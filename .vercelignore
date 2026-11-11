@@ -1,0 +1,4 @@
+.DS_Store
+semester3-quiz-hub
+data/*_questions.json
+data/quiz_data.json
