@@ -68,6 +68,23 @@
       0% { background-color: rgba(250, 204, 21, 0.55); }
       100% { background-color: transparent; }
     }
+    /* ===== Rich text (Markdown-lite) rendering for questions & explanations ===== */
+    .rt { white-space: normal; line-height: 1.6; }
+    .rt .rt-ln { min-height: 0.4em; }
+    .rt .rt-gap { height: 0.45em; }
+    .rt .rt-li { display: flex; gap: 0.4em; }
+    .rt .rt-li > .rt-bullet { flex-shrink: 0; color: #059669; font-weight: 700; }
+    .rt .rt-num { flex-shrink: 0; font-weight: 700; color: #1e3a8a; min-width: 1.3em; }
+    .rt code.rt-ic { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: rgba(15, 23, 42, 0.07); border: 1px solid rgba(15, 23, 42, 0.12); border-radius: 4px; padding: 0 0.3em; color: #9f1239; white-space: pre-wrap; word-break: break-word; }
+    .rt pre.rt-code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1.5; background: #0f172a; color: #e2e8f0; border-radius: 6px; padding: 0.6em 0.8em; margin: 0.35em 0; overflow-x: auto; white-space: pre; font-weight: 500; }
+    .rt .rt-math { font-family: 'Cambria Math', 'STIX Two Math', Georgia, serif; font-style: normal; white-space: nowrap; }
+    .rt strong { font-weight: 800; color: #0f172a; }
+    .exp-head { font-weight: 800; font-size: 14px; color: #065f46; background: #ecfdf5; border: 1px solid #6ee7b7; border-radius: 6px; padding: 0.35em 0.7em; }
+    .exp-sec { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 6px; padding: 0.6em 0.8em; }
+    .exp-sec-title { font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.02em; color: #1e3a8a; margin-bottom: 0.35em; }
+    .exp-tip { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 6px; padding: 0.45em 0.75em; color: #78350f; }
+    .exp-more summary { cursor: pointer; color: #4b5563; font-size: 12px; user-select: none; }
+    .exp-more[open] summary { margin-bottom: 0.4em; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col text-xs sm:text-[13px] pb-14 lg:pb-2">
@@ -1073,7 +1090,7 @@
       const viBox = document.getElementById('viTranslationBox');
       const viText = document.getElementById('viTranslationText');
 
-      qBox.textContent = q.question_text || `Câu hỏi trên Slide #${q.slide_num}`;
+      setRichText(qBox, q.question_text || `Câu hỏi trên Slide #${q.slide_num}`);
 
       // Always populate Vietnamese translation banner if available
       let qVi = q.question_translation || '';
@@ -1083,7 +1100,7 @@
       }
       if (qVi && qVi.length > 5) {
         viBox.classList.remove('hidden');
-        viText.textContent = qVi;
+        setRichText(viText, qVi);
       } else {
         viBox.classList.add('hidden');
       }
@@ -1242,7 +1259,9 @@
       const fbTitle = document.getElementById('feedbackTitle');
       const fbBadge = document.getElementById('feedbackCorrectBadge');
 
-      document.getElementById('explanationText').textContent = q.explanation || `Đáp án đúng: ${q.answers.join(', ')}`;
+      const expEl = document.getElementById('explanationText');
+      expEl.classList.remove('whitespace-pre-wrap');
+      expEl.innerHTML = renderExplanationHTML(q.explanation || `🎯 Đáp án đúng: ${q.answers.join(', ')}`, q);
       document.getElementById('theoryExcerptText').textContent = q.theory_excerpt || '';
       document.getElementById('theoryCitationText').textContent = q.theory_citation || '';
       fbBadge.textContent = `Đáp án đúng: ${q.answers.join(', ')}`;
@@ -1722,6 +1741,116 @@
 
     function escapeHtml(str) {
       return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // ===== Markdown-lite renderer (HTML is escaped FIRST, so data can never inject markup) =====
+    const LATEX_MAP = [
+      [/\\rightarrow|\\to\b/g, '→'], [/\\leftarrow/g, '←'], [/\\Rightarrow/g, '⇒'], [/\\Leftrightarrow/g, '⇔'],
+      [/\\leq?\b/g, '≤'], [/\\geq?\b/g, '≥'], [/\\neq?\b/g, '≠'], [/\\approx/g, '≈'], [/\\times/g, '×'],
+      [/\\cdot/g, '·'], [/\\in\b/g, '∈'], [/\\notin/g, '∉'], [/\\infty/g, '∞'], [/\\alpha/g, 'α'], [/\\beta/g, 'β'],
+      [/\\Theta/g, 'Θ'], [/\\Omega/g, 'Ω'], [/\\sum/g, 'Σ'], [/\\ldots|\\dots|\\cdots/g, '…'],
+      [/\\lfloor/g, '⌊'], [/\\rfloor/g, '⌋'], [/\\lceil/g, '⌈'], [/\\rceil/g, '⌉'],
+      [/\\pmod\s*\{?\s*([^}\s$]+)\s*\}?/g, ' mod $1'], [/\\bmod/g, ' mod '], [/\\mod/g, ' mod '],
+      [/\\log/g, 'log'], [/\\ln/g, 'ln'], [/\\quad|\\qquad/g, ' '], [/\\,|\\;|\\!/g, ' '],
+      [/\\frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, '($1)/($2)'],
+      [/\\(?:text|mathrm|mathbf|mathit|operatorname)\s*\{([^{}]*)\}/g, '$1'],
+      [/\\\{/g, '{'], [/\\\}/g, '}'], [/\\%/g, '%'], [/\\_/g, '_']
+    ];
+    const SUP = { '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','n':'ⁿ','+':'⁺','-':'⁻','h':'ʰ','k':'ᵏ','i':'ⁱ' };
+    const SUB = { '0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉','n':'ₙ','i':'ᵢ','j':'ⱼ','k':'ₖ' };
+    function latexToUnicode(s) {
+      let t = s;
+      LATEX_MAP.forEach(([re, rep]) => { t = t.replace(re, rep); });
+      t = t.replace(/\^\{([^{}]+)\}|\^(\w)/g, (m, a, b) => { const v = a || b; return [...v].every(c => SUP[c]) ? [...v].map(c => SUP[c]).join('') : '^' + v; });
+      t = t.replace(/_\{([^{}]+)\}|_(\w)/g, (m, a, b) => { const v = a || b; return [...v].every(c => SUB[c]) ? [...v].map(c => SUB[c]).join('') : '_' + v; });
+      return t.replace(/\\([a-zA-Z]+)/g, '$1').replace(/[{}]/g, '').replace(/\s{2,}/g, ' ').trim();
+    }
+    function renderInline(escaped) {
+      const slots = [];
+      const keep = html => { slots.push(html); return `\u0000${slots.length - 1}\u0000`; };
+      let s = escaped;
+      s = s.replace(/`([^`\n]+)`/g, (m, c) => keep(`<code class="rt-ic">${c}</code>`));
+      s = s.replace(/\$\$([^$]+)\$\$/g, (m, c) => keep(`<span class="rt-math">${latexToUnicode(c)}</span>`));
+      s = s.replace(/\$([^$\n]{1,160})\$/g, (m, c) => (/[\\^_=<>+]|&lt;|&gt;/.test(c) || /^\s*\w{1,3}\s*$/.test(c)) ? keep(`<span class="rt-math">${latexToUnicode(c)}</span>`) : m);
+      s = s.replace(/\\(rightarrow|Rightarrow|leftarrow|to|le|leq|ge|geq|neq|times|approx|in)\b/g, m => latexToUnicode(m));
+      s = s.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+      return s.replace(/\u0000(\d+)\u0000/g, (m, i) => slots[+i]);
+    }
+    function renderRichText(raw) {
+      const src = String(raw || '').replace(/\r\n?/g, '\n');
+      const parts = src.split(/```[a-zA-Z0-9_+-]*\n?([\s\S]*?)```/g);
+      let html = '';
+      parts.forEach((part, idx) => {
+        if (idx % 2 === 1) { html += `<pre class="rt-code">${escapeHtml(part.replace(/\n+$/, ''))}</pre>`; return; }
+        const lines = part.split('\n');
+        lines.forEach((line, li) => {
+          if ((li === 0 || li === lines.length - 1) && line.trim() === '' && idx > 0) return;
+          if (line.trim() === '') { html += '<div class="rt-gap"></div>'; return; }
+          const indent = (line.match(/^\s*/)[0].replace(/\t/g, '    ').length);
+          const pad = indent ? ` style="padding-left:${Math.min(indent, 12) * 0.45}em"` : '';
+          const t = line.trim();
+          let m;
+          if ((m = t.match(/^[-*•]\s+(.*)$/))) {
+            html += `<div class="rt-ln rt-li"${pad}><span class="rt-bullet">•</span><span>${renderInline(escapeHtml(m[1]))}</span></div>`;
+          } else if ((m = t.match(/^(\d{1,2})[.)]\s+(.*)$/))) {
+            html += `<div class="rt-ln rt-li"${pad}><span class="rt-num">${m[1]}.</span><span>${renderInline(escapeHtml(m[2]))}</span></div>`;
+          } else {
+            html += `<div class="rt-ln"${pad}>${renderInline(escapeHtml(t))}</div>`;
+          }
+        });
+      });
+      return `<div class="rt">${html}</div>`;
+    }
+    function setRichText(el, raw) {
+      el.classList.remove('whitespace-pre-wrap', 'whitespace-pre-line');
+      el.innerHTML = renderRichText(raw);
+    }
+
+    // Split the structured explanation into sections and render them as cards.
+    const EXP_HEADERS = ['🎯', '📝', '📋', '💬', '📌', '❌', '✅', '💡'];
+    function renderExplanationHTML(raw, q) {
+      const text = String(raw || '').replace(/\r\n?/g, '\n').trim();
+      const sections = [];
+      let cur = null;
+      let inFence = false;
+      text.split('\n').forEach(line => {
+        if (/^\s*```/.test(line)) inFence = !inFence;
+        const head = !inFence && EXP_HEADERS.find(h => line.trimStart().startsWith(h));
+        if (head) { cur = { icon: head, first: line.trim(), body: [] }; sections.push(cur); }
+        else if (cur) cur.body.push(line);
+        else { cur = { icon: '', first: '', body: [line] }; sections.push(cur); }
+      });
+      if (!sections.some(s => s.icon)) return renderRichText(text);
+
+      const answerTexts = (q.answers || []).map(k => ((q.options || []).find(o => o.key === k) || {}).text || '').map(s => s.trim().toLowerCase());
+      const isTrivialTip = tip => {
+        const t = tip.replace(/^💡\s*Mẹo nhớ:\s*/i, '').trim();
+        if (t.length < 3) return true;
+        const core = t.replace(/^Đáp án\s+[A-F](\s*,\s*[A-F])*\s*/i, '').replace(/^\(|\)$/g, '').trim().toLowerCase();
+        return core === '' || answerTexts.includes(core);
+      };
+
+      let main = '', more = '';
+      sections.forEach(sec => {
+        const body = sec.body.join('\n').replace(/^\n+|\n+$/g, '');
+        if (sec.icon === '🎯') {
+          main += `<div class="exp-head">${renderInline(escapeHtml(sec.first))}</div>`;
+          if (body) main += `<div class="exp-sec">${renderRichText(body)}</div>`;
+        } else if (sec.icon === '📝' || sec.icon === '📋') {
+          more += `<div class="exp-sec mb-2"><div class="exp-sec-title">${escapeHtml(sec.first.replace(/:$/, ''))}</div>${renderRichText(body)}</div>`;
+        } else if (sec.icon === '💡') {
+          const full = (sec.first + (body ? '\n' + body : '')).trim();
+          if (!isTrivialTip(full)) main += `<div class="exp-tip">${renderRichText(full)}</div>`;
+        } else if (sec.icon) {
+          const title = sec.first.replace(/:\s*$/, '');
+          const inlineRest = '';
+          main += `<div class="exp-sec"><div class="exp-sec-title">${renderInline(escapeHtml(title))}</div>${renderRichText(inlineRest + body)}</div>`;
+        } else if (body.trim()) {
+          main += `<div class="exp-sec">${renderRichText(body)}</div>`;
+        }
+      });
+      if (more) main += `<details class="exp-more"><summary>📝 Xem dịch đề &amp; dịch đáp án</summary>${more}</details>`;
+      return `<div class="flex flex-col gap-2">${main}</div>`;
     }
 
     // Keyboard shortcuts
