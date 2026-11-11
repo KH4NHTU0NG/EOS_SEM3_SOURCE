@@ -612,34 +612,34 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/CSD203/slide_033.png",
       "missing_image": false,
-      "question_text": "What will be the output of the following code?\n\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def add_first(self, data):\n        new_node = Node(data)\n        new_node.next = self.head\n        self.head = new_node\n\n    def print_list(self):\n        current = self.head\n        while current is not None:\n            print(current.data, end=\" \")\n            current = current.next\n        print()\n\nif __name__ == \"__main__\":\n    list = LinkedList()\n    list.add_first(1)\n    list.add_first(2)\n    list.add_first(3)\n    list.print_list()",
+      "question_text": "What is the output of the following list assignment?\n\n```python\naList = [4, 8, 12, 16]\naList[1:4] = [20, 24, 28]\nprint(aList)\n```",
       "type": "single",
       "options": [
         {
           "key": "A",
-          "text": "1 2 3"
+          "text": "[4, 20, 24, 28, 8, 12, 16]"
         },
         {
           "key": "B",
-          "text": "3 2 1"
+          "text": "[4, 20, 24, 28]"
         },
         {
           "key": "C",
-          "text": "1 3 2"
+          "text": "[4, 8, 12, 16]"
         },
         {
           "key": "D",
-          "text": "3 1 2"
+          "text": "[20, 24, 28]"
         }
       ],
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: 3 2 1)\n\n📝 Dịch đề:\nKết quả in ra của đoạn code danh sách liên kết đơn (Singly Linked List) dưới đây là gì?\n\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def add_first(self, data):\n        new_node = Node(data)\n        new_node.next = self.head\n        self.head = new_node\n\n    def print_list(self):\n        current = self.head\n        while current is not None:\n            print(current.data, end=\" \")\n            current = current.next\n        print()\n\nif __name__ == \"__main__\":\n    list = LinkedList()\n    list.add_first(1)\n    list.add_first(2)\n    list.add_first(3)\n    list.print_list()\n\n📋 Dịch đáp án:\n- B: 3 2 1\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích từng bước thực thi trên danh sách liên kết đơn (`LinkedList`):\n1. Phương thức `add_first(data)` tạo nút mới `new_node`, trỏ `new_node.next = self.head` và cập nhật `self.head = new_node` (chèn vào đầu danh sách):\n   - Khởi tạo: `head -> None`\n   - `list.add_first(1)`: `head -> [1] -> None`\n   - `list.add_first(2)`: Nút `2` chèn vào trước `1` → `head -> [2] -> [1] -> None`\n   - `list.add_first(3)`: Nút `3` chèn vào trước `2` → `head -> [3] -> [2] -> [1] -> None`\n2. Phương thức `print_list()` duyệt `current` từ `self.head` đến cuối danh sách:\n   - In ra lần lượt: `3 2 1` (Đáp án B).\n\n💡 Mẹo nhớ: Đáp án B (3 2 1)",
-      "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0366-L0380)",
-      "theory_excerpt": "[L0366] A linked list is a linear data structure consisting of a sequence of nodes, where each node stores data and a reference to the next node in the list. (Danh sách liên kết là một cấu trúc dữ liệu tuyến tính gồm một chuỗi các nút, trong đó mỗi nút lưu trữ dữ liệu và một tham chiếu đến nút tiếp theo trong danh sách.)\n[L0367] Unlike arrays, elements in a linked list are not stored in contiguous memory locations, which allows flexible and dynamic memory allocation. (Không giống như mảng, các phần tử trong danh sách liên kết không được lưu trữ ở các vị trí bộ nhớ liền kề, cho phép cấp phát bộ nhớ linh hoạt và động.)\n[L0368] The first node of a linked list is called the head, and it represents the starting point of the list. (Nút đầu tiên của danh sách liên kết được gọi là head và nó đại diện cho điểm bắt đầu của danh sách.)\n[L0369] The last node of a linked list contains a reference to null, indicating the end of the list. (Nút cuối cùng của danh sách liên kết chứa tham chiếu null, biểu thị rằng danh sách đã kết thúc.)\n[L0370] ## [H2] Structure of a Linked List\n[L0371] Each node in a linked list consists of two main parts: a data field and a link field. (Mỗi nút trong danh sách liên kết gồm hai phần chính: vùng dữ liệu và vùng liên kết.)\n[L0372] The data field stores the value of the element, while the link field stores the address of the next node. (Vùng dữ liệu lưu giá trị của phần tử, trong khi vùng liên kết lưu địa chỉ của nút tiếp theo.)\n[L0373] This structure allows nodes to be easily connected or disconnected during insertion and deletion operations. (Cấu trúc này cho phép các nút dễ dàng được kết nối hoặc tách rời trong các thao tác chèn và xóa.)\n[L0374] ## [H2] Types of Linked List\n[L0375] A singly linked list is a type of linked list in which each node contains a reference only to the next node. (Danh sách liên kết đơn là loại danh sách mà mỗi nút chỉ chứa tham chiếu đến nút kế tiếp.)\n[L0376] A doubly linked list allows traversal in both forward and backward directions because each node contains references to both the next and previous nodes. (Danh sách liên kết đôi cho phép duyệt theo cả hai chiều vì mỗi nút chứa tham chiếu đến cả nút trước và nút sau.)\n[L0377] A circular linked list is a linked list in which the last node points back to the first node, forming a circular structure. (Danh sách liên kết vòng là danh sách mà nút cuối trỏ lại nút đầu, tạo thành một cấu trúc vòng.)\n[L0378] ## [H2] Basic Operations on Linked List\n[L0379] Insertion is the operation of adding a new node to the linked list at a specific position. (Chèn là thao tác thêm một nút mới vào danh sách liên kết tại một vị trí xác định.)\n[L0380] Deletion is the operation of removing an existing node from the linked list by updating the links between nodes. (Xóa là thao tác loại bỏ một nút khỏi danh sách liên kết bằng cách cập nhật các liên kết giữa các nút.)",
+      "explanation": "🎯 Đáp án đúng: B (B: [4, 20, 24, 28])\n\n📝 Dịch đề:\nKết quả của thao tác gán lát cắt danh sách (list slice assignment) dưới đây là gì?\n\n```python\naList = [4, 8, 12, 16]\naList[1:4] = [20, 24, 28]\nprint(aList)\n```\n\n📋 Dịch đáp án:\n- A: [4, 20, 24, 28, 8, 12, 16]\n- B: [4, 20, 24, 28]\n- C: [4, 8, 12, 16]\n- D: [20, 24, 28]\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích cơ chế gán lát cắt (slice assignment) trong Python:\n1. Danh sách ban đầu `aList = [4, 8, 12, 16]` có 4 phần tử với các chỉ số tương ứng:\n   - `aList[0] = 4`\n   - `aList[1] = 8`\n   - `aList[2] = 12`\n   - `aList[3] = 16`\n2. Cú pháp cắt lát `aList[1:4]` chọn các phần tử từ chỉ số `1` đến `3` (không bao gồm cận trên `4`), tức là 3 phần tử `[8, 12, 16]`.\n3. Phép gán `aList[1:4] = [20, 24, 28]` thay thế trực tiếp 3 phần tử tại chỉ số 1, 2, 3 bằng các giá trị mới `[20, 24, 28]`.\n4. Danh sách sau khi gán trở thành: `[4, 20, 24, 28]`.\n5. Lệnh `print(aList)` in ra `[4, 20, 24, 28]` (Đáp án B).\n\n💡 Mẹo nhớ: aList[1:4] gồm các phần tử tại vị trí 1, 2, 3 được thay thế bởi [20, 24, 28], giữ nguyên phần tử đầu aList[0] = 4.",
+      "theory_citation": "[1] Python 3 Documentation - Sequence Types — list, tuple, range (Section 4.6.4)",
+      "theory_excerpt": "[L0001] Slices of lists can be assigned to, which can even change the size of the list or clear it entirely: s[i:j] = t replaces the slice of s from i to j with the contents of the iterable t.",
       "slide_comment": "",
-      "question_translation": "Kết quả in ra của đoạn code danh sách liên kết đơn (Singly Linked List) dưới đây là gì?\n\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def add_first(self, data):\n        new_node = Node(data)\n        new_node.next = self.head\n        self.head = new_node\n\n    def print_list(self):\n        current = self.head\n        while current is not None:\n            print(current.data, end=\" \")\n            current = current.next\n        print()\n\nif __name__ == \"__main__\":\n    list = LinkedList()\n    list.add_first(1)\n    list.add_first(2)\n    list.add_first(3)\n    list.print_list()",
+      "question_translation": "Kết quả của thao tác gán lát cắt danh sách (list slice assignment) dưới đây là gì?\n\n```python\naList = [4, 8, 12, 16]\naList[1:4] = [20, 24, 28]\nprint(aList)\n```",
       "is_multi": false
     },
     {
@@ -764,38 +764,34 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/CSD203/slide_037.png",
       "missing_image": false,
-      "question_text": "Consider the following operations on a circular queue with a fixed size of 4 (indices 0 to 3):\n\nclass CircularQueue:\n    def __init__(self, size):\n        self.queue = [None] * size\n        self.max_size = size\n        self.front = -1\n        self.rear = -1\n\n    def enqueue(self, data):\n        if (self.rear + 1) % self.max_size == self.front:\n            return \"Queue is Full\"\n        elif self.front == -1:\n            self.front = 0\n            self.rear = 0\n        else:\n            self.rear = (self.rear + 1) % self.max_size\n        self.queue[self.rear] = data\n\n    def dequeue(self):\n        if self.front == -1:\n            return \"Queue is Empty\"\n        data = self.queue[self.front]\n        self.queue[self.front] = None\n        if self.front == self.rear:\n            self.front = -1\n            self.rear = -1\n        else:\n            self.front = (self.front + 1) % self.max_size\n        return data\n\ncq = CircularQueue(4)\ncq.enqueue(10)\ncq.enqueue(20)\ncq.enqueue(30)\ncq.dequeue()\ncq.enqueue(40)\ncq.enqueue(50)\n\nWhat is the state of the queue (cq.queue) and the positions of front and rear at the end?",
+      "question_text": "What does the following function do, and what is its output for the input [10, 20, 30, 40, 50] with x = 35?\n\n```python\nfrom collections import deque\n\ndef fn(queue, x):\n    q = deque(queue)\n    arr1 = []\n    arr2 = []\n    while q:\n        item = q.popleft()\n        if item <= x:\n            arr1.append(item)\n        else:\n            arr2.append(item)\n    return arr1 + arr2\n```",
       "type": "single",
       "options": [
         {
           "key": "A",
-          "text": "cq.queue = [50, 20, 30, 40], front = 1, rear = 0"
+          "text": "[10, 20, 30, 40, 50]"
         },
         {
           "key": "B",
-          "text": "cq.queue = [10, 20, 30, 40], front = 0, rear = 3"
+          "text": "[[10, 20, 30], [40, 50]]"
         },
         {
           "key": "C",
-          "text": "cq.queue = [None, 20, 30, 40], front = 1, rear = 3"
+          "text": "[10, 20, 30]"
         },
         {
           "key": "D",
-          "text": "cq.queue = [50, None, 30, 40], front = 2, rear = 0"
-        },
-        {
-          "key": "E",
-          "text": "cq.queue = [20, 30, 40, 50], front = 0, rear = 3"
+          "text": "[20, 40]"
         }
       ],
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: cq.queue = [50, 20, 30, 40], front = 1, rear = 0)\n\n📝 Dịch đề:\nXét các thao tác sau trên hàng đợi vòng (Circular Queue) có kích thước cố định bằng 4 (chỉ số từ 0 đến 3):\n\ncq = CircularQueue(4)\ncq.enqueue(10)\ncq.enqueue(20)\ncq.enqueue(30)\ncq.dequeue()\ncq.enqueue(40)\ncq.enqueue(50)\n\nTrạng thái cuối cùng của mảng `cq.queue` và vị trí của `front`, `rear` là gì?\n\n📋 Dịch đáp án:\n- A: cq.queue = [50, 20, 30, 40], front = 1, rear = 0\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích từng bước trạng thái của `CircularQueue(4)` (với `max_size = 4`):\n1. Khởi tạo: `queue = [None, None, None, None]`, `front = -1`, `rear = -1`.\n2. `cq.enqueue(10)`: Hàng đợi đang rỗng (`front == -1`) → `front = 0, rear = 0`, `queue = [10, None, None, None]`.\n3. `cq.enqueue(20)`: `rear = (0 + 1) % 4 = 1`, `queue = [10, 20, None, None]`, `front = 0, rear = 1`.\n4. `cq.enqueue(30)`: `rear = (1 + 1) % 4 = 2`, `queue = [10, 20, 30, None]`, `front = 0, rear = 2`.\n5. `cq.dequeue()`: Lấy phần tử tại `front = 0` (`10`), gán `queue[0] = None`, cập nhật `front = (0 + 1) % 4 = 1` → `queue = [None, 20, 30, None]`, `front = 1, rear = 2`.\n6. `cq.enqueue(40)`: `rear = (2 + 1) % 4 = 3`, gán `queue[3] = 40` → `queue = [None, 20, 30, 40]`, `front = 1, rear = 3`.\n7. `cq.enqueue(50)`: Kiểm tra đầy `(3 + 1) % 4 = 0 != front (1)` → chưa đầy. Cập nhật vòng `rear = (3 + 1) % 4 = 0`, gán `queue[0] = 50` → `queue = [50, 20, 30, 40]`, `front = 1, rear = 0` (Đáp án A).\n\n💡 Mẹo nhớ: Đáp án A (cq.queue = [50, 20, 30, 40], front = 1, rear = 0)",
-      "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0006-L0020)",
-      "theory_excerpt": "[L0006] ## [H2] Complexity Analysis of Operations on Queue\n[L0007] Enqueue: Adds an element to the end (rear) of the queue. If the queue is full, an overflow error occurs. (Enqueue: Thêm một phần tử vào cuối (rear) của hàng đợi. Nếu hàng đợi đầy, sẽ xảy ra lỗi tràn (overflow).)\n[L0008] Dequeue: Removes the element from the front of the queue. If the queue is empty, an underflow error occurs. (Dequeue: Loại bỏ phần tử ở đầu (front) của hàng đợi. Nếu hàng đợi rỗng, sẽ xảy ra lỗi thiếu (underflow).)\n[L0009] Peek/Front: Returns the element at the front without removing it. (Peek/Front: Trả về phần tử ở đầu (front) hàng đợi mà không loại bỏ nó.)\n[L0010] Size: Returns the number of elements in the queue. (Size: Trả về số lượng phần tử hiện có trong hàng đợi.)\n[L0011] isEmpty: Returns true if the queue is empty, otherwise false. (isEmpty: Trả về true nếu hàng đợi rỗng, ngược lại trả về false.)\n[L0012] isFull: Returns true if the queue is full, otherwise false. (isFull: Trả về true nếu hàng đợi đầy, ngược lại trả về false.)\n[L0013] ## [H2] Types of Queues\n[L0014] Queue data structure can be classified into 4 types: (Cấu trúc dữ liệu hàng đợi có thể được phân loại thành 4 loại:)\n[L0015] Simple Queue: Simple Queue simply follows FIFO Structure. We can only insert the element at the back and remove the element from the front of the queue. A simple queue is efficiently implemented either using a linked list or a circular array. (Simple Queue: Simple Queue chỉ đơn giản tuân theo cấu trúc FIFO. Ta chỉ có thể chèn phần tử ở phía sau và loại bỏ phần tử ở phía trước của hàng đợi. Một hàng đợi đơn giản có thể được cài đặt hiệu quả bằng danh sách liên kết hoặc mảng vòng (circular array).)\n[L0016] Double-Ended Queue (Deque): In a double-ended queue the insertion and deletion operations, both can be performed from both ends. They are of two types: (Double-Ended Queue (Deque): Trong hàng đợi hai đầu, cả thao tác chèn và xóa đều có thể được thực hiện ở cả hai đầu. Chúng có hai loại:)\n[L0017] Input Restricted Queue: This is a simple queue. In this type of queue, the input can be taken from only one end but deletion can be done from any of the ends. (Input Restricted Queue: Đây là một dạng hàng đợi đơn giản. Trong loại hàng đợi này, dữ liệu chỉ có thể được thêm vào từ một đầu nhưng có thể bị xóa ở bất kỳ đầu nào.)\n[L0018] Output Restricted Queue: This is also a simple queue. In this type of queue, the input can be taken from both ends but deletion can be done from only one end. (Output Restricted Queue: Đây cũng là một dạng hàng đợi đơn giản. Trong loại hàng đợi này, dữ liệu có thể được thêm vào từ cả hai đầu nhưng việc xóa chỉ có thể thực hiện từ một đầu.)\n[L0019] Priority Queue: A priority queue is a special queue where the elements are accessed based on the priority assigned to them. They are of two types: (Priority Queue: Priority Queue là một hàng đợi đặc biệt, trong đó các phần tử được truy cập dựa trên mức độ ưu tiên đã gán cho chúng. Chúng được chia thành hai loại:)\n[L0020] Ascending Priority Queue: In Ascending Priority Queue, the elements are arranged in increasing order of their priority values. The element with the smallest priority value is popped first. (Ascending Priority Queue: Trong hàng đợi ưu tiên tăng dần, các phần tử được sắp xếp theo thứ tự tăng dần của giá trị ưu tiên. Phần tử có giá trị ưu tiên nhỏ nhất sẽ được lấy ra trước.)",
+      "explanation": "🎯 Đáp án đúng: A (A: [10, 20, 30, 40, 50])\n\n📝 Dịch đề:\nHàm sau đây thực hiện điều gì và kết quả trả về của nó là gì đối với đầu vào `[10, 20, 30, 40, 50]` với `x = 35`?\n\n📋 Dịch đáp án:\n- A: [10, 20, 30, 40, 50]\n- B: [[10, 20, 30], [40, 50]]\n- C: [10, 20, 30]\n- D: [20, 40]\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích thuật toán phân tách và nối danh sách:\n1. Danh sách đầu vào `queue = [10, 20, 30, 40, 50]` được nạp vào hàng đợi `q = deque(queue)`.\n2. Vòng lặp `while q:` lấy lần lượt từng phần tử từ đầu hàng đợi (`q.popleft()` theo nguyên lý FIFO):\n   - `item = 10 <= 35` → thêm vào `arr1` → `arr1 = [10]`\n   - `item = 20 <= 35` → thêm vào `arr1` → `arr1 = [10, 20]`\n   - `item = 30 <= 35` → thêm vào `arr1` → `arr1 = [10, 20, 30]`\n   - `item = 40 > 35` → thêm vào `arr2` → `arr2 = [40]`\n   - `item = 50 > 35` → thêm vào `arr2` → `arr2 = [40, 50]`\n3. Câu lệnh `return arr1 + arr2` nối hai mảng:\n   - `[10, 20, 30] + [40, 50] = [10, 20, 30, 40, 50]` (Đáp án A).\n\n💡 Mẹo nhớ: Các phần tử <= 35 vào arr1 ([10, 20, 30]), các phần tử > 35 vào arr2 ([40, 50]), nối lại đúng mảng ban đầu [10, 20, 30, 40, 50].",
+      "theory_citation": "[1] SEMESTER_3_CSD_SONG_NGỮ.mhtml - Queue & Deque Data Structures (L0013-L0018)",
+      "theory_excerpt": "[L0016] Double-Ended Queue (Deque): In a double-ended queue the insertion and deletion operations, both can be performed from both ends.",
       "slide_comment": "",
-      "question_translation": "Xét các thao tác sau trên hàng đợi vòng (Circular Queue) có kích thước cố định bằng 4 (chỉ số từ 0 đến 3):\n\ncq = CircularQueue(4)\ncq.enqueue(10)\ncq.enqueue(20)\ncq.enqueue(30)\ncq.dequeue()\ncq.enqueue(40)\ncq.enqueue(50)\n\nTrạng thái cuối cùng của mảng `cq.queue` và vị trí của `front`, `rear` là gì?",
+      "question_translation": "Hàm sau đây thực hiện điều gì và kết quả trả về của nó là gì đối với đầu vào `[10, 20, 30, 40, 50]` với `x = 35`?\n\n```python\nfrom collections import deque\n\ndef fn(queue, x):\n    q = deque(queue)\n    arr1 = []\n    arr2 = []\n    while q:\n        item = q.popleft()\n        if item <= x:\n            arr1.append(item)\n        else:\n            arr2.append(item)\n    return arr1 + arr2\n```",
       "is_multi": false
     },
     {
@@ -851,11 +847,15 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "0"
+          "text": "1"
         },
         {
           "key": "C",
           "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "6"
         }
       ],
       "answers": [
@@ -1777,6 +1777,10 @@ window.QUIZ_DATA = {
         {
           "key": "C",
           "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "6"
         }
       ],
       "answers": [
@@ -1842,11 +1846,15 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "0"
+          "text": "1"
         },
         {
           "key": "C",
           "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "6"
         }
       ],
       "answers": [
@@ -4839,7 +4847,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "[9, 12, 18, 33, 47, 71, 56, 24, 63, 85]"
+          "text": "[9, 12, 18, 47, 33, 71, 56, 24, 63, 85]"
         },
         {
           "key": "C",
@@ -4851,9 +4859,9 @@ window.QUIZ_DATA = {
         }
       ],
       "answers": [
-        "B"
+        "A"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: [9, 12, 18, 33, 47, 71, 56, 24, 63, 85])\n\n📝 Dịch đề:\nCho mảng [47, 12, 85, 33, 9, 71, 56, 24, 63, 18]. Trạng thái của mảng sau vòng lặp thứ 3 (3rd iteration) của thuật toán Sắp xếp chọn (Selection Sort) là gì?\n\nA. [9, 12, 18, 33, 47, 71, 56, 24, 63, 85]\nB. [9, 12, 18, 33, 47, 71, 56, 24, 63, 85]\nC. [9, 12, 33, 18, 47, 71, 56, 24, 63, 85]\nD. [9, 12, 18, 33, 85, 71, 56, 24, 63, 47]\n\n📋 Dịch đáp án:\n- B: [9, 12, 18, 33, 47, 71, 56, 24, 63, 85]\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTruy vết từng bước Selection Sort trên mảng ban đầu `[47, 12, 85, 33, 9, 71, 56, 24, 63, 18]`:\n1. **Vòng 1:** Tìm phần tử nhỏ nhất từ chỉ số 0..9 là `9`. Hoán đổi `9` với `47` ở chỉ số 0:\n   - Mảng: `[9, 12, 85, 33, 47, 71, 56, 24, 63, 18]`.\n2. **Vòng 2:** Tìm phần tử nhỏ nhất từ chỉ số 1..9 là `12` (ở chỉ số 1):\n   - `12` đã ở đúng vị trí chỉ số 1, không đổi: `[9, 12, 85, 33, 47, 71, 56, 24, 63, 18]`.\n3. **Vòng 3:** Tìm phần tử nhỏ nhất từ chỉ số 2..9 là `18` (ở chỉ số 9). Hoán đổi `18` với `85` ở chỉ số 2:\n   - Mảng: `[9, 12, 18, 33, 47, 71, 56, 24, 63, 85]`.\nBa phần tử đầu tiên đã được sắp xếp là `[9, 12, 18]`. Đáp án đúng là **B**.\n\n💡 Mẹo nhớ: Sau 3 vòng Selection sort: Đưa lần lượt 9, 12, 18 về 3 vị trí đầu tiên -> [9, 12, 18, 33, 47, ...].",
+      "explanation": "🎯 Đáp án đúng: A (A: [9, 12, 18, 33, 47, 71, 56, 24, 63, 85])\n\n📝 Dịch đề:\nCho mảng [47, 12, 85, 33, 9, 71, 56, 24, 63, 18]. Mảng sẽ như thế nào sau lần lặp thứ 3 của thuật toán Sắp xếp chọn (Selection Sort)?\n\n📋 Dịch đáp án:\n- A: [9, 12, 18, 33, 47, 71, 56, 24, 63, 85]\n- B: [9, 12, 18, 47, 33, 71, 56, 24, 63, 85]\n- C: [9, 12, 33, 18, 47, 71, 56, 24, 63, 85]\n- D: [9, 12, 18, 33, 85, 71, 56, 24, 63, 47]\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích thuật toán Selection Sort từng vòng lặp:\nMảng ban đầu: `[47, 12, 85, 33, 9, 71, 56, 24, 63, 18]`\n1. Lần lặp 1: Tìm phần tử nhỏ nhất từ chỉ số 0 đến 9. Phần tử nhỏ nhất là `9` (tại chỉ số 4). Đổi chỗ `9` với phần tử tại chỉ số 0 (`47`):\n   → Mảng sau lần 1: `[9, 12, 85, 33, 47, 71, 56, 24, 63, 18]`\n2. Lần lặp 2: Tìm phần tử nhỏ nhất từ chỉ số 1 đến 9. Phần tử nhỏ nhất là `12` (đã nằm tại chỉ số 1). Không cần hoán đổi:\n   → Mảng sau lần 2: `[9, 12, 85, 33, 47, 71, 56, 24, 63, 18]`\n3. Lần lặp 3: Tìm phần tử nhỏ nhất từ chỉ số 2 đến 9 trong dãy `[85, 33, 47, 71, 56, 24, 63, 18]`. Phần tử nhỏ nhất là `18` (tại chỉ số 9). Đổi chỗ `18` với phần tử tại chỉ số 2 (`85`):\n   → Mảng sau lần 3: `[9, 12, 18, 33, 47, 71, 56, 24, 63, 85]` (Đáp án A).\n\n💡 Mẹo nhớ: Sau 3 bước của Selection Sort, 3 vị trí đầu tiên phải là 3 giá trị nhỏ nhất toàn mảng theo thứ tự tăng dần: 9, 12, 18. Số 85 được đổi chỗ về vị trí cuối của 18.",
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0081-L0095)",
       "theory_excerpt": "[L0081] Recursive Nature: Each left or right subtree of a node in a BST is itself a BST, allowing recursive algorithms to naturally process the tree. (Tính chất đệ quy: Mỗi cây con bên trái hoặc bên phải của một nút trong BST cũng chính là một BST, cho phép các thuật toán đệ quy xử lý cây một cách tự nhiên.)\n[L0082] Practical Applications: BSTs are widely used in database indexing, symbol tables, range queries, and are foundational for advanced structures like AVL trees, Red-Black trees. In problem solving, BSTs are used in problems where we need to maintain a sorted stream of data. (Ứng dụng thực tế: BST được sử dụng rộng rãi trong việc đánh chỉ mục cơ sở dữ liệu, bảng ký hiệu, truy vấn theo khoảng và là nền tảng cho các cấu trúc nâng cao như cây AVL, cây Đỏ-Đen. Trong giải quyết bài toán, BST được áp dụng khi cần duy trì một luồng dữ liệu đã được sắp xếp.)\n[L0083] Binary Search Tree (BST) is a data structure that is commonly used to implement efficient searching, insertion, and deletion operations along with maintaining a sorted sequence of data. Please remember the following properties of BSTs before moving forward. (Cây tìm kiếm nhị phân (BST) là một cấu trúc dữ liệu thường được sử dụng để triển khai các thao tác tìm kiếm, chèn và xóa hiệu quả, đồng thời duy trì một dãy dữ liệu có thứ tự. Hãy ghi nhớ các thuộc tính sau của BST trước khi tiếp tục.)\n[L0084] The left subtree of a node contains only nodes with keys lesser than the node's key. (Cây con bên trái của một nút chỉ chứa các nút có khóa nhỏ hơn khóa của nút đó.)\n[L0085] The right subtree of a node contains only nodes with keys greater than the node's key. (Cây con bên phải của một nút chỉ chứa các nút có khóa lớn hơn khóa của nút đó.)\n[L0086] The left and right subtree each must also be a binary search tree. There must be no duplicate nodes. (Mỗi cây con trái và phải cũng phải là một cây tìm kiếm nhị phân. Không được phép có các nút trùng lặp.)\n[L0087] A BST supports operations like search, insert, delete, maximum, minimum, floor, ceil, greater, smaller, etc in O(h) time where h is the height of the BST. To keep height less, self balancing BSTs (like AVL and Red Black Trees) are used in practice. These Self-Balancing BSTs maintain the height as O(Log n). Therefore all of the above mentioned operations become O(Log n). Together with these, BST also allows sorted order traversal of data in O(n) time. (Một BST hỗ trợ các thao tác như tìm kiếm, chèn, xóa, tìm giá trị lớn nhất, nhỏ nhất, floor, ceil, lớn hơn, nhỏ hơn, v.v. trong thời gian O(h), trong đó h là chiều cao của cây. Để giữ cho chiều cao nhỏ, trong thực tế người ta sử dụng BST tự cân bằng (như cây AVL và cây Đỏ-Đen). Các BST tự cân bằng này duy trì chiều cao là O(log n). Do đó, tất cả các thao tác kể trên đều trở thành O(log n). Ngoài ra, BST còn cho phép duyệt dữ liệu theo thứ tự sắp xếp trong thời gian O(n).)\n[L0088] A Self-Balancing Binary Search Tree is used to maintain a sorted stream of data. For example, suppose we are getting online orders placed and we want to maintain the live data (in RAM) in sorted order of prices. For example, we wish to know the number of items purchased at cost below a given cost at any moment. Or we wish to know the number of items purchased at a higher cost than the given cost. (Một cây tìm kiếm nhị phân tự cân bằng được dùng để duy trì một luồng dữ liệu được sắp xếp. Ví dụ, giả sử chúng ta nhận các đơn hàng trực tuyến và muốn duy trì dữ liệu trực tiếp (trong RAM) theo thứ tự giá. Chẳng hạn, ta muốn biết số lượng mặt hàng được mua với giá thấp hơn một giá trị nhất định tại một thời điểm nào đó, hoặc muốn biết số lượng mặt hàng được mua với giá cao hơn giá trị đó.)\n[L0089] A Self-Balancing Binary Search Tree is used to implement a doubly ended priority queue. With a Binary Heap, we can either implement a priority queue with support of extractMin() or with extractMax(). If we wish to support both the operations, we use a Self-Balancing Binary Search Tree to do both in O(Log n). (Một cây tìm kiếm nhị phân tự cân bằng được dùng để cài đặt hàng đợi ưu tiên hai đầu (doubly ended priority queue). Với một Binary Heap, ta có thể triển khai hàng đợi ưu tiên hỗ trợ extract Min() hoặc extract Max(). Nếu muốn hỗ trợ cả hai thao tác này, ta sử dụng cây tìm kiếm nhị phân tự cân bằng để thực hiện cả hai trong thời gian O(log n).)\n[L0090] There are many more algorithm problems where a Self-Balancing BST is the best suited data structure, like count smaller elements on right, Smallest Greater Element on Right Side, etc. (Có rất nhiều bài toán thuật toán mà BST tự cân bằng là cấu trúc dữ liệu phù hợp nhất, chẳng hạn như đếm số phần tử nhỏ hơn ở bên phải (count smaller elements on right), tìm phần tử lớn hơn nhỏ nhất ở bên phải (Smallest Greater Element on Right Side), v.v.)\n[L0091] A BST can be used to sort a large dataset. By inserting the elements of the dataset into a BST and then performing an in-order traversal, the elements will be returned in sorted order. When compared to normal sorting algorithms, the advantage here is, we can later insert / delete items in O(Log n) time. (Một BST có thể được dùng để sắp xếp một tập dữ liệu lớn. Bằng cách chèn các phần tử của tập dữ liệu vào BST và sau đó thực hiện duyệt theo thứ tự giữa (in-order traversal), ta sẽ nhận được các phần tử theo thứ tự sắp xếp. So với các thuật toán sắp xếp thông thường, lợi thế ở đây là ta có thể tiếp tục chèn/xóa phần tử sau đó trong thời gian O(log n).)\n[L0092] Variations of BST like B Tree and B+ Tree are used in Database indexing. (Các biến thể của BST như cây B và cây B+ được sử dụng trong việc đánh chỉ mục cơ sở dữ liệu.)\n[L0093] TreeMap and TreeSet in Java, and set and map in C++ are internally implemented using self-balancing BSTs, more formally a Red-Black Tree. (TreeMap và TreeSet trong Java, cũng như set và map trong C++ được triển khai nội bộ bằng các BST tự cân bằng, cụ thể hơn là cây Đỏ-Đen (Red-Black Tree).)\n[L0094] AVL Tree (Self-Balancing BST)\n[L0095] ## [H1] AVL Tree Data Structure",
       "slide_comment": "",
@@ -4913,15 +4921,15 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "6"
+          "text": "16"
         },
         {
           "key": "C",
-          "text": "21"
+          "text": "18"
         },
         {
           "key": "D",
-          "text": "0"
+          "text": "20"
         }
       ],
       "answers": [
@@ -5325,6 +5333,10 @@ window.QUIZ_DATA = {
         {
           "key": "C",
           "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "5"
         }
       ],
       "answers": [
@@ -6471,7 +6483,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "A, B, C, D, E"
+          "text": "A, B, D, E, C"
         }
       ],
       "answers": [
@@ -7050,11 +7062,11 @@ window.QUIZ_DATA = {
         },
         {
           "key": "C",
-          "text": "0(1)"
+          "text": "O(1)"
         },
         {
           "key": "D",
-          "text": "O(n)"
+          "text": "O(n²)"
         }
       ],
       "answers": [
@@ -7289,12 +7301,12 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/CSD203/slide_217.png",
       "missing_image": false,
-      "question_text": "What is the output of the following code?",
+      "question_text": "What is the output of the following code?\n\n```python\na = \"Hello, World!\"\nprint(a[1])\n```",
       "type": "single",
       "options": [
         {
           "key": "A",
-          "text": "= \"Hello, World!\" print (a[1])"
+          "text": "H"
         },
         {
           "key": "B",
@@ -7312,11 +7324,11 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: e)\n\n📝 Dịch đề:\nĐầu ra của đoạn mã sau là gì?\n\n📋 Dịch đáp án:\n- B: e\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên lý Cấu trúc Dữ liệu và Giải thuật, đáp án 'e' phản ánh chính xác cấu trúc dữ liệu, cơ chế thực thi và các quy tắc thuật toán chuẩn.\n\n💡 Mẹo nhớ: e",
+      "explanation": "🎯 Đáp án đúng: B (B: e)\n\n📝 Dịch đề:\nKết quả của đoạn mã sau là gì?\n\n```python\na = \"Hello, World!\"\nprint(a[1])\n```\n\n📋 Dịch đáp án:\n- A: H\n- B: e\n- C: Hello\n- D: World\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\n1. Chuỗi trong Python được đánh chỉ số từ 0:\n   - `a[0] = 'H'`\n   - `a[1] = 'e'`\n   - `a[2] = 'l'`\n   - `a[3] = 'l'`\n   - `a[4] = 'o'`\n2. Biểu thức `a[1]` truy xuất ký tự tại chỉ số 1, tức là chữ `'e'`.\n3. Lệnh `print(a[1])` in ra `e` (Đáp án B).\n\n💡 Mẹo nhớ: Python đếm chỉ số từ 0 (a[0] là H, a[1] là e).",
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0416-L0430)",
       "theory_excerpt": "[L0416] Con trái: 2 * i + 1\n[L0417] Con phải: 2 * i + 2\n[L0418] ## [H2] 3. Cài đặt Max-Heap trong Java\n[L0419] java\n[L0420] public class MaxHeap { private int[] heap; private int size; private int capacity; public MaxHeap(int capacity) { this.capacity = capacity; this.size = 0; this.heap = new int[capacity]; } // Lấy index cha, con trái, con phải private int parent(int i) { return (i - 1) / 2; } private int leftChild(int i) { return 2 * i + 1; } private int rightChild(int i){ return 2 * i + 2; } private void swap(int i, int j) { int temp = heap[i]; heap[i] = heap[j]; heap[j] = temp; } // ✅ INSERT - O(log n) public void insert(int value) { if (size == capacity) throw new RuntimeException(\"Heap đầy!\"); heap[size] = value; int i = size++; // Heapify Up: đẩy phần tử lên đúng vị trí while (i > 0 && heap[i] > heap[parent(i)]) { swap(i, parent(i)); i = parent(i); } } // ✅ EXTRACT MAX - O(log n) public int extractMax() { if (size == 0) throw new RuntimeException(\"Heap rỗng!\"); int max = heap[0]; heap[0] = heap[--size]; // Đưa phần tử cuối lên gốc heapifyDown(0); // Heapify Down return max; } // ✅ PEEK - O(1) public int peek() { if (size == 0) throw new RuntimeException(\"Heap rỗng!\"); return heap[0]; } // Heapify Down: đẩy phần tử xuống đúng vị trí private void heapifyDown(int i) { int largest = i; int left = leftChild(i); int right = rightChild(i); if (left < size && heap[left] > heap[largest]) largest = left; if (right < size && heap[right] > heap[largest]) largest = right; if (largest != i) { swap(i, largest); heapifyDown(largest); } } // ✅ BUILD HEAP từ mảng có sẵn - O(n) public void buildHeap(int[] arr) { this.heap = arr; this.size = arr.length; // Bắt đầu từ nút cha cuối cùng for (int i = size / 2 - 1; i >= 0; i--) { heapifyDown(i); } } public void printHeap() { for (int i = 0; i < size; i++) System.out.print(heap[i] + \" \"); System.out.println(); }}\n[L0421] ## [H2] 4. Heap Sort\n[L0422] Sắp xếp mảng sử dụng Max-Heap — độ phức tạp O(n log n):\n[L0423] java\n[L0424] public class HeapSort { public static void heapSort(int[] arr) { int n = arr.length; // Bước 1: Xây dựng Max-Heap từ mảng - O(n) for (int i = n / 2 - 1; i >= 0; i--) { heapify(arr, n, i); } // Bước 2: Lần lượt đưa phần tử lớn nhất về cuối - O(n log n) for (int i = n - 1; i > 0; i--) { // Hoán đổi gốc (max) với phần tử cuối int temp = arr[0]; arr[0] = arr[i]; arr[i] = temp; // Heapify lại phần còn lại heapify(arr, i, 0); } } private static void heapify(int[] arr, int n, int i) { int largest = i; int left = 2 * i + 1; int right = 2 * i + 2; if (left < n && arr[left] > arr[largest]) largest = left; if (right < n && arr[right] > arr[largest]) largest = right; if (largest != i) { int temp = arr[i]; arr[i] = arr[largest]; arr[largest] = temp; heapify(arr, n, largest); } } public static void main(String[] args) { int[] arr = {64, 34, 25, 12, 22, 11, 90}; heapSort(arr); System.out.println(Arrays.toString(arr)); // Output: [11, 12, 22, 25, 34, 64, 90] }}\n[L0425] ## [H2] 5. PriorityQueue trong Java (Built-in Heap)\n[L0426] Java cung cấp sẵn PriorityQueue — mặc định là Min-Heap:\n[L0427] java\n[L0428] import java.util.PriorityQueue;import java.util.Collections;// ---- MIN-HEAP (mặc định) ----PriorityQueue<Integer> minHeap = new PriorityQueue<>();minHeap.offer(10);minHeap.offer(3);minHeap.offer(7);System.out.println(minHeap.poll()); // 3 (nhỏ nhất)// ---- MAX-HEAP ----PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());maxHeap.offer(10);maxHeap.offer(3);maxHeap.offer(7);System.out.println(maxHeap.poll()); // 10 (lớn nhất)// ---- CÁC PHƯƠNG THỨC CHÍNH ----// offer(e) → thêm phần tử - O(log n)// poll() → lấy & xóa phần tử đầu - O(log n)// peek() → xem phần tử đầu, không xóa - O(1)// size() → số phần tử// isEmpty() → kiểm tra rỗng\n[L0429] ## [H2] 6. Ứng dụng thực tế\n[L0430] ## [H3] 🔹 Tìm K phần tử lớn nhất",
       "slide_comment": "",
-      "question_translation": "Đầu ra của đoạn mã sau là gì?"
+      "question_translation": "Kết quả của đoạn mã sau là gì?\n\n```python\na = \"Hello, World!\"\nprint(a[1])\n```"
     },
     {
       "id": 199,
@@ -7796,7 +7808,7 @@ window.QUIZ_DATA = {
       "image": "images/CSD203/slide_231.png",
       "missing_image": false,
       "question_text": "What two techniques are combined in an optimized Union-Find structure? Choose 2 correct answers.",
-      "type": "single",
+      "type": "multi",
       "options": [
         {
           "key": "A",
@@ -7816,13 +7828,15 @@ window.QUIZ_DATA = {
         }
       ],
       "answers": [
-        "A"
+        "A",
+        "C"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: Path compression)\n\n📝 Dịch đề:\nHai kỹ thuật nào được kết hợp trong cấu trúc Union-Find được tối ưu hóa? Chọn 2 câu trả lời đúng.\n\n📋 Dịch đáp án:\n- A: Nén đường dẫn\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên lý Cấu trúc Dữ liệu và Giải thuật, đáp án 'Nén đường dẫn' phản ánh chính xác cấu trúc dữ liệu, cơ chế thực thi và các quy tắc thuật toán chuẩn.\n\n💡 Mẹo nhớ: Nén đường dẫn",
+      "explanation": "🎯 Đáp án đúng: A, C (A: Path compression, C: Union by size)\n\n📝 Dịch đề:\nHai kỹ thuật nào được kết hợp trong cấu trúc Union-Find (Disjoint Set Union) tối ưu? Chọn 2 đáp án đúng.\n\n📋 Dịch đáp án:\n- A: Path compression (Nén đường đi)\n- B: Topological sorting (Sắp xếp topo)\n- C: Union by size / rank (Hợp nhất theo kích thước/hạng)\n- D: Greedy choice (Lựa chọn tham lam)\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCấu trúc dữ liệu các tập hợp rời nhau (Disjoint Set Union - DSU / Union-Find) được tối ưu hóa bằng 2 kỹ thuật cốt lõi:\n1. **Union by size (hoặc Union by rank):** Khi hợp nhất hai cây, luôn gắn gốc của cây nhỏ hơn vào làm con của cây lớn hơn để giữ cho chiều cao của cây luôn ở mức tối thiểu $O(\\log n)$.\n2. **Path compression (Nén đường đi):** Trong thao tác `find(x)`, cập nhật trực tiếp con trỏ cha của tất cả các nút trên đường đi thẳng về nút gốc đại diện, giúp cây trở nên cực kỳ bẹt.\n- Kết hợp cả hai kỹ thuật này đưa độ phức tạp trung bình của mỗi thao tác về gần như hằng số $O(\u0007lpha(n))$, trong đó $\u0007lpha(n)$ là hàm Ackermann nghịch đảo.\n\n💡 Mẹo nhớ: Tối ưu Union-Find luôn là cặp đôi Path Compression (trong Find) + Union by Rank/Size (trong Union).",
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0196-L0210)",
       "theory_excerpt": "[L0196] ## [H1] Kruskal’s Minimum Spanning Tree (MST) Algorithm\n[L0197] A minimum spanning tree (MST) of a weighted, connected, undirected graph is a cycle-free set of edges that connects all vertices with the minimum possible total weight. The weight of a spanning tree is the sum of its edge weights. (Cây khung nhỏ nhất – MST – của một đồ thị có trọng số, liên thông, vô hướng là tập cạnh không có chu trình nối tất cả các đỉnh với tổng trọng số nhỏ nhất. Trọng số của cây khung là tổng trọng số các cạnh của nó.)\n[L0198] Kruskal’s algorithm sorts all edges in nondecreasing order of weight, then scans from lightest to heaviest, adding an edge if it does not create a cycle (often checked with a Disjoint-Set/Union-Find). After selecting n−1n-1n−1 edges, the result is an MST. Because it makes the best local choice at each step, Kruskal’s is a greedy algorithm. (Thuật toán Kruskal sắp xếp mọi cạnh theo trọng số tăng dần, rồi duyệt từ nhẹ đến nặng, thêm một cạnh nếu không tạo chu trình (thường kiểm tra bằng cấu trúc Union-Find). Khi chọn đủ n−1 n-1 n−1 cạnh, ta thu được MST. Độ luôn chọn phương án tối ưu cục bộ ở mỗi bước, Kruskal là thuật toán tham lam (greedy).)\n[L0199] ## [H2] How to find MST using Kruskal's algorithm?\n[L0200] Steps to find an MST with Kruskal’s algorithm: (Các bước tìm MST bằng thuật toán Kruskal:)\n[L0201] Sort all edges in non-decreasing order by weight. (1) Sắp xếp tất cả cạnh theo trọng số tăng dần.)\n[L0202] Initialize a Disjoint Set (Union-Find) over all vertices. (2) Khởi tạo cấu trúc Disjoint Set / Union-Find cho mọi đỉnh.)\n[L0203] Scan edges from lightest to heaviest; for each edge (u, v): if find(u) != find(v), add the edge to the MST and union(u, v); otherwise skip it (would form a cycle). (3) Duyệt cạnh từ nhẹ đến nặng; với mỗi cạnh (u, v): nếu find(u) != find(v) thì thêm vào MST và union(u, v); ngược lại bỏ qua vì sẽ tạo chu trình.)\n[L0204] Stop when the MST has exactly V − 1 edges. (4) Dừng khi MST có đúng V − 1 cạnh.)\n[L0205] Cycle detection is handled by the Disjoint Set structure. (Việc phát hiện chu trình được xử lý bởi cấu trúc Disjoint Set.)\n[L0206] Time complexity: O(E log E) due to sorting; Union-Find operations are near-constant with path compression and union by rank. (Độ phức tạp thời gian: O(E log E) do bước sắp xếp; các phép Union-Find gần như hằng số nhờ path compression và union by rank.)\n[L0207] ## [H3] Illustration:\n[L0208] Dijkstra’sAlgorithm (Single-Source Shortest Paths)\n[L0209] ## [H1] Dijkstra's Algorithm to find Shortest Paths from a Source to all\n[L0210] Given a weighted, undirected graph represented as an edge list and a source vertex src, compute the shortest-path distances from src to all other vertices. (Cho một đồ thị vô hướng có trọng số được biểu diễn bằng danh sách cạnh và đỉnh nguồn src, hãy tính khoảng cách đường đi ngắn nhất từ src tới mọi đỉnh còn lại.)",
       "slide_comment": "",
-      "question_translation": "Hai kỹ thuật nào được kết hợp trong cấu trúc Union-Find được tối ưu hóa? Chọn 2 câu trả lời đúng."
+      "question_translation": "Hai kỹ thuật nào được kết hợp trong cấu trúc Union-Find được tối ưu hóa? Chọn 2 câu trả lời đúng.",
+      "is_multi": true
     },
     {
       "id": 213,
@@ -8588,7 +8602,7 @@ window.QUIZ_DATA = {
       "image": "images/CSD203/slide_254.png",
       "missing_image": false,
       "question_text": "Which of the following best describes a doubly linked list node? Choose 2 correct answers.",
-      "type": "single",
+      "type": "multi",
       "options": [
         {
           "key": "A",
@@ -8608,13 +8622,15 @@ window.QUIZ_DATA = {
         }
       ],
       "answers": [
+        "B",
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Stores a link to the previous node)\n\n📝 Dịch đề:\nĐiều nào sau đây mô tả đúng nhất về nút danh sách liên kết (Linked List) đôi? Chọn 2 câu trả lời đúng.\n\n📋 Dịch đáp án:\n- C: Lưu trữ một liên kết đến nút trước đó\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên lý Cấu trúc Dữ liệu & Giải thuật: Danh sách liên kết đôi cho phép duyệt theo cả hai chiều vì mỗi nút chứa tham chiếu đến cả nút trước và nút sau.\n\n💡 Mẹo nhớ: Lưu trữ một liên kết đến nút trước đó",
+      "explanation": "🎯 Đáp án đúng: B, C (B: Stores a link to the next node, C: Stores a link to the previous node)\n\n📝 Dịch đề:\nĐặc điểm nào sau đây mô tả đúng nhất về một nút trong danh sách liên kết đôi (doubly linked list node)? Chọn 2 đáp án đúng.\n\n📋 Dịch đáp án:\n- A: Stores only element (Chỉ lưu phần tử)\n- B: Stores a link to the next node (Lưu liên kết trỏ tới nút kế tiếp)\n- C: Stores a link to the previous node (Lưu liên kết trỏ tới nút phía trước)\n- D: Stores a unique index (Lưu chỉ số duy nhất)\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCấu trúc của một nút trong danh sách liên kết đôi (`Doubly Linked List Node`):\nMỗi nút gồm 3 thành phần chính:\n1. Dữ liệu phần tử (`element` / `data`).\n2. Con trỏ/liên kết tới nút kế tiếp (`next` pointer) → Đáp án B.\n3. Con trỏ/liên kết tới nút liền trước (`prev` pointer) → Đáp án C.\nNhờ 2 liên kết này, danh sách liên kết đôi có thể duyệt linh hoạt theo cả hai chiều (tiến và lùi).\n\n💡 Mẹo nhớ: Danh sách liên kết đôi (Doubly) có 2 con trỏ: prev trỏ về trước và next trỏ về sau.",
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0366-L0380)",
       "theory_excerpt": "[L0366] A linked list is a linear data structure consisting of a sequence of nodes, where each node stores data and a reference to the next node in the list. (Danh sách liên kết là một cấu trúc dữ liệu tuyến tính gồm một chuỗi các nút, trong đó mỗi nút lưu trữ dữ liệu và một tham chiếu đến nút tiếp theo trong danh sách.)\n[L0367] Unlike arrays, elements in a linked list are not stored in contiguous memory locations, which allows flexible and dynamic memory allocation. (Không giống như mảng, các phần tử trong danh sách liên kết không được lưu trữ ở các vị trí bộ nhớ liền kề, cho phép cấp phát bộ nhớ linh hoạt và động.)\n[L0368] The first node of a linked list is called the head, and it represents the starting point of the list. (Nút đầu tiên của danh sách liên kết được gọi là head và nó đại diện cho điểm bắt đầu của danh sách.)\n[L0369] The last node of a linked list contains a reference to null, indicating the end of the list. (Nút cuối cùng của danh sách liên kết chứa tham chiếu null, biểu thị rằng danh sách đã kết thúc.)\n[L0370] ## [H2] Structure of a Linked List\n[L0371] Each node in a linked list consists of two main parts: a data field and a link field. (Mỗi nút trong danh sách liên kết gồm hai phần chính: vùng dữ liệu và vùng liên kết.)\n[L0372] The data field stores the value of the element, while the link field stores the address of the next node. (Vùng dữ liệu lưu giá trị của phần tử, trong khi vùng liên kết lưu địa chỉ của nút tiếp theo.)\n[L0373] This structure allows nodes to be easily connected or disconnected during insertion and deletion operations. (Cấu trúc này cho phép các nút dễ dàng được kết nối hoặc tách rời trong các thao tác chèn và xóa.)\n[L0374] ## [H2] Types of Linked List\n[L0375] A singly linked list is a type of linked list in which each node contains a reference only to the next node. (Danh sách liên kết đơn là loại danh sách mà mỗi nút chỉ chứa tham chiếu đến nút kế tiếp.)\n[L0376] A doubly linked list allows traversal in both forward and backward directions because each node contains references to both the next and previous nodes. (Danh sách liên kết đôi cho phép duyệt theo cả hai chiều vì mỗi nút chứa tham chiếu đến cả nút trước và nút sau.)\n[L0377] A circular linked list is a linked list in which the last node points back to the first node, forming a circular structure. (Danh sách liên kết vòng là danh sách mà nút cuối trỏ lại nút đầu, tạo thành một cấu trúc vòng.)\n[L0378] ## [H2] Basic Operations on Linked List\n[L0379] Insertion is the operation of adding a new node to the linked list at a specific position. (Chèn là thao tác thêm một nút mới vào danh sách liên kết tại một vị trí xác định.)\n[L0380] Deletion is the operation of removing an existing node from the linked list by updating the links between nodes. (Xóa là thao tác loại bỏ một nút khỏi danh sách liên kết bằng cách cập nhật các liên kết giữa các nút.)",
       "slide_comment": "",
-      "question_translation": "Điều nào sau đây mô tả đúng nhất về nút danh sách liên kết (Linked List) đôi? Chọn 2 câu trả lời đúng."
+      "question_translation": "Điều nào sau đây mô tả đúng nhất về nút danh sách liên kết (Linked List) đôi? Chọn 2 câu trả lời đúng.",
+      "is_multi": true
     },
     {
       "id": 235,
@@ -8687,7 +8703,8 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0086-L0100)",
       "theory_excerpt": "[L0086] The left and right subtree each must also be a binary search tree. There must be no duplicate nodes. (Mỗi cây con trái và phải cũng phải là một cây tìm kiếm nhị phân. Không được phép có các nút trùng lặp.)\n[L0087] A BST supports operations like search, insert, delete, maximum, minimum, floor, ceil, greater, smaller, etc in O(h) time where h is the height of the BST. To keep height less, self balancing BSTs (like AVL and Red Black Trees) are used in practice. These Self-Balancing BSTs maintain the height as O(Log n). Therefore all of the above mentioned operations become O(Log n). Together with these, BST also allows sorted order traversal of data in O(n) time. (Một BST hỗ trợ các thao tác như tìm kiếm, chèn, xóa, tìm giá trị lớn nhất, nhỏ nhất, floor, ceil, lớn hơn, nhỏ hơn, v.v. trong thời gian O(h), trong đó h là chiều cao của cây. Để giữ cho chiều cao nhỏ, trong thực tế người ta sử dụng BST tự cân bằng (như cây AVL và cây Đỏ-Đen). Các BST tự cân bằng này duy trì chiều cao là O(log n). Do đó, tất cả các thao tác kể trên đều trở thành O(log n). Ngoài ra, BST còn cho phép duyệt dữ liệu theo thứ tự sắp xếp trong thời gian O(n).)\n[L0088] A Self-Balancing Binary Search Tree is used to maintain a sorted stream of data. For example, suppose we are getting online orders placed and we want to maintain the live data (in RAM) in sorted order of prices. For example, we wish to know the number of items purchased at cost below a given cost at any moment. Or we wish to know the number of items purchased at a higher cost than the given cost. (Một cây tìm kiếm nhị phân tự cân bằng được dùng để duy trì một luồng dữ liệu được sắp xếp. Ví dụ, giả sử chúng ta nhận các đơn hàng trực tuyến và muốn duy trì dữ liệu trực tiếp (trong RAM) theo thứ tự giá. Chẳng hạn, ta muốn biết số lượng mặt hàng được mua với giá thấp hơn một giá trị nhất định tại một thời điểm nào đó, hoặc muốn biết số lượng mặt hàng được mua với giá cao hơn giá trị đó.)\n[L0089] A Self-Balancing Binary Search Tree is used to implement a doubly ended priority queue. With a Binary Heap, we can either implement a priority queue with support of extractMin() or with extractMax(). If we wish to support both the operations, we use a Self-Balancing Binary Search Tree to do both in O(Log n). (Một cây tìm kiếm nhị phân tự cân bằng được dùng để cài đặt hàng đợi ưu tiên hai đầu (doubly ended priority queue). Với một Binary Heap, ta có thể triển khai hàng đợi ưu tiên hỗ trợ extract Min() hoặc extract Max(). Nếu muốn hỗ trợ cả hai thao tác này, ta sử dụng cây tìm kiếm nhị phân tự cân bằng để thực hiện cả hai trong thời gian O(log n).)\n[L0090] There are many more algorithm problems where a Self-Balancing BST is the best suited data structure, like count smaller elements on right, Smallest Greater Element on Right Side, etc. (Có rất nhiều bài toán thuật toán mà BST tự cân bằng là cấu trúc dữ liệu phù hợp nhất, chẳng hạn như đếm số phần tử nhỏ hơn ở bên phải (count smaller elements on right), tìm phần tử lớn hơn nhỏ nhất ở bên phải (Smallest Greater Element on Right Side), v.v.)\n[L0091] A BST can be used to sort a large dataset. By inserting the elements of the dataset into a BST and then performing an in-order traversal, the elements will be returned in sorted order. When compared to normal sorting algorithms, the advantage here is, we can later insert / delete items in O(Log n) time. (Một BST có thể được dùng để sắp xếp một tập dữ liệu lớn. Bằng cách chèn các phần tử của tập dữ liệu vào BST và sau đó thực hiện duyệt theo thứ tự giữa (in-order traversal), ta sẽ nhận được các phần tử theo thứ tự sắp xếp. So với các thuật toán sắp xếp thông thường, lợi thế ở đây là ta có thể tiếp tục chèn/xóa phần tử sau đó trong thời gian O(log n).)\n[L0092] Variations of BST like B Tree and B+ Tree are used in Database indexing. (Các biến thể của BST như cây B và cây B+ được sử dụng trong việc đánh chỉ mục cơ sở dữ liệu.)\n[L0093] TreeMap and TreeSet in Java, and set and map in C++ are internally implemented using self-balancing BSTs, more formally a Red-Black Tree. (TreeMap và TreeSet trong Java, cũng như set và map trong C++ được triển khai nội bộ bằng các BST tự cân bằng, cụ thể hơn là cây Đỏ-Đen (Red-Black Tree).)\n[L0094] AVL Tree (Self-Balancing BST)\n[L0095] ## [H1] AVL Tree Data Structure\n[L0096] An AVL tree is defined as a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees for any node cannot be more than one. (Cây AVL được định nghĩa là một cây tìm kiếm nhị phân tự cân bằng (BST), trong đó độ chênh lệch chiều cao giữa cây con trái và cây con phải của bất kỳ nút nào không được vượt quá một.)\n[L0097] Balance Factor = left subtree height - right subtree height (Hệ số cân bằng (Balance Factor) = chiều cao cây con trái – chiều cao cây con phải)\n[L0098] For a Balanced Tree (for every node): -1 ≤ Balance Factor ≤ 1 (Đối với một cây cân bằng (với mọi nút): -1 ≤ Hệ số cân bằng ≤ 1)\n[L0099] ## [H3] Example of an AVL Tree:\n[L0100] The balance factors for different nodes are: 12 : +1, 8 : +1, 18 : +1, 5 : +1, 11 : 0, 17 : 0 and 4 : 0. Since all differences lie between -1 to +1, the tree is an AVL tree. (Các hệ số cân bằng (balance factor) cho các nút khác nhau là: 12 : +1, 8 : +1, 18 : +1, 5 : +1, 11 : 0, 17 : 0 và 4 : 0. Vì tất cả các giá trị chênh lệch đều nằm trong khoảng từ -1 đến +1, nên cây này là một cây AVL.)",
       "slide_comment": "",
-      "question_translation": "Hai cây nào đảm bảo thời gian tìm kiếm O(log n)? Chọn 2 câu trả lời đúng."
+      "question_translation": "Hai cây nào đảm bảo thời gian tìm kiếm O(log n)? Chọn 2 câu trả lời đúng.",
+      "is_multi": true
     },
     {
       "id": 237,
@@ -11168,7 +11185,8 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0366-L0380)",
       "theory_excerpt": "[L0366] A linked list is a linear data structure consisting of a sequence of nodes, where each node stores data and a reference to the next node in the list. (Danh sách liên kết là một cấu trúc dữ liệu tuyến tính gồm một chuỗi các nút, trong đó mỗi nút lưu trữ dữ liệu và một tham chiếu đến nút tiếp theo trong danh sách.)\n[L0367] Unlike arrays, elements in a linked list are not stored in contiguous memory locations, which allows flexible and dynamic memory allocation. (Không giống như mảng, các phần tử trong danh sách liên kết không được lưu trữ ở các vị trí bộ nhớ liền kề, cho phép cấp phát bộ nhớ linh hoạt và động.)\n[L0368] The first node of a linked list is called the head, and it represents the starting point of the list. (Nút đầu tiên của danh sách liên kết được gọi là head và nó đại diện cho điểm bắt đầu của danh sách.)\n[L0369] The last node of a linked list contains a reference to null, indicating the end of the list. (Nút cuối cùng của danh sách liên kết chứa tham chiếu null, biểu thị rằng danh sách đã kết thúc.)\n[L0370] ## [H2] Structure of a Linked List\n[L0371] Each node in a linked list consists of two main parts: a data field and a link field. (Mỗi nút trong danh sách liên kết gồm hai phần chính: vùng dữ liệu và vùng liên kết.)\n[L0372] The data field stores the value of the element, while the link field stores the address of the next node. (Vùng dữ liệu lưu giá trị của phần tử, trong khi vùng liên kết lưu địa chỉ của nút tiếp theo.)\n[L0373] This structure allows nodes to be easily connected or disconnected during insertion and deletion operations. (Cấu trúc này cho phép các nút dễ dàng được kết nối hoặc tách rời trong các thao tác chèn và xóa.)\n[L0374] ## [H2] Types of Linked List\n[L0375] A singly linked list is a type of linked list in which each node contains a reference only to the next node. (Danh sách liên kết đơn là loại danh sách mà mỗi nút chỉ chứa tham chiếu đến nút kế tiếp.)\n[L0376] A doubly linked list allows traversal in both forward and backward directions because each node contains references to both the next and previous nodes. (Danh sách liên kết đôi cho phép duyệt theo cả hai chiều vì mỗi nút chứa tham chiếu đến cả nút trước và nút sau.)\n[L0377] A circular linked list is a linked list in which the last node points back to the first node, forming a circular structure. (Danh sách liên kết vòng là danh sách mà nút cuối trỏ lại nút đầu, tạo thành một cấu trúc vòng.)\n[L0378] ## [H2] Basic Operations on Linked List\n[L0379] Insertion is the operation of adding a new node to the linked list at a specific position. (Chèn là thao tác thêm một nút mới vào danh sách liên kết tại một vị trí xác định.)\n[L0380] Deletion is the operation of removing an existing node from the linked list by updating the links between nodes. (Xóa là thao tác loại bỏ một nút khỏi danh sách liên kết bằng cách cập nhật các liên kết giữa các nút.)",
       "slide_comment": "",
-      "question_translation": "Trong Python, loại tích hợp nào sử dụng mảng bên trong? Chọn 2 câu trả lời đúng."
+      "question_translation": "Trong Python, loại tích hợp nào sử dụng mảng bên trong? Chọn 2 câu trả lời đúng.",
+      "is_multi": true
     },
     {
       "id": 305,
@@ -11443,7 +11461,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "N°n"
+          "text": "N*n"
         },
         {
           "key": "C",
@@ -11451,13 +11469,13 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "n • log n: This represents logarithmic growth. For a balanced binary tree, the height is proportional to logg n. This is the defining characteristic of AVL trees and other balanced trees in terms of their height efficiency. • n: This represents linear growth. An unbalanced binary search tree (like a skewed tree) can have a height proportional to n.in the worst case. AVL trees prevent this. • n logn: This typically represents the complexity of sorting algorithms or certain operations on data structures, not specifically the height of a balanced tree. • N *n: This is a more complex growth rate, usually seen in algorithms with nested loops or more intricate relationships, not relevant to tree height."
+          "text": "n"
         }
       ],
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: logn)\n\n📝 Dịch đề:\nChiều cao của cây cân bằng AVL lưu trữ n mục xấp xỉ:\n\n📋 Dịch đáp án:\n- C: logn\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCây AVL duy trì hệ số cân bằng (Balance Factor) trong tập {-1, 0, 1}. Khi chèn hoặc xóa làm mất cân bằng, thực hiện phép quay logn để tái lập trạng thái cân bằng.\n\n💡 Mẹo nhớ: logn",
+      "explanation": "🎯 Đáp án đúng: C (C: logn)\n\n📝 Dịch đề:\nChiều cao của một cây AVL lưu trữ n phần tử xấp xỉ bằng:\n\n📋 Dịch đáp án:\n- A: nlogn\n- B: N*n\n- C: logn\n- D: n\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\n1. Cây AVL là cây tìm kiếm nhị phân tự cân bằng, đảm bảo tại mọi nút, độ lệch chiều cao giữa cây con trái và cây con phải không vượt quá 1 (hệ số cân bằng $\\in \\{-1, 0, 1\\}$).\n2. Nhờ cơ chế tự cân bằng bằng các phép quay (rotations), chiều cao $h$ của cây AVL chứa $n$ nút luôn được giới hạn chặt chẽ ở mức:\n   $$h \u0007pprox 1.44 \\log_2(n) = O(\\log n)$$\n3. Do đó, chiều cao cây xấp xỉ $\\log n$ (Đáp án C).\n\n💡 Mẹo nhớ: Cây AVL tự cân bằng nên chiều cao luôn là O(log n).",
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0086-L0100)",
       "theory_excerpt": "[L0086] The left and right subtree each must also be a binary search tree. There must be no duplicate nodes. (Mỗi cây con trái và phải cũng phải là một cây tìm kiếm nhị phân. Không được phép có các nút trùng lặp.)\n[L0087] A BST supports operations like search, insert, delete, maximum, minimum, floor, ceil, greater, smaller, etc in O(h) time where h is the height of the BST. To keep height less, self balancing BSTs (like AVL and Red Black Trees) are used in practice. These Self-Balancing BSTs maintain the height as O(Log n). Therefore all of the above mentioned operations become O(Log n). Together with these, BST also allows sorted order traversal of data in O(n) time. (Một BST hỗ trợ các thao tác như tìm kiếm, chèn, xóa, tìm giá trị lớn nhất, nhỏ nhất, floor, ceil, lớn hơn, nhỏ hơn, v.v. trong thời gian O(h), trong đó h là chiều cao của cây. Để giữ cho chiều cao nhỏ, trong thực tế người ta sử dụng BST tự cân bằng (như cây AVL và cây Đỏ-Đen). Các BST tự cân bằng này duy trì chiều cao là O(log n). Do đó, tất cả các thao tác kể trên đều trở thành O(log n). Ngoài ra, BST còn cho phép duyệt dữ liệu theo thứ tự sắp xếp trong thời gian O(n).)\n[L0088] A Self-Balancing Binary Search Tree is used to maintain a sorted stream of data. For example, suppose we are getting online orders placed and we want to maintain the live data (in RAM) in sorted order of prices. For example, we wish to know the number of items purchased at cost below a given cost at any moment. Or we wish to know the number of items purchased at a higher cost than the given cost. (Một cây tìm kiếm nhị phân tự cân bằng được dùng để duy trì một luồng dữ liệu được sắp xếp. Ví dụ, giả sử chúng ta nhận các đơn hàng trực tuyến và muốn duy trì dữ liệu trực tiếp (trong RAM) theo thứ tự giá. Chẳng hạn, ta muốn biết số lượng mặt hàng được mua với giá thấp hơn một giá trị nhất định tại một thời điểm nào đó, hoặc muốn biết số lượng mặt hàng được mua với giá cao hơn giá trị đó.)\n[L0089] A Self-Balancing Binary Search Tree is used to implement a doubly ended priority queue. With a Binary Heap, we can either implement a priority queue with support of extractMin() or with extractMax(). If we wish to support both the operations, we use a Self-Balancing Binary Search Tree to do both in O(Log n). (Một cây tìm kiếm nhị phân tự cân bằng được dùng để cài đặt hàng đợi ưu tiên hai đầu (doubly ended priority queue). Với một Binary Heap, ta có thể triển khai hàng đợi ưu tiên hỗ trợ extract Min() hoặc extract Max(). Nếu muốn hỗ trợ cả hai thao tác này, ta sử dụng cây tìm kiếm nhị phân tự cân bằng để thực hiện cả hai trong thời gian O(log n).)\n[L0090] There are many more algorithm problems where a Self-Balancing BST is the best suited data structure, like count smaller elements on right, Smallest Greater Element on Right Side, etc. (Có rất nhiều bài toán thuật toán mà BST tự cân bằng là cấu trúc dữ liệu phù hợp nhất, chẳng hạn như đếm số phần tử nhỏ hơn ở bên phải (count smaller elements on right), tìm phần tử lớn hơn nhỏ nhất ở bên phải (Smallest Greater Element on Right Side), v.v.)\n[L0091] A BST can be used to sort a large dataset. By inserting the elements of the dataset into a BST and then performing an in-order traversal, the elements will be returned in sorted order. When compared to normal sorting algorithms, the advantage here is, we can later insert / delete items in O(Log n) time. (Một BST có thể được dùng để sắp xếp một tập dữ liệu lớn. Bằng cách chèn các phần tử của tập dữ liệu vào BST và sau đó thực hiện duyệt theo thứ tự giữa (in-order traversal), ta sẽ nhận được các phần tử theo thứ tự sắp xếp. So với các thuật toán sắp xếp thông thường, lợi thế ở đây là ta có thể tiếp tục chèn/xóa phần tử sau đó trong thời gian O(log n).)\n[L0092] Variations of BST like B Tree and B+ Tree are used in Database indexing. (Các biến thể của BST như cây B và cây B+ được sử dụng trong việc đánh chỉ mục cơ sở dữ liệu.)\n[L0093] TreeMap and TreeSet in Java, and set and map in C++ are internally implemented using self-balancing BSTs, more formally a Red-Black Tree. (TreeMap và TreeSet trong Java, cũng như set và map trong C++ được triển khai nội bộ bằng các BST tự cân bằng, cụ thể hơn là cây Đỏ-Đen (Red-Black Tree).)\n[L0094] AVL Tree (Self-Balancing BST)\n[L0095] ## [H1] AVL Tree Data Structure\n[L0096] An AVL tree is defined as a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees for any node cannot be more than one. (Cây AVL được định nghĩa là một cây tìm kiếm nhị phân tự cân bằng (BST), trong đó độ chênh lệch chiều cao giữa cây con trái và cây con phải của bất kỳ nút nào không được vượt quá một.)\n[L0097] Balance Factor = left subtree height - right subtree height (Hệ số cân bằng (Balance Factor) = chiều cao cây con trái – chiều cao cây con phải)\n[L0098] For a Balanced Tree (for every node): -1 ≤ Balance Factor ≤ 1 (Đối với một cây cân bằng (với mọi nút): -1 ≤ Hệ số cân bằng ≤ 1)\n[L0099] ## [H3] Example of an AVL Tree:\n[L0100] The balance factors for different nodes are: 12 : +1, 8 : +1, 18 : +1, 5 : +1, 11 : 0, 17 : 0 and 4 : 0. Since all differences lie between -1 to +1, the tree is an AVL tree. (Các hệ số cân bằng (balance factor) cho các nút khác nhau là: 12 : +1, 8 : +1, 18 : +1, 5 : +1, 11 : 0, 17 : 0 và 4 : 0. Vì tất cả các giá trị chênh lệch đều nằm trong khoảng từ -1 đến +1, nên cây này là một cây AVL.)",
       "slide_comment": "",
@@ -11930,7 +11948,8 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0056-L0070)",
       "theory_excerpt": "[L0056] A dynamic size stack can grow and shrink automatically as needed. (Một stack có kích thước động có thể tự động mở rộng hoặc thu hẹp khi cần.)\n[L0057] If the stack is full, its capacity expands to allow more elements. (Nếu stack đầy, dung lượng của nó sẽ được mở rộng để cho phép thêm nhiều phần tử hơn.)\n[L0058] As elements are removed, memory usage can shrink as well. (Khi các phần tử bị loại bỏ, việc sử dụng bộ nhớ cũng có thể thu hẹp lại.\n[L0059] Can be implemented using: (Có thể được cài đặt bằng:)\n[L0060] → Linked List → grows/shrinks naturally. (→ Danh sách liên kết (Linked List) → tự nhiên mở rộng/thu hẹp.)\n[L0061] → Dynamic Array (like vector in C++ or ArrayList in Java) → resizes automatically. (→ Mảng động (như vector trong C++ hoặc ArrayList trong Java) → tự động thay đổi kích thước.)\n[L0062] Example: Stack implementation using linked list or resizable array. (Ví dụ: Cài đặt stack bằng danh sách liên kết hoặc mảng có thể thay đổi kích thước.)\n[L0063] Note: We generally use dynamic stacks in practice, as they can grow or shrink as needed without overflow issues. (Lưu ý: Trong thực tế, chúng ta thường sử dụng stack động, vì chúng có thể mở rộng hoặc thu hẹp khi cần thiết mà không gặp vấn đề tràn (overflow).)\n[L0064] ## [H2] Common Operations on Stack:\n[L0065] In order to make manipulations in a stack, there are certain operations provided to us. (Để thao tác với một stack, chúng ta được cung cấp một số phép toán cơ bản.)\n[L0066] push() to insert an element into the stack. (push() để chèn một phần tử vào stack.)\n[L0067] pop() to remove an element from the stack. (pop() để loại bỏ một phần tử khỏi stack.)\n[L0068] top() Returns the top element of the stack. (top() trả về phần tử trên cùng của stack.)\n[L0069] isEmpty() returns true if stack is empty else false. (isEmpty() trả về true nếu stack rỗng, ngược lại trả về false.)\n[L0070] size() returns the size of the stack. (size() trả về số lượng phần tử hiện có trong stack.)",
       "slide_comment": "Hai thao tác nào được hỗ trợ bởi cấu trúc dữ liệu ngăn xếp (stack)? Chọn 2 đáp án đúng. B. push và D. pop. push dùng để thêm phần tử vào đỉnh ngăn xếp, còn pop dùng để lấy và xóa phần tử ở đỉnh theo nguyên tắc LIFO – vào sau, ra trước.",
-      "question_translation": "Hai thao tác nào được ngăn xếp (Stack) hỗ trợ? Chọn 2 câu trả lời đúng."
+      "question_translation": "Hai thao tác nào được ngăn xếp (Stack) hỗ trợ? Chọn 2 câu trả lời đúng.",
+      "is_multi": true
     },
     {
       "id": 326,
@@ -12443,12 +12462,12 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/CSD203/slide_362.png",
       "missing_image": false,
-      "question_text": "Cho hàm băm h(key) = key mod 6. Sử dụng phương pháp dò tuyến tính để chèn các khóa 1, 6, 11, 17 vào bảng có kích thước 6. Khóa 12 sẽ được đặt ở vị trí nào nếu được chèn tiếp theo?",
+      "question_text": "A hash function h defined h(key) = key mod 6, linear probing is used to insert the keys 1, 6, 11, 17 into a table with size = 6. What will the location of key 12 be?",
       "type": "single",
       "options": [
         {
           "key": "A",
-          "text": "hash function h defined h(key) =key mod 6, linear probing is used to insert the keys 1, 6, 11, 17 into a table with size = 6. What will the location of key 12 be?"
+          "text": "0"
         },
         {
           "key": "B",
@@ -12464,13 +12483,13 @@ window.QUIZ_DATA = {
         }
       ],
       "answers": [
-        "C"
+        "D"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: 2)\n\n📝 Dịch đề:\nCho hàm băm h(key) = key mod 6. Sử dụng phương pháp dò tuyến tính để chèn các khóa 1, 6, 11, 17 vào bảng có kích thước 6. Khóa 12 sẽ được đặt ở vị trí nào nếu được chèn tiếp theo?\n\n📋 Dịch đáp án:\n- C: 2\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên lý Cấu trúc Dữ liệu và Giải thuật, đáp án '2' phản ánh chính xác cấu trúc dữ liệu, cơ chế thực thi và các quy tắc thuật toán chuẩn.\n\n💡 Mẹo nhớ: 2",
+      "explanation": "🎯 Đáp án đúng: D (D: 3)\n\n📝 Dịch đề:\nCho hàm băm h(key) = key mod 6. Sử dụng phương pháp dò tuyến tính (linear probing) để chèn lần lượt các khóa 1, 6, 11, 17 vào bảng băm có kích thước 6. Khóa 12 sẽ được đặt ở vị trí nào nếu được chèn tiếp theo?\n\n📋 Dịch đáp án:\n- A: 0\n- B: 1\n- C: 2\n- D: 3\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nBảng băm có kích thước $M = 6$ với các chỉ số từ 0 đến 5.\n1. Chèn khóa 1: $h(1) = 1 \\pmod 6 = 1$. Vị trí 1 trống → `T[1] = 1`.\n2. Chèn khóa 6: $h(6) = 6 \\pmod 6 = 0$. Vị trí 0 trống → `T[0] = 6`.\n3. Chèn khóa 11: $h(11) = 11 \\pmod 6 = 5$. Vị trí 5 trống → `T[5] = 11`.\n4. Chèn khóa 17: $h(17) = 17 \\pmod 6 = 5$. Vị trí 5 đã bị chiếm bởi 11 (xung đột):\n   - Dò tuyến tính: $(5 + 1) \\pmod 6 = 0$ (đã chiếm bởi 6)\n   - $(5 + 2) \\pmod 6 = 1$ (đã chiếm bởi 1)\n   - $(5 + 3) \\pmod 6 = 2$ (trống) → `T[2] = 17`.\n5. Tiếp tục chèn khóa 12: $h(12) = 12 \\pmod 6 = 0$. Vị trí 0 đã bị chiếm bởi 6 (xung đột):\n   - Dò tuyến tính: $(0 + 1) \\pmod 6 = 1$ (đã chiếm bởi 1)\n   - $(0 + 2) \\pmod 6 = 2$ (đã chiếm bởi 17)\n   - $(0 + 3) \\pmod 6 = 3$ (trống) → `T[3] = 12`.\nDo đó, khóa 12 được đặt tại vị trí 3 (Đáp án D).\n\n💡 Mẹo nhớ: h(12)=0 bị đụng tại 0(chứa 6), 1(chứa 1), 2(chứa 17) -> trôi vào ô số 3.",
       "theory_citation": "[1] SEMESTER_3_CSD203_Theory.mhtml - CSD203 Theory Reference (L0078-L0092)",
       "theory_excerpt": "[L0078] Hierarchical Structure: A BST is composed of nodes, each having up to two children, forming a tree-like hierarchy with a single root node at the top. (Cấu trúc phân cấp: Một cây tìm kiếm nhị phân (BST) được tạo thành từ các nút, mỗi nút có tối đa hai nút con, tạo thành một cấu trúc phân cấp giống cây với một nút gốc duy nhất ở trên cùng.)\n[L0079] Ordering Property: For every node in the BST, all values in the left subtree are smaller, and all values in the right subtree are greater. (Thuộc tính sắp xếp: Với mỗi nút trong BST, tất cả các giá trị trong cây con bên trái đều nhỏ hơn, và tất cả các giá trị trong cây con bên phải đều lớn hơn.)\n[L0080] Efficient Operations: In a balanced BST, operations like search, insertion, and deletion can be performed in O(log n) time. In the worst-case (unbalanced), these degrade to O(n). With self-balancing BSTs like AVL and Red Black Trees, we can ensure the worst case as O(Log n). (Thao tác hiệu quả: Trong một BST cân bằng, các thao tác như tìm kiếm, chèn và xóa có thể được thực hiện trong thời gian O(log n). Trong trường hợp xấu nhất (cây mất cân bằng), chúng suy giảm xuống O(n). Với các BST tự cân bằng như cây AVL và cây Đỏ-Đen, ta có thể đảm bảo trường hợp xấu nhất vẫn là O(log n).)\n[L0081] Recursive Nature: Each left or right subtree of a node in a BST is itself a BST, allowing recursive algorithms to naturally process the tree. (Tính chất đệ quy: Mỗi cây con bên trái hoặc bên phải của một nút trong BST cũng chính là một BST, cho phép các thuật toán đệ quy xử lý cây một cách tự nhiên.)\n[L0082] Practical Applications: BSTs are widely used in database indexing, symbol tables, range queries, and are foundational for advanced structures like AVL trees, Red-Black trees. In problem solving, BSTs are used in problems where we need to maintain a sorted stream of data. (Ứng dụng thực tế: BST được sử dụng rộng rãi trong việc đánh chỉ mục cơ sở dữ liệu, bảng ký hiệu, truy vấn theo khoảng và là nền tảng cho các cấu trúc nâng cao như cây AVL, cây Đỏ-Đen. Trong giải quyết bài toán, BST được áp dụng khi cần duy trì một luồng dữ liệu đã được sắp xếp.)\n[L0083] Binary Search Tree (BST) is a data structure that is commonly used to implement efficient searching, insertion, and deletion operations along with maintaining a sorted sequence of data. Please remember the following properties of BSTs before moving forward. (Cây tìm kiếm nhị phân (BST) là một cấu trúc dữ liệu thường được sử dụng để triển khai các thao tác tìm kiếm, chèn và xóa hiệu quả, đồng thời duy trì một dãy dữ liệu có thứ tự. Hãy ghi nhớ các thuộc tính sau của BST trước khi tiếp tục.)\n[L0084] The left subtree of a node contains only nodes with keys lesser than the node's key. (Cây con bên trái của một nút chỉ chứa các nút có khóa nhỏ hơn khóa của nút đó.)\n[L0085] The right subtree of a node contains only nodes with keys greater than the node's key. (Cây con bên phải của một nút chỉ chứa các nút có khóa lớn hơn khóa của nút đó.)\n[L0086] The left and right subtree each must also be a binary search tree. There must be no duplicate nodes. (Mỗi cây con trái và phải cũng phải là một cây tìm kiếm nhị phân. Không được phép có các nút trùng lặp.)\n[L0087] A BST supports operations like search, insert, delete, maximum, minimum, floor, ceil, greater, smaller, etc in O(h) time where h is the height of the BST. To keep height less, self balancing BSTs (like AVL and Red Black Trees) are used in practice. These Self-Balancing BSTs maintain the height as O(Log n). Therefore all of the above mentioned operations become O(Log n). Together with these, BST also allows sorted order traversal of data in O(n) time. (Một BST hỗ trợ các thao tác như tìm kiếm, chèn, xóa, tìm giá trị lớn nhất, nhỏ nhất, floor, ceil, lớn hơn, nhỏ hơn, v.v. trong thời gian O(h), trong đó h là chiều cao của cây. Để giữ cho chiều cao nhỏ, trong thực tế người ta sử dụng BST tự cân bằng (như cây AVL và cây Đỏ-Đen). Các BST tự cân bằng này duy trì chiều cao là O(log n). Do đó, tất cả các thao tác kể trên đều trở thành O(log n). Ngoài ra, BST còn cho phép duyệt dữ liệu theo thứ tự sắp xếp trong thời gian O(n).)\n[L0088] A Self-Balancing Binary Search Tree is used to maintain a sorted stream of data. For example, suppose we are getting online orders placed and we want to maintain the live data (in RAM) in sorted order of prices. For example, we wish to know the number of items purchased at cost below a given cost at any moment. Or we wish to know the number of items purchased at a higher cost than the given cost. (Một cây tìm kiếm nhị phân tự cân bằng được dùng để duy trì một luồng dữ liệu được sắp xếp. Ví dụ, giả sử chúng ta nhận các đơn hàng trực tuyến và muốn duy trì dữ liệu trực tiếp (trong RAM) theo thứ tự giá. Chẳng hạn, ta muốn biết số lượng mặt hàng được mua với giá thấp hơn một giá trị nhất định tại một thời điểm nào đó, hoặc muốn biết số lượng mặt hàng được mua với giá cao hơn giá trị đó.)\n[L0089] A Self-Balancing Binary Search Tree is used to implement a doubly ended priority queue. With a Binary Heap, we can either implement a priority queue with support of extractMin() or with extractMax(). If we wish to support both the operations, we use a Self-Balancing Binary Search Tree to do both in O(Log n). (Một cây tìm kiếm nhị phân tự cân bằng được dùng để cài đặt hàng đợi ưu tiên hai đầu (doubly ended priority queue). Với một Binary Heap, ta có thể triển khai hàng đợi ưu tiên hỗ trợ extract Min() hoặc extract Max(). Nếu muốn hỗ trợ cả hai thao tác này, ta sử dụng cây tìm kiếm nhị phân tự cân bằng để thực hiện cả hai trong thời gian O(log n).)\n[L0090] There are many more algorithm problems where a Self-Balancing BST is the best suited data structure, like count smaller elements on right, Smallest Greater Element on Right Side, etc. (Có rất nhiều bài toán thuật toán mà BST tự cân bằng là cấu trúc dữ liệu phù hợp nhất, chẳng hạn như đếm số phần tử nhỏ hơn ở bên phải (count smaller elements on right), tìm phần tử lớn hơn nhỏ nhất ở bên phải (Smallest Greater Element on Right Side), v.v.)\n[L0091] A BST can be used to sort a large dataset. By inserting the elements of the dataset into a BST and then performing an in-order traversal, the elements will be returned in sorted order. When compared to normal sorting algorithms, the advantage here is, we can later insert / delete items in O(Log n) time. (Một BST có thể được dùng để sắp xếp một tập dữ liệu lớn. Bằng cách chèn các phần tử của tập dữ liệu vào BST và sau đó thực hiện duyệt theo thứ tự giữa (in-order traversal), ta sẽ nhận được các phần tử theo thứ tự sắp xếp. So với các thuật toán sắp xếp thông thường, lợi thế ở đây là ta có thể tiếp tục chèn/xóa phần tử sau đó trong thời gian O(log n).)\n[L0092] Variations of BST like B Tree and B+ Tree are used in Database indexing. (Các biến thể của BST như cây B và cây B+ được sử dụng trong việc đánh chỉ mục cơ sở dữ liệu.)",
       "slide_comment": "Cho hàm băm h(key) = key mod 6. Sử dụng phương pháp dò tuyến tính để chèn các khóa 1, 6, 11, 17 vào bảng có kích thước 6. Khóa 12 sẽ được đặt ở vị trí nào nếu được chèn tiếp theo? D. Vị trí 3. Sau khi chèn, các vị trí 0, 1, 2 và 5 đã bị chiếm. Khóa 12 có 12 mod 6 = 0, nên dò lần lượt từ vị trí 0 đến vị trí trống đầu tiên là 3.",
-      "question_translation": "Cho hàm băm h(key) = key mod 6. Sử dụng phương pháp dò tuyến tính để chèn các khóa 1, 6, 11, 17 vào bảng có kích thước 6. Khóa 12 sẽ được đặt ở vị trí nào nếu được chèn tiếp theo?"
+      "question_translation": "Cho hàm băm h(key) = key mod 6. Sử dụng phương pháp dò tuyến tính (linear probing) để chèn lần lượt các khóa 1, 6, 11, 17 vào bảng băm có kích thước 6. Khóa 12 sẽ được đặt ở vị trí nào nếu được chèn tiếp theo?"
     },
     {
       "id": 341,
@@ -13668,7 +13687,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "To traverse a graph Nodes: These are the fundamental entities in a tree, storing data. Edges: These are the links that connect nodes, establishing relationships (parent-child, etc.). Hierarchical Structure: What distinguishes a tree from a general graph (which is also a set of nodes and edges) is its specific hierarchical, acyclic (no loops), and connected nature, with a single root node. However, option B provides the most fundamental building blocks that define a tree as a connected structure."
+          "text": "To traverse a graph"
         }
       ],
       "answers": [
@@ -14971,7 +14990,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "It chooses the edge with the maximum weight that connects a vertex in the tree to a vertex not yet in the tree. Đáp án đúng:"
+          "text": "It chooses the edge with the maximum weight that connects a vertex in the tree to a vertex not yet in the tree."
         }
       ],
       "answers": [
@@ -15417,7 +15436,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "Overflow Underflow: This term specifically refers to the condition where an attempt is made to pop (remove) an element from an empty stack. Overflow: This is the opposite condition, occurring when an attempt is made to push (add) an element to a stack that is already full. Empty collection: While the stack is an empty collection, this term doesn't describe the action of trying to remove from it. Garbage collection: This is a process of automatically reclaiming memory that is no longer in use, and it's unrelated to stack operations."
+          "text": "Overflow"
         }
       ],
       "answers": [
