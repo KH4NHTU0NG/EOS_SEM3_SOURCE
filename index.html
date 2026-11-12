@@ -233,9 +233,14 @@
             Prev Question
           </button>
         </div>
-        <button onclick="skipCurrentQuestion()" title="Phím tắt: S" class="w-full eos-btn py-1.5 px-2 text-xs font-bold text-amber-950 bg-amber-100 hover:bg-amber-200 border-amber-400 rounded-sm flex items-center justify-center gap-1.5 shadow-sm">
-          <span>⏭</span> Skip (Hiện đáp án &amp; giải thích)
-        </button>
+        <div class="grid grid-cols-2 gap-1.5">
+          <button onclick="skipCurrentQuestion()" title="Bỏ qua câu hiện tại để xem đáp án (Phím tắt: S)" class="w-full eos-btn py-1.5 px-1.5 text-xs font-bold text-amber-950 bg-amber-100 hover:bg-amber-200 border-amber-400 rounded-sm flex items-center justify-center gap-1 shadow-sm">
+            <span>⏭</span> Skip câu này (S)
+          </button>
+          <button onclick="skipAllQuestionsConfirm()" title="Bỏ qua tất cả các câu chưa làm để xem kết quả &amp; giải thích toàn bộ đề (Phím tắt: Shift + S)" class="w-full eos-btn py-1.5 px-1.5 text-xs font-bold text-orange-950 bg-orange-100 hover:bg-orange-200 border-orange-400 rounded-sm flex items-center justify-center gap-1 shadow-sm">
+            <span>⏭⏭</span> Skip All (Xem KQ)
+          </button>
+        </div>
         <div class="grid grid-cols-2 gap-1.5">
           <button onclick="toggleCurrentBookmark()" id="btnBookmark" title="Phím tắt: F" class="eos-btn py-1 px-2 text-[11px] rounded-sm">
             ★ Đánh dấu (F)
@@ -264,7 +269,13 @@
             <span>☆</span> <span>Đánh dấu (F)</span>
           </button>
           <button onclick="skipCurrentQuestion()" title="Phím tắt: S" class="eos-btn px-2.5 py-0.5 text-xs font-bold text-amber-950 bg-amber-100 hover:bg-amber-200 border-amber-400 flex items-center gap-1 shadow-sm">
-            <span>⏭</span> Skip (Hiện đáp án)
+            <span>⏭</span> <span>Skip (S)</span>
+          </button>
+          <button onclick="skipAllQuestionsConfirm()" title="Bỏ qua tất cả các câu chưa làm để xem ngay kết quả &amp; toàn bộ giải thích (Phím tắt: Shift + S)" class="eos-btn px-2.5 py-0.5 text-xs font-bold text-orange-950 bg-orange-100 hover:bg-orange-200 border-orange-400 flex items-center gap-1 shadow-sm">
+            <span>⏭⏭</span> <span>Skip All (Xem KQ)</span>
+          </button>
+          <button onclick="openResultSummaryModal(false)" title="Xem bảng tổng kết điểm số &amp; tiến độ làm bài" class="eos-btn px-2.5 py-0.5 text-xs font-bold text-[#0000CC] hover:bg-blue-50 border-blue-400 flex items-center gap-1">
+            <span>📊</span> <span>Kết Quả</span>
           </button>
           <button onclick="toggleExplanationManual()" class="eos-btn px-2.5 py-0.5 text-xs text-amber-900">
             💡 Xem Giải Thích (H)
@@ -396,6 +407,16 @@
         </select>
       </div>
 
+      <!-- Quick Actions for Status Board: View Result & Skip All -->
+      <div class="grid grid-cols-2 gap-1 text-xs">
+        <button onclick="openResultSummaryModal(false)" class="eos-btn py-1 font-bold text-[#003399] flex items-center justify-center gap-1 shadow-xs" title="Xem bảng tổng kết kết quả &amp; điểm số">
+          <span>📊</span> Xem Kết Quả
+        </button>
+        <button onclick="skipAllQuestionsConfirm()" class="eos-btn py-1 font-bold text-orange-950 bg-orange-100 hover:bg-orange-200 border-orange-400 flex items-center justify-center gap-1 shadow-xs" title="Bỏ qua tất cả các câu chưa làm để xem kết quả &amp; giải thích toàn bộ đề (Shift + S)">
+          <span>⏭⏭</span> Skip All
+        </button>
+      </div>
+
       <!-- Grid of Question Boxes (1..N) -->
       <div id="desktopStatusGrid" class="eos-inset p-2 grid grid-cols-5 gap-1.5 overflow-y-auto flex-grow content-start max-h-[380px] lg:max-h-none">
         <!-- Populated by JS -->
@@ -473,9 +494,15 @@
         <button onclick="setFilterMode('bookmarked'); toggleMobileBoardModal();" id="mTabModeBookmarked" class="eos-btn py-1 text-center text-amber-900 font-bold">★ Dấu</button>
       </div>
       <div id="mobileStatusGrid" class="eos-inset p-2 grid grid-cols-6 gap-1.5 overflow-y-auto flex-grow content-start"></div>
-      <div class="flex justify-between items-center pt-1 border-t border-gray-300 text-xs">
-        <button onclick="exportProgressJSON()" class="eos-btn px-2.5 py-1">⬇ Lưu tiến độ</button>
-        <button onclick="resetSubjectProgressConfirm()" class="eos-btn px-2.5 py-1 text-red-700">Xóa lịch sử môn này</button>
+      <div class="flex flex-wrap justify-between items-center gap-1.5 pt-1.5 border-t border-gray-300 text-xs">
+        <div class="flex items-center gap-1">
+          <button onclick="openResultSummaryModal(false); toggleMobileBoardModal();" class="eos-btn px-2 py-1 font-bold text-[#0000CC]">📊 Xem KQ</button>
+          <button onclick="skipAllQuestionsConfirm(); toggleMobileBoardModal();" class="eos-btn px-2 py-1 font-bold text-orange-950 bg-orange-100 border-orange-400">⏭⏭ Skip All</button>
+        </div>
+        <div class="flex items-center gap-1">
+          <button onclick="exportProgressJSON()" class="eos-btn px-2 py-1">⬇ Lưu</button>
+          <button onclick="resetSubjectProgressConfirm()" class="eos-btn px-2 py-1 text-red-700">Xóa</button>
+        </div>
       </div>
     </div>
   </div>
@@ -511,28 +538,52 @@
 
   <!-- 4. EOS FINISH / SCORE SUMMARY POPUP -->
   <div id="examResultModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/60 p-4">
-    <div class="eos-panel w-full max-w-sm p-4 flex flex-col gap-3 shadow-2xl border-2 border-[#003399]">
+    <div class="eos-panel w-full max-w-md p-4 flex flex-col gap-3 shadow-2xl border-2 border-[#003399]">
       <div class="bg-[#003399] text-white font-bold px-2.5 py-1 text-xs flex justify-between items-center -m-4 mb-1">
-        <span>EOS Exam Result Summary</span>
-        <button onclick="closeExamResultModal()" class="text-white font-bold">✕</button>
+        <span id="examResultModalTitle">BẢNG TỔNG KẾT KẾT QUẢ</span>
+        <button onclick="closeExamResultModal()" class="text-white font-bold hover:text-amber-200">✕</button>
       </div>
-      <div id="examResultSub" class="eos-blue text-center text-sm pt-2">Môn CSD203</div>
-      <div class="eos-inset p-3 grid grid-cols-3 gap-2 text-center text-xs">
-        <div>Đã làm đúng<div id="examResultCorrect" class="text-lg font-bold text-emerald-700 font-mono">0</div></div>
-        <div>Đã làm sai<div id="examResultWrong" class="text-lg font-bold text-rose-700 font-mono">0</div></div>
-        <div>Điểm (Hệ 10)<div id="examResultScore" class="text-lg font-bold text-[#0000CC] font-mono">0.0</div></div>
+      <div id="examResultSub" class="eos-blue text-center text-sm pt-2 font-bold">Môn CSD203</div>
+      
+      <div class="eos-inset p-3 grid grid-cols-4 gap-2 text-center text-xs">
+        <div class="bg-emerald-50 border border-emerald-400 p-2 rounded">
+          <span class="text-emerald-900 font-bold block mb-1">✓ Làm đúng</span>
+          <div id="examResultCorrect" class="text-xl font-bold text-emerald-700 font-mono">0</div>
+        </div>
+        <div class="bg-rose-50 border border-rose-400 p-2 rounded">
+          <span class="text-rose-900 font-bold block mb-1">✗ Làm sai</span>
+          <div id="examResultWrong" class="text-xl font-bold text-rose-700 font-mono">0</div>
+        </div>
+        <div class="bg-amber-50 border border-amber-400 p-2 rounded">
+          <span class="text-amber-900 font-bold block mb-1">⏭ Đã Skip</span>
+          <div id="examResultSkipped" class="text-xl font-bold text-amber-700 font-mono">0</div>
+        </div>
+        <div class="bg-blue-50 border border-blue-400 p-2 rounded">
+          <span class="text-blue-900 font-bold block mb-1">🎯 Điểm số</span>
+          <div id="examResultScore" class="text-base font-black text-[#0000CC] font-mono leading-tight mt-1">0.0/10</div>
+        </div>
       </div>
-      <div class="flex gap-2 justify-end">
-        <button onclick="closeExamResultModal()" class="eos-btn px-4 py-1.5 text-xs">Xem lại bài &amp; Giải thích</button>
+
+      <div id="examResultNote" class="text-xs text-gray-800 bg-white p-2.5 rounded border border-gray-300 text-center leading-relaxed">
+        <!-- Dynamic message -->
+      </div>
+
+      <div class="flex flex-wrap gap-2 justify-end pt-1 border-t border-gray-300">
+        <button onclick="resetSubjectProgressConfirm(); closeExamResultModal();" class="eos-btn px-3 py-1.5 text-xs text-rose-700 hover:bg-rose-50 border-rose-300">
+          ↺ Làm lại môn này
+        </button>
+        <button onclick="closeExamResultModal()" class="eos-btn px-4 py-1.5 text-xs font-bold text-[#0000CC] bg-blue-50 hover:bg-blue-100 border-blue-500">
+          🔍 Xem lại bài &amp; Giải thích chi tiết
+        </button>
       </div>
     </div>
   </div>
 
   <!-- DATA SCRIPTS (Works both inside semester3-quiz-hub/ and directly on Desktop/) -->
-  <script src="data/quiz_data.js?v=20261112_1545"></script>
-  <script src="data/theory_data.js?v=20261112_1545"></script>
-  <script src="semester3-quiz-hub/data/quiz_data.js?v=20261112_1545"></script>
-  <script src="semester3-quiz-hub/data/theory_data.js?v=20261112_1545"></script>
+  <script src="data/quiz_data.js?v=20261112_1715"></script>
+  <script src="data/theory_data.js?v=20261112_1715"></script>
+  <script src="semester3-quiz-hub/data/quiz_data.js?v=20261112_1715"></script>
+  <script src="semester3-quiz-hub/data/theory_data.js?v=20261112_1715"></script>
 
   <script>
     function resolveImagePath(imgPath) {
@@ -743,6 +794,61 @@
       document.getElementById('btnFinishExam').disabled = !checked;
     }
 
+    function openResultSummaryModal(isFromSkipAll = false) {
+      const subj = appState.currentSubject;
+      const subjState = appState.subjects[subj];
+      const baseList = getSubjectQuestions(subj).filter(q => appState.showMissingSlides || !q.missing_image);
+
+      let correct = 0, wrong = 0, skipped = 0, todo = 0;
+      baseList.forEach(q => {
+        const rec = subjState.answered[q.id];
+        if (!rec) {
+          todo++;
+        } else if (rec.isSkipped) {
+          skipped++;
+        } else if (rec.isCorrect) {
+          correct++;
+        } else {
+          wrong++;
+        }
+      });
+
+      const total = baseList.length;
+      // Score only credits user-answered questions that are correct (not skipped)
+      const score = total > 0 ? ((correct / total) * 10).toFixed(2) : '0.00';
+      const pct = total > 0 ? ((correct / total) * 100).toFixed(1) : '0.0';
+
+      const titleEl = document.getElementById('examResultModalTitle');
+      if (titleEl) {
+        titleEl.textContent = isFromSkipAll
+          ? 'BẢNG KẾT QUẢ TỔNG QUAN (SKIP ALL TOÀN BỘ)'
+          : (appState.mode === 'exam' ? 'EOS EXAM RESULT SUMMARY' : 'BẢNG TỔNG KẾT KẾT QUẢ & TIẾN ĐỘ');
+      }
+
+      document.getElementById('examResultSub').textContent = `Môn ${subj} — Tổng số ${total} câu hỏi`;
+      document.getElementById('examResultCorrect').textContent = correct;
+      document.getElementById('examResultWrong').textContent = wrong;
+      const elSkipped = document.getElementById('examResultSkipped');
+      if (elSkipped) elSkipped.textContent = skipped;
+      const elScore = document.getElementById('examResultScore');
+      if (elScore) elScore.textContent = `${score}/10 (${pct}%)`;
+
+      const elNote = document.getElementById('examResultNote');
+      if (elNote) {
+        if (isFromSkipAll) {
+          elNote.innerHTML = `🎉 <strong>Đã mở khóa toàn bộ đáp án &amp; giải thích cho ${total} câu hỏi!</strong><br/>` +
+            `Số câu bạn tự làm: <strong>${correct + wrong}</strong> (Đúng: ${correct}, Sai: ${wrong}) | Đã Skip: <strong>${skipped}</strong>.<br/>` +
+            `<span class="text-emerald-800 font-semibold mt-1 inline-block">Bấm nút bên dưới để xem lại từng câu hỏi kèm lời giải chi tiết và mẹo ghi nhớ!</span>`;
+        } else {
+          elNote.innerHTML = `Tiến độ làm bài: <strong>${correct + wrong + skipped}/${total}</strong> câu (Còn lại: ${todo} câu).<br/>` +
+            `Điểm số được tính trên những câu bạn tự suy nghĩ và trả lời đúng.`;
+        }
+      }
+
+      document.getElementById('examResultModal').classList.remove('hidden');
+      renderAll();
+    }
+
     function onFinishExamClick() {
       const subj = appState.currentSubject;
       const subjState = appState.subjects[subj];
@@ -762,21 +868,7 @@
         saveState();
       }
 
-      let correct = 0, wrong = 0;
-      baseList.forEach(q => {
-        const rec = subjState.answered[q.id];
-        if (rec) {
-          if (rec.isCorrect) correct++;
-          else wrong++;
-        }
-      });
-      const score = baseList.length > 0 ? ((correct / baseList.length) * 10).toFixed(2) : '0.00';
-      document.getElementById('examResultSub').textContent = `Môn ${subj} — Đã làm ${correct + wrong}/${baseList.length} câu`;
-      document.getElementById('examResultCorrect').textContent = correct;
-      document.getElementById('examResultWrong').textContent = wrong;
-      document.getElementById('examResultScore').textContent = score;
-      document.getElementById('examResultModal').classList.remove('hidden');
-      renderAll();
+      openResultSummaryModal(false);
     }
 
     function closeExamResultModal() {
@@ -784,6 +876,63 @@
       appState.mode = 'study';
       updateModeButtonsUI();
       renderAll();
+      const expContainer = document.getElementById('explanationContainer');
+      if (expContainer) {
+        expContainer.classList.remove('hidden');
+        expContainer.classList.add('flex');
+      }
+    }
+
+    function skipAllQuestionsConfirm() {
+      const subj = appState.currentSubject;
+      const subjState = appState.subjects[subj];
+      const baseList = getSubjectQuestions(subj).filter(q => appState.showMissingSlides || !q.missing_image);
+
+      let unansweredCount = 0;
+      baseList.forEach(q => {
+        if (!subjState.answered[q.id]) {
+          unansweredCount++;
+        }
+      });
+
+      const confirmMsg = unansweredCount === 0
+        ? `Tất cả ${baseList.length} câu hỏi trong môn ${subj} đều đã được làm hoặc skip.\n\nBấm OK để mở bảng xem kết quả tổng quan!`
+        : `⏭⏭ XÁC NHẬN BỎ QUA TẤT CẢ (SKIP ALL):\n\nBạn có chắc muốn bỏ qua tất cả ${unansweredCount} câu hỏi chưa làm trong môn ${subj} để mở toàn bộ đáp án, giải thích chi tiết và xem bảng kết quả ngay lập tức không?`;
+
+      if (!confirm(confirmMsg)) return;
+
+      if (appState.mode === 'exam') {
+        examRevealed = true;
+        baseList.forEach(q => {
+          if (examDraftAnswers[q.id] && examDraftAnswers[q.id].length > 0) {
+            const sel = examDraftAnswers[q.id];
+            subjState.answered[q.id] = {
+              selected: sel,
+              isCorrect: arraysEqualIgnoreOrder(sel, q.answers)
+            };
+          }
+        });
+        appState.mode = 'study';
+        document.getElementById('modeSelect').value = 'study';
+        updateModeButtonsUI();
+      }
+
+      // Skip all remaining unanswered questions
+      baseList.forEach(q => {
+        if (!subjState.answered[q.id]) {
+          subjState.answered[q.id] = {
+            selected: [...q.answers],
+            isCorrect: true,
+            isSkipped: true
+          };
+        }
+      });
+
+      tempMultiSelection.clear();
+      saveState();
+      renderAll();
+
+      openResultSummaryModal(true);
     }
 
     function getSubjectQuestions(subj) {
@@ -1872,6 +2021,7 @@
       const key = e.key.toUpperCase();
       if (e.key === 'ArrowLeft') { e.preventDefault(); navigatePrev(); }
       else if (e.key === 'ArrowRight') { e.preventDefault(); navigateNext(); }
+      else if (key === 'S' && e.shiftKey) { e.preventDefault(); skipAllQuestionsConfirm(); }
       else if (key === 'S') { e.preventDefault(); skipCurrentQuestion(); }
       else if (key === 'H') { e.preventDefault(); toggleExplanationManual(); }
       else if (key === 'T') { e.preventDefault(); openTheoryModal(); }
