@@ -1363,7 +1363,7 @@
     "section": "Chọn 1 Đáp Án (Single Choice)",
     "image": "images/NWC303/slide_041.png",
     "missing_image": false,
-    "question_text": "What command, or set of commands, would be used to determine if the following configuration on router HQ works as designed?\nip route 0.0.0.0 0.0.0.0 serial 0/0/0 10\nip route 0.0.0.0 0.0.0.0 serial 0/1/0",
+    "question_text": "What command, or set of commands, would be used to determine if the following configuration on router HQ works as designed?\n\n```text\nip route 0.0.0.0 0.0.0.0 serial 0/0/0 10\nip route 0.0.0.0 0.0.0.0 serial 0/1/0\n```",
     "type": "single",
     "options": [
       {
@@ -1394,7 +1394,7 @@
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - Module 15. IP Static Routing - 4.2. Configure and Test Floating Static Routes (L3014-L3022)",
     "theory_excerpt": "[L3014] 4.2. Configure and Test Floating Static Routes:\n[L3015] - The commands to configure primary default routes alongside their corresponding floating static routes (by appending the administrative distance) are as follows:\n[L3016] (Các lệnh để cấu hình các tuyến mặc định chính cùng với các tuyến tĩnh nổi tương ứng của chúng (bằng cách thêm khoảng cách quản trị) như sau:)\n[L3017] + 'R1(config)# ip route 0.0.0.0 0.0.0.0 172.16.2.2'\n[L3018] + 'R1(config)# ip route 0.0.0.0 0.0.0.0 10.10.10.2 5'\n[L3019] + 'R1(config)# ipv6 route ::/0 2001:db8:acad:2::2'\n[L3020] + 'R1(config)# ipv6 route ::/0 2001:db8:feed:10::2 5'\n[L3021] - Verification using the 'show ip route' and 'show ipv6 route' commands confirms that initially only the primary default routes are installed in the routing table, while the floating static routes remain notably absent until the primary path or interface fails, at which point the router generates syslog messages and actively uses the secondary floating route.\n[L3022] (Việc xác minh bằng các lệnh 'show ip route' và 'show ipv6 route' xác nhận rằng ban đầu chỉ có các tuyến mặc định chính được cài đặt trong bảng định tuyến, trong khi các tuyến tĩnh nổi vẫn hoàn toàn vắng mặt cho đến khi đường dẫn hoặc giao diện chính bị lỗi, tại thời điểm đó bộ định tuyến tạo ra các thông báo syslog và tích cực sử dụng tuyến nổi thứ cấp.)",
     "slide_comment": "",
-    "question_translation": "Lệnh hoặc tập lệnh nào được dùng để kiểm tra xem cấu hình tuyến tĩnh mặc định và tuyến tĩnh nổi trên router HQ có hoạt động đúng thiết kế hay không?",
+    "question_translation": "Lệnh hoặc nhóm lệnh nào sau đây được sử dụng để kiểm tra xem cấu hình sau trên router HQ có hoạt động đúng như thiết kế không?\n\n```text\nip route 0.0.0.0 0.0.0.0 serial 0/0/0 10\nip route 0.0.0.0 0.0.0.0 serial 0/1/0\n```",
     "is_multi": false
   },
   {
@@ -2729,7 +2729,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_080.png",
     "missing_image": false,
-    "question_text": "What character is used to enable the filtering of commands?\nHoàng Hoàng",
+    "question_text": "What character is used to enable the filtering of commands?",
     "type": "single",
     "options": [
       {
@@ -3125,7 +3125,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_091.png",
     "missing_image": false,
-    "question_text": "What message informs IPv6 enabled interfaces to use stateful DHCPv6 for obtaining an IPv6 address?\nHoàng Hoàng",
+    "question_text": "What message informs IPv6 enabled interfaces to use stateful DHCPv6 for obtaining an IPv6 address?",
     "type": "single",
     "options": [
       {
@@ -3593,7 +3593,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_104.png",
     "missing_image": false,
-    "question_text": "Which command will display a summary of all IPv6-enabled interfaces on a router that includes the IPv6\naddress and operational status?\nHoàng Hoàng",
+    "question_text": "Which command will display a summary of all IPv6-enabled interfaces on a router that includes the IPv6\naddress and operational status?",
     "type": "single",
     "options": [
       {
@@ -4069,7 +4069,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_117.png",
     "missing_image": false,
-    "question_text": "Which method does not require a server to maintain network address information to know which IPv6\naddresses are being used?",
+    "question_text": "Which method does not require a server to maintain network address information which IPv6\naddresses are being used?",
     "type": "single",
     "options": [
       {
@@ -4537,7 +4537,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_130.png",
     "missing_image": false,
-    "question_text": "Which switching method makes use of the FCS value?\nHoàng Hoàng",
+    "question_text": "Which switching method makes use of the FCS value?",
     "type": "single",
     "options": [
       {
@@ -5122,15 +5122,15 @@
     "options": [
       {
         "key": "A",
-        "text": "ip dhop snooping"
+        "text": "ip dhcp snooping"
       },
       {
         "key": "B",
-        "text": "ip dhop snooping limit rate"
+        "text": "ip dhcp snooping limit rate"
       },
       {
         "key": "C",
-        "text": "ip dhop snooping vlan"
+        "text": "ip dhcp snooping vlan"
       },
       {
         "key": "D",
@@ -5140,7 +5140,7 @@
     "answers": [
       "A"
     ],
-    "explanation": "🎯 Đáp án đúng: A (A: ip dhop snooping)\n\n📝 Dịch đề:\nMột quản trị viên mạng đang cấu hình DHCP snooping trên switch. Lệnh cấu hình nào cần phải được thực thi đầu tiên?\n\n📋 Dịch đáp án:\n- A: ip dhop snooping\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy trình cấu hình DHCP Snooping trên thiết bị chuyển mạch Cisco Catalyst:\n1. **Bước 1 (Bắt buộc đầu tiên):** Kích hoạt tính năng DHCP Snooping trên toàn cầu bằng lệnh `ip dhcp snooping` ở chế độ Global Configuration.\n2. **Bước tiếp theo:** Kích hoạt snooping trên các VLAN cụ thể (`ip dhcp snooping vlan <vlan-id>`), thiết lập cổng tin cậy (`ip dhcp snooping trust`) và giới hạn tốc độ gói (`ip dhcp snooping limit rate`).\nNếu chưa bật `ip dhcp snooping` toàn cục, các lệnh khác sẽ không có hiệu lực. Do đó đáp án là **A**.\n\n💡 Mẹo nhớ: Cấu hình DHCP snooping đầu tiên = ip dhcp snooping (global config).",
+    "explanation": "🎯 Đáp án đúng: A (A: ip dhcp snooping)\n\n📝 Dịch đề:\nMột quản trị viên mạng đang cấu hình DHCP snooping trên switch. Lệnh cấu hình nào cần phải được thực thi đầu tiên?\n\n📋 Dịch đáp án:\n- A: ip dhcp snooping\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy trình cấu hình DHCP Snooping trên thiết bị chuyển mạch Cisco Catalyst:\n1. **Bước 1 (Bắt buộc đầu tiên):** Kích hoạt tính năng DHCP Snooping trên toàn cầu bằng lệnh `ip dhcp snooping` ở chế độ Global Configuration.\n2. **Bước tiếp theo:** Kích hoạt snooping trên các VLAN cụ thể (`ip dhcp snooping vlan <vlan-id>`), thiết lập cổng tin cậy (`ip dhcp snooping trust`) và giới hạn tốc độ gói (`ip dhcp snooping limit rate`).\nNếu chưa bật `ip dhcp snooping` toàn cục, các lệnh khác sẽ không có hiệu lực. Do đó đáp án là **A**.\n\n💡 Mẹo nhớ: Cấu hình DHCP snooping đầu tiên = ip dhcp snooping (global config).",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L2056-L2070)",
     "theory_excerpt": "[L2056] 3.3. Steps to Implement DHCP Snooping:\n[L2057] - Use the following steps to enable DHCP snooping:\n[L2058] (Sử dụng các bước sau để bật DHCP snooping:)\n[L2059] + Step 1: Enable DHCP snooping globally by using the 'ip dhcp snooping' global configuration command.\n[L2060] (Bước 1: Bật DHCP snooping toàn cục bằng lệnh cấu hình toàn cục 'ip dhcp snooping'.)\n[L2061] + Step 2: On trusted ports, use the 'ip dhcp snooping trust' interface configuration command.\n[L2062] (Bước 2: Trên các cổng đáng tin cậy, sử dụng lệnh cấu hình giao diện 'ip dhcp snooping trust'.)\n[L2063] + Step 3: On untrusted interfaces, limit the number of DHCP discovery messages using the 'ip dhcp snooping limit rate packets-per-second' command.\n[L2064] (Bước 3: Trên các giao diện không tin cậy, giới hạn số lượng thông báo khám phá DHCP bằng lệnh 'ip dhcp snooping limit rate packets-per-second'.)\n[L2065] + Step 4: Enable DHCP snooping by VLAN using the 'ip dhcp snooping vlan' global configuration command.\n[L2066] (Bước 4: Bật DHCP snooping theo VLAN bằng lệnh cấu hình toàn cục 'ip dhcp snooping vlan'.)\n[L2067] - Verify DHCP snooping settings using the 'show ip dhcp snooping' privileged EXEC command, and view client mappings using the 'show ip dhcp snooping binding' command.\n[L2068] (Xác minh các cài đặt DHCP snooping bằng lệnh EXEC đặc quyền 'show ip dhcp snooping' và xem bản đồ máy khách bằng lệnh 'show ip dhcp snooping binding'.)\n[L2069] - A typical DHCP snooping configuration involves enabling the feature on the switch, explicitly trusting the upstream interface to the DHCP server, rate-limiting untrusted access ports, and enabling snooping on specific VLANs.\n[L2070] (Một cấu hình DHCP snooping điển hình bao gồm việc bật tính năng này trên switch, tin tưởng rõ ràng giao diện đường lên tới máy chủ DHCP, giới hạn tốc độ các cổng truy cập không tin cậy và bật snooping trên các VLAN cụ thể.)",
     "slide_comment": "",
@@ -5557,7 +5557,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_158.png",
     "missing_image": false,
-    "question_text": "You cannot ping a directly connected host. Which IOS command can be used to validate Layer 1 and Layer 2\nconnectivity?",
+    "question_text": "You cannot ping a directly connected host. Which IOS command can be used to validate Layer 1 and Layer 2 connectivity?",
     "type": "single",
     "options": [
       {
@@ -5566,7 +5566,7 @@
       },
       {
         "key": "B",
-        "text": "show cap neighbors detail"
+        "text": "show cdp neighbors detail"
       },
       {
         "key": "C",
@@ -5588,7 +5588,7 @@
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L0366-L0380)",
     "theory_excerpt": "[L0366] + 'show ip interface brief' and 'show ipv6 interface brief': Displays a summary for all interfaces, including their IP addresses and current operational status.\n[L0367] ('show ip interface brief' và 'show ipv6 interface brief': Hiển thị bản tóm tắt cho tất cả các giao diện, bao gồm địa chỉ IP của chúng và trạng thái hoạt động hiện tại.)\n[L0368] + 'show running-config interface interface-id': This displays the commands applied to the specified interface.\n[L0369] ('show running-config interface interface-id': Lệnh này hiển thị các lệnh được áp dụng cho giao diện được chỉ định.)\n[L0370] + 'show ip route' and 'show ipv6 route': These display the contents of the IPv4 or IPv6 routing table stored in RAM.\n[L0371] ('show ip route' và 'show ipv6 route': Các lệnh này hiển thị nội dung của bảng định tuyến IPv4 hoặc IPv6 được lưu trữ trong RAM.)\n[L0372] - In Cisco IOS 15, active interfaces should appear in the routing table with two related entries identified by the code 'C' (Connected) or 'L' (Local); in previous IOS versions, only a single entry with the code 'C' will appear.\n[L0373] (Trong Cisco IOS 15, các giao diện hoạt động sẽ xuất hiện trong bảng định tuyến với hai mục liên quan được xác định bằng mã 'C' (Đã kết nối) hoặc 'L' (Cục bộ); trong các phiên bản IOS trước đó, chỉ một mục nhập duy nhất có mã 'C' sẽ xuất hiện.)\n[L0374] 5.2. Verify Interface Status:\n[L0375] - The 'show ip interface brief' and 'show ipv6 interface brief' commands quickly reveal interface status, confirming they are operational if Status and Protocol are \"up,\" whereas any other output indicates a configuration or cabling problem.\n[L0376] (Lệnh 'show ip interface brief' và 'show ipv6 interface brief' nhanh chóng tiết lộ trạng thái giao diện, xác nhận chúng đang hoạt động nếu Status và Protocol là \"up,\" trong khi bất kỳ kết quả nào khác chỉ ra sự cố cấu hình hoặc cáp.)\n[L0377] 5.3. Verify IPv6 Link Local and Multicast Addresses:\n[L0378] - The 'show ipv6 interface brief' command displays two configured IPv6 addresses per interface: the manually entered global unicast address and the link-local unicast address beginning with FE80.\n[L0379] (Lệnh 'show ipv6 interface brief' hiển thị hai địa chỉ IPv6 được cấu hình cho mỗi giao diện: địa chỉ global unicast được nhập thủ công và địa chỉ link-local unicast bắt đầu bằng FE80.)\n[L0380] - A link-local address is automatically added whenever a global unicast address is assigned, and while an IPv6 interface requires a link-local address, a global unicast address is optional.",
     "slide_comment": "",
-    "question_translation": "Bạn không thể ping máy chủ được kết nối trực tiếp. Lệnh iOS nào có thể được sử dụng để xác thực Lớp 1 và Lớp 2\nkết nối?"
+    "question_translation": "Bạn không thể ping một máy chủ kết nối trực tiếp. Lệnh Cisco IOS nào có thể được sử dụng để xác thực kết nối ở Tầng 1 (Physical) và Tầng 2 (Data Link)?"
   },
   {
     "id": 149,
@@ -6461,7 +6461,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_184.png",
     "missing_image": false,
-    "question_text": "What will a router do if it does not have a default route configured and a packet needs to be forwarded to a\ndestination network that is not listed in the routing table?\nHoàng Hoàng",
+    "question_text": "What will a router do if it does not have a default route configured and a packet needs to be forwarded to a\ndestination network that is not listed in the routing table?",
     "type": "single",
     "options": [
       {
@@ -6717,7 +6717,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_191.png",
     "missing_image": false,
-    "question_text": "hich flag in an ICMPv6 RA message indicates that a host should use SLAAC to create an IPv6 Global\nUnicast Address (GUA)?",
+    "question_text": "Which flag in an ICMPv6 RA message indicates that a host should use SLAAC to create an IPv6 Global Unicast Address (GUA)?",
     "type": "single",
     "options": [
       {
@@ -6744,7 +6744,7 @@
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1431-L1445)",
     "theory_excerpt": "[L1431] (Mặc dù hệ điều hành máy chủ tuân theo gợi ý của RA, nhưng quyết định thực tế cuối cùng vẫn do máy chủ tự định đoạt.)\n[L1432] 1.4. Three RA Message Flags:\n[L1433] - How a client obtains an IPv6 GUA depends on settings in the RA message, which includes three flags to inform the host about the dynamic options available:\n[L1434] (Cách máy khách lấy GUA IPv6 phụ thuộc vào các cài đặt trong thông báo RA, bao gồm ba cờ để thông báo cho máy chủ về các tùy chọn động khả dụng:)\n[L1435] + A flag (Address Autoconfiguration): Signifies to use Stateless Address Autoconfiguration (SLAAC) to create an IPv6 GUA.\n[L1436] (Cờ A (Tự động cấu hình Địa chỉ): Cho biết sử dụng Tự động Cấu hình Địa chỉ Không trạng thái (SLAAC) để tạo GUA IPv6.)\n[L1437] + O flag (Other Configuration): Signifies that additional information is available from a stateless DHCPv6 server.\n[L1438] (Cờ O (Cấu hình Khác): Cho biết thông tin bổ sung có sẵn từ máy chủ DHCPv6 không trạng thái.)\n[L1439] + M flag (Managed Address Configuration): Signifies to use a stateful DHCPv6 server to obtain an IPv6 GUA.\n[L1440] (Cờ M (Cấu hình Địa chỉ được Quản lý): Cho biết sử dụng máy chủ DHCPv6 có trạng thái để lấy GUA IPv6.)\n[L1441] - If both the M (Managed) and A (Autoconfiguration) flags are set to 1 in an RA received by a host, the host will attempt to use both SLAAC and Stateful DHCPv6 to acquire its IPv6 configuration, which can lead to unexpected dual addressing or conflicts.\n[L1442] (Nếu cả cờ M (Managed) và cờ A (Autoconfiguration) đều được đặt là 1 trong RA mà máy chủ nhận được, máy chủ sẽ cố gắng sử dụng cả SLAAC và DHCPv6 có trạng thái để lấy cấu hình IPv6 của nó, điều này có thể dẫn đến việc có hai địa chỉ hoặc xung đột không mong muốn.)\n[L1443] 2. SLAAC:\n[L1444] 2.1. SLAAC Overview:\n[L1445] - The SLAAC method enables hosts to create their own unique IPv6 global unicast address without the services of a DHCPv6 server, making it essential because not every network has access to a DHCPv6 server but every device needs a GUA.",
     "slide_comment": "",
-    "question_translation": "cờ hich trong thông báo ICMPv6 RA cho biết rằng máy chủ nên sử dụng SLAAC để tạo IPv6 Global\nĐịa chỉ Unicast (GUA)?"
+    "question_translation": "Cờ (flag) nào trong gói tin ICMPv6 Router Advertisement (RA) chỉ thị rằng máy chủ (host) nên sử dụng SLAAC để tự động tạo địa chỉ IPv6 Global Unicast (GUA)?"
   },
   {
     "id": 181,
@@ -6874,7 +6874,7 @@
       },
       {
         "key": "C",
-        "text": "Hides internal IP addresses from external networks R U ARN TO KNOW"
+        "text": "Hides internal IP addresses from external networks"
       },
       {
         "key": "D",
@@ -6888,7 +6888,7 @@
     "answers": [
       "C"
     ],
-    "explanation": "🎯 Đáp án đúng: C (C: Hides internal IP addresses from external networks R U ARN TO KNOW)\n\n📝 Dịch đề:\nNAT mang lại lợi ích gì trên router WLAN?\n\n📋 Dịch đáp án:\n- C: Hides internal IP addresses from external networks R U ARN TO KNOW\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nVới tất cả các bộ phận chuyển động, định tuyến liên VLAN sử dụng các switch Lớp 3 thường dẫn đến số lượng lỗi triển khai thấp nhất so với Router-on-a-stick, vì nó dựa vào các giao diện ảo bên trong và loại bỏ nhu cầu về trunking bên ngoài phức tạp và ánh xạ giao diện phụ.\n\n💡 Mẹo nhớ: Đáp án C (Hides internal IP addresses from external networks R U ARN TO KNOW)",
+    "explanation": "🎯 Đáp án đúng: C (C: Hides internal IP addresses from external networks )\n\n📝 Dịch đề:\nNAT mang lại lợi ích gì trên router WLAN?\n\n📋 Dịch đáp án:\n- C: Hides internal IP addresses from external networks 📌 Giải thích chi tiết từng bước (Vì sao chọn):\nVới tất cả các bộ phận chuyển động, định tuyến liên VLAN sử dụng các switch Lớp 3 thường dẫn đến số lượng lỗi triển khai thấp nhất so với Router-on-a-stick, vì nó dựa vào các giao diện ảo bên trong và loại bỏ nhu cầu về trunking bên ngoài phức tạp và ánh xạ giao diện phụ.\n\n💡 Mẹo nhớ: Đáp án C (Hides internal IP addresses from external networks )",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L2571-L2585)",
     "theory_excerpt": "[L2571] (Cuối cùng, kiểm tra các liên kết giữa các thiết bị có dây để tìm kiếm các đầu nối kém hoặc cáp bị hỏng, và nếu cơ sở vật chất vật lý đã ở đúng vị trí, hãy xác minh mạng LAN có dây bằng cách ping các thiết bị, bao gồm cả AP.)\n[L2572] - If connectivity still fails at this point, which suggests something is wrong with the AP or its configuration, and once the user PC is eliminated as the source of the problem and the physical status of devices is confirmed, begin investigating the performance of the AP by checking its power status.\n[L2573] (Nếu kết nối vẫn thất bại tại thời điểm này, điều đó cho thấy có gì đó không ổn với AP hoặc cấu hình của nó, và một khi PC người dùng bị loại trừ là nguồn gốc của sự cố và trạng thái vật lý của các thiết bị được xác nhận, hãy bắt đầu điều tra hiệu suất của AP bằng cách kiểm tra trạng thái nguồn của nó.)\n[L2574] 4.3. Troubleshooting When the Network Is Slow:\n[L2575] - To optimize and increase the bandwidth of 802.11 dual-band routers and APs, either upgrade the wireless clients (because older 802.11b, 802.11g, and even 802.11n devices can slow the entire WLAN, meaning all wireless devices should support the same highest acceptable standard for best performance) or split the traffic.\n[L2576] (Để tối ưu hóa và tăng băng thông của bộ định tuyến và AP băng tần kép 802.11, hãy nâng cấp các máy khách không dây (bởi vì các thiết bị cũ 802.11b, 802.11g và thậm chí cả 802.11n có thể làm chậm toàn bộ WLAN, có nghĩa là tất cả các thiết bị không dây nên hỗ trợ cùng một tiêu chuẩn cao nhất có thể chấp nhận được để có hiệu suất tốt nhất) hoặc chia tách lưu lượng.)\n[L2577] - The easiest way to improve wireless performance is to split the wireless traffic between the 802.11n 2.4 GHz band and the 5 GHz band, which allows 802.11n (or better) devices to use the two bands as two separate wireless networks to help manage the traffic.\n[L2578] (Cách dễ nhất để cải thiện hiệu suất không dây là chia tách lưu lượng không dây giữa băng tần 2.4 GHz 802.11n và băng tần 5 GHz, điều này cho phép các thiết bị 802.11n (hoặc tốt hơn) sử dụng hai băng tần làm hai mạng không dây riêng biệt để giúp quản lý lưu lượng.)\n[L2579] - Using a split-the-traffic approach has several benefits: the 2.4 GHz band may be suitable for basic Internet traffic that is not time-sensitive, its bandwidth may still be shared with other nearby WLANs, while the 5 GHz band is much less crowded (making it ideal for streaming multimedia) and has more channels, which makes the chosen channel likely interference-free.\n[L2580] (Sử dụng phương pháp chia tách lưu lượng có một số lợi ích: băng tần 2.4 GHz có thể phù hợp cho lưu lượng Internet cơ bản không nhạy cảm về thời gian, băng thông của nó vẫn có thể bị chia sẻ với các WLAN gần đó khác, trong khi băng tần 5 GHz ít đông đúc hơn nhiều (lý tưởng để truyền phát đa phương tiện) và có nhiều kênh hơn, điều này làm cho kênh được chọn có khả năng không bị nhiễu.)\n[L2581] - Because dual-band routers and APs use the same network name on both bands by default, it may be useful to segment the traffic, which can be most simply achieved by renaming one of the wireless networks.\n[L2582] (Bởi vì các bộ định tuyến và AP băng tần kép sử dụng cùng một tên mạng trên cả hai băng tần theo mặc định, việc phân đoạn lưu lượng có thể hữu ích, điều này có thể đạt được một cách đơn giản nhất bằng cách đổi tên một trong các mạng không dây.)\n[L2583] - To improve the range of a wireless network, ensure the wireless router or AP location is free of obstructions, such as furniture, fixtures, and tall appliances, as these block the signal, which shortens the range of the WLAN; if this still does not solve the problem, then a Wi-Fi Range Extender or deploying Powerline wireless technology may be used.\n[L2584] (Để cải thiện phạm vi của mạng không dây, hãy đảm bảo vị trí bộ định tuyến không dây hoặc AP không có vật cản, chẳng hạn như đồ nội thất, đồ đạc và các thiết bị cao, vì chúng chặn tín hiệu, làm rút ngắn phạm vi của WLAN; nếu điều này vẫn không giải quyết được sự cố, thì có thể sử dụng Bộ mở rộng phạm vi Wi-Fi hoặc triển khai công nghệ không dây Powerline.)\n[L2585] 4.4. Updating Firmware:",
     "slide_comment": "",
@@ -6910,7 +6910,7 @@
       },
       {
         "key": "B",
-        "text": "ip dhop snooping"
+        "text": "ip dhcp snooping"
       },
       {
         "key": "C",
@@ -6941,7 +6941,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_197.png",
     "missing_image": false,
-    "question_text": "Which method would an IP vo-enabled host using SLAAC employ to learn the address of the default gateway?\nHoàng Hoàng",
+    "question_text": "Which method would an IPv6-enabled host using SLAAC employ to learn the address of the default gateway?",
     "type": "single",
     "options": [
       {
@@ -6968,7 +6968,7 @@
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1691-L1705)",
     "theory_excerpt": "[L1691] + Hot Standby Router Protocol (HSRP): A Cisco-proprietary FHRP designed to allow for transparent failover of a first-hop IPv4 device. HSRP is used in a group of routers for selecting an active device and a standby device. The active device routes packets, while the standby device takes over when the active device fails or when preset conditions are met.\n[L1692] (Giao thức Định tuyến Dự phòng Nóng (HSRP): Một FHRP độc quyền của Cisco được thiết kế để cho phép chuyển đổi dự phòng trong suốt của một thiết bị IPv4 bước nhảy đầu tiên. HSRP được sử dụng trong một nhóm các bộ định tuyến để chọn một thiết bị hoạt động và một thiết bị dự phòng. Thiết bị hoạt động định tuyến các gói tin, trong khi thiết bị dự phòng tiếp quản khi thiết bị hoạt động bị lỗi hoặc khi đáp ứng các điều kiện đặt trước.)\n[L1693] + HSRP for IPv6: A Cisco-proprietary FHRP that provides the same functionality of HSRP but in an IPv6 environment. An HSRP IPv6 group has a virtual MAC address derived from the HSRP group number and a virtual IPv6 link-local address derived from the HSRP virtual MAC address. Periodic router advertisements (RAs) are sent for the HSRP virtual IPv6 link-local address when the group is active, and these RAs stop after a final RA is sent when the group becomes inactive.\n[L1694] (HSRP cho IPv6: Một FHRP độc quyền của Cisco cung cấp chức năng tương tự như HSRP nhưng trong môi trường IPv6. Nhóm HSRP IPv6 có một địa chỉ MAC ảo bắt nguồn từ số nhóm HSRP và một địa chỉ link-local IPv6 ảo bắt nguồn từ địa chỉ MAC ảo HSRP. Các thông báo định tuyến (RA) định kỳ được gửi cho địa chỉ link-local IPv6 ảo HSRP khi nhóm hoạt động, và các RA này dừng lại sau khi một RA cuối cùng được gửi khi nhóm trở nên không hoạt động.)\n[L1695] + Virtual Router Redundancy Protocol version 2 (VRRPv2): A non-proprietary election protocol that dynamically assigns responsibility for one or more virtual routers to the VRRP routers on an IPv4 LAN, allowing several routers on a multiaccess link to use the same virtual IPv4 address. One router is elected as the virtual router master, with the other routers acting as backups in case the virtual router master fails.\n[L1696] (Giao thức Dự phòng Bộ định tuyến Ảo phiên bản 2 (VRRPv2): Một giao thức bầu chọn không độc quyền tự động gán trách nhiệm cho một hoặc nhiều bộ định tuyến ảo đối với các bộ định tuyến VRRP trên mạng LAN IPv4, cho phép một số bộ định tuyến trên một liên kết đa truy cập sử dụng cùng một địa chỉ IPv4 ảo. Một bộ định tuyến được bầu làm bộ định tuyến ảo chính, trong khi các bộ định tuyến khác đóng vai trò dự phòng trong trường hợp bộ định tuyến ảo chính bị lỗi.)\n[L1697] + VRRPv3: Provides the capability to support IPv4 and IPv6 addresses, works in multi-vendor environments, and is more scalable than VRRPv2.\n[L1698] (VRRPv3: Cung cấp khả năng hỗ trợ địa chỉ IPv4 và IPv6, hoạt động trong môi trường đa nhà cung cấp và có khả năng mở rộng tốt hơn VRRPv2.)\n[L1699] + Gateway Load Balancing Protocol (GLBP): A Cisco-proprietary FHRP that protects data traffic from a failed router or circuit, like HSRP and VRRP, while also allowing load balancing (also called load sharing) between a group of redundant routers.\n[L1700] (Giao thức Cân bằng Tải Cổng (GLBP): Một FHRP độc quyền của Cisco bảo vệ lưu lượng dữ liệu khỏi một bộ định tuyến hoặc mạch bị lỗi, giống như HSRP và VRRP, đồng thời cho phép cân bằng tải (còn gọi là chia sẻ tải) giữa một nhóm các bộ định tuyến dự phòng.)\n[L1701] + GLBP for IPv6: A Cisco-proprietary FHRP that provides automatic router backup for IPv6 hosts configured with a single default gateway on a LAN. Multiple first-hop routers on the LAN combine to offer a single virtual first-hop IPv6 router while sharing the IPv6 packet forwarding load.\n[L1702] (GLBP cho IPv6: Một FHRP độc quyền của Cisco cung cấp khả năng sao lưu bộ định tuyến tự động cho các máy chủ IPv6 được cấu hình với một cổng mặc định duy nhất trên mạng LAN. Nhiều bộ định tuyến bước nhảy đầu tiên trên mạng LAN kết hợp lại để cung cấp một bộ định tuyến IPv6 ảo duy nhất ở bước nhảy đầu tiên trong khi chia sẻ tải chuyển tiếp gói IPv6.)\n[L1703] + ICMP Router Discovery Protocol (IRDP): Specified in RFC 1256, IRDP is a legacy FHRP solution that allows IPv4 hosts to locate routers providing IPv4 connectivity to other nonlocal IP networks.\n[L1704] (Giao thức Khám phá Bộ định tuyến ICMP (IRDP): Được chỉ định trong RFC 1256, IRDP là một giải pháp FHRP cũ cho phép các máy chủ IPv4 định vị các bộ định tuyến cung cấp kết nối IPv4 đến các mạng IP không cục bộ khác.)\n[L1705] 2. Hot Standby Router Protocol (HSRP):",
     "slide_comment": "",
-    "question_translation": "Máy chủ hỗ trợ IP sử dụng SLAAC sẽ sử dụng phương pháp nào để tìm hiểu địa chỉ của cổng mặc định?"
+    "question_translation": "Một host kích hoạt IPv6 sử dụng SLAAC sẽ sử dụng phương thức nào để biết được địa chỉ của default gateway?"
   },
   {
     "id": 187,
@@ -7301,7 +7301,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_207.png",
     "missing_image": false,
-    "question_text": "static route has been configured on a router. However, the destination network no longer exists. What\nbuld an administrator do to remove the static route from the routing table?",
+    "question_text": "A static route has been configured on a router. However, the destination network no longer exists. What should an administrator do to remove the static route from the routing table?",
     "type": "single",
     "options": [
       {
@@ -7314,7 +7314,7 @@
       },
       {
         "key": "C",
-        "text": "Change the administrative distance for that route. To KNOw"
+        "text": "Change the administrative distance for that route."
       },
       {
         "key": "D",
@@ -7328,7 +7328,7 @@
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L3021-L3035)",
     "theory_excerpt": "[L3021] - Verification using the 'show ip route' and 'show ipv6 route' commands confirms that initially only the primary default routes are installed in the routing table, while the floating static routes remain notably absent until the primary path or interface fails, at which point the router generates syslog messages and actively uses the secondary floating route.\n[L3022] (Việc xác minh bằng các lệnh 'show ip route' và 'show ipv6 route' xác nhận rằng ban đầu chỉ có các tuyến mặc định chính được cài đặt trong bảng định tuyến, trong khi các tuyến tĩnh nổi vẫn hoàn toàn vắng mặt cho đến khi đường dẫn hoặc giao diện chính bị lỗi, tại thời điểm đó bộ định tuyến tạo ra các thông báo syslog và tích cực sử dụng tuyến nổi thứ cấp.)\n[L3023] 5. Configure Static Host Routes:\n[L3024] 5.1. Host Routes:\n[L3025] - A host route is an IPv4 address with a 32-bit mask, or an IPv6 address with a 128-bit mask, which can be added to the routing table automatically, configured statically, or obtained through other methods.\n[L3026] (Tuyến máy chủ là một địa chỉ IPv4 với mặt nạ 32 bit, hoặc địa chỉ IPv6 với mặt nạ 128 bit, có thể được thêm vào bảng định tuyến một cách tự động, được cấu hình tĩnh hoặc thu được thông qua các phương pháp khác.)\n[L3027] - Automatically Installed Host Routes: Cisco IOS automatically installs a local host route (designated with an 'L') when an interface address is configured, allowing for a more efficient process for packets directed to the router itself, which acts as an addition to the connected route designated with a 'C' in the routing table for the network address of the interface.\n[L3028] (Tuyến Máy chủ Cài đặt Tự động: Cisco IOS tự động cài đặt một tuyến máy chủ cục bộ (được chỉ định bằng 'L') khi một địa chỉ giao diện được cấu hình, cho phép xử lý hiệu quả hơn đối với các gói tin hướng tới chính bộ định tuyến, điều này đóng vai trò bổ sung cho tuyến kết nối được chỉ định bằng chữ 'C' trong bảng định tuyến cho địa chỉ mạng của giao diện.)\n[L3029] 5.2. Static Host Routes:\n[L3030] - A host route can be a manually configured static route to direct traffic to a specific destination device, using a 255.255.255.255 (/32) mask for IPv4 or a /128 prefix length for IPv6.\n[L3031] (Một tuyến máy chủ có thể là một tuyến tĩnh được cấu hình thủ công để hướng lưu lượng tới một thiết bị đích cụ thể, sử dụng mặt nạ 255.255.255.255 (/32) cho IPv4 hoặc độ dài tiền tố /128 cho IPv6.)\n[L3032] - Local host routes provide a significant benefit to the IOS by allowing the router to more efficiently process packets that are destined directly to the router itself (such as management traffic), bypassing the normal packet forwarding process; additionally, manually configuring a static host route is an ideal tool for solving routing problems where traffic must be forcibly directed to a highly secure specific server or when overriding a broader network route for a single, critical destination.\n[L3033] (Các tuyến máy chủ cục bộ mang lại lợi ích đáng kể cho IOS bằng cách cho phép bộ định tuyến xử lý hiệu quả hơn các gói tin được định hướng trực tiếp tới chính bộ định tuyến (chẳng hạn như lưu lượng quản lý), bỏ qua quá trình chuyển tiếp gói thông thường; ngoài ra, việc cấu hình thủ công một tuyến máy chủ tĩnh là một công cụ lý tưởng để giải quyết các sự cố định tuyến nơi lưu lượng phải bị buộc hướng tới một máy chủ cụ thể có tính bảo mật cao hoặc khi cần ghi đè một tuyến mạng rộng hơn cho một đích đến quan trọng, duy nhất.)\n[L3034] - The configurations for static host routes on a local router to access a specific server are structured as follows:\n[L3035] (Các cấu hình cho tuyến máy chủ tĩnh trên một bộ định tuyến cục bộ để truy cập một máy chủ cụ thể được định dạng như sau:)",
     "slide_comment": "",
-    "question_translation": "tuyến tĩnh đã được cấu hình trên router. Tuy nhiên, mạng đích không còn tồn tại. cái gì\nquản trị viên có cần làm gì để xóa tuyến tĩnh khỏi bảng định tuyến không?"
+    "question_translation": "Một tuyến đường tĩnh đã được cấu hình trên router. Tuy nhiên mạng đích không còn tồn tại nữa. Quản trị viên cần làm gì để xóa tuyến đường tĩnh này khỏi bảng định tuyến?"
   },
   {
     "id": 197,
@@ -7337,7 +7337,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_208.png",
     "missing_image": false,
-    "question_text": "network administrator is entering the command ipvo unicast-routing to start configuring DHCPv6 operation\ni a router. Which statement describes the function of this command?",
+    "question_text": "A network administrator is entering the command `ipv6 unicast-routing` to start configuring DHCPv6 operation on a router. Which statement describes the function of this command?",
     "type": "single",
     "options": [
       {
@@ -7360,11 +7360,11 @@
     "answers": [
       "B"
     ],
-    "explanation": "🎯 Đáp án đúng: B (B: It is required for sending ICMPv6 RA messages.)\n\n📝 Dịch đề:\nquản trị mạng đang nhập lệnh ipvo unicast-routing để bắt đầu cấu hình hoạt động DHCPv6\ntôi là một router. Câu lệnh nào mô tả chức năng của lệnh này?\n\n📋 Dịch đáp án:\n- B: It is required for sending ICMPv6 RA messages.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMột lệnh thường được sử dụng khác là 'show interfaces', hiển thị thông tin trạng thái và thống kê trên các giao diện mạng và thường xuyên được sử dụng khi cấu hình và giám sát các thiết bị mạng.\n\n💡 Mẹo nhớ: Đáp án B (It is required for sending ICMPv6 RA messages.)",
+    "explanation": "🎯 Đáp án đúng: B (B: It is required for sending ICMPv6 RA messages.)\n\n📝 Dịch đề:\nquản trị mạng đang nhập lệnh ipv6 unicast-routing để bắt đầu cấu hình hoạt động DHCPv6\ntôi là một router. Câu lệnh nào mô tả chức năng của lệnh này?\n\n📋 Dịch đáp án:\n- B: It is required for sending ICMPv6 RA messages.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMột lệnh thường được sử dụng khác là 'show interfaces', hiển thị thông tin trạng thái và thống kê trên các giao diện mạng và thường xuyên được sử dụng khi cấu hình và giám sát các thiết bị mạng.\n\n💡 Mẹo nhớ: Đáp án B (It is required for sending ICMPv6 RA messages.)",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1561-L1575)",
     "theory_excerpt": "[L1561] (DHCPv6 có trạng thái được bật bằng lệnh cấu hình giao diện 'ipv6 nd managed-config-flag', lệnh này đặt cờ M thành 1.)\n[L1562] 4. Configure DHCPv6 Server:\n[L1563] 4.1. DHCPv6 Router Roles:\n[L1564] - Cisco IOS routers can be configured to provide DHCPv6 services in smaller networks without needing separate devices for servers, clients, or relay agents.\n[L1565] (Các bộ định tuyến Cisco IOS có thể được cấu hình để cung cấp các dịch vụ DHCPv6 trong các mạng nhỏ hơn mà không cần các thiết bị riêng biệt cho máy chủ, máy khách hoặc relay agent.)\n[L1566] - Specifically, a router can be configured to be one of the following:\n[L1567] (Cụ thể, một bộ định tuyến có thể được cấu hình để trở thành một trong các vai trò sau:)\n[L1568] + DHCPv6 Server: Router provides stateless or stateful DHCPv6 services.\n[L1569] (Máy chủ DHCPv6: Bộ định tuyến cung cấp các dịch vụ DHCPv6 có trạng thái hoặc không trạng thái.)\n[L1570] + DHCPv6 Client: Router interface acquires an IPv6 IP configuration from a DHCPv6 server.\n[L1571] (Máy khách DHCPv6: Giao diện bộ định tuyến nhận cấu hình IP IPv6 từ máy chủ DHCPv6.)\n[L1572] + DHCPv6 Relay Agent: Router provides DHCPv6 forwarding services when the client and the server are located on different networks.\n[L1573] (DHCPv6 Relay Agent: Bộ định tuyến cung cấp dịch vụ chuyển tiếp DHCPv6 khi máy khách và máy chủ nằm trên các mạng khác nhau.)\n[L1574] 4.2. Configure a Stateless DHCPv6 Server:\n[L1575] - The stateless DHCPv6 server option requires the router to advertise the IPv6 network addressing information in RA messages, using the following steps:",
     "slide_comment": "",
-    "question_translation": "quản trị mạng đang nhập lệnh ipvo unicast-routing để bắt đầu cấu hình hoạt động DHCPv6\ntôi là một router. Câu lệnh nào mô tả chức năng của lệnh này?"
+    "question_translation": "Quản trị viên mạng nhập lệnh `ipv6 unicast-routing` để bắt đầu cấu hình hoạt động DHCPv6 trên router. Phát biểu nào mô tả đúng chức năng của câu lệnh này?"
   },
   {
     "id": 198,
@@ -7642,7 +7642,7 @@
       },
       {
         "key": "C",
-        "text": "Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI"
+        "text": "Ensure the IPv6 address is unique on the network. I"
       },
       {
         "key": "D",
@@ -7652,7 +7652,7 @@
     "answers": [
       "C"
     ],
-    "explanation": "🎯 Đáp án đúng: C (C: Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI)\n\n📝 Dịch đề:\nMục đích của Phát hiện địa chỉ trùng lặp (DAD) là gì?\n\n📋 Dịch đáp án:\n- C: Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMáy chủ SLAAC có thể sử dụng quá trình Phát hiện Địa chỉ Trùng lặp (DAD) để đảm bảo GUA IPv6 là duy nhất bằng cách gửi thông báo Lời gọi Láng giềng (NS) ICMPv6 với địa chỉ đa hướng solicited-node được xây dựng đặc biệt chứa 24 bit cuối của địa chỉ IPv6 của máy chủ.\n\n💡 Mẹo nhớ: Đáp án C (Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI)",
+    "explanation": "🎯 Đáp án đúng: C (C: Ensure the IPv6 address is unique on the network. I)\n\n📝 Dịch đề:\nMục đích của Phát hiện địa chỉ trùng lặp (DAD) là gì?\n\n📋 Dịch đáp án:\n- C: Ensure the IPv6 address is unique on the network. I\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMáy chủ SLAAC có thể sử dụng quá trình Phát hiện Địa chỉ Trùng lặp (DAD) để đảm bảo GUA IPv6 là duy nhất bằng cách gửi thông báo Lời gọi Láng giềng (NS) ICMPv6 với địa chỉ đa hướng solicited-node được xây dựng đặc biệt chứa 24 bit cuối của địa chỉ IPv6 của máy chủ.\n\n💡 Mẹo nhớ: Đáp án C (Ensure the IPv6 address is unique on the network. I)",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1486-L1500)",
     "theory_excerpt": "[L1486] (Các hệ điều hành hiện đại, bao gồm Windows, Linux và Mac OS, cho phép người dùng sửa đổi thủ công cách tạo ID giao diện thành được tạo ngẫu nhiên hoặc sử dụng EUI-64.)\n[L1487] 2.6. Duplicate Address Detection:\n[L1488] - A SLAAC host may use the Duplicate Address Detection (DAD) process to ensure the IPv6 GUA is unique by sending an ICMPv6 Neighbor Solicitation (NS) message with a specially constructed solicited-node multicast address containing the last 24 bits of the host's IPv6 address.\n[L1489] (Máy chủ SLAAC có thể sử dụng quá trình Phát hiện Địa chỉ Trùng lặp (DAD) để đảm bảo GUA IPv6 là duy nhất bằng cách gửi thông báo Lời gọi Láng giềng (NS) ICMPv6 với địa chỉ đa hướng solicited-node được xây dựng đặc biệt chứa 24 bit cuối của địa chỉ IPv6 của máy chủ.)\n[L1490] - If no other devices respond with a Neighbor Advertisement (NA) message, the address is virtually guaranteed to be unique and can be used by the host; if an NA is received, the address is not unique, and the host must generate a new interface ID.\n[L1491] (Nếu không có thiết bị nào khác phản hồi bằng thông báo Quảng bá Láng giềng (NA), địa chỉ được đảm bảo ảo là duy nhất và có thể được máy chủ sử dụng; nếu nhận được NA, địa chỉ không duy nhất và máy chủ phải tạo ID giao diện mới.)\n[L1492] - Although DAD is not strictly required because a 64-bit interface ID provides 18 quintillion possibilities making duplicates extremely remote, the IETF recommends its use, so most operating systems perform DAD on all IPv6 unicast addresses.\n[L1493] (Mặc dù DAD không hoàn toàn bắt buộc vì ID giao diện 64 bit cung cấp 18 tỷ tỷ khả năng khiến việc trùng lặp là cực kỳ khó xảy ra, IETF khuyến nghị sử dụng nó, do đó hầu hết các hệ điều hành đều thực hiện DAD trên tất cả các địa chỉ unicast IPv6.)\n[L1494] - The Duplicate Address Detection (DAD) process in IPv6 is essentially equivalent to the Gratuitous ARP process used in IPv4 to check for address uniqueness.\n[L1495] (Quá trình Phát hiện Địa chỉ Trùng lặp (DAD) trong IPv6 về cơ bản tương đương với quá trình Gratuitous ARP được sử dụng trong IPv4 để kiểm tra tính duy nhất của địa chỉ.)\n[L1496] 3. DHCPv6:\n[L1497] 3.1. DHCPv6 Operation Steps:\n[L1498] - DHCPv6 is defined in RFC 3315 and provides both stateless and stateful methods for IPv6 dynamic addressing.\n[L1499] (DHCPv6 được định nghĩa trong RFC 3315 và cung cấp cả hai phương pháp không trạng thái và có trạng thái cho việc cấp phát địa chỉ động IPv6.)\n[L1500] - Stateful DHCPv6 does not require SLAAC, while stateless DHCPv6 does.",
     "slide_comment": "Mục đích của Duplicate Address Detection (DAD) là gì? C. Đảm bảo địa chỉ IPv6 là duy nhất trên mạng (Ensure the IPv6 address is unique on the network). DAD kiểm tra xem địa chỉ IPv6 vừa được gán đã được thiết bị khác sử dụng hay chưa trước khi kích hoạt.",
@@ -7822,7 +7822,7 @@
       },
       {
         "key": "C",
-        "text": "Simplifies management of multiple APs ARN TO KNOWI"
+        "text": "Simplifies management of multiple APs"
       },
       {
         "key": "D",
@@ -7832,7 +7832,7 @@
     "answers": [
       "C"
     ],
-    "explanation": "🎯 Đáp án đúng: C (C: Simplifies management of multiple APs ARN TO KNOWI)\n\n📝 Dịch đề:\nLợi ích chính của việc sử dụng bộ điều khiển mạng LAN không dây tập trung là gì?\n\n📋 Dịch đáp án:\n- C: Simplifies management of multiple APs ARN TO KNOWI\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nViệc triển khai mạng bằng cách sử dụng Bộ điều khiển mạng LAN không dây (WLC) cung cấp khả năng quản lý tập trung, và khi nhiều AP được thêm vào, mỗi AP được tự động cấu hình và quản lý bởi WLC.\n\n💡 Mẹo nhớ: Đáp án C (Simplifies management of multiple APs ARN TO KNOWI)",
+    "explanation": "🎯 Đáp án đúng: C (C: Simplifies management of multiple APs )\n\n📝 Dịch đề:\nLợi ích chính của việc sử dụng bộ điều khiển mạng LAN không dây tập trung là gì?\n\n📋 Dịch đáp án:\n- C: Simplifies management of multiple APs 📌 Giải thích chi tiết từng bước (Vì sao chọn):\nViệc triển khai mạng bằng cách sử dụng Bộ điều khiển mạng LAN không dây (WLC) cung cấp khả năng quản lý tập trung, và khi nhiều AP được thêm vào, mỗi AP được tự động cấu hình và quản lý bởi WLC.\n\n💡 Mẹo nhớ: Đáp án C (Simplifies management of multiple APs )",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L2571-L2585)",
     "theory_excerpt": "[L2571] (Cuối cùng, kiểm tra các liên kết giữa các thiết bị có dây để tìm kiếm các đầu nối kém hoặc cáp bị hỏng, và nếu cơ sở vật chất vật lý đã ở đúng vị trí, hãy xác minh mạng LAN có dây bằng cách ping các thiết bị, bao gồm cả AP.)\n[L2572] - If connectivity still fails at this point, which suggests something is wrong with the AP or its configuration, and once the user PC is eliminated as the source of the problem and the physical status of devices is confirmed, begin investigating the performance of the AP by checking its power status.\n[L2573] (Nếu kết nối vẫn thất bại tại thời điểm này, điều đó cho thấy có gì đó không ổn với AP hoặc cấu hình của nó, và một khi PC người dùng bị loại trừ là nguồn gốc của sự cố và trạng thái vật lý của các thiết bị được xác nhận, hãy bắt đầu điều tra hiệu suất của AP bằng cách kiểm tra trạng thái nguồn của nó.)\n[L2574] 4.3. Troubleshooting When the Network Is Slow:\n[L2575] - To optimize and increase the bandwidth of 802.11 dual-band routers and APs, either upgrade the wireless clients (because older 802.11b, 802.11g, and even 802.11n devices can slow the entire WLAN, meaning all wireless devices should support the same highest acceptable standard for best performance) or split the traffic.\n[L2576] (Để tối ưu hóa và tăng băng thông của bộ định tuyến và AP băng tần kép 802.11, hãy nâng cấp các máy khách không dây (bởi vì các thiết bị cũ 802.11b, 802.11g và thậm chí cả 802.11n có thể làm chậm toàn bộ WLAN, có nghĩa là tất cả các thiết bị không dây nên hỗ trợ cùng một tiêu chuẩn cao nhất có thể chấp nhận được để có hiệu suất tốt nhất) hoặc chia tách lưu lượng.)\n[L2577] - The easiest way to improve wireless performance is to split the wireless traffic between the 802.11n 2.4 GHz band and the 5 GHz band, which allows 802.11n (or better) devices to use the two bands as two separate wireless networks to help manage the traffic.\n[L2578] (Cách dễ nhất để cải thiện hiệu suất không dây là chia tách lưu lượng không dây giữa băng tần 2.4 GHz 802.11n và băng tần 5 GHz, điều này cho phép các thiết bị 802.11n (hoặc tốt hơn) sử dụng hai băng tần làm hai mạng không dây riêng biệt để giúp quản lý lưu lượng.)\n[L2579] - Using a split-the-traffic approach has several benefits: the 2.4 GHz band may be suitable for basic Internet traffic that is not time-sensitive, its bandwidth may still be shared with other nearby WLANs, while the 5 GHz band is much less crowded (making it ideal for streaming multimedia) and has more channels, which makes the chosen channel likely interference-free.\n[L2580] (Sử dụng phương pháp chia tách lưu lượng có một số lợi ích: băng tần 2.4 GHz có thể phù hợp cho lưu lượng Internet cơ bản không nhạy cảm về thời gian, băng thông của nó vẫn có thể bị chia sẻ với các WLAN gần đó khác, trong khi băng tần 5 GHz ít đông đúc hơn nhiều (lý tưởng để truyền phát đa phương tiện) và có nhiều kênh hơn, điều này làm cho kênh được chọn có khả năng không bị nhiễu.)\n[L2581] - Because dual-band routers and APs use the same network name on both bands by default, it may be useful to segment the traffic, which can be most simply achieved by renaming one of the wireless networks.\n[L2582] (Bởi vì các bộ định tuyến và AP băng tần kép sử dụng cùng một tên mạng trên cả hai băng tần theo mặc định, việc phân đoạn lưu lượng có thể hữu ích, điều này có thể đạt được một cách đơn giản nhất bằng cách đổi tên một trong các mạng không dây.)\n[L2583] - To improve the range of a wireless network, ensure the wireless router or AP location is free of obstructions, such as furniture, fixtures, and tall appliances, as these block the signal, which shortens the range of the WLAN; if this still does not solve the problem, then a Wi-Fi Range Extender or deploying Powerline wireless technology may be used.\n[L2584] (Để cải thiện phạm vi của mạng không dây, hãy đảm bảo vị trí bộ định tuyến không dây hoặc AP không có vật cản, chẳng hạn như đồ nội thất, đồ đạc và các thiết bị cao, vì chúng chặn tín hiệu, làm rút ngắn phạm vi của WLAN; nếu điều này vẫn không giải quyết được sự cố, thì có thể sử dụng Bộ mở rộng phạm vi Wi-Fi hoặc triển khai công nghệ không dây Powerline.)\n[L2585] 4.4. Updating Firmware:",
     "slide_comment": "Lợi ích chính của việc sử dụng Wireless LAN Controller (WLC) tập trung là gì? C. Đơn giản hóa việc quản lý nhiều Access Point (Simplifies management of multiple APs). WLC cho phép cấu hình và quản lý tập trung các AP trong toàn hệ thống.",
@@ -8137,7 +8137,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_231.png",
     "missing_image": false,
-    "question_text": "What is the effect of issuing the ip address dhop command on a router interface?",
+    "question_text": "What is the effect of issuing the `ip address dhcp` command on a router interface?",
     "type": "single",
     "options": [
       {
@@ -8164,11 +8164,11 @@
     "answers": [
       "D"
     ],
-    "explanation": "🎯 Đáp án đúng: D (D: Makes the router request an IP address dynamically)\n\n📝 Dịch đề:\nTác dụng của việc ban hành lệnh dhop địa chỉ IP trên giao diện router là gì?\n\n📋 Dịch đáp án:\n- D: Makes the router request an IP address dynamically\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCấu hình bộ định tuyến với lệnh cấu hình giao diện 'ip helper-address address', khiến nó chấp nhận các yêu cầu quảng bá và chuyển tiếp chúng dưới dạng đơn hướng đến địa chỉ IPv4 được chỉ định, điều này có thể được xác minh bằng lệnh 'show ip interface'.\n\n💡 Mẹo nhớ: Đáp án D (Makes the router request an IP address dynamically)",
+    "explanation": "🎯 Đáp án đúng: D (D: Makes the router request an IP address dynamically)\n\n📝 Dịch đề:\nTác dụng của việc ban hành lệnh dhcp địa chỉ IP trên giao diện router là gì?\n\n📋 Dịch đáp án:\n- D: Makes the router request an IP address dynamically\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCấu hình bộ định tuyến với lệnh cấu hình giao diện 'ip helper-address address', khiến nó chấp nhận các yêu cầu quảng bá và chuyển tiếp chúng dưới dạng đơn hướng đến địa chỉ IPv4 được chỉ định, điều này có thể được xác minh bằng lệnh 'show ip interface'.\n\n💡 Mẹo nhớ: Đáp án D (Makes the router request an IP address dynamically)",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1291-L1305)",
     "theory_excerpt": "[L1291] (Bước 2: Cung cấp DHCP (DHCPOFFER))\n[L1292] + Step 3: DHCP Request (DHCPREQUEST) - The client sends the DHCPREQUEST as a broadcast packet so that all other DHCP servers know their offers were rejected, allowing them to return their offered IPv4 addresses to their respective pools. Additionally, Layer 2 protocols like ARP are peripherally involved to verify that the offered IP address is not already in use on the local network.\n[L1293] (Bước 3: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi DHCPREQUEST dưới dạng gói tin quảng bá để tất cả các máy chủ DHCP khác biết rằng lời đề nghị của họ đã bị từ chối, cho phép chúng đưa địa chỉ IPv4 đã đề nghị trở lại nhóm của mình. Ngoài ra, các giao thức Lớp 2 như ARP có liên quan gián tiếp để xác minh rằng địa chỉ IP được cung cấp chưa được sử dụng trên mạng cục bộ.)\n[L1294] + Step 4: DHCP Acknowledgment (DHCPACK)\n[L1295] (Bước 4: Xác nhận DHCP (DHCPACK))\n[L1296] 1.4. Steps to Renew a Lease:\n[L1297] - Prior to lease expiration, the client begins a two-step process to renew the lease with the DHCPv4 server:\n[L1298] (Trước khi hợp đồng thuê hết hạn, máy khách bắt đầu quy trình hai bước để gia hạn hợp đồng thuê với máy chủ DHCPv4:)\n[L1299] + Step 1: DHCP Request (DHCPREQUEST) - The client sends a DHCPREQUEST message directly to the original DHCPv4 server; if a DHCPACK is not received within a specified time, it broadcasts another DHCPREQUEST to allow other servers to extend the lease.\n[L1300] (Bước 1: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi thông báo DHCPREQUEST trực tiếp đến máy chủ DHCPv4 ban đầu; nếu không nhận được DHCPACK trong một khoảng thời gian nhất định, nó sẽ quảng bá một DHCPREQUEST khác để cho phép các máy chủ khác gia hạn hợp đồng thuê.)\n[L1301] + Step 2: DHCP Acknowledgment (DHCPACK) - On receiving the DHCPREQUEST message, the server verifies the lease information by returning a DHCPACK.\n[L1302] (Bước 2: Xác nhận DHCP (DHCPACK) - Khi nhận được thông báo DHCPREQUEST, máy chủ sẽ xác minh thông tin hợp đồng thuê bằng cách trả về một DHCPACK.)\n[L1303] - According to IETF RFC 2131, these messages (primarily DHCPOFFER and DHCPACK) can be sent as unicast or broadcast.\n[L1304] (Theo IETF RFC 2131, các thông báo này (chủ yếu là DHCPOFFER và DHCPACK) có thể được gửi dưới dạng đơn hướng hoặc quảng bá.)\n[L1305] 2. Configure a Cisco IOS DHCPv4 Server:",
     "slide_comment": "",
-    "question_translation": "Tác dụng của việc ban hành lệnh dhop địa chỉ IP trên giao diện router là gì?"
+    "question_translation": "Tác dụng của việc thực thi câu lệnh `ip address dhcp` trên một cổng giao tiếp (interface) của router là gì?"
   },
   {
     "id": 220,
@@ -8249,7 +8249,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_234.png",
     "missing_image": false,
-    "question_text": "What is accomplished by the ip dhop excluded-address 10.10.4.1 10.10.4.5 command?",
+    "question_text": "What is accomplished by the ip dhcp excluded-address 10.10.4.1 10.10.4.5 command?",
     "type": "single",
     "options": [
       {
@@ -8272,11 +8272,11 @@
     "answers": [
       "B"
     ],
-    "explanation": "🎯 Đáp án đúng: B (B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)\n\n📝 Dịch đề:\nLệnh ip dhop loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?\n\n📋 Dịch đáp án:\n- B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nLoại trừ các địa chỉ IPv4 được gán thủ công cho bộ định tuyến, máy chủ hoặc máy in bằng lệnh 'ip dhcp excluded-address low-address [high-address]', lệnh này có thể được nhập nhiều lần.\n\n💡 Mẹo nhớ: Đáp án B (The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)",
+    "explanation": "🎯 Đáp án đúng: B (B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)\n\n📝 Dịch đề:\nLệnh ip dhcp loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?\n\n📋 Dịch đáp án:\n- B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nLoại trừ các địa chỉ IPv4 được gán thủ công cho bộ định tuyến, máy chủ hoặc máy in bằng lệnh 'ip dhcp excluded-address low-address [high-address]', lệnh này có thể được nhập nhiều lần.\n\n💡 Mẹo nhớ: Đáp án B (The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1291-L1305)",
     "theory_excerpt": "[L1291] (Bước 2: Cung cấp DHCP (DHCPOFFER))\n[L1292] + Step 3: DHCP Request (DHCPREQUEST) - The client sends the DHCPREQUEST as a broadcast packet so that all other DHCP servers know their offers were rejected, allowing them to return their offered IPv4 addresses to their respective pools. Additionally, Layer 2 protocols like ARP are peripherally involved to verify that the offered IP address is not already in use on the local network.\n[L1293] (Bước 3: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi DHCPREQUEST dưới dạng gói tin quảng bá để tất cả các máy chủ DHCP khác biết rằng lời đề nghị của họ đã bị từ chối, cho phép chúng đưa địa chỉ IPv4 đã đề nghị trở lại nhóm của mình. Ngoài ra, các giao thức Lớp 2 như ARP có liên quan gián tiếp để xác minh rằng địa chỉ IP được cung cấp chưa được sử dụng trên mạng cục bộ.)\n[L1294] + Step 4: DHCP Acknowledgment (DHCPACK)\n[L1295] (Bước 4: Xác nhận DHCP (DHCPACK))\n[L1296] 1.4. Steps to Renew a Lease:\n[L1297] - Prior to lease expiration, the client begins a two-step process to renew the lease with the DHCPv4 server:\n[L1298] (Trước khi hợp đồng thuê hết hạn, máy khách bắt đầu quy trình hai bước để gia hạn hợp đồng thuê với máy chủ DHCPv4:)\n[L1299] + Step 1: DHCP Request (DHCPREQUEST) - The client sends a DHCPREQUEST message directly to the original DHCPv4 server; if a DHCPACK is not received within a specified time, it broadcasts another DHCPREQUEST to allow other servers to extend the lease.\n[L1300] (Bước 1: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi thông báo DHCPREQUEST trực tiếp đến máy chủ DHCPv4 ban đầu; nếu không nhận được DHCPACK trong một khoảng thời gian nhất định, nó sẽ quảng bá một DHCPREQUEST khác để cho phép các máy chủ khác gia hạn hợp đồng thuê.)\n[L1301] + Step 2: DHCP Acknowledgment (DHCPACK) - On receiving the DHCPREQUEST message, the server verifies the lease information by returning a DHCPACK.\n[L1302] (Bước 2: Xác nhận DHCP (DHCPACK) - Khi nhận được thông báo DHCPREQUEST, máy chủ sẽ xác minh thông tin hợp đồng thuê bằng cách trả về một DHCPACK.)\n[L1303] - According to IETF RFC 2131, these messages (primarily DHCPOFFER and DHCPACK) can be sent as unicast or broadcast.\n[L1304] (Theo IETF RFC 2131, các thông báo này (chủ yếu là DHCPOFFER và DHCPACK) có thể được gửi dưới dạng đơn hướng hoặc quảng bá.)\n[L1305] 2. Configure a Cisco IOS DHCPv4 Server:",
     "slide_comment": "",
-    "question_translation": "Lệnh ip dhop loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?"
+    "question_translation": "Lệnh ip dhcp loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?"
   },
   {
     "id": 223,
@@ -8753,7 +8753,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_248.png",
     "missing_image": false,
-    "question_text": "What does the term \"port density\" represent for an Ethernet switch?\nHoàng Hoàng",
+    "question_text": "What does the term \"port density\" represent for an Ethernet switch?",
     "type": "single",
     "options": [
       {
@@ -9166,7 +9166,7 @@
       },
       {
         "key": "B",
-        "text": "1. The router de-encapsulates the Ethernet frame. 2. The router examines the destination MAC address. 3. The router identifies the Ethernet Type field. 4. The router examines the destination IP address. ARN TO KNOW"
+        "text": "1. The router de-encapsulates the Ethernet frame. 2. The router examines the destination MAC address. 3. The router identifies the Ethernet Type field. 4. The router examines the destination IP address."
       },
       {
         "key": "C",
@@ -9593,7 +9593,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_271.png",
     "missing_image": false,
-    "question_text": "An administrator issues the commands:\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhop\nWhat is the administrator trying to achieve?",
+    "question_text": "An administrator issues the commands:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nWhat is the administrator trying to achieve?",
     "type": "single",
     "options": [
       {
@@ -9616,11 +9616,11 @@
     "answers": [
       "A"
     ],
-    "explanation": "🎯 Đáp án đúng: A (A: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop\nQuản trị viên đang cố gắng đạt được điều gì?\n\n📋 Dịch đáp án:\n- A: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án A (configuring the router to obtain IP parameters from a DHCPv4 server)",
+    "explanation": "🎯 Đáp án đúng: A (A: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhcp\nQuản trị viên đang cố gắng đạt được điều gì?\n\n📋 Dịch đáp án:\n- A: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án A (configuring the router to obtain IP parameters from a DHCPv4 server)",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1716-L1730)",
     "theory_excerpt": "[L1716] - The role of the active and standby routers is determined during the HSRP election process, where, by default, the router with the numerically highest IPv4 address is elected as the active router.\n[L1717] (Vai trò của các bộ định tuyến hoạt động và dự phòng được xác định trong quá trình bầu chọn HSRP, trong đó, theo mặc định, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng được bầu làm bộ định tuyến hoạt động.)\n[L1718] - To better control network operations, HSRP priority can be used to determine the active router, where the router with the highest HSRP priority (default is 100) will become the active router.\n[L1719] (Để kiểm soát hoạt động mạng tốt hơn, ưu tiên HSRP có thể được sử dụng để xác định bộ định tuyến hoạt động, trong đó bộ định tuyến có mức ưu tiên HSRP cao nhất (mặc định là 100) sẽ trở thành bộ định tuyến hoạt động.)\n[L1720] - If the priorities are equal, the router with the numerically highest IPv4 address is elected as the active router.\n[L1721] (Nếu các mức ưu tiên bằng nhau, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng sẽ được bầu làm bộ định tuyến hoạt động.)\n[L1722] - To configure a router to be the active router, use the 'standby priority' interface command, which accepts a range from 0 to 255.\n[L1723] (Để cấu hình một bộ định tuyến trở thành bộ định tuyến hoạt động, sử dụng lệnh giao diện 'standby priority', chấp nhận dải từ 0 đến 255.)\n[L1724] - By default, after a router becomes the active router, it will remain the active router even if another router comes online with a higher HSRP priority.\n[L1725] (Theo mặc định, sau khi một bộ định tuyến trở thành bộ định tuyến hoạt động, nó sẽ vẫn là bộ định tuyến hoạt động ngay cả khi một bộ định tuyến khác trực tuyến với mức ưu tiên HSRP cao hơn.)\n[L1726] - To force a new HSRP election process to take place when a higher-priority router comes online, preemption must be enabled using the 'standby preempt' interface command.\n[L1727] (Để buộc một quá trình bầu chọn HSRP mới diễn ra khi một bộ định tuyến có độ ưu tiên cao hơn trực tuyến, tính năng ưu tiên chiếm quyền (preemption) phải được bật bằng lệnh giao diện 'standby preempt'.)\n[L1728] - Preemption allows a router to trigger the re-election process and assume the role of the active router, but only if it has a higher priority, meaning a router with equal priority but a higher IPv4 address will not preempt an active router.\n[L1729] (Ưu tiên chiếm quyền cho phép một bộ định tuyến kích hoạt quá trình bầu chọn lại và đảm nhận vai trò của bộ định tuyến hoạt động, nhưng chỉ khi nó có mức ưu tiên cao hơn, có nghĩa là một bộ định tuyến có mức ưu tiên tương đương nhưng địa chỉ IPv4 cao hơn sẽ không chiếm quyền của bộ định tuyến đang hoạt động.)\n[L1730] - With preemption disabled, the router that boots up first will become the active router if there are no other routers online during the election process.",
     "slide_comment": "",
-    "question_translation": "Người quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop\nQuản trị viên đang cố gắng đạt được điều gì?"
+    "question_translation": "Một quản trị viên thực thi các câu lệnh sau:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nQuản trị viên đang muốn đạt được điều gì?"
   },
   {
     "id": 260,
@@ -9629,7 +9629,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/NWC303/slide_272.png",
     "missing_image": false,
-    "question_text": "An administrator issues the commands:\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhop",
+    "question_text": "An administrator issues the commands:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nWhat is the administrator trying to achieve?",
     "type": "single",
     "options": [
       {
@@ -9652,11 +9652,11 @@
     "answers": [
       "D"
     ],
-    "explanation": "🎯 Đáp án đúng: D (D: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop\n\n📋 Dịch đáp án:\n- D: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án D (configuring the router to obtain IP parameters from a DHCPv4 server)",
+    "explanation": "🎯 Đáp án đúng: D (D: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhcp\n\n📋 Dịch đáp án:\n- D: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án D (configuring the router to obtain IP parameters from a DHCPv4 server)",
     "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1716-L1730)",
     "theory_excerpt": "[L1716] - The role of the active and standby routers is determined during the HSRP election process, where, by default, the router with the numerically highest IPv4 address is elected as the active router.\n[L1717] (Vai trò của các bộ định tuyến hoạt động và dự phòng được xác định trong quá trình bầu chọn HSRP, trong đó, theo mặc định, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng được bầu làm bộ định tuyến hoạt động.)\n[L1718] - To better control network operations, HSRP priority can be used to determine the active router, where the router with the highest HSRP priority (default is 100) will become the active router.\n[L1719] (Để kiểm soát hoạt động mạng tốt hơn, ưu tiên HSRP có thể được sử dụng để xác định bộ định tuyến hoạt động, trong đó bộ định tuyến có mức ưu tiên HSRP cao nhất (mặc định là 100) sẽ trở thành bộ định tuyến hoạt động.)\n[L1720] - If the priorities are equal, the router with the numerically highest IPv4 address is elected as the active router.\n[L1721] (Nếu các mức ưu tiên bằng nhau, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng sẽ được bầu làm bộ định tuyến hoạt động.)\n[L1722] - To configure a router to be the active router, use the 'standby priority' interface command, which accepts a range from 0 to 255.\n[L1723] (Để cấu hình một bộ định tuyến trở thành bộ định tuyến hoạt động, sử dụng lệnh giao diện 'standby priority', chấp nhận dải từ 0 đến 255.)\n[L1724] - By default, after a router becomes the active router, it will remain the active router even if another router comes online with a higher HSRP priority.\n[L1725] (Theo mặc định, sau khi một bộ định tuyến trở thành bộ định tuyến hoạt động, nó sẽ vẫn là bộ định tuyến hoạt động ngay cả khi một bộ định tuyến khác trực tuyến với mức ưu tiên HSRP cao hơn.)\n[L1726] - To force a new HSRP election process to take place when a higher-priority router comes online, preemption must be enabled using the 'standby preempt' interface command.\n[L1727] (Để buộc một quá trình bầu chọn HSRP mới diễn ra khi một bộ định tuyến có độ ưu tiên cao hơn trực tuyến, tính năng ưu tiên chiếm quyền (preemption) phải được bật bằng lệnh giao diện 'standby preempt'.)\n[L1728] - Preemption allows a router to trigger the re-election process and assume the role of the active router, but only if it has a higher priority, meaning a router with equal priority but a higher IPv4 address will not preempt an active router.\n[L1729] (Ưu tiên chiếm quyền cho phép một bộ định tuyến kích hoạt quá trình bầu chọn lại và đảm nhận vai trò của bộ định tuyến hoạt động, nhưng chỉ khi nó có mức ưu tiên cao hơn, có nghĩa là một bộ định tuyến có mức ưu tiên tương đương nhưng địa chỉ IPv4 cao hơn sẽ không chiếm quyền của bộ định tuyến đang hoạt động.)\n[L1730] - With preemption disabled, the router that boots up first will become the active router if there are no other routers online during the election process.",
     "slide_comment": "",
-    "question_translation": "Người quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop"
+    "question_translation": "Một quản trị viên thực thi các câu lệnh sau:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nQuản trị viên đang muốn đạt được mục tiêu nào?"
   },
   {
     "id": 261,

@@ -529,10 +529,10 @@
   </div>
 
   <!-- DATA SCRIPTS (Works both inside semester3-quiz-hub/ and directly on Desktop/) -->
-  <script src="data/quiz_data.js?v=20261112_0215"></script>
-  <script src="data/theory_data.js?v=20261112_0215"></script>
-  <script src="semester3-quiz-hub/data/quiz_data.js?v=20261112_0215"></script>
-  <script src="semester3-quiz-hub/data/theory_data.js?v=20261112_0215"></script>
+  <script src="data/quiz_data.js?v=20261112_1545"></script>
+  <script src="data/theory_data.js?v=20261112_1545"></script>
+  <script src="semester3-quiz-hub/data/quiz_data.js?v=20261112_1545"></script>
+  <script src="semester3-quiz-hub/data/theory_data.js?v=20261112_1545"></script>
 
   <script>
     function resolveImagePath(imgPath) {
@@ -1243,10 +1243,14 @@
               ? '<span class="text-rose-700 font-bold text-xs shrink-0 mt-0.5">✗ Sai</span>'
               : '');
 
+        const renderedOptHtml = (cleanText.includes('\n') || cleanText.startsWith('```'))
+          ? renderRichText(cleanText)
+          : renderInline(escapeHtml(cleanText));
+
         btn.innerHTML = `
           <span class="font-mono font-bold text-[#0000CC] shrink-0 mt-0.5">${key}.</span>
-          <div class="flex-grow flex flex-col text-left">
-            <span>${escapeHtml(cleanText)}</span>
+          <div class="flex-grow flex flex-col text-left overflow-hidden w-full">
+            <div class="w-full">${renderedOptHtml}</div>
             ${transText ? `<span class="text-xs text-emerald-800 font-semibold mt-1 bg-emerald-50/80 px-2 py-0.5 rounded border border-emerald-200 w-fit">↳ ${escapeHtml(transText)}</span>` : ''}
           </div>
           ${badgeLabel}

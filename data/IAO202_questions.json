@@ -2654,7 +2654,7 @@
       },
       {
         "key": "D",
-        "text": "The computer beeps once during the boot process. #I To KNOW"
+        "text": "The computer beeps once during the boot process."
       }
     ],
     "answers": [
@@ -6494,7 +6494,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/IAO202/slide_184.png",
     "missing_image": false,
-    "question_text": "onsider the result of the Is -I command in the Linux output below. What are the file permissions assigned to\nthe sales user for the analyst.txt file?\nIs -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt",
+    "question_text": "Consider the result of the `ls -l` command in the Linux output below. What are the file permissions assigned to the `sales` user for the `analyst.txt` file?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```",
     "type": "single",
     "options": [
       {
@@ -6521,7 +6521,7 @@
     "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L0666-L0680)",
     "theory_excerpt": "[L0666] + The Master Boot Record (MBR) is located in the first sector of a partitioned computer, stores all the information about the way in which the file system is organized, and quickly hands over control to a loading function, which loads the OS.\n[L0667] (Bản ghi Khởi động Chính (MBR) nằm trong khu vực đầu tiên của một máy tính được phân vùng, lưu trữ toàn bộ thông tin về cách tổ chức hệ thống tập tin và nhanh chóng trao quyền điều khiển cho một chức năng tải sẽ tải HĐH.)\n[L0668] - Mounting is the term used for the process of assigning a directory to a partition, and after a successful mount operation, the file system contained on the partition is accessible through the specified directory.\n[L0669] (Gắn kết là thuật ngữ được sử dụng cho quá trình gán một thư mục cho một phân vùng, và sau một thao tác gắn kết thành công, hệ thống tập tin chứa trên phân vùng có thể được truy cập thông qua thư mục được chỉ định.)\n[L0670] 5.2. File Permissions and Links:\n[L0671] - Linux uses file permissions in order to organize the system and enforce boundaries within the computer, where every file in Linux carries its file permissions, which define the actions that the owner, the group, and others can perform with the file.\n[L0672] (Linux sử dụng quyền tập tin để tổ chức hệ thống và thực thi các ranh giới trong máy tính, nơi mọi tập tin trong Linux mang các quyền tập tin của nó, xác định các hành động mà chủ sở hữu, nhóm và những người khác có thể thực hiện với tập tin.)\n[L0673] - The possible permission rights are Read, Write, and Execute.\n[L0674] (Các quyền cho phép có thể là Đọc, Ghi và Thực thi.)\n[L0675] - The 'ls' command with the '-l' parameter lists additional information about a file, including seven fields: the first field displays the permissions (e.g., -rwxrw-r--); the second field defines the number of hard links to the file; the third and fourth fields display the user and group who own the file, respectively; the fifth field displays the file size in bytes; the sixth field displays the date and time of the last modification; and the seventh field displays the file name.\n[L0676] (Lệnh 'ls' với tham số '-l' liệt kê thông tin bổ sung về một tập tin, bao gồm bảy trường: trường đầu tiên hiển thị các quyền (ví dụ: -rwxrw-r--); trường thứ hai xác định số lượng liên kết cứng tới tập tin; trường thứ ba và thứ tư lần lượt hiển thị người dùng và nhóm sở hữu tập tin; trường thứ năm hiển thị kích thước tập tin bằng byte; trường thứ sáu hiển thị ngày và giờ sửa đổi lần cuối; và trường thứ bảy hiển thị tên tập tin.)\n[L0677] - In a permission breakdown like '-rwxrw-r--', the initial dash (-) means that this is a file; the first set of characters (rwx) is for user permissions indicating the owner can Read, Write, and eXecute; the second set (rw-) is for group permissions indicating the owning group can Read and Write; and the third set (r--) is for any other user or group who can only Read the file.\n[L0678] (Trong phân tích quyền như '-rwxrw-r--', dấu gạch ngang ban đầu (-) có nghĩa đây là một tập tin; tập hợp ký tự đầu tiên (rwx) dành cho quyền của người dùng cho biết chủ sở hữu có thể Đọc, Ghi và Thực thi; tập hợp thứ hai (rw-) dành cho quyền của nhóm cho biết nhóm sở hữu có thể Đọc và Ghi; và tập hợp thứ ba (r--) dành cho bất kỳ người dùng hoặc nhóm nào khác chỉ có thể Đọc tập tin.)\n[L0679] - File permissions are a fundamental part of Linux and cannot be broken, and the only user that can override file permission on a Linux computer is the root user.\n[L0680] (Quyền tập tin là một phần cơ bản của Linux và không thể bị phá vỡ, và người dùng duy nhất có thể ghi đè quyền tập tin trên máy tính Linux là người dùng root.)",
     "slide_comment": "",
-    "question_translation": "Xét kết quả lệnh ls -l trong Linux dưới đây. Quyền của user sales đối với file analyst.txt là gì?"
+    "question_translation": "Xét kết quả lệnh `ls -l` trong Linux dưới đây. Quyền hạn của người dùng (user) `sales` đối với tệp tin `analyst.txt` là gì?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```"
   },
   {
     "id": 172,
@@ -6530,7 +6530,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/IAO202/slide_185.png",
     "missing_image": false,
-    "question_text": "Consider the result of the Is - command in the Linux output below. What are the group file permissions assigned\nto the analyst.txt file?\nIs - analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt",
+    "question_text": "Consider the result of the `ls -l` command in the Linux output below. What are the group file permissions assigned to the `analyst.txt` file?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```",
     "type": "single",
     "options": [
       {
@@ -6557,7 +6557,7 @@
     "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L0666-L0680)",
     "theory_excerpt": "[L0666] + The Master Boot Record (MBR) is located in the first sector of a partitioned computer, stores all the information about the way in which the file system is organized, and quickly hands over control to a loading function, which loads the OS.\n[L0667] (Bản ghi Khởi động Chính (MBR) nằm trong khu vực đầu tiên của một máy tính được phân vùng, lưu trữ toàn bộ thông tin về cách tổ chức hệ thống tập tin và nhanh chóng trao quyền điều khiển cho một chức năng tải sẽ tải HĐH.)\n[L0668] - Mounting is the term used for the process of assigning a directory to a partition, and after a successful mount operation, the file system contained on the partition is accessible through the specified directory.\n[L0669] (Gắn kết là thuật ngữ được sử dụng cho quá trình gán một thư mục cho một phân vùng, và sau một thao tác gắn kết thành công, hệ thống tập tin chứa trên phân vùng có thể được truy cập thông qua thư mục được chỉ định.)\n[L0670] 5.2. File Permissions and Links:\n[L0671] - Linux uses file permissions in order to organize the system and enforce boundaries within the computer, where every file in Linux carries its file permissions, which define the actions that the owner, the group, and others can perform with the file.\n[L0672] (Linux sử dụng quyền tập tin để tổ chức hệ thống và thực thi các ranh giới trong máy tính, nơi mọi tập tin trong Linux mang các quyền tập tin của nó, xác định các hành động mà chủ sở hữu, nhóm và những người khác có thể thực hiện với tập tin.)\n[L0673] - The possible permission rights are Read, Write, and Execute.\n[L0674] (Các quyền cho phép có thể là Đọc, Ghi và Thực thi.)\n[L0675] - The 'ls' command with the '-l' parameter lists additional information about a file, including seven fields: the first field displays the permissions (e.g., -rwxrw-r--); the second field defines the number of hard links to the file; the third and fourth fields display the user and group who own the file, respectively; the fifth field displays the file size in bytes; the sixth field displays the date and time of the last modification; and the seventh field displays the file name.\n[L0676] (Lệnh 'ls' với tham số '-l' liệt kê thông tin bổ sung về một tập tin, bao gồm bảy trường: trường đầu tiên hiển thị các quyền (ví dụ: -rwxrw-r--); trường thứ hai xác định số lượng liên kết cứng tới tập tin; trường thứ ba và thứ tư lần lượt hiển thị người dùng và nhóm sở hữu tập tin; trường thứ năm hiển thị kích thước tập tin bằng byte; trường thứ sáu hiển thị ngày và giờ sửa đổi lần cuối; và trường thứ bảy hiển thị tên tập tin.)\n[L0677] - In a permission breakdown like '-rwxrw-r--', the initial dash (-) means that this is a file; the first set of characters (rwx) is for user permissions indicating the owner can Read, Write, and eXecute; the second set (rw-) is for group permissions indicating the owning group can Read and Write; and the third set (r--) is for any other user or group who can only Read the file.\n[L0678] (Trong phân tích quyền như '-rwxrw-r--', dấu gạch ngang ban đầu (-) có nghĩa đây là một tập tin; tập hợp ký tự đầu tiên (rwx) dành cho quyền của người dùng cho biết chủ sở hữu có thể Đọc, Ghi và Thực thi; tập hợp thứ hai (rw-) dành cho quyền của nhóm cho biết nhóm sở hữu có thể Đọc và Ghi; và tập hợp thứ ba (r--) dành cho bất kỳ người dùng hoặc nhóm nào khác chỉ có thể Đọc tập tin.)\n[L0679] - File permissions are a fundamental part of Linux and cannot be broken, and the only user that can override file permission on a Linux computer is the root user.\n[L0680] (Quyền tập tin là một phần cơ bản của Linux và không thể bị phá vỡ, và người dùng duy nhất có thể ghi đè quyền tập tin trên máy tính Linux là người dùng root.)",
     "slide_comment": "",
-    "question_translation": "Xem kết quả lệnh 'ls -l' trong Linux: dòng quyền hạn hiển thị '-rw-r--r--'. Chủ sở hữu (User/Owner) của tệp có các quyền nào?"
+    "question_translation": "Xét kết quả lệnh `ls -l` trong Linux dưới đây. Quyền hạn của nhóm (group `staff`) đối với tệp tin `analyst.txt` là gì?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```"
   },
   {
     "id": 173,
@@ -7550,7 +7550,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/IAO202/slide_214.png",
     "missing_image": false,
-    "question_text": "What is a feature of the topdump tool?",
+    "question_text": "What is a feature of the tcpdump tool?",
     "type": "single",
     "options": [
       {
@@ -7847,7 +7847,7 @@
       },
       {
         "key": "B",
-        "text": "destination MAC address to a destination IPv4 address R U IN TO KNOWI"
+        "text": "destination MAC address to a destination IPv4 address R U IN I"
       },
       {
         "key": "C",
@@ -7861,7 +7861,7 @@
     "answers": [
       "B"
     ],
-    "explanation": "🎯 Đáp án đúng: B (B: destination MAC address to a destination IPv4 address R U IN TO KNOWI)\n\n📝 Dịch đề:\nARP ánh xạ địa chỉ nào?\n\n📋 Dịch đáp án:\n- B: destination MAC address to a destination IPv4 address R U IN TO KNOWI\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nARP tìm MAC tương ứng với địa chỉ IPv4.\n\n💡 Mẹo nhớ: Đáp án B (destination MAC address to a destination IPv4 address R U IN TO KNOWI)",
+    "explanation": "🎯 Đáp án đúng: B (B: destination MAC address to a destination IPv4 address R U IN I)\n\n📝 Dịch đề:\nARP ánh xạ địa chỉ nào?\n\n📋 Dịch đáp án:\n- B: destination MAC address to a destination IPv4 address R U IN I\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nARP tìm MAC tương ứng với địa chỉ IPv4.\n\n💡 Mẹo nhớ: Đáp án B (destination MAC address to a destination IPv4 address R U IN I)",
     "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L1326-L1340)",
     "theory_excerpt": "[L1326] - Conversely, when the destination IP address is on a remote network, the destination MAC address will be the address of the host's default gateway.\n[L1327] (Ngược lại, khi địa chỉ IP đích nằm trên một mạng từ xa, địa chỉ MAC đích sẽ là địa chỉ của cổng mặc định của máy chủ.)\n[L1328] - During remote communication, routers examine the destination IPv4 address, de-encapsulate the Layer 2 information upon receiving the Ethernet frame, determine the next-hop device using the destination IP address, and then encapsulate the IP packet in a new data link frame for the outgoing interface, where the destination MAC address will be that of the device's Ethernet NIC if the next-hop device is the final destination.\n[L1329] (Trong quá trình giao tiếp từ xa, các bộ định tuyến kiểm tra địa chỉ IPv4 đích, giải nén thông tin Lớp 2 khi nhận được khung Ethernet, xác định thiết bị bước nhảy tiếp theo bằng cách sử dụng địa chỉ IP đích, và sau đó đóng gói gói IP vào một khung liên kết dữ liệu mới cho giao diện đi, trong đó địa chỉ MAC đích sẽ là địa chỉ NIC Ethernet của thiết bị nếu thiết bị bước nhảy tiếp theo là đích cuối cùng.)\n[L1330] 2. Address Resolution Protocol:\n[L1331] 2.1. ARP Overview and Functions:\n[L1332] - A device uses the Address Resolution Protocol (ARP) to determine the destination MAC address of a local device when it knows its IPv4 address, solving the problem of sending a packet to another host on the same local IPv4 network when the MAC address is unknown.\n[L1333] (Một thiết bị sử dụng Giao thức Phân giải Địa chỉ (ARP) để xác định địa chỉ MAC đích của một thiết bị cục bộ khi nó biết địa chỉ IPv4 của thiết bị đó, giải quyết vấn đề gửi một gói tin đến một máy chủ khác trên cùng mạng IPv4 cục bộ khi địa chỉ MAC chưa được biết.)\n[L1334] - ARP provides two basic functions, which are resolving IPv4 addresses to MAC addresses and maintaining a table of IPv4 to MAC address mappings.\n[L1335] (ARP cung cấp hai chức năng cơ bản là phân giải địa chỉ IPv4 thành địa chỉ MAC và duy trì một bảng ánh xạ từ địa chỉ IPv4 sang địa chỉ MAC.)\n[L1336] - When a packet is sent to the data link layer to be encapsulated into an Ethernet frame, the sending device searches its ARP table, also known as the ARP cache, in its RAM to find the MAC address mapped to the destination IPv4 address if that IP address is on the same network as the source.\n[L1337] (Khi một gói tin được gửi đến lớp liên kết dữ liệu để được đóng gói thành một khung Ethernet, thiết bị gửi sẽ tìm kiếm trong bảng ARP của nó, còn được gọi là bộ đệm ARP, trong bộ nhớ RAM để tìm địa chỉ MAC được ánh xạ với địa chỉ IPv4 đích nếu địa chỉ IP đó nằm trên cùng mạng với nguồn.)\n[L1338] - If the device locates the IPv4 address, its corresponding MAC address is used as the destination MAC address in the frame.\n[L1339] (Nếu thiết bị xác định được vị trí địa chỉ IPv4, địa chỉ MAC tương ứng của nó sẽ được sử dụng làm địa chỉ MAC đích trong khung.)\n[L1340] - IPv6 uses a process similar to ARP for IPv4 known as ICMPv6 Neighbor Discovery (ND), which uses neighbor solicitation and neighbor advertisement messages that function similarly to IPv4 ARP requests and ARP replies.",
     "slide_comment": "",
@@ -9771,7 +9771,7 @@
       },
       {
         "key": "D",
-        "text": "to exchange all the response mechanisms to known threats"
+        "text": "to exchange all the response mechanisms n threats"
       }
     ],
     "answers": [
@@ -11238,7 +11238,7 @@
     "section": "Câu Hỏi Đơn (Single Choice)",
     "image": "images/IAO202/slide_317.png",
     "missing_image": false,
-    "question_text": "ser is executing a tracert to a remote device. At what point would a router, which is in the path to the\ndestination device, stop forwarding the packet?",
+    "question_text": "A user is executing a `tracert` to a remote device. At what point would a router, which is in the path to the destination device, stop forwarding the packet?",
     "type": "single",
     "options": [
       {
@@ -11247,7 +11247,7 @@
       },
       {
         "key": "B",
-        "text": "when the RTT value reaches zero ARN TO KNOWI"
+        "text": "when the RTT value reaches zero"
       },
       {
         "key": "C",
@@ -11269,7 +11269,7 @@
     "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L1256-L1270)",
     "theory_excerpt": "[L1256] (Nhắn tin giữa các thiết bị IPv6 liên quan đến các thông báo Yêu cầu Hàng xóm (NS) và Quảng cáo Hàng xóm (NA) để phân giải địa chỉ và Phát hiện Địa chỉ Trùng lặp (DAD):)\n[L1257] + For address resolution, NS messages are sent when a device knows the IPv6 address of another device but does not know its MAC address (equivalent to an ARP Request for IPv4), and NA messages are sent in response, including the device’s Ethernet MAC address (equivalent to an ARP Reply in IPv4).\n[L1258] (Đối với phân giải địa chỉ, các thông báo NS được gửi khi một thiết bị biết địa chỉ IPv6 của thiết bị khác nhưng không biết địa chỉ MAC của thiết bị đó (tương đương với Yêu cầu ARP cho IPv4), và các thông báo NA được gửi để phản hồi, bao gồm địa chỉ MAC Ethernet của thiết bị (tương đương với Hồi đáp ARP trong IPv4).)\n[L1259] + When a device is assigned a global unicast or link-local unicast address, Duplicate Address Detection (DAD) is performed to check the uniqueness of the address by sending an NS message with its own IPv6 address.\n[L1260] (Khi một thiết bị được gán một địa chỉ unicast toàn cầu hoặc unicast liên kết cục bộ, Phát hiện Địa chỉ Trùng lặp (DAD) được thực hiện để kiểm tra tính duy nhất của địa chỉ bằng cách gửi một thông báo NS bằng địa chỉ IPv6 của chính nó.)\n[L1261] + If another device on the network has this address, it will respond with an NA message to notify the sending device that the address is in use, whereas if a corresponding NA message is not returned within a certain period of time, the unicast address is unique and acceptable for use.\n[L1262] (Nếu một thiết bị khác trên mạng có địa chỉ này, nó sẽ phản hồi bằng một thông báo NA để thông báo cho thiết bị gửi rằng địa chỉ đang được sử dụng, trong khi nếu không có thông báo NA tương ứng nào được trả về trong một khoảng thời gian nhất định, thì địa chỉ unicast đó là duy nhất và có thể sử dụng được.)\n[L1263] 2. Ping and Traceroute Utilities:\n[L1264] 2.1. Ping - Test Connectivity:\n[L1265] - Ping is an IPv4 and IPv6 testing utility that uses ICMP echo request and echo reply messages to test connectivity between hosts, where an echo request is sent to the host address using the ping command, and if the host receives it, it responds with an echo reply.\n[L1266] (Ping là một tiện ích kiểm tra IPv4 và IPv6 sử dụng các thông báo yêu cầu echo và hồi đáp echo của ICMP để kiểm tra kết nối giữa các máy chủ, trong đó một yêu cầu echo được gửi đến địa chỉ máy chủ bằng lệnh ping và nếu máy chủ nhận được yêu cầu đó, nó sẽ phản hồi bằng một hồi đáp echo.)\n[L1267] - As each echo reply is received, ping provides feedback on the time between when the request was sent and when the reply was received, which can serve as a measure of network performance.\n[L1268] (Khi nhận được mỗi hồi đáp echo, ping cung cấp phản hồi về thời gian giữa thời điểm yêu cầu được gửi và thời điểm nhận được hồi đáp, điều này có thể đóng vai trò như một thước đo hiệu suất mạng.)\n[L1269] - Ping has a timeout value for the reply, meaning if a reply is not received within the timeout, ping provides a message indicating that a response was not received, and after all requests are sent, it provides a summary that includes the success rate and average round-trip time to the destination.\n[L1270] (Ping có giá trị thời gian chờ cho hồi đáp, nghĩa là nếu không nhận được hồi đáp trong thời gian chờ, ping sẽ cung cấp thông báo cho biết không nhận được phản hồi, và sau khi tất cả các yêu cầu được gửi, nó cung cấp một bản tóm tắt bao gồm tỷ lệ thành công và thời gian vòng đệm trung bình đến đích.)",
     "slide_comment": "",
-    "question_translation": "Người dùng đang thực hiện lệnh 'tracert' đến một thiết bị từ xa. Tại thời điểm nào thì một router trên đường đi sẽ loại bỏ gói tin và gửi lại phản hồi lỗi?"
+    "question_translation": "Một người dùng đang thực thi lệnh `tracert` đến một thiết bị từ xa. Tại thời điểm nào thì một router nằm trên đường truyền đến thiết bị đích sẽ dừng chuyển tiếp gói tin?"
   },
   {
     "id": 303,

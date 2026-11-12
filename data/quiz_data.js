@@ -17615,7 +17615,7 @@ window.QUIZ_DATA = {
       "section": "Chọn 1 Đáp Án (Single Choice)",
       "image": "images/NWC303/slide_041.png",
       "missing_image": false,
-      "question_text": "What command, or set of commands, would be used to determine if the following configuration on router HQ works as designed?\nip route 0.0.0.0 0.0.0.0 serial 0/0/0 10\nip route 0.0.0.0 0.0.0.0 serial 0/1/0",
+      "question_text": "What command, or set of commands, would be used to determine if the following configuration on router HQ works as designed?\n\n```text\nip route 0.0.0.0 0.0.0.0 serial 0/0/0 10\nip route 0.0.0.0 0.0.0.0 serial 0/1/0\n```",
       "type": "single",
       "options": [
         {
@@ -17646,7 +17646,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - Module 15. IP Static Routing - 4.2. Configure and Test Floating Static Routes (L3014-L3022)",
       "theory_excerpt": "[L3014] 4.2. Configure and Test Floating Static Routes:\n[L3015] - The commands to configure primary default routes alongside their corresponding floating static routes (by appending the administrative distance) are as follows:\n[L3016] (Các lệnh để cấu hình các tuyến mặc định chính cùng với các tuyến tĩnh nổi tương ứng của chúng (bằng cách thêm khoảng cách quản trị) như sau:)\n[L3017] + 'R1(config)# ip route 0.0.0.0 0.0.0.0 172.16.2.2'\n[L3018] + 'R1(config)# ip route 0.0.0.0 0.0.0.0 10.10.10.2 5'\n[L3019] + 'R1(config)# ipv6 route ::/0 2001:db8:acad:2::2'\n[L3020] + 'R1(config)# ipv6 route ::/0 2001:db8:feed:10::2 5'\n[L3021] - Verification using the 'show ip route' and 'show ipv6 route' commands confirms that initially only the primary default routes are installed in the routing table, while the floating static routes remain notably absent until the primary path or interface fails, at which point the router generates syslog messages and actively uses the secondary floating route.\n[L3022] (Việc xác minh bằng các lệnh 'show ip route' và 'show ipv6 route' xác nhận rằng ban đầu chỉ có các tuyến mặc định chính được cài đặt trong bảng định tuyến, trong khi các tuyến tĩnh nổi vẫn hoàn toàn vắng mặt cho đến khi đường dẫn hoặc giao diện chính bị lỗi, tại thời điểm đó bộ định tuyến tạo ra các thông báo syslog và tích cực sử dụng tuyến nổi thứ cấp.)",
       "slide_comment": "",
-      "question_translation": "Lệnh hoặc tập lệnh nào được dùng để kiểm tra xem cấu hình tuyến tĩnh mặc định và tuyến tĩnh nổi trên router HQ có hoạt động đúng thiết kế hay không?",
+      "question_translation": "Lệnh hoặc nhóm lệnh nào sau đây được sử dụng để kiểm tra xem cấu hình sau trên router HQ có hoạt động đúng như thiết kế không?\n\n```text\nip route 0.0.0.0 0.0.0.0 serial 0/0/0 10\nip route 0.0.0.0 0.0.0.0 serial 0/1/0\n```",
       "is_multi": false
     },
     {
@@ -18981,7 +18981,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_080.png",
       "missing_image": false,
-      "question_text": "What character is used to enable the filtering of commands?\nHoàng Hoàng",
+      "question_text": "What character is used to enable the filtering of commands?",
       "type": "single",
       "options": [
         {
@@ -19377,7 +19377,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_091.png",
       "missing_image": false,
-      "question_text": "What message informs IPv6 enabled interfaces to use stateful DHCPv6 for obtaining an IPv6 address?\nHoàng Hoàng",
+      "question_text": "What message informs IPv6 enabled interfaces to use stateful DHCPv6 for obtaining an IPv6 address?",
       "type": "single",
       "options": [
         {
@@ -19845,7 +19845,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_104.png",
       "missing_image": false,
-      "question_text": "Which command will display a summary of all IPv6-enabled interfaces on a router that includes the IPv6\naddress and operational status?\nHoàng Hoàng",
+      "question_text": "Which command will display a summary of all IPv6-enabled interfaces on a router that includes the IPv6\naddress and operational status?",
       "type": "single",
       "options": [
         {
@@ -20321,7 +20321,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_117.png",
       "missing_image": false,
-      "question_text": "Which method does not require a server to maintain network address information to know which IPv6\naddresses are being used?",
+      "question_text": "Which method does not require a server to maintain network address information which IPv6\naddresses are being used?",
       "type": "single",
       "options": [
         {
@@ -20789,7 +20789,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_130.png",
       "missing_image": false,
-      "question_text": "Which switching method makes use of the FCS value?\nHoàng Hoàng",
+      "question_text": "Which switching method makes use of the FCS value?",
       "type": "single",
       "options": [
         {
@@ -21374,15 +21374,15 @@ window.QUIZ_DATA = {
       "options": [
         {
           "key": "A",
-          "text": "ip dhop snooping"
+          "text": "ip dhcp snooping"
         },
         {
           "key": "B",
-          "text": "ip dhop snooping limit rate"
+          "text": "ip dhcp snooping limit rate"
         },
         {
           "key": "C",
-          "text": "ip dhop snooping vlan"
+          "text": "ip dhcp snooping vlan"
         },
         {
           "key": "D",
@@ -21392,7 +21392,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: ip dhop snooping)\n\n📝 Dịch đề:\nMột quản trị viên mạng đang cấu hình DHCP snooping trên switch. Lệnh cấu hình nào cần phải được thực thi đầu tiên?\n\n📋 Dịch đáp án:\n- A: ip dhop snooping\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy trình cấu hình DHCP Snooping trên thiết bị chuyển mạch Cisco Catalyst:\n1. **Bước 1 (Bắt buộc đầu tiên):** Kích hoạt tính năng DHCP Snooping trên toàn cầu bằng lệnh `ip dhcp snooping` ở chế độ Global Configuration.\n2. **Bước tiếp theo:** Kích hoạt snooping trên các VLAN cụ thể (`ip dhcp snooping vlan <vlan-id>`), thiết lập cổng tin cậy (`ip dhcp snooping trust`) và giới hạn tốc độ gói (`ip dhcp snooping limit rate`).\nNếu chưa bật `ip dhcp snooping` toàn cục, các lệnh khác sẽ không có hiệu lực. Do đó đáp án là **A**.\n\n💡 Mẹo nhớ: Cấu hình DHCP snooping đầu tiên = ip dhcp snooping (global config).",
+      "explanation": "🎯 Đáp án đúng: A (A: ip dhcp snooping)\n\n📝 Dịch đề:\nMột quản trị viên mạng đang cấu hình DHCP snooping trên switch. Lệnh cấu hình nào cần phải được thực thi đầu tiên?\n\n📋 Dịch đáp án:\n- A: ip dhcp snooping\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy trình cấu hình DHCP Snooping trên thiết bị chuyển mạch Cisco Catalyst:\n1. **Bước 1 (Bắt buộc đầu tiên):** Kích hoạt tính năng DHCP Snooping trên toàn cầu bằng lệnh `ip dhcp snooping` ở chế độ Global Configuration.\n2. **Bước tiếp theo:** Kích hoạt snooping trên các VLAN cụ thể (`ip dhcp snooping vlan <vlan-id>`), thiết lập cổng tin cậy (`ip dhcp snooping trust`) và giới hạn tốc độ gói (`ip dhcp snooping limit rate`).\nNếu chưa bật `ip dhcp snooping` toàn cục, các lệnh khác sẽ không có hiệu lực. Do đó đáp án là **A**.\n\n💡 Mẹo nhớ: Cấu hình DHCP snooping đầu tiên = ip dhcp snooping (global config).",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L2056-L2070)",
       "theory_excerpt": "[L2056] 3.3. Steps to Implement DHCP Snooping:\n[L2057] - Use the following steps to enable DHCP snooping:\n[L2058] (Sử dụng các bước sau để bật DHCP snooping:)\n[L2059] + Step 1: Enable DHCP snooping globally by using the 'ip dhcp snooping' global configuration command.\n[L2060] (Bước 1: Bật DHCP snooping toàn cục bằng lệnh cấu hình toàn cục 'ip dhcp snooping'.)\n[L2061] + Step 2: On trusted ports, use the 'ip dhcp snooping trust' interface configuration command.\n[L2062] (Bước 2: Trên các cổng đáng tin cậy, sử dụng lệnh cấu hình giao diện 'ip dhcp snooping trust'.)\n[L2063] + Step 3: On untrusted interfaces, limit the number of DHCP discovery messages using the 'ip dhcp snooping limit rate packets-per-second' command.\n[L2064] (Bước 3: Trên các giao diện không tin cậy, giới hạn số lượng thông báo khám phá DHCP bằng lệnh 'ip dhcp snooping limit rate packets-per-second'.)\n[L2065] + Step 4: Enable DHCP snooping by VLAN using the 'ip dhcp snooping vlan' global configuration command.\n[L2066] (Bước 4: Bật DHCP snooping theo VLAN bằng lệnh cấu hình toàn cục 'ip dhcp snooping vlan'.)\n[L2067] - Verify DHCP snooping settings using the 'show ip dhcp snooping' privileged EXEC command, and view client mappings using the 'show ip dhcp snooping binding' command.\n[L2068] (Xác minh các cài đặt DHCP snooping bằng lệnh EXEC đặc quyền 'show ip dhcp snooping' và xem bản đồ máy khách bằng lệnh 'show ip dhcp snooping binding'.)\n[L2069] - A typical DHCP snooping configuration involves enabling the feature on the switch, explicitly trusting the upstream interface to the DHCP server, rate-limiting untrusted access ports, and enabling snooping on specific VLANs.\n[L2070] (Một cấu hình DHCP snooping điển hình bao gồm việc bật tính năng này trên switch, tin tưởng rõ ràng giao diện đường lên tới máy chủ DHCP, giới hạn tốc độ các cổng truy cập không tin cậy và bật snooping trên các VLAN cụ thể.)",
       "slide_comment": "",
@@ -21809,7 +21809,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_158.png",
       "missing_image": false,
-      "question_text": "You cannot ping a directly connected host. Which IOS command can be used to validate Layer 1 and Layer 2\nconnectivity?",
+      "question_text": "You cannot ping a directly connected host. Which IOS command can be used to validate Layer 1 and Layer 2 connectivity?",
       "type": "single",
       "options": [
         {
@@ -21818,7 +21818,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "show cap neighbors detail"
+          "text": "show cdp neighbors detail"
         },
         {
           "key": "C",
@@ -21840,7 +21840,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L0366-L0380)",
       "theory_excerpt": "[L0366] + 'show ip interface brief' and 'show ipv6 interface brief': Displays a summary for all interfaces, including their IP addresses and current operational status.\n[L0367] ('show ip interface brief' và 'show ipv6 interface brief': Hiển thị bản tóm tắt cho tất cả các giao diện, bao gồm địa chỉ IP của chúng và trạng thái hoạt động hiện tại.)\n[L0368] + 'show running-config interface interface-id': This displays the commands applied to the specified interface.\n[L0369] ('show running-config interface interface-id': Lệnh này hiển thị các lệnh được áp dụng cho giao diện được chỉ định.)\n[L0370] + 'show ip route' and 'show ipv6 route': These display the contents of the IPv4 or IPv6 routing table stored in RAM.\n[L0371] ('show ip route' và 'show ipv6 route': Các lệnh này hiển thị nội dung của bảng định tuyến IPv4 hoặc IPv6 được lưu trữ trong RAM.)\n[L0372] - In Cisco IOS 15, active interfaces should appear in the routing table with two related entries identified by the code 'C' (Connected) or 'L' (Local); in previous IOS versions, only a single entry with the code 'C' will appear.\n[L0373] (Trong Cisco IOS 15, các giao diện hoạt động sẽ xuất hiện trong bảng định tuyến với hai mục liên quan được xác định bằng mã 'C' (Đã kết nối) hoặc 'L' (Cục bộ); trong các phiên bản IOS trước đó, chỉ một mục nhập duy nhất có mã 'C' sẽ xuất hiện.)\n[L0374] 5.2. Verify Interface Status:\n[L0375] - The 'show ip interface brief' and 'show ipv6 interface brief' commands quickly reveal interface status, confirming they are operational if Status and Protocol are \"up,\" whereas any other output indicates a configuration or cabling problem.\n[L0376] (Lệnh 'show ip interface brief' và 'show ipv6 interface brief' nhanh chóng tiết lộ trạng thái giao diện, xác nhận chúng đang hoạt động nếu Status và Protocol là \"up,\" trong khi bất kỳ kết quả nào khác chỉ ra sự cố cấu hình hoặc cáp.)\n[L0377] 5.3. Verify IPv6 Link Local and Multicast Addresses:\n[L0378] - The 'show ipv6 interface brief' command displays two configured IPv6 addresses per interface: the manually entered global unicast address and the link-local unicast address beginning with FE80.\n[L0379] (Lệnh 'show ipv6 interface brief' hiển thị hai địa chỉ IPv6 được cấu hình cho mỗi giao diện: địa chỉ global unicast được nhập thủ công và địa chỉ link-local unicast bắt đầu bằng FE80.)\n[L0380] - A link-local address is automatically added whenever a global unicast address is assigned, and while an IPv6 interface requires a link-local address, a global unicast address is optional.",
       "slide_comment": "",
-      "question_translation": "Bạn không thể ping máy chủ được kết nối trực tiếp. Lệnh iOS nào có thể được sử dụng để xác thực Lớp 1 và Lớp 2\nkết nối?"
+      "question_translation": "Bạn không thể ping một máy chủ kết nối trực tiếp. Lệnh Cisco IOS nào có thể được sử dụng để xác thực kết nối ở Tầng 1 (Physical) và Tầng 2 (Data Link)?"
     },
     {
       "id": 149,
@@ -22713,7 +22713,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_184.png",
       "missing_image": false,
-      "question_text": "What will a router do if it does not have a default route configured and a packet needs to be forwarded to a\ndestination network that is not listed in the routing table?\nHoàng Hoàng",
+      "question_text": "What will a router do if it does not have a default route configured and a packet needs to be forwarded to a\ndestination network that is not listed in the routing table?",
       "type": "single",
       "options": [
         {
@@ -22969,7 +22969,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_191.png",
       "missing_image": false,
-      "question_text": "hich flag in an ICMPv6 RA message indicates that a host should use SLAAC to create an IPv6 Global\nUnicast Address (GUA)?",
+      "question_text": "Which flag in an ICMPv6 RA message indicates that a host should use SLAAC to create an IPv6 Global Unicast Address (GUA)?",
       "type": "single",
       "options": [
         {
@@ -22996,7 +22996,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1431-L1445)",
       "theory_excerpt": "[L1431] (Mặc dù hệ điều hành máy chủ tuân theo gợi ý của RA, nhưng quyết định thực tế cuối cùng vẫn do máy chủ tự định đoạt.)\n[L1432] 1.4. Three RA Message Flags:\n[L1433] - How a client obtains an IPv6 GUA depends on settings in the RA message, which includes three flags to inform the host about the dynamic options available:\n[L1434] (Cách máy khách lấy GUA IPv6 phụ thuộc vào các cài đặt trong thông báo RA, bao gồm ba cờ để thông báo cho máy chủ về các tùy chọn động khả dụng:)\n[L1435] + A flag (Address Autoconfiguration): Signifies to use Stateless Address Autoconfiguration (SLAAC) to create an IPv6 GUA.\n[L1436] (Cờ A (Tự động cấu hình Địa chỉ): Cho biết sử dụng Tự động Cấu hình Địa chỉ Không trạng thái (SLAAC) để tạo GUA IPv6.)\n[L1437] + O flag (Other Configuration): Signifies that additional information is available from a stateless DHCPv6 server.\n[L1438] (Cờ O (Cấu hình Khác): Cho biết thông tin bổ sung có sẵn từ máy chủ DHCPv6 không trạng thái.)\n[L1439] + M flag (Managed Address Configuration): Signifies to use a stateful DHCPv6 server to obtain an IPv6 GUA.\n[L1440] (Cờ M (Cấu hình Địa chỉ được Quản lý): Cho biết sử dụng máy chủ DHCPv6 có trạng thái để lấy GUA IPv6.)\n[L1441] - If both the M (Managed) and A (Autoconfiguration) flags are set to 1 in an RA received by a host, the host will attempt to use both SLAAC and Stateful DHCPv6 to acquire its IPv6 configuration, which can lead to unexpected dual addressing or conflicts.\n[L1442] (Nếu cả cờ M (Managed) và cờ A (Autoconfiguration) đều được đặt là 1 trong RA mà máy chủ nhận được, máy chủ sẽ cố gắng sử dụng cả SLAAC và DHCPv6 có trạng thái để lấy cấu hình IPv6 của nó, điều này có thể dẫn đến việc có hai địa chỉ hoặc xung đột không mong muốn.)\n[L1443] 2. SLAAC:\n[L1444] 2.1. SLAAC Overview:\n[L1445] - The SLAAC method enables hosts to create their own unique IPv6 global unicast address without the services of a DHCPv6 server, making it essential because not every network has access to a DHCPv6 server but every device needs a GUA.",
       "slide_comment": "",
-      "question_translation": "cờ hich trong thông báo ICMPv6 RA cho biết rằng máy chủ nên sử dụng SLAAC để tạo IPv6 Global\nĐịa chỉ Unicast (GUA)?"
+      "question_translation": "Cờ (flag) nào trong gói tin ICMPv6 Router Advertisement (RA) chỉ thị rằng máy chủ (host) nên sử dụng SLAAC để tự động tạo địa chỉ IPv6 Global Unicast (GUA)?"
     },
     {
       "id": 181,
@@ -23126,7 +23126,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "C",
-          "text": "Hides internal IP addresses from external networks R U ARN TO KNOW"
+          "text": "Hides internal IP addresses from external networks"
         },
         {
           "key": "D",
@@ -23140,7 +23140,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Hides internal IP addresses from external networks R U ARN TO KNOW)\n\n📝 Dịch đề:\nNAT mang lại lợi ích gì trên router WLAN?\n\n📋 Dịch đáp án:\n- C: Hides internal IP addresses from external networks R U ARN TO KNOW\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nVới tất cả các bộ phận chuyển động, định tuyến liên VLAN sử dụng các switch Lớp 3 thường dẫn đến số lượng lỗi triển khai thấp nhất so với Router-on-a-stick, vì nó dựa vào các giao diện ảo bên trong và loại bỏ nhu cầu về trunking bên ngoài phức tạp và ánh xạ giao diện phụ.\n\n💡 Mẹo nhớ: Đáp án C (Hides internal IP addresses from external networks R U ARN TO KNOW)",
+      "explanation": "🎯 Đáp án đúng: C (C: Hides internal IP addresses from external networks )\n\n📝 Dịch đề:\nNAT mang lại lợi ích gì trên router WLAN?\n\n📋 Dịch đáp án:\n- C: Hides internal IP addresses from external networks 📌 Giải thích chi tiết từng bước (Vì sao chọn):\nVới tất cả các bộ phận chuyển động, định tuyến liên VLAN sử dụng các switch Lớp 3 thường dẫn đến số lượng lỗi triển khai thấp nhất so với Router-on-a-stick, vì nó dựa vào các giao diện ảo bên trong và loại bỏ nhu cầu về trunking bên ngoài phức tạp và ánh xạ giao diện phụ.\n\n💡 Mẹo nhớ: Đáp án C (Hides internal IP addresses from external networks )",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L2571-L2585)",
       "theory_excerpt": "[L2571] (Cuối cùng, kiểm tra các liên kết giữa các thiết bị có dây để tìm kiếm các đầu nối kém hoặc cáp bị hỏng, và nếu cơ sở vật chất vật lý đã ở đúng vị trí, hãy xác minh mạng LAN có dây bằng cách ping các thiết bị, bao gồm cả AP.)\n[L2572] - If connectivity still fails at this point, which suggests something is wrong with the AP or its configuration, and once the user PC is eliminated as the source of the problem and the physical status of devices is confirmed, begin investigating the performance of the AP by checking its power status.\n[L2573] (Nếu kết nối vẫn thất bại tại thời điểm này, điều đó cho thấy có gì đó không ổn với AP hoặc cấu hình của nó, và một khi PC người dùng bị loại trừ là nguồn gốc của sự cố và trạng thái vật lý của các thiết bị được xác nhận, hãy bắt đầu điều tra hiệu suất của AP bằng cách kiểm tra trạng thái nguồn của nó.)\n[L2574] 4.3. Troubleshooting When the Network Is Slow:\n[L2575] - To optimize and increase the bandwidth of 802.11 dual-band routers and APs, either upgrade the wireless clients (because older 802.11b, 802.11g, and even 802.11n devices can slow the entire WLAN, meaning all wireless devices should support the same highest acceptable standard for best performance) or split the traffic.\n[L2576] (Để tối ưu hóa và tăng băng thông của bộ định tuyến và AP băng tần kép 802.11, hãy nâng cấp các máy khách không dây (bởi vì các thiết bị cũ 802.11b, 802.11g và thậm chí cả 802.11n có thể làm chậm toàn bộ WLAN, có nghĩa là tất cả các thiết bị không dây nên hỗ trợ cùng một tiêu chuẩn cao nhất có thể chấp nhận được để có hiệu suất tốt nhất) hoặc chia tách lưu lượng.)\n[L2577] - The easiest way to improve wireless performance is to split the wireless traffic between the 802.11n 2.4 GHz band and the 5 GHz band, which allows 802.11n (or better) devices to use the two bands as two separate wireless networks to help manage the traffic.\n[L2578] (Cách dễ nhất để cải thiện hiệu suất không dây là chia tách lưu lượng không dây giữa băng tần 2.4 GHz 802.11n và băng tần 5 GHz, điều này cho phép các thiết bị 802.11n (hoặc tốt hơn) sử dụng hai băng tần làm hai mạng không dây riêng biệt để giúp quản lý lưu lượng.)\n[L2579] - Using a split-the-traffic approach has several benefits: the 2.4 GHz band may be suitable for basic Internet traffic that is not time-sensitive, its bandwidth may still be shared with other nearby WLANs, while the 5 GHz band is much less crowded (making it ideal for streaming multimedia) and has more channels, which makes the chosen channel likely interference-free.\n[L2580] (Sử dụng phương pháp chia tách lưu lượng có một số lợi ích: băng tần 2.4 GHz có thể phù hợp cho lưu lượng Internet cơ bản không nhạy cảm về thời gian, băng thông của nó vẫn có thể bị chia sẻ với các WLAN gần đó khác, trong khi băng tần 5 GHz ít đông đúc hơn nhiều (lý tưởng để truyền phát đa phương tiện) và có nhiều kênh hơn, điều này làm cho kênh được chọn có khả năng không bị nhiễu.)\n[L2581] - Because dual-band routers and APs use the same network name on both bands by default, it may be useful to segment the traffic, which can be most simply achieved by renaming one of the wireless networks.\n[L2582] (Bởi vì các bộ định tuyến và AP băng tần kép sử dụng cùng một tên mạng trên cả hai băng tần theo mặc định, việc phân đoạn lưu lượng có thể hữu ích, điều này có thể đạt được một cách đơn giản nhất bằng cách đổi tên một trong các mạng không dây.)\n[L2583] - To improve the range of a wireless network, ensure the wireless router or AP location is free of obstructions, such as furniture, fixtures, and tall appliances, as these block the signal, which shortens the range of the WLAN; if this still does not solve the problem, then a Wi-Fi Range Extender or deploying Powerline wireless technology may be used.\n[L2584] (Để cải thiện phạm vi của mạng không dây, hãy đảm bảo vị trí bộ định tuyến không dây hoặc AP không có vật cản, chẳng hạn như đồ nội thất, đồ đạc và các thiết bị cao, vì chúng chặn tín hiệu, làm rút ngắn phạm vi của WLAN; nếu điều này vẫn không giải quyết được sự cố, thì có thể sử dụng Bộ mở rộng phạm vi Wi-Fi hoặc triển khai công nghệ không dây Powerline.)\n[L2585] 4.4. Updating Firmware:",
       "slide_comment": "",
@@ -23162,7 +23162,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "ip dhop snooping"
+          "text": "ip dhcp snooping"
         },
         {
           "key": "C",
@@ -23193,7 +23193,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_197.png",
       "missing_image": false,
-      "question_text": "Which method would an IP vo-enabled host using SLAAC employ to learn the address of the default gateway?\nHoàng Hoàng",
+      "question_text": "Which method would an IPv6-enabled host using SLAAC employ to learn the address of the default gateway?",
       "type": "single",
       "options": [
         {
@@ -23220,7 +23220,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1691-L1705)",
       "theory_excerpt": "[L1691] + Hot Standby Router Protocol (HSRP): A Cisco-proprietary FHRP designed to allow for transparent failover of a first-hop IPv4 device. HSRP is used in a group of routers for selecting an active device and a standby device. The active device routes packets, while the standby device takes over when the active device fails or when preset conditions are met.\n[L1692] (Giao thức Định tuyến Dự phòng Nóng (HSRP): Một FHRP độc quyền của Cisco được thiết kế để cho phép chuyển đổi dự phòng trong suốt của một thiết bị IPv4 bước nhảy đầu tiên. HSRP được sử dụng trong một nhóm các bộ định tuyến để chọn một thiết bị hoạt động và một thiết bị dự phòng. Thiết bị hoạt động định tuyến các gói tin, trong khi thiết bị dự phòng tiếp quản khi thiết bị hoạt động bị lỗi hoặc khi đáp ứng các điều kiện đặt trước.)\n[L1693] + HSRP for IPv6: A Cisco-proprietary FHRP that provides the same functionality of HSRP but in an IPv6 environment. An HSRP IPv6 group has a virtual MAC address derived from the HSRP group number and a virtual IPv6 link-local address derived from the HSRP virtual MAC address. Periodic router advertisements (RAs) are sent for the HSRP virtual IPv6 link-local address when the group is active, and these RAs stop after a final RA is sent when the group becomes inactive.\n[L1694] (HSRP cho IPv6: Một FHRP độc quyền của Cisco cung cấp chức năng tương tự như HSRP nhưng trong môi trường IPv6. Nhóm HSRP IPv6 có một địa chỉ MAC ảo bắt nguồn từ số nhóm HSRP và một địa chỉ link-local IPv6 ảo bắt nguồn từ địa chỉ MAC ảo HSRP. Các thông báo định tuyến (RA) định kỳ được gửi cho địa chỉ link-local IPv6 ảo HSRP khi nhóm hoạt động, và các RA này dừng lại sau khi một RA cuối cùng được gửi khi nhóm trở nên không hoạt động.)\n[L1695] + Virtual Router Redundancy Protocol version 2 (VRRPv2): A non-proprietary election protocol that dynamically assigns responsibility for one or more virtual routers to the VRRP routers on an IPv4 LAN, allowing several routers on a multiaccess link to use the same virtual IPv4 address. One router is elected as the virtual router master, with the other routers acting as backups in case the virtual router master fails.\n[L1696] (Giao thức Dự phòng Bộ định tuyến Ảo phiên bản 2 (VRRPv2): Một giao thức bầu chọn không độc quyền tự động gán trách nhiệm cho một hoặc nhiều bộ định tuyến ảo đối với các bộ định tuyến VRRP trên mạng LAN IPv4, cho phép một số bộ định tuyến trên một liên kết đa truy cập sử dụng cùng một địa chỉ IPv4 ảo. Một bộ định tuyến được bầu làm bộ định tuyến ảo chính, trong khi các bộ định tuyến khác đóng vai trò dự phòng trong trường hợp bộ định tuyến ảo chính bị lỗi.)\n[L1697] + VRRPv3: Provides the capability to support IPv4 and IPv6 addresses, works in multi-vendor environments, and is more scalable than VRRPv2.\n[L1698] (VRRPv3: Cung cấp khả năng hỗ trợ địa chỉ IPv4 và IPv6, hoạt động trong môi trường đa nhà cung cấp và có khả năng mở rộng tốt hơn VRRPv2.)\n[L1699] + Gateway Load Balancing Protocol (GLBP): A Cisco-proprietary FHRP that protects data traffic from a failed router or circuit, like HSRP and VRRP, while also allowing load balancing (also called load sharing) between a group of redundant routers.\n[L1700] (Giao thức Cân bằng Tải Cổng (GLBP): Một FHRP độc quyền của Cisco bảo vệ lưu lượng dữ liệu khỏi một bộ định tuyến hoặc mạch bị lỗi, giống như HSRP và VRRP, đồng thời cho phép cân bằng tải (còn gọi là chia sẻ tải) giữa một nhóm các bộ định tuyến dự phòng.)\n[L1701] + GLBP for IPv6: A Cisco-proprietary FHRP that provides automatic router backup for IPv6 hosts configured with a single default gateway on a LAN. Multiple first-hop routers on the LAN combine to offer a single virtual first-hop IPv6 router while sharing the IPv6 packet forwarding load.\n[L1702] (GLBP cho IPv6: Một FHRP độc quyền của Cisco cung cấp khả năng sao lưu bộ định tuyến tự động cho các máy chủ IPv6 được cấu hình với một cổng mặc định duy nhất trên mạng LAN. Nhiều bộ định tuyến bước nhảy đầu tiên trên mạng LAN kết hợp lại để cung cấp một bộ định tuyến IPv6 ảo duy nhất ở bước nhảy đầu tiên trong khi chia sẻ tải chuyển tiếp gói IPv6.)\n[L1703] + ICMP Router Discovery Protocol (IRDP): Specified in RFC 1256, IRDP is a legacy FHRP solution that allows IPv4 hosts to locate routers providing IPv4 connectivity to other nonlocal IP networks.\n[L1704] (Giao thức Khám phá Bộ định tuyến ICMP (IRDP): Được chỉ định trong RFC 1256, IRDP là một giải pháp FHRP cũ cho phép các máy chủ IPv4 định vị các bộ định tuyến cung cấp kết nối IPv4 đến các mạng IP không cục bộ khác.)\n[L1705] 2. Hot Standby Router Protocol (HSRP):",
       "slide_comment": "",
-      "question_translation": "Máy chủ hỗ trợ IP sử dụng SLAAC sẽ sử dụng phương pháp nào để tìm hiểu địa chỉ của cổng mặc định?"
+      "question_translation": "Một host kích hoạt IPv6 sử dụng SLAAC sẽ sử dụng phương thức nào để biết được địa chỉ của default gateway?"
     },
     {
       "id": 187,
@@ -23553,7 +23553,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_207.png",
       "missing_image": false,
-      "question_text": "static route has been configured on a router. However, the destination network no longer exists. What\nbuld an administrator do to remove the static route from the routing table?",
+      "question_text": "A static route has been configured on a router. However, the destination network no longer exists. What should an administrator do to remove the static route from the routing table?",
       "type": "single",
       "options": [
         {
@@ -23566,7 +23566,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "C",
-          "text": "Change the administrative distance for that route. To KNOw"
+          "text": "Change the administrative distance for that route."
         },
         {
           "key": "D",
@@ -23580,7 +23580,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L3021-L3035)",
       "theory_excerpt": "[L3021] - Verification using the 'show ip route' and 'show ipv6 route' commands confirms that initially only the primary default routes are installed in the routing table, while the floating static routes remain notably absent until the primary path or interface fails, at which point the router generates syslog messages and actively uses the secondary floating route.\n[L3022] (Việc xác minh bằng các lệnh 'show ip route' và 'show ipv6 route' xác nhận rằng ban đầu chỉ có các tuyến mặc định chính được cài đặt trong bảng định tuyến, trong khi các tuyến tĩnh nổi vẫn hoàn toàn vắng mặt cho đến khi đường dẫn hoặc giao diện chính bị lỗi, tại thời điểm đó bộ định tuyến tạo ra các thông báo syslog và tích cực sử dụng tuyến nổi thứ cấp.)\n[L3023] 5. Configure Static Host Routes:\n[L3024] 5.1. Host Routes:\n[L3025] - A host route is an IPv4 address with a 32-bit mask, or an IPv6 address with a 128-bit mask, which can be added to the routing table automatically, configured statically, or obtained through other methods.\n[L3026] (Tuyến máy chủ là một địa chỉ IPv4 với mặt nạ 32 bit, hoặc địa chỉ IPv6 với mặt nạ 128 bit, có thể được thêm vào bảng định tuyến một cách tự động, được cấu hình tĩnh hoặc thu được thông qua các phương pháp khác.)\n[L3027] - Automatically Installed Host Routes: Cisco IOS automatically installs a local host route (designated with an 'L') when an interface address is configured, allowing for a more efficient process for packets directed to the router itself, which acts as an addition to the connected route designated with a 'C' in the routing table for the network address of the interface.\n[L3028] (Tuyến Máy chủ Cài đặt Tự động: Cisco IOS tự động cài đặt một tuyến máy chủ cục bộ (được chỉ định bằng 'L') khi một địa chỉ giao diện được cấu hình, cho phép xử lý hiệu quả hơn đối với các gói tin hướng tới chính bộ định tuyến, điều này đóng vai trò bổ sung cho tuyến kết nối được chỉ định bằng chữ 'C' trong bảng định tuyến cho địa chỉ mạng của giao diện.)\n[L3029] 5.2. Static Host Routes:\n[L3030] - A host route can be a manually configured static route to direct traffic to a specific destination device, using a 255.255.255.255 (/32) mask for IPv4 or a /128 prefix length for IPv6.\n[L3031] (Một tuyến máy chủ có thể là một tuyến tĩnh được cấu hình thủ công để hướng lưu lượng tới một thiết bị đích cụ thể, sử dụng mặt nạ 255.255.255.255 (/32) cho IPv4 hoặc độ dài tiền tố /128 cho IPv6.)\n[L3032] - Local host routes provide a significant benefit to the IOS by allowing the router to more efficiently process packets that are destined directly to the router itself (such as management traffic), bypassing the normal packet forwarding process; additionally, manually configuring a static host route is an ideal tool for solving routing problems where traffic must be forcibly directed to a highly secure specific server or when overriding a broader network route for a single, critical destination.\n[L3033] (Các tuyến máy chủ cục bộ mang lại lợi ích đáng kể cho IOS bằng cách cho phép bộ định tuyến xử lý hiệu quả hơn các gói tin được định hướng trực tiếp tới chính bộ định tuyến (chẳng hạn như lưu lượng quản lý), bỏ qua quá trình chuyển tiếp gói thông thường; ngoài ra, việc cấu hình thủ công một tuyến máy chủ tĩnh là một công cụ lý tưởng để giải quyết các sự cố định tuyến nơi lưu lượng phải bị buộc hướng tới một máy chủ cụ thể có tính bảo mật cao hoặc khi cần ghi đè một tuyến mạng rộng hơn cho một đích đến quan trọng, duy nhất.)\n[L3034] - The configurations for static host routes on a local router to access a specific server are structured as follows:\n[L3035] (Các cấu hình cho tuyến máy chủ tĩnh trên một bộ định tuyến cục bộ để truy cập một máy chủ cụ thể được định dạng như sau:)",
       "slide_comment": "",
-      "question_translation": "tuyến tĩnh đã được cấu hình trên router. Tuy nhiên, mạng đích không còn tồn tại. cái gì\nquản trị viên có cần làm gì để xóa tuyến tĩnh khỏi bảng định tuyến không?"
+      "question_translation": "Một tuyến đường tĩnh đã được cấu hình trên router. Tuy nhiên mạng đích không còn tồn tại nữa. Quản trị viên cần làm gì để xóa tuyến đường tĩnh này khỏi bảng định tuyến?"
     },
     {
       "id": 197,
@@ -23589,7 +23589,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_208.png",
       "missing_image": false,
-      "question_text": "network administrator is entering the command ipvo unicast-routing to start configuring DHCPv6 operation\ni a router. Which statement describes the function of this command?",
+      "question_text": "A network administrator is entering the command `ipv6 unicast-routing` to start configuring DHCPv6 operation on a router. Which statement describes the function of this command?",
       "type": "single",
       "options": [
         {
@@ -23612,11 +23612,11 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: It is required for sending ICMPv6 RA messages.)\n\n📝 Dịch đề:\nquản trị mạng đang nhập lệnh ipvo unicast-routing để bắt đầu cấu hình hoạt động DHCPv6\ntôi là một router. Câu lệnh nào mô tả chức năng của lệnh này?\n\n📋 Dịch đáp án:\n- B: It is required for sending ICMPv6 RA messages.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMột lệnh thường được sử dụng khác là 'show interfaces', hiển thị thông tin trạng thái và thống kê trên các giao diện mạng và thường xuyên được sử dụng khi cấu hình và giám sát các thiết bị mạng.\n\n💡 Mẹo nhớ: Đáp án B (It is required for sending ICMPv6 RA messages.)",
+      "explanation": "🎯 Đáp án đúng: B (B: It is required for sending ICMPv6 RA messages.)\n\n📝 Dịch đề:\nquản trị mạng đang nhập lệnh ipv6 unicast-routing để bắt đầu cấu hình hoạt động DHCPv6\ntôi là một router. Câu lệnh nào mô tả chức năng của lệnh này?\n\n📋 Dịch đáp án:\n- B: It is required for sending ICMPv6 RA messages.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMột lệnh thường được sử dụng khác là 'show interfaces', hiển thị thông tin trạng thái và thống kê trên các giao diện mạng và thường xuyên được sử dụng khi cấu hình và giám sát các thiết bị mạng.\n\n💡 Mẹo nhớ: Đáp án B (It is required for sending ICMPv6 RA messages.)",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1561-L1575)",
       "theory_excerpt": "[L1561] (DHCPv6 có trạng thái được bật bằng lệnh cấu hình giao diện 'ipv6 nd managed-config-flag', lệnh này đặt cờ M thành 1.)\n[L1562] 4. Configure DHCPv6 Server:\n[L1563] 4.1. DHCPv6 Router Roles:\n[L1564] - Cisco IOS routers can be configured to provide DHCPv6 services in smaller networks without needing separate devices for servers, clients, or relay agents.\n[L1565] (Các bộ định tuyến Cisco IOS có thể được cấu hình để cung cấp các dịch vụ DHCPv6 trong các mạng nhỏ hơn mà không cần các thiết bị riêng biệt cho máy chủ, máy khách hoặc relay agent.)\n[L1566] - Specifically, a router can be configured to be one of the following:\n[L1567] (Cụ thể, một bộ định tuyến có thể được cấu hình để trở thành một trong các vai trò sau:)\n[L1568] + DHCPv6 Server: Router provides stateless or stateful DHCPv6 services.\n[L1569] (Máy chủ DHCPv6: Bộ định tuyến cung cấp các dịch vụ DHCPv6 có trạng thái hoặc không trạng thái.)\n[L1570] + DHCPv6 Client: Router interface acquires an IPv6 IP configuration from a DHCPv6 server.\n[L1571] (Máy khách DHCPv6: Giao diện bộ định tuyến nhận cấu hình IP IPv6 từ máy chủ DHCPv6.)\n[L1572] + DHCPv6 Relay Agent: Router provides DHCPv6 forwarding services when the client and the server are located on different networks.\n[L1573] (DHCPv6 Relay Agent: Bộ định tuyến cung cấp dịch vụ chuyển tiếp DHCPv6 khi máy khách và máy chủ nằm trên các mạng khác nhau.)\n[L1574] 4.2. Configure a Stateless DHCPv6 Server:\n[L1575] - The stateless DHCPv6 server option requires the router to advertise the IPv6 network addressing information in RA messages, using the following steps:",
       "slide_comment": "",
-      "question_translation": "quản trị mạng đang nhập lệnh ipvo unicast-routing để bắt đầu cấu hình hoạt động DHCPv6\ntôi là một router. Câu lệnh nào mô tả chức năng của lệnh này?"
+      "question_translation": "Quản trị viên mạng nhập lệnh `ipv6 unicast-routing` để bắt đầu cấu hình hoạt động DHCPv6 trên router. Phát biểu nào mô tả đúng chức năng của câu lệnh này?"
     },
     {
       "id": 198,
@@ -23894,7 +23894,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "C",
-          "text": "Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI"
+          "text": "Ensure the IPv6 address is unique on the network. I"
         },
         {
           "key": "D",
@@ -23904,7 +23904,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI)\n\n📝 Dịch đề:\nMục đích của Phát hiện địa chỉ trùng lặp (DAD) là gì?\n\n📋 Dịch đáp án:\n- C: Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMáy chủ SLAAC có thể sử dụng quá trình Phát hiện Địa chỉ Trùng lặp (DAD) để đảm bảo GUA IPv6 là duy nhất bằng cách gửi thông báo Lời gọi Láng giềng (NS) ICMPv6 với địa chỉ đa hướng solicited-node được xây dựng đặc biệt chứa 24 bit cuối của địa chỉ IPv6 của máy chủ.\n\n💡 Mẹo nhớ: Đáp án C (Ensure the IPv6 address is unique on the network. R U ARN TO KNOWI)",
+      "explanation": "🎯 Đáp án đúng: C (C: Ensure the IPv6 address is unique on the network. I)\n\n📝 Dịch đề:\nMục đích của Phát hiện địa chỉ trùng lặp (DAD) là gì?\n\n📋 Dịch đáp án:\n- C: Ensure the IPv6 address is unique on the network. I\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nMáy chủ SLAAC có thể sử dụng quá trình Phát hiện Địa chỉ Trùng lặp (DAD) để đảm bảo GUA IPv6 là duy nhất bằng cách gửi thông báo Lời gọi Láng giềng (NS) ICMPv6 với địa chỉ đa hướng solicited-node được xây dựng đặc biệt chứa 24 bit cuối của địa chỉ IPv6 của máy chủ.\n\n💡 Mẹo nhớ: Đáp án C (Ensure the IPv6 address is unique on the network. I)",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1486-L1500)",
       "theory_excerpt": "[L1486] (Các hệ điều hành hiện đại, bao gồm Windows, Linux và Mac OS, cho phép người dùng sửa đổi thủ công cách tạo ID giao diện thành được tạo ngẫu nhiên hoặc sử dụng EUI-64.)\n[L1487] 2.6. Duplicate Address Detection:\n[L1488] - A SLAAC host may use the Duplicate Address Detection (DAD) process to ensure the IPv6 GUA is unique by sending an ICMPv6 Neighbor Solicitation (NS) message with a specially constructed solicited-node multicast address containing the last 24 bits of the host's IPv6 address.\n[L1489] (Máy chủ SLAAC có thể sử dụng quá trình Phát hiện Địa chỉ Trùng lặp (DAD) để đảm bảo GUA IPv6 là duy nhất bằng cách gửi thông báo Lời gọi Láng giềng (NS) ICMPv6 với địa chỉ đa hướng solicited-node được xây dựng đặc biệt chứa 24 bit cuối của địa chỉ IPv6 của máy chủ.)\n[L1490] - If no other devices respond with a Neighbor Advertisement (NA) message, the address is virtually guaranteed to be unique and can be used by the host; if an NA is received, the address is not unique, and the host must generate a new interface ID.\n[L1491] (Nếu không có thiết bị nào khác phản hồi bằng thông báo Quảng bá Láng giềng (NA), địa chỉ được đảm bảo ảo là duy nhất và có thể được máy chủ sử dụng; nếu nhận được NA, địa chỉ không duy nhất và máy chủ phải tạo ID giao diện mới.)\n[L1492] - Although DAD is not strictly required because a 64-bit interface ID provides 18 quintillion possibilities making duplicates extremely remote, the IETF recommends its use, so most operating systems perform DAD on all IPv6 unicast addresses.\n[L1493] (Mặc dù DAD không hoàn toàn bắt buộc vì ID giao diện 64 bit cung cấp 18 tỷ tỷ khả năng khiến việc trùng lặp là cực kỳ khó xảy ra, IETF khuyến nghị sử dụng nó, do đó hầu hết các hệ điều hành đều thực hiện DAD trên tất cả các địa chỉ unicast IPv6.)\n[L1494] - The Duplicate Address Detection (DAD) process in IPv6 is essentially equivalent to the Gratuitous ARP process used in IPv4 to check for address uniqueness.\n[L1495] (Quá trình Phát hiện Địa chỉ Trùng lặp (DAD) trong IPv6 về cơ bản tương đương với quá trình Gratuitous ARP được sử dụng trong IPv4 để kiểm tra tính duy nhất của địa chỉ.)\n[L1496] 3. DHCPv6:\n[L1497] 3.1. DHCPv6 Operation Steps:\n[L1498] - DHCPv6 is defined in RFC 3315 and provides both stateless and stateful methods for IPv6 dynamic addressing.\n[L1499] (DHCPv6 được định nghĩa trong RFC 3315 và cung cấp cả hai phương pháp không trạng thái và có trạng thái cho việc cấp phát địa chỉ động IPv6.)\n[L1500] - Stateful DHCPv6 does not require SLAAC, while stateless DHCPv6 does.",
       "slide_comment": "Mục đích của Duplicate Address Detection (DAD) là gì? C. Đảm bảo địa chỉ IPv6 là duy nhất trên mạng (Ensure the IPv6 address is unique on the network). DAD kiểm tra xem địa chỉ IPv6 vừa được gán đã được thiết bị khác sử dụng hay chưa trước khi kích hoạt.",
@@ -24074,7 +24074,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "C",
-          "text": "Simplifies management of multiple APs ARN TO KNOWI"
+          "text": "Simplifies management of multiple APs"
         },
         {
           "key": "D",
@@ -24084,7 +24084,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Simplifies management of multiple APs ARN TO KNOWI)\n\n📝 Dịch đề:\nLợi ích chính của việc sử dụng bộ điều khiển mạng LAN không dây tập trung là gì?\n\n📋 Dịch đáp án:\n- C: Simplifies management of multiple APs ARN TO KNOWI\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nViệc triển khai mạng bằng cách sử dụng Bộ điều khiển mạng LAN không dây (WLC) cung cấp khả năng quản lý tập trung, và khi nhiều AP được thêm vào, mỗi AP được tự động cấu hình và quản lý bởi WLC.\n\n💡 Mẹo nhớ: Đáp án C (Simplifies management of multiple APs ARN TO KNOWI)",
+      "explanation": "🎯 Đáp án đúng: C (C: Simplifies management of multiple APs )\n\n📝 Dịch đề:\nLợi ích chính của việc sử dụng bộ điều khiển mạng LAN không dây tập trung là gì?\n\n📋 Dịch đáp án:\n- C: Simplifies management of multiple APs 📌 Giải thích chi tiết từng bước (Vì sao chọn):\nViệc triển khai mạng bằng cách sử dụng Bộ điều khiển mạng LAN không dây (WLC) cung cấp khả năng quản lý tập trung, và khi nhiều AP được thêm vào, mỗi AP được tự động cấu hình và quản lý bởi WLC.\n\n💡 Mẹo nhớ: Đáp án C (Simplifies management of multiple APs )",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L2571-L2585)",
       "theory_excerpt": "[L2571] (Cuối cùng, kiểm tra các liên kết giữa các thiết bị có dây để tìm kiếm các đầu nối kém hoặc cáp bị hỏng, và nếu cơ sở vật chất vật lý đã ở đúng vị trí, hãy xác minh mạng LAN có dây bằng cách ping các thiết bị, bao gồm cả AP.)\n[L2572] - If connectivity still fails at this point, which suggests something is wrong with the AP or its configuration, and once the user PC is eliminated as the source of the problem and the physical status of devices is confirmed, begin investigating the performance of the AP by checking its power status.\n[L2573] (Nếu kết nối vẫn thất bại tại thời điểm này, điều đó cho thấy có gì đó không ổn với AP hoặc cấu hình của nó, và một khi PC người dùng bị loại trừ là nguồn gốc của sự cố và trạng thái vật lý của các thiết bị được xác nhận, hãy bắt đầu điều tra hiệu suất của AP bằng cách kiểm tra trạng thái nguồn của nó.)\n[L2574] 4.3. Troubleshooting When the Network Is Slow:\n[L2575] - To optimize and increase the bandwidth of 802.11 dual-band routers and APs, either upgrade the wireless clients (because older 802.11b, 802.11g, and even 802.11n devices can slow the entire WLAN, meaning all wireless devices should support the same highest acceptable standard for best performance) or split the traffic.\n[L2576] (Để tối ưu hóa và tăng băng thông của bộ định tuyến và AP băng tần kép 802.11, hãy nâng cấp các máy khách không dây (bởi vì các thiết bị cũ 802.11b, 802.11g và thậm chí cả 802.11n có thể làm chậm toàn bộ WLAN, có nghĩa là tất cả các thiết bị không dây nên hỗ trợ cùng một tiêu chuẩn cao nhất có thể chấp nhận được để có hiệu suất tốt nhất) hoặc chia tách lưu lượng.)\n[L2577] - The easiest way to improve wireless performance is to split the wireless traffic between the 802.11n 2.4 GHz band and the 5 GHz band, which allows 802.11n (or better) devices to use the two bands as two separate wireless networks to help manage the traffic.\n[L2578] (Cách dễ nhất để cải thiện hiệu suất không dây là chia tách lưu lượng không dây giữa băng tần 2.4 GHz 802.11n và băng tần 5 GHz, điều này cho phép các thiết bị 802.11n (hoặc tốt hơn) sử dụng hai băng tần làm hai mạng không dây riêng biệt để giúp quản lý lưu lượng.)\n[L2579] - Using a split-the-traffic approach has several benefits: the 2.4 GHz band may be suitable for basic Internet traffic that is not time-sensitive, its bandwidth may still be shared with other nearby WLANs, while the 5 GHz band is much less crowded (making it ideal for streaming multimedia) and has more channels, which makes the chosen channel likely interference-free.\n[L2580] (Sử dụng phương pháp chia tách lưu lượng có một số lợi ích: băng tần 2.4 GHz có thể phù hợp cho lưu lượng Internet cơ bản không nhạy cảm về thời gian, băng thông của nó vẫn có thể bị chia sẻ với các WLAN gần đó khác, trong khi băng tần 5 GHz ít đông đúc hơn nhiều (lý tưởng để truyền phát đa phương tiện) và có nhiều kênh hơn, điều này làm cho kênh được chọn có khả năng không bị nhiễu.)\n[L2581] - Because dual-band routers and APs use the same network name on both bands by default, it may be useful to segment the traffic, which can be most simply achieved by renaming one of the wireless networks.\n[L2582] (Bởi vì các bộ định tuyến và AP băng tần kép sử dụng cùng một tên mạng trên cả hai băng tần theo mặc định, việc phân đoạn lưu lượng có thể hữu ích, điều này có thể đạt được một cách đơn giản nhất bằng cách đổi tên một trong các mạng không dây.)\n[L2583] - To improve the range of a wireless network, ensure the wireless router or AP location is free of obstructions, such as furniture, fixtures, and tall appliances, as these block the signal, which shortens the range of the WLAN; if this still does not solve the problem, then a Wi-Fi Range Extender or deploying Powerline wireless technology may be used.\n[L2584] (Để cải thiện phạm vi của mạng không dây, hãy đảm bảo vị trí bộ định tuyến không dây hoặc AP không có vật cản, chẳng hạn như đồ nội thất, đồ đạc và các thiết bị cao, vì chúng chặn tín hiệu, làm rút ngắn phạm vi của WLAN; nếu điều này vẫn không giải quyết được sự cố, thì có thể sử dụng Bộ mở rộng phạm vi Wi-Fi hoặc triển khai công nghệ không dây Powerline.)\n[L2585] 4.4. Updating Firmware:",
       "slide_comment": "Lợi ích chính của việc sử dụng Wireless LAN Controller (WLC) tập trung là gì? C. Đơn giản hóa việc quản lý nhiều Access Point (Simplifies management of multiple APs). WLC cho phép cấu hình và quản lý tập trung các AP trong toàn hệ thống.",
@@ -24389,7 +24389,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_231.png",
       "missing_image": false,
-      "question_text": "What is the effect of issuing the ip address dhop command on a router interface?",
+      "question_text": "What is the effect of issuing the `ip address dhcp` command on a router interface?",
       "type": "single",
       "options": [
         {
@@ -24416,11 +24416,11 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: Makes the router request an IP address dynamically)\n\n📝 Dịch đề:\nTác dụng của việc ban hành lệnh dhop địa chỉ IP trên giao diện router là gì?\n\n📋 Dịch đáp án:\n- D: Makes the router request an IP address dynamically\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCấu hình bộ định tuyến với lệnh cấu hình giao diện 'ip helper-address address', khiến nó chấp nhận các yêu cầu quảng bá và chuyển tiếp chúng dưới dạng đơn hướng đến địa chỉ IPv4 được chỉ định, điều này có thể được xác minh bằng lệnh 'show ip interface'.\n\n💡 Mẹo nhớ: Đáp án D (Makes the router request an IP address dynamically)",
+      "explanation": "🎯 Đáp án đúng: D (D: Makes the router request an IP address dynamically)\n\n📝 Dịch đề:\nTác dụng của việc ban hành lệnh dhcp địa chỉ IP trên giao diện router là gì?\n\n📋 Dịch đáp án:\n- D: Makes the router request an IP address dynamically\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCấu hình bộ định tuyến với lệnh cấu hình giao diện 'ip helper-address address', khiến nó chấp nhận các yêu cầu quảng bá và chuyển tiếp chúng dưới dạng đơn hướng đến địa chỉ IPv4 được chỉ định, điều này có thể được xác minh bằng lệnh 'show ip interface'.\n\n💡 Mẹo nhớ: Đáp án D (Makes the router request an IP address dynamically)",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1291-L1305)",
       "theory_excerpt": "[L1291] (Bước 2: Cung cấp DHCP (DHCPOFFER))\n[L1292] + Step 3: DHCP Request (DHCPREQUEST) - The client sends the DHCPREQUEST as a broadcast packet so that all other DHCP servers know their offers were rejected, allowing them to return their offered IPv4 addresses to their respective pools. Additionally, Layer 2 protocols like ARP are peripherally involved to verify that the offered IP address is not already in use on the local network.\n[L1293] (Bước 3: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi DHCPREQUEST dưới dạng gói tin quảng bá để tất cả các máy chủ DHCP khác biết rằng lời đề nghị của họ đã bị từ chối, cho phép chúng đưa địa chỉ IPv4 đã đề nghị trở lại nhóm của mình. Ngoài ra, các giao thức Lớp 2 như ARP có liên quan gián tiếp để xác minh rằng địa chỉ IP được cung cấp chưa được sử dụng trên mạng cục bộ.)\n[L1294] + Step 4: DHCP Acknowledgment (DHCPACK)\n[L1295] (Bước 4: Xác nhận DHCP (DHCPACK))\n[L1296] 1.4. Steps to Renew a Lease:\n[L1297] - Prior to lease expiration, the client begins a two-step process to renew the lease with the DHCPv4 server:\n[L1298] (Trước khi hợp đồng thuê hết hạn, máy khách bắt đầu quy trình hai bước để gia hạn hợp đồng thuê với máy chủ DHCPv4:)\n[L1299] + Step 1: DHCP Request (DHCPREQUEST) - The client sends a DHCPREQUEST message directly to the original DHCPv4 server; if a DHCPACK is not received within a specified time, it broadcasts another DHCPREQUEST to allow other servers to extend the lease.\n[L1300] (Bước 1: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi thông báo DHCPREQUEST trực tiếp đến máy chủ DHCPv4 ban đầu; nếu không nhận được DHCPACK trong một khoảng thời gian nhất định, nó sẽ quảng bá một DHCPREQUEST khác để cho phép các máy chủ khác gia hạn hợp đồng thuê.)\n[L1301] + Step 2: DHCP Acknowledgment (DHCPACK) - On receiving the DHCPREQUEST message, the server verifies the lease information by returning a DHCPACK.\n[L1302] (Bước 2: Xác nhận DHCP (DHCPACK) - Khi nhận được thông báo DHCPREQUEST, máy chủ sẽ xác minh thông tin hợp đồng thuê bằng cách trả về một DHCPACK.)\n[L1303] - According to IETF RFC 2131, these messages (primarily DHCPOFFER and DHCPACK) can be sent as unicast or broadcast.\n[L1304] (Theo IETF RFC 2131, các thông báo này (chủ yếu là DHCPOFFER và DHCPACK) có thể được gửi dưới dạng đơn hướng hoặc quảng bá.)\n[L1305] 2. Configure a Cisco IOS DHCPv4 Server:",
       "slide_comment": "",
-      "question_translation": "Tác dụng của việc ban hành lệnh dhop địa chỉ IP trên giao diện router là gì?"
+      "question_translation": "Tác dụng của việc thực thi câu lệnh `ip address dhcp` trên một cổng giao tiếp (interface) của router là gì?"
     },
     {
       "id": 220,
@@ -24501,7 +24501,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_234.png",
       "missing_image": false,
-      "question_text": "What is accomplished by the ip dhop excluded-address 10.10.4.1 10.10.4.5 command?",
+      "question_text": "What is accomplished by the ip dhcp excluded-address 10.10.4.1 10.10.4.5 command?",
       "type": "single",
       "options": [
         {
@@ -24524,11 +24524,11 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)\n\n📝 Dịch đề:\nLệnh ip dhop loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?\n\n📋 Dịch đáp án:\n- B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nLoại trừ các địa chỉ IPv4 được gán thủ công cho bộ định tuyến, máy chủ hoặc máy in bằng lệnh 'ip dhcp excluded-address low-address [high-address]', lệnh này có thể được nhập nhiều lần.\n\n💡 Mẹo nhớ: Đáp án B (The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)",
+      "explanation": "🎯 Đáp án đúng: B (B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)\n\n📝 Dịch đề:\nLệnh ip dhcp loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?\n\n📋 Dịch đáp án:\n- B: The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nLoại trừ các địa chỉ IPv4 được gán thủ công cho bộ định tuyến, máy chủ hoặc máy in bằng lệnh 'ip dhcp excluded-address low-address [high-address]', lệnh này có thể được nhập nhiều lần.\n\n💡 Mẹo nhớ: Đáp án B (The DHCP server will not issue IPv4 addresses ranging from 10.10.4.1 to 10.10.4.5.)",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1291-L1305)",
       "theory_excerpt": "[L1291] (Bước 2: Cung cấp DHCP (DHCPOFFER))\n[L1292] + Step 3: DHCP Request (DHCPREQUEST) - The client sends the DHCPREQUEST as a broadcast packet so that all other DHCP servers know their offers were rejected, allowing them to return their offered IPv4 addresses to their respective pools. Additionally, Layer 2 protocols like ARP are peripherally involved to verify that the offered IP address is not already in use on the local network.\n[L1293] (Bước 3: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi DHCPREQUEST dưới dạng gói tin quảng bá để tất cả các máy chủ DHCP khác biết rằng lời đề nghị của họ đã bị từ chối, cho phép chúng đưa địa chỉ IPv4 đã đề nghị trở lại nhóm của mình. Ngoài ra, các giao thức Lớp 2 như ARP có liên quan gián tiếp để xác minh rằng địa chỉ IP được cung cấp chưa được sử dụng trên mạng cục bộ.)\n[L1294] + Step 4: DHCP Acknowledgment (DHCPACK)\n[L1295] (Bước 4: Xác nhận DHCP (DHCPACK))\n[L1296] 1.4. Steps to Renew a Lease:\n[L1297] - Prior to lease expiration, the client begins a two-step process to renew the lease with the DHCPv4 server:\n[L1298] (Trước khi hợp đồng thuê hết hạn, máy khách bắt đầu quy trình hai bước để gia hạn hợp đồng thuê với máy chủ DHCPv4:)\n[L1299] + Step 1: DHCP Request (DHCPREQUEST) - The client sends a DHCPREQUEST message directly to the original DHCPv4 server; if a DHCPACK is not received within a specified time, it broadcasts another DHCPREQUEST to allow other servers to extend the lease.\n[L1300] (Bước 1: Yêu cầu DHCP (DHCPREQUEST) - Máy khách gửi thông báo DHCPREQUEST trực tiếp đến máy chủ DHCPv4 ban đầu; nếu không nhận được DHCPACK trong một khoảng thời gian nhất định, nó sẽ quảng bá một DHCPREQUEST khác để cho phép các máy chủ khác gia hạn hợp đồng thuê.)\n[L1301] + Step 2: DHCP Acknowledgment (DHCPACK) - On receiving the DHCPREQUEST message, the server verifies the lease information by returning a DHCPACK.\n[L1302] (Bước 2: Xác nhận DHCP (DHCPACK) - Khi nhận được thông báo DHCPREQUEST, máy chủ sẽ xác minh thông tin hợp đồng thuê bằng cách trả về một DHCPACK.)\n[L1303] - According to IETF RFC 2131, these messages (primarily DHCPOFFER and DHCPACK) can be sent as unicast or broadcast.\n[L1304] (Theo IETF RFC 2131, các thông báo này (chủ yếu là DHCPOFFER và DHCPACK) có thể được gửi dưới dạng đơn hướng hoặc quảng bá.)\n[L1305] 2. Configure a Cisco IOS DHCPv4 Server:",
       "slide_comment": "",
-      "question_translation": "Lệnh ip dhop loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?"
+      "question_translation": "Lệnh ip dhcp loại trừ địa chỉ 10.10.4.1 10.10.4.5 thực hiện được điều gì?"
     },
     {
       "id": 223,
@@ -25005,7 +25005,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_248.png",
       "missing_image": false,
-      "question_text": "What does the term \"port density\" represent for an Ethernet switch?\nHoàng Hoàng",
+      "question_text": "What does the term \"port density\" represent for an Ethernet switch?",
       "type": "single",
       "options": [
         {
@@ -25418,7 +25418,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "1. The router de-encapsulates the Ethernet frame. 2. The router examines the destination MAC address. 3. The router identifies the Ethernet Type field. 4. The router examines the destination IP address. ARN TO KNOW"
+          "text": "1. The router de-encapsulates the Ethernet frame. 2. The router examines the destination MAC address. 3. The router identifies the Ethernet Type field. 4. The router examines the destination IP address."
         },
         {
           "key": "C",
@@ -25845,7 +25845,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_271.png",
       "missing_image": false,
-      "question_text": "An administrator issues the commands:\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhop\nWhat is the administrator trying to achieve?",
+      "question_text": "An administrator issues the commands:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nWhat is the administrator trying to achieve?",
       "type": "single",
       "options": [
         {
@@ -25868,11 +25868,11 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop\nQuản trị viên đang cố gắng đạt được điều gì?\n\n📋 Dịch đáp án:\n- A: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án A (configuring the router to obtain IP parameters from a DHCPv4 server)",
+      "explanation": "🎯 Đáp án đúng: A (A: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhcp\nQuản trị viên đang cố gắng đạt được điều gì?\n\n📋 Dịch đáp án:\n- A: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án A (configuring the router to obtain IP parameters from a DHCPv4 server)",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1716-L1730)",
       "theory_excerpt": "[L1716] - The role of the active and standby routers is determined during the HSRP election process, where, by default, the router with the numerically highest IPv4 address is elected as the active router.\n[L1717] (Vai trò của các bộ định tuyến hoạt động và dự phòng được xác định trong quá trình bầu chọn HSRP, trong đó, theo mặc định, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng được bầu làm bộ định tuyến hoạt động.)\n[L1718] - To better control network operations, HSRP priority can be used to determine the active router, where the router with the highest HSRP priority (default is 100) will become the active router.\n[L1719] (Để kiểm soát hoạt động mạng tốt hơn, ưu tiên HSRP có thể được sử dụng để xác định bộ định tuyến hoạt động, trong đó bộ định tuyến có mức ưu tiên HSRP cao nhất (mặc định là 100) sẽ trở thành bộ định tuyến hoạt động.)\n[L1720] - If the priorities are equal, the router with the numerically highest IPv4 address is elected as the active router.\n[L1721] (Nếu các mức ưu tiên bằng nhau, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng sẽ được bầu làm bộ định tuyến hoạt động.)\n[L1722] - To configure a router to be the active router, use the 'standby priority' interface command, which accepts a range from 0 to 255.\n[L1723] (Để cấu hình một bộ định tuyến trở thành bộ định tuyến hoạt động, sử dụng lệnh giao diện 'standby priority', chấp nhận dải từ 0 đến 255.)\n[L1724] - By default, after a router becomes the active router, it will remain the active router even if another router comes online with a higher HSRP priority.\n[L1725] (Theo mặc định, sau khi một bộ định tuyến trở thành bộ định tuyến hoạt động, nó sẽ vẫn là bộ định tuyến hoạt động ngay cả khi một bộ định tuyến khác trực tuyến với mức ưu tiên HSRP cao hơn.)\n[L1726] - To force a new HSRP election process to take place when a higher-priority router comes online, preemption must be enabled using the 'standby preempt' interface command.\n[L1727] (Để buộc một quá trình bầu chọn HSRP mới diễn ra khi một bộ định tuyến có độ ưu tiên cao hơn trực tuyến, tính năng ưu tiên chiếm quyền (preemption) phải được bật bằng lệnh giao diện 'standby preempt'.)\n[L1728] - Preemption allows a router to trigger the re-election process and assume the role of the active router, but only if it has a higher priority, meaning a router with equal priority but a higher IPv4 address will not preempt an active router.\n[L1729] (Ưu tiên chiếm quyền cho phép một bộ định tuyến kích hoạt quá trình bầu chọn lại và đảm nhận vai trò của bộ định tuyến hoạt động, nhưng chỉ khi nó có mức ưu tiên cao hơn, có nghĩa là một bộ định tuyến có mức ưu tiên tương đương nhưng địa chỉ IPv4 cao hơn sẽ không chiếm quyền của bộ định tuyến đang hoạt động.)\n[L1730] - With preemption disabled, the router that boots up first will become the active router if there are no other routers online during the election process.",
       "slide_comment": "",
-      "question_translation": "Người quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop\nQuản trị viên đang cố gắng đạt được điều gì?"
+      "question_translation": "Một quản trị viên thực thi các câu lệnh sau:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nQuản trị viên đang muốn đạt được điều gì?"
     },
     {
       "id": 260,
@@ -25881,7 +25881,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/NWC303/slide_272.png",
       "missing_image": false,
-      "question_text": "An administrator issues the commands:\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhop",
+      "question_text": "An administrator issues the commands:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nWhat is the administrator trying to achieve?",
       "type": "single",
       "options": [
         {
@@ -25904,11 +25904,11 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop\n\n📋 Dịch đáp án:\n- D: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án D (configuring the router to obtain IP parameters from a DHCPv4 server)",
+      "explanation": "🎯 Đáp án đúng: D (D: configuring the router to obtain IP parameters from a DHCPv4 server)\n\n📝 Dịch đề:\nNgười quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhcp\n\n📋 Dịch đáp án:\n- D: configuring the router to obtain IP parameters from a DHCPv4 server\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhi được kết nối với một phân đoạn mạng có sẵn nhóm DHCPv4, một PC sẽ tự động nhận các thông số TCP/IP của nó (hậu tố DNS, địa chỉ IPv4, mặt nạ mạng con, cổng mặc định và máy chủ DNS), có thể xác minh bằng lệnh 'ipconfig /all' mà không cần cấu hình giao diện bộ định tuyến dành riêng cho DHCP.\n\n💡 Mẹo nhớ: Đáp án D (configuring the router to obtain IP parameters from a DHCPv4 server)",
       "theory_citation": "[1] SEMESTER_3_NWC303_Theory.mhtml - NWC303 Theory Reference (L1716-L1730)",
       "theory_excerpt": "[L1716] - The role of the active and standby routers is determined during the HSRP election process, where, by default, the router with the numerically highest IPv4 address is elected as the active router.\n[L1717] (Vai trò của các bộ định tuyến hoạt động và dự phòng được xác định trong quá trình bầu chọn HSRP, trong đó, theo mặc định, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng được bầu làm bộ định tuyến hoạt động.)\n[L1718] - To better control network operations, HSRP priority can be used to determine the active router, where the router with the highest HSRP priority (default is 100) will become the active router.\n[L1719] (Để kiểm soát hoạt động mạng tốt hơn, ưu tiên HSRP có thể được sử dụng để xác định bộ định tuyến hoạt động, trong đó bộ định tuyến có mức ưu tiên HSRP cao nhất (mặc định là 100) sẽ trở thành bộ định tuyến hoạt động.)\n[L1720] - If the priorities are equal, the router with the numerically highest IPv4 address is elected as the active router.\n[L1721] (Nếu các mức ưu tiên bằng nhau, bộ định tuyến có địa chỉ IPv4 cao nhất theo số lượng sẽ được bầu làm bộ định tuyến hoạt động.)\n[L1722] - To configure a router to be the active router, use the 'standby priority' interface command, which accepts a range from 0 to 255.\n[L1723] (Để cấu hình một bộ định tuyến trở thành bộ định tuyến hoạt động, sử dụng lệnh giao diện 'standby priority', chấp nhận dải từ 0 đến 255.)\n[L1724] - By default, after a router becomes the active router, it will remain the active router even if another router comes online with a higher HSRP priority.\n[L1725] (Theo mặc định, sau khi một bộ định tuyến trở thành bộ định tuyến hoạt động, nó sẽ vẫn là bộ định tuyến hoạt động ngay cả khi một bộ định tuyến khác trực tuyến với mức ưu tiên HSRP cao hơn.)\n[L1726] - To force a new HSRP election process to take place when a higher-priority router comes online, preemption must be enabled using the 'standby preempt' interface command.\n[L1727] (Để buộc một quá trình bầu chọn HSRP mới diễn ra khi một bộ định tuyến có độ ưu tiên cao hơn trực tuyến, tính năng ưu tiên chiếm quyền (preemption) phải được bật bằng lệnh giao diện 'standby preempt'.)\n[L1728] - Preemption allows a router to trigger the re-election process and assume the role of the active router, but only if it has a higher priority, meaning a router with equal priority but a higher IPv4 address will not preempt an active router.\n[L1729] (Ưu tiên chiếm quyền cho phép một bộ định tuyến kích hoạt quá trình bầu chọn lại và đảm nhận vai trò của bộ định tuyến hoạt động, nhưng chỉ khi nó có mức ưu tiên cao hơn, có nghĩa là một bộ định tuyến có mức ưu tiên tương đương nhưng địa chỉ IPv4 cao hơn sẽ không chiếm quyền của bộ định tuyến đang hoạt động.)\n[L1730] - With preemption disabled, the router that boots up first will become the active router if there are no other routers online during the election process.",
       "slide_comment": "",
-      "question_translation": "Người quản trị đưa ra các lệnh:\nrouter(cấu hình)# giao diện g0/1\nrouter(config-if)# địa chỉ IP dhop"
+      "question_translation": "Một quản trị viên thực thi các câu lệnh sau:\n```text\nRouter(config)# interface g0/1\nRouter(config-if)# ip address dhcp\n```\nQuản trị viên đang muốn đạt được mục tiêu nào?"
     },
     {
       "id": 261,
@@ -28855,7 +28855,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "The computer beeps once during the boot process. #I To KNOW"
+          "text": "The computer beeps once during the boot process."
         }
       ],
       "answers": [
@@ -32695,7 +32695,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/IAO202/slide_184.png",
       "missing_image": false,
-      "question_text": "onsider the result of the Is -I command in the Linux output below. What are the file permissions assigned to\nthe sales user for the analyst.txt file?\nIs -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt",
+      "question_text": "Consider the result of the `ls -l` command in the Linux output below. What are the file permissions assigned to the `sales` user for the `analyst.txt` file?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```",
       "type": "single",
       "options": [
         {
@@ -32722,7 +32722,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L0666-L0680)",
       "theory_excerpt": "[L0666] + The Master Boot Record (MBR) is located in the first sector of a partitioned computer, stores all the information about the way in which the file system is organized, and quickly hands over control to a loading function, which loads the OS.\n[L0667] (Bản ghi Khởi động Chính (MBR) nằm trong khu vực đầu tiên của một máy tính được phân vùng, lưu trữ toàn bộ thông tin về cách tổ chức hệ thống tập tin và nhanh chóng trao quyền điều khiển cho một chức năng tải sẽ tải HĐH.)\n[L0668] - Mounting is the term used for the process of assigning a directory to a partition, and after a successful mount operation, the file system contained on the partition is accessible through the specified directory.\n[L0669] (Gắn kết là thuật ngữ được sử dụng cho quá trình gán một thư mục cho một phân vùng, và sau một thao tác gắn kết thành công, hệ thống tập tin chứa trên phân vùng có thể được truy cập thông qua thư mục được chỉ định.)\n[L0670] 5.2. File Permissions and Links:\n[L0671] - Linux uses file permissions in order to organize the system and enforce boundaries within the computer, where every file in Linux carries its file permissions, which define the actions that the owner, the group, and others can perform with the file.\n[L0672] (Linux sử dụng quyền tập tin để tổ chức hệ thống và thực thi các ranh giới trong máy tính, nơi mọi tập tin trong Linux mang các quyền tập tin của nó, xác định các hành động mà chủ sở hữu, nhóm và những người khác có thể thực hiện với tập tin.)\n[L0673] - The possible permission rights are Read, Write, and Execute.\n[L0674] (Các quyền cho phép có thể là Đọc, Ghi và Thực thi.)\n[L0675] - The 'ls' command with the '-l' parameter lists additional information about a file, including seven fields: the first field displays the permissions (e.g., -rwxrw-r--); the second field defines the number of hard links to the file; the third and fourth fields display the user and group who own the file, respectively; the fifth field displays the file size in bytes; the sixth field displays the date and time of the last modification; and the seventh field displays the file name.\n[L0676] (Lệnh 'ls' với tham số '-l' liệt kê thông tin bổ sung về một tập tin, bao gồm bảy trường: trường đầu tiên hiển thị các quyền (ví dụ: -rwxrw-r--); trường thứ hai xác định số lượng liên kết cứng tới tập tin; trường thứ ba và thứ tư lần lượt hiển thị người dùng và nhóm sở hữu tập tin; trường thứ năm hiển thị kích thước tập tin bằng byte; trường thứ sáu hiển thị ngày và giờ sửa đổi lần cuối; và trường thứ bảy hiển thị tên tập tin.)\n[L0677] - In a permission breakdown like '-rwxrw-r--', the initial dash (-) means that this is a file; the first set of characters (rwx) is for user permissions indicating the owner can Read, Write, and eXecute; the second set (rw-) is for group permissions indicating the owning group can Read and Write; and the third set (r--) is for any other user or group who can only Read the file.\n[L0678] (Trong phân tích quyền như '-rwxrw-r--', dấu gạch ngang ban đầu (-) có nghĩa đây là một tập tin; tập hợp ký tự đầu tiên (rwx) dành cho quyền của người dùng cho biết chủ sở hữu có thể Đọc, Ghi và Thực thi; tập hợp thứ hai (rw-) dành cho quyền của nhóm cho biết nhóm sở hữu có thể Đọc và Ghi; và tập hợp thứ ba (r--) dành cho bất kỳ người dùng hoặc nhóm nào khác chỉ có thể Đọc tập tin.)\n[L0679] - File permissions are a fundamental part of Linux and cannot be broken, and the only user that can override file permission on a Linux computer is the root user.\n[L0680] (Quyền tập tin là một phần cơ bản của Linux và không thể bị phá vỡ, và người dùng duy nhất có thể ghi đè quyền tập tin trên máy tính Linux là người dùng root.)",
       "slide_comment": "",
-      "question_translation": "Xét kết quả lệnh ls -l trong Linux dưới đây. Quyền của user sales đối với file analyst.txt là gì?"
+      "question_translation": "Xét kết quả lệnh `ls -l` trong Linux dưới đây. Quyền hạn của người dùng (user) `sales` đối với tệp tin `analyst.txt` là gì?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```"
     },
     {
       "id": 172,
@@ -32731,7 +32731,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/IAO202/slide_185.png",
       "missing_image": false,
-      "question_text": "Consider the result of the Is - command in the Linux output below. What are the group file permissions assigned\nto the analyst.txt file?\nIs - analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt",
+      "question_text": "Consider the result of the `ls -l` command in the Linux output below. What are the group file permissions assigned to the `analyst.txt` file?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```",
       "type": "single",
       "options": [
         {
@@ -32758,7 +32758,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L0666-L0680)",
       "theory_excerpt": "[L0666] + The Master Boot Record (MBR) is located in the first sector of a partitioned computer, stores all the information about the way in which the file system is organized, and quickly hands over control to a loading function, which loads the OS.\n[L0667] (Bản ghi Khởi động Chính (MBR) nằm trong khu vực đầu tiên của một máy tính được phân vùng, lưu trữ toàn bộ thông tin về cách tổ chức hệ thống tập tin và nhanh chóng trao quyền điều khiển cho một chức năng tải sẽ tải HĐH.)\n[L0668] - Mounting is the term used for the process of assigning a directory to a partition, and after a successful mount operation, the file system contained on the partition is accessible through the specified directory.\n[L0669] (Gắn kết là thuật ngữ được sử dụng cho quá trình gán một thư mục cho một phân vùng, và sau một thao tác gắn kết thành công, hệ thống tập tin chứa trên phân vùng có thể được truy cập thông qua thư mục được chỉ định.)\n[L0670] 5.2. File Permissions and Links:\n[L0671] - Linux uses file permissions in order to organize the system and enforce boundaries within the computer, where every file in Linux carries its file permissions, which define the actions that the owner, the group, and others can perform with the file.\n[L0672] (Linux sử dụng quyền tập tin để tổ chức hệ thống và thực thi các ranh giới trong máy tính, nơi mọi tập tin trong Linux mang các quyền tập tin của nó, xác định các hành động mà chủ sở hữu, nhóm và những người khác có thể thực hiện với tập tin.)\n[L0673] - The possible permission rights are Read, Write, and Execute.\n[L0674] (Các quyền cho phép có thể là Đọc, Ghi và Thực thi.)\n[L0675] - The 'ls' command with the '-l' parameter lists additional information about a file, including seven fields: the first field displays the permissions (e.g., -rwxrw-r--); the second field defines the number of hard links to the file; the third and fourth fields display the user and group who own the file, respectively; the fifth field displays the file size in bytes; the sixth field displays the date and time of the last modification; and the seventh field displays the file name.\n[L0676] (Lệnh 'ls' với tham số '-l' liệt kê thông tin bổ sung về một tập tin, bao gồm bảy trường: trường đầu tiên hiển thị các quyền (ví dụ: -rwxrw-r--); trường thứ hai xác định số lượng liên kết cứng tới tập tin; trường thứ ba và thứ tư lần lượt hiển thị người dùng và nhóm sở hữu tập tin; trường thứ năm hiển thị kích thước tập tin bằng byte; trường thứ sáu hiển thị ngày và giờ sửa đổi lần cuối; và trường thứ bảy hiển thị tên tập tin.)\n[L0677] - In a permission breakdown like '-rwxrw-r--', the initial dash (-) means that this is a file; the first set of characters (rwx) is for user permissions indicating the owner can Read, Write, and eXecute; the second set (rw-) is for group permissions indicating the owning group can Read and Write; and the third set (r--) is for any other user or group who can only Read the file.\n[L0678] (Trong phân tích quyền như '-rwxrw-r--', dấu gạch ngang ban đầu (-) có nghĩa đây là một tập tin; tập hợp ký tự đầu tiên (rwx) dành cho quyền của người dùng cho biết chủ sở hữu có thể Đọc, Ghi và Thực thi; tập hợp thứ hai (rw-) dành cho quyền của nhóm cho biết nhóm sở hữu có thể Đọc và Ghi; và tập hợp thứ ba (r--) dành cho bất kỳ người dùng hoặc nhóm nào khác chỉ có thể Đọc tập tin.)\n[L0679] - File permissions are a fundamental part of Linux and cannot be broken, and the only user that can override file permission on a Linux computer is the root user.\n[L0680] (Quyền tập tin là một phần cơ bản của Linux và không thể bị phá vỡ, và người dùng duy nhất có thể ghi đè quyền tập tin trên máy tính Linux là người dùng root.)",
       "slide_comment": "",
-      "question_translation": "Xem kết quả lệnh 'ls -l' trong Linux: dòng quyền hạn hiển thị '-rw-r--r--'. Chủ sở hữu (User/Owner) của tệp có các quyền nào?"
+      "question_translation": "Xét kết quả lệnh `ls -l` trong Linux dưới đây. Quyền hạn của nhóm (group `staff`) đối với tệp tin `analyst.txt` là gì?\n\n```bash\n$ ls -l analyst.txt\n-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt\n```"
     },
     {
       "id": 173,
@@ -33751,7 +33751,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/IAO202/slide_214.png",
       "missing_image": false,
-      "question_text": "What is a feature of the topdump tool?",
+      "question_text": "What is a feature of the tcpdump tool?",
       "type": "single",
       "options": [
         {
@@ -34048,7 +34048,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "destination MAC address to a destination IPv4 address R U IN TO KNOWI"
+          "text": "destination MAC address to a destination IPv4 address R U IN I"
         },
         {
           "key": "C",
@@ -34062,7 +34062,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: destination MAC address to a destination IPv4 address R U IN TO KNOWI)\n\n📝 Dịch đề:\nARP ánh xạ địa chỉ nào?\n\n📋 Dịch đáp án:\n- B: destination MAC address to a destination IPv4 address R U IN TO KNOWI\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nARP tìm MAC tương ứng với địa chỉ IPv4.\n\n💡 Mẹo nhớ: Đáp án B (destination MAC address to a destination IPv4 address R U IN TO KNOWI)",
+      "explanation": "🎯 Đáp án đúng: B (B: destination MAC address to a destination IPv4 address R U IN I)\n\n📝 Dịch đề:\nARP ánh xạ địa chỉ nào?\n\n📋 Dịch đáp án:\n- B: destination MAC address to a destination IPv4 address R U IN I\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nARP tìm MAC tương ứng với địa chỉ IPv4.\n\n💡 Mẹo nhớ: Đáp án B (destination MAC address to a destination IPv4 address R U IN I)",
       "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L1326-L1340)",
       "theory_excerpt": "[L1326] - Conversely, when the destination IP address is on a remote network, the destination MAC address will be the address of the host's default gateway.\n[L1327] (Ngược lại, khi địa chỉ IP đích nằm trên một mạng từ xa, địa chỉ MAC đích sẽ là địa chỉ của cổng mặc định của máy chủ.)\n[L1328] - During remote communication, routers examine the destination IPv4 address, de-encapsulate the Layer 2 information upon receiving the Ethernet frame, determine the next-hop device using the destination IP address, and then encapsulate the IP packet in a new data link frame for the outgoing interface, where the destination MAC address will be that of the device's Ethernet NIC if the next-hop device is the final destination.\n[L1329] (Trong quá trình giao tiếp từ xa, các bộ định tuyến kiểm tra địa chỉ IPv4 đích, giải nén thông tin Lớp 2 khi nhận được khung Ethernet, xác định thiết bị bước nhảy tiếp theo bằng cách sử dụng địa chỉ IP đích, và sau đó đóng gói gói IP vào một khung liên kết dữ liệu mới cho giao diện đi, trong đó địa chỉ MAC đích sẽ là địa chỉ NIC Ethernet của thiết bị nếu thiết bị bước nhảy tiếp theo là đích cuối cùng.)\n[L1330] 2. Address Resolution Protocol:\n[L1331] 2.1. ARP Overview and Functions:\n[L1332] - A device uses the Address Resolution Protocol (ARP) to determine the destination MAC address of a local device when it knows its IPv4 address, solving the problem of sending a packet to another host on the same local IPv4 network when the MAC address is unknown.\n[L1333] (Một thiết bị sử dụng Giao thức Phân giải Địa chỉ (ARP) để xác định địa chỉ MAC đích của một thiết bị cục bộ khi nó biết địa chỉ IPv4 của thiết bị đó, giải quyết vấn đề gửi một gói tin đến một máy chủ khác trên cùng mạng IPv4 cục bộ khi địa chỉ MAC chưa được biết.)\n[L1334] - ARP provides two basic functions, which are resolving IPv4 addresses to MAC addresses and maintaining a table of IPv4 to MAC address mappings.\n[L1335] (ARP cung cấp hai chức năng cơ bản là phân giải địa chỉ IPv4 thành địa chỉ MAC và duy trì một bảng ánh xạ từ địa chỉ IPv4 sang địa chỉ MAC.)\n[L1336] - When a packet is sent to the data link layer to be encapsulated into an Ethernet frame, the sending device searches its ARP table, also known as the ARP cache, in its RAM to find the MAC address mapped to the destination IPv4 address if that IP address is on the same network as the source.\n[L1337] (Khi một gói tin được gửi đến lớp liên kết dữ liệu để được đóng gói thành một khung Ethernet, thiết bị gửi sẽ tìm kiếm trong bảng ARP của nó, còn được gọi là bộ đệm ARP, trong bộ nhớ RAM để tìm địa chỉ MAC được ánh xạ với địa chỉ IPv4 đích nếu địa chỉ IP đó nằm trên cùng mạng với nguồn.)\n[L1338] - If the device locates the IPv4 address, its corresponding MAC address is used as the destination MAC address in the frame.\n[L1339] (Nếu thiết bị xác định được vị trí địa chỉ IPv4, địa chỉ MAC tương ứng của nó sẽ được sử dụng làm địa chỉ MAC đích trong khung.)\n[L1340] - IPv6 uses a process similar to ARP for IPv4 known as ICMPv6 Neighbor Discovery (ND), which uses neighbor solicitation and neighbor advertisement messages that function similarly to IPv4 ARP requests and ARP replies.",
       "slide_comment": "",
@@ -35972,7 +35972,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "to exchange all the response mechanisms to known threats"
+          "text": "to exchange all the response mechanisms n threats"
         }
       ],
       "answers": [
@@ -37439,7 +37439,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/IAO202/slide_317.png",
       "missing_image": false,
-      "question_text": "ser is executing a tracert to a remote device. At what point would a router, which is in the path to the\ndestination device, stop forwarding the packet?",
+      "question_text": "A user is executing a `tracert` to a remote device. At what point would a router, which is in the path to the destination device, stop forwarding the packet?",
       "type": "single",
       "options": [
         {
@@ -37448,7 +37448,7 @@ window.QUIZ_DATA = {
         },
         {
           "key": "B",
-          "text": "when the RTT value reaches zero ARN TO KNOWI"
+          "text": "when the RTT value reaches zero"
         },
         {
           "key": "C",
@@ -37470,7 +37470,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_IAO202_Theory.mhtml - IAO202 Theory Reference (L1256-L1270)",
       "theory_excerpt": "[L1256] (Nhắn tin giữa các thiết bị IPv6 liên quan đến các thông báo Yêu cầu Hàng xóm (NS) và Quảng cáo Hàng xóm (NA) để phân giải địa chỉ và Phát hiện Địa chỉ Trùng lặp (DAD):)\n[L1257] + For address resolution, NS messages are sent when a device knows the IPv6 address of another device but does not know its MAC address (equivalent to an ARP Request for IPv4), and NA messages are sent in response, including the device’s Ethernet MAC address (equivalent to an ARP Reply in IPv4).\n[L1258] (Đối với phân giải địa chỉ, các thông báo NS được gửi khi một thiết bị biết địa chỉ IPv6 của thiết bị khác nhưng không biết địa chỉ MAC của thiết bị đó (tương đương với Yêu cầu ARP cho IPv4), và các thông báo NA được gửi để phản hồi, bao gồm địa chỉ MAC Ethernet của thiết bị (tương đương với Hồi đáp ARP trong IPv4).)\n[L1259] + When a device is assigned a global unicast or link-local unicast address, Duplicate Address Detection (DAD) is performed to check the uniqueness of the address by sending an NS message with its own IPv6 address.\n[L1260] (Khi một thiết bị được gán một địa chỉ unicast toàn cầu hoặc unicast liên kết cục bộ, Phát hiện Địa chỉ Trùng lặp (DAD) được thực hiện để kiểm tra tính duy nhất của địa chỉ bằng cách gửi một thông báo NS bằng địa chỉ IPv6 của chính nó.)\n[L1261] + If another device on the network has this address, it will respond with an NA message to notify the sending device that the address is in use, whereas if a corresponding NA message is not returned within a certain period of time, the unicast address is unique and acceptable for use.\n[L1262] (Nếu một thiết bị khác trên mạng có địa chỉ này, nó sẽ phản hồi bằng một thông báo NA để thông báo cho thiết bị gửi rằng địa chỉ đang được sử dụng, trong khi nếu không có thông báo NA tương ứng nào được trả về trong một khoảng thời gian nhất định, thì địa chỉ unicast đó là duy nhất và có thể sử dụng được.)\n[L1263] 2. Ping and Traceroute Utilities:\n[L1264] 2.1. Ping - Test Connectivity:\n[L1265] - Ping is an IPv4 and IPv6 testing utility that uses ICMP echo request and echo reply messages to test connectivity between hosts, where an echo request is sent to the host address using the ping command, and if the host receives it, it responds with an echo reply.\n[L1266] (Ping là một tiện ích kiểm tra IPv4 và IPv6 sử dụng các thông báo yêu cầu echo và hồi đáp echo của ICMP để kiểm tra kết nối giữa các máy chủ, trong đó một yêu cầu echo được gửi đến địa chỉ máy chủ bằng lệnh ping và nếu máy chủ nhận được yêu cầu đó, nó sẽ phản hồi bằng một hồi đáp echo.)\n[L1267] - As each echo reply is received, ping provides feedback on the time between when the request was sent and when the reply was received, which can serve as a measure of network performance.\n[L1268] (Khi nhận được mỗi hồi đáp echo, ping cung cấp phản hồi về thời gian giữa thời điểm yêu cầu được gửi và thời điểm nhận được hồi đáp, điều này có thể đóng vai trò như một thước đo hiệu suất mạng.)\n[L1269] - Ping has a timeout value for the reply, meaning if a reply is not received within the timeout, ping provides a message indicating that a response was not received, and after all requests are sent, it provides a summary that includes the success rate and average round-trip time to the destination.\n[L1270] (Ping có giá trị thời gian chờ cho hồi đáp, nghĩa là nếu không nhận được hồi đáp trong thời gian chờ, ping sẽ cung cấp thông báo cho biết không nhận được phản hồi, và sau khi tất cả các yêu cầu được gửi, nó cung cấp một bản tóm tắt bao gồm tỷ lệ thành công và thời gian vòng đệm trung bình đến đích.)",
       "slide_comment": "",
-      "question_translation": "Người dùng đang thực hiện lệnh 'tracert' đến một thiết bị từ xa. Tại thời điểm nào thì một router trên đường đi sẽ loại bỏ gói tin và gửi lại phản hồi lỗi?"
+      "question_translation": "Một người dùng đang thực thi lệnh `tracert` đến một thiết bị từ xa. Tại thời điểm nào thì một router nằm trên đường truyền đến thiết bị đích sẽ dừng chuyển tiếp gói tin?"
     },
     {
       "id": 303,
@@ -38030,7 +38030,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_014.png",
       "missing_image": false,
-      "question_text": "What is the value of the query:\nSELECT 'Agnes' + NULL + 'Allison'",
+      "question_text": "What is the value of the query:\n```sql\nSELECT 'Agnes' + NULL + 'Allison'\n```",
       "type": "single",
       "options": [
         {
@@ -38057,7 +38057,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 01. Giới thiệu SQL & 09. Truy vấn với điều kiện trong SQL Server (Xử lý chuỗi và giá trị NULL) (L0451-L0464)",
       "theory_excerpt": "[L0451] ## [H2] 7. IS NULL / IS NOT NULL\n[L0452] Dùng để kiểm tra giá trị NULL.\n[L0453] Ví dụ:\n[L0454] SELECT * FROM Student\n[L0455] WHERE Age IS NULL;\n[L0456] Trả về sinh viên chưa có dữ liệu tuổi.\n[L0457] ## [H2] Tóm tắt\n[L0458] WHERE: lọc dữ liệu.\n[L0459] Toán tử so sánh: =, <>, >, <, >=, <=.\n[L0460] Toán tử logic: AND, OR, NOT.\n[L0461] BETWEEN: lọc theo khoảng.\n[L0462] IN: lọc theo tập hợp.\n[L0463] LIKE: tìm kiếm theo mẫu.\n[L0464] IS NULL: kiểm tra giá trị rỗng.",
       "slide_comment": "Giải thích: Trong SQL, nối chuỗi với NULL bằng toán tử + sẽ cho kết quả NULL.",
-      "question_translation": "Giá trị trả về của câu truy vấn SQL dưới đây là gì?\nSELECT 'Agnes' + NULL + 'Allison'",
+      "question_translation": "Giá trị trả về của câu truy vấn sau là gì?\n```sql\nSELECT 'Agnes' + NULL + 'Allison'\n```",
       "is_multi": false
     },
     {
@@ -38663,7 +38663,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_032.png",
       "missing_image": false,
-      "question_text": "Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query.\nSET ANSI_NULLS OFF\nSELECT Profession FROM UserProfile WHERE (Profession <> NULL)",
+      "question_text": "Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query:\n```sql\nSET ANSI_NULLS OFF;\nSELECT Profession FROM UserProfile WHERE (Profession <> NULL);\n```",
       "type": "single",
       "options": [
         {
@@ -38690,7 +38690,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 09. Truy vấn với điều kiện trong SQL Server (Toán tử <> và kiểm tra NULL) (L0412-L0456)",
       "theory_excerpt": "[L0412] ## [H2] 2. Các toán tử so sánh thường dùng\n[L0413] = : bằng\n[L0414] <> hoặc != : khác\n[L0415] > , < , >= , <= : lớn hơn, nhỏ hơn, lớn hơn hoặc bằng, nhỏ hơn hoặc bằng\n[L0416] Ví dụ:\n[L0417] SELECT * FROM Student\n[L0418] WHERE Age <> 21;\n[L0419] Trả về sinh viên có tuổi khác 21.\n[L0420] ## [H2] 3. Toán tử logic\n[L0421] AND : tất cả điều kiện đều đúng\n[L0422] OR : chỉ cần một điều kiện đúng\n[L0423] NOT : phủ định điều kiện\n[L0424] Ví dụ:\n[L0425] SELECT * FROM Student\n[L0426] WHERE Age > 20 AND Name = 'Bình';\n[L0427] Trả về sinh viên tên Bình và tuổi lớn hơn 20.\n[L0428] SELECT * FROM Student\n[L0429] WHERE Age < 22 OR Name = 'An';\n[L0430] Trả về sinh viên có tuổi dưới 22 hoặc tên An.\n[L0431] ## [H2] 4. BETWEEN – Trong khoảng\n[L0432] Ví dụ:\n[L0433] SELECT * FROM Student\n[L0434] WHERE Age BETWEEN 20 AND 22;\n[L0435] Trả về sinh viên có tuổi từ 20 đến 22.\n[L0436] ## [H2] 5. IN – Trong tập hợp\n[L0437] Ví dụ:\n[L0438] SELECT * FROM Student\n[L0439] WHERE Name IN ('An', 'Chi');\n[L0440] Trả về sinh viên có tên An hoặc Chi.\n[L0441] ## [H2] 6. LIKE – Tìm kiếm theo mẫu\n[L0442] % : đại diện cho nhiều ký tự bất kỳ\n[L0443] _ : đại diện cho một ký tự\n[L0444] Ví dụ:\n[L0445] SELECT * FROM Student\n[L0446] WHERE Name LIKE 'A%';\n[L0447] Trả về sinh viên có tên bắt đầu bằng chữ A.\n[L0448] SELECT * FROM Student\n[L0449] WHERE Name LIKE '_i%';\n[L0450] Trả về sinh viên có ký tự thứ hai trong tên là “i”.\n[L0451] ## [H2] 7. IS NULL / IS NOT NULL\n[L0452] Dùng để kiểm tra giá trị NULL.\n[L0453] Ví dụ:\n[L0454] SELECT * FROM Student\n[L0455] WHERE Age IS NULL;\n[L0456] Trả về sinh viên chưa có dữ liệu tuổi.",
       "slide_comment": "Giải thích: Khi SET ANSI_NULLS OFF, phép so sánh <> NULL sẽ trả về các giá trị khác NULL.",
-      "question_translation": "Giả sử bảng `UserProfile` chứa cột `Profession` cho phép nhận giá trị `NULL`. Kết quả của đoạn truy vấn dưới đây là gì?\nSET ANSI_NULLS OFF\nSELECT Profession FROM UserProfile WHERE (Profession <> NULL)",
+      "question_translation": "Giả sử UserProfile là một bảng có cột Profession cho phép giá trị NULL. Kết quả của câu truy vấn dưới đây là gì?\n```sql\nSET ANSI_NULLS OFF;\nSELECT Profession FROM UserProfile WHERE (Profession <> NULL);\n```",
       "is_multi": false
     },
     {
@@ -38779,7 +38779,7 @@ window.QUIZ_DATA = {
       "options": [
         {
           "key": "A",
-          "text": "SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM dbo.Orders AS o\n    WHERE o.CustomerID = c.CustomerID\n);"
+          "text": "SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n SELECT 1\n FROM dbo.Orders AS o\n WHERE o.CustomerID = c.CustomerID\n);"
         },
         {
           "key": "B",
@@ -38798,7 +38798,7 @@ window.QUIZ_DATA = {
         "A",
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: A, B (A: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM dbo.Orders AS o\n    WHERE o.CustomerID = c.CustomerID\n);; B: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c LEFT JOIN dbo.Orders AS o\nON c.CustomerID = o.CustomerID\nWHERE o.OrderID IS NULL;)\n\n📝 Dịch đề:\nGiả sử tất cả các bảng, cột đã sẵn sàng và mỗi khách hàng có thể đặt một hoặc nhiều đơn hàng. Làm sao bạn có thể\ntruy xuất tất cả khách hàng chưa thực hiện bất kỳ giao dịch mua hàng nào?\n\n📋 Dịch đáp án:\n- A: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM dbo.Orders AS o\n    WHERE o.CustomerID = c.CustomerID\n);\n- B: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c LEFT JOIN dbo.Orders AS o\nON c.CustomerID = o.CustomerID\nWHERE o.OrderID IS NULL;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nĐể tìm tất cả khách hàng chưa từng đặt đơn hàng nào:\n1. Cách 1 (Đáp án A): Dùng truy vấn con tương quan với `WHERE NOT EXISTS (...)` để lọc những `Customer` không có bất kỳ bản ghi nào khớp `CustomerID` trong bảng `Orders`.\n2. Cách 2 (Đáp án B): Dùng `Customers LEFT JOIN Orders ON c.CustomerID = o.CustomerID`. Những khách hàng chưa có đơn hàng sẽ có các cột bên bảng `Orders` mang giá trị `NULL`, sau đó lọc bằng `WHERE o.OrderID IS NULL`.\n\n💡 Mẹo nhớ: Đáp án A, B (SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM dbo.Orders AS o\n    WHERE o.CustomerID = c.CustomerID\n);, SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c LEFT JOIN dbo.Orders AS o\nON c.CustomerID = o.CustomerID\nWHERE o.OrderID IS NULL;)",
+      "explanation": "🎯 Đáp án đúng: A, B (A: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n SELECT 1\n FROM dbo.Orders AS o\n WHERE o.CustomerID = c.CustomerID\n);; B: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c LEFT JOIN dbo.Orders AS o\nON c.CustomerID = o.CustomerID\nWHERE o.OrderID IS NULL;)\n\n📝 Dịch đề:\nGiả sử tất cả các bảng, cột đã sẵn sàng và mỗi khách hàng có thể đặt một hoặc nhiều đơn hàng. Làm sao bạn có thể\ntruy xuất tất cả khách hàng chưa thực hiện bất kỳ giao dịch mua hàng nào?\n\n📋 Dịch đáp án:\n- A: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n SELECT 1\n FROM dbo.Orders AS o\n WHERE o.CustomerID = c.CustomerID\n);\n- B: SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c LEFT JOIN dbo.Orders AS o\nON c.CustomerID = o.CustomerID\nWHERE o.OrderID IS NULL;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nĐể tìm tất cả khách hàng chưa từng đặt đơn hàng nào:\n1. Cách 1 (Đáp án A): Dùng truy vấn con tương quan với `WHERE NOT EXISTS (...)` để lọc những `Customer` không có bất kỳ bản ghi nào khớp `CustomerID` trong bảng `Orders`.\n2. Cách 2 (Đáp án B): Dùng `Customers LEFT JOIN Orders ON c.CustomerID = o.CustomerID`. Những khách hàng chưa có đơn hàng sẽ có các cột bên bảng `Orders` mang giá trị `NULL`, sau đó lọc bằng `WHERE o.OrderID IS NULL`.\n\n💡 Mẹo nhớ: Đáp án A, B (SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c\nWHERE NOT EXISTS (\n SELECT 1\n FROM dbo.Orders AS o\n WHERE o.CustomerID = c.CustomerID\n);, SELECT c.CustomerID, c.CustomerName, c.Email, c.CreatedDate\nFROM dbo.Customers AS c LEFT JOIN dbo.Orders AS o\nON c.CustomerID = o.CustomerID\nWHERE o.OrderID IS NULL;)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 13. Left - Right Join & 17. Truy vấn lồng trong SQL Server (L0664-L0721)",
       "theory_excerpt": "[L0664] ## [H2] 1. LEFT JOIN\n[L0665] ## [H3] Khái niệm\n[L0666] LEFT JOIN trả về tất cả bản ghi từ bảng bên trái, và dữ liệu khớp từ bảng bên phải.\n[L0667] Nếu không có dữ liệu khớp bên phải thì sẽ trả về NULL.\n[L0668] ## [H3] Cú pháp\n[L0669] SELECT A.column1, B.column2, ...\n[L0670] FROM TableA A\n[L0671] LEFT JOIN TableB B\n[L0672] ON A.common_column = B.common_column;\n[L0673] ## [H3] Ví dụ minh họa\n[L0674] Bảng Student\n[L0675] StudentID\n[L0676] Name\n[L0677] Age\n[L0678] 1\n[L0679] An\n[L0680] 20\n[L0681] 2\n[L0682] Bình\n[L0683] 21\n[L0684] 3\n[L0685] Chi\n[L0686] 22\n[L0687] Bảng Enrollment\n[L0688] EnrollmentID\n[L0689] StudentID\n[L0690] Course\n[L0691] 101\n[L0692] 1\n[L0693] DBI202\n[L0694] 102\n[L0695] 2\n[L0696] CSD201\n[L0697] 103\n[L0698] 4\n[L0699] MAS291\n[L0700] Truy vấn:\n[L0701] SELECT Student.StudentID, Student.Name, Enrollment.Course\n[L0702] FROM Student\n[L0703] LEFT JOIN Enrollment\n[L0704] ON Student.StudentID = Enrollment.StudentID;\n[L0705] Kết quả:\n[L0706] StudentID\n[L0707] Name\n[L0708] Course\n[L0709] 1\n[L0710] An\n[L0711] DBI202\n[L0712] 2\n[L0713] Bình\n[L0714] CSD201\n[L0715] 3\n[L0716] Chi\n[L0717] NULL\n[L0718] Giải thích:\n[L0719] StudentID 1 và 2 có dữ liệu khớp → hiện đủ.\n[L0720] StudentID 3 chỉ có trong Student → Course = NULL.\n[L0721] StudentID 4 chỉ có trong Enrollment → không xuất hiện.",
       "slide_comment": "Giải thích: NOT EXISTS và LEFT JOIN ... WHERE o.OrderID IS NULL đều dùng để tìm khách hàng chưa từng có đơn hàng.",
@@ -38913,7 +38913,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: AB, BC, BD)\n\n📝 Dịch đề:\nXét mối quan hệ R(A,B,C,D) và FD {AB → C, C→D, D → A}\nTất cả các khóa của R là gì?\n\n📋 Dịch đáp án:\n- A: AB, BC, BD\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nXét lược đồ R(A, B, C, D) với F = \\{AB \\to C, C \\to D, D \\to A\\}:\n- Nhận xét: Thuộc tính B không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào, do đó mọi khóa ứng viên (candidate key) bắt buộc phải chứa B.\n- Thử \\{B\\}^+ = \\{B\\} \\neq R, vậy khóa phải có ít nhất 2 thuộc tính chứa B:\n  + \\{AB\\}^+: có AB \\to C, C \\to D \\Rightarrow \\{AB\\}^+ = \\{A, B, C, D\\} (Khóa tối thiểu).\n  + \\{BC\\}^+: có C \\to D, D \\to A \\Rightarrow \\{BC\\}^+ = \\{A, B, C, D\\} (Khóa tối thiểu).\n  + \\{BD\\}^+: có D \\to A, rồi AB \\to C \\Rightarrow \\{BD\\}^+ = \\{A, B, C, D\\} (Khóa tối thiểu).\nVậy tất cả các khóa ứng viên của R là AB, BC, BD.\n\n💡 Mẹo nhớ: Đáp án A (AB, BC, BD)",
+      "explanation": "🎯 Đáp án đúng: A (A: AB, BC, BD)\n\n📝 Dịch đề:\nXét mối quan hệ R(A,B,C,D) và FD {AB → C, C→D, D → A}\nTất cả các khóa của R là gì?\n\n📋 Dịch đáp án:\n- A: AB, BC, BD\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nXét lược đồ R(A, B, C, D) với F = \\{AB \\to C, C \\to D, D \\to A\\}:\n- Nhận xét: Thuộc tính B không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào, do đó mọi khóa ứng viên (candidate key) bắt buộc phải chứa B.\n- Thử \\{B\\}^+ = \\{B\\} \\neq R, vậy khóa phải có ít nhất 2 thuộc tính chứa B:\n + \\{AB\\}^+: có AB \\to C, C \\to D \\Rightarrow \\{AB\\}^+ = \\{A, B, C, D\\} (Khóa tối thiểu).\n + \\{BC\\}^+: có C \\to D, D \\to A \\Rightarrow \\{BC\\}^+ = \\{A, B, C, D\\} (Khóa tối thiểu).\n + \\{BD\\}^+: có D \\to A, rồi AB \\to C \\Rightarrow \\{BD\\}^+ = \\{A, B, C, D\\} (Khóa tối thiểu).\nVậy tất cả các khóa ứng viên của R là AB, BC, BD.\n\n💡 Mẹo nhớ: Đáp án A (AB, BC, BD)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 06. Tạo khóa chính trong SQL Server & Phụ thuộc hàm (L0273-L0288)",
       "theory_excerpt": "[L0273] ## [H2] 1. Khái niệm Primary Key\n[L0274] Primary Key là một ràng buộc (constraint) dùng để xác định duy nhất mỗi bản ghi trong bảng.\n[L0275] Một bảng chỉ có một khóa chính, nhưng khóa này có thể gồm một hoặc nhiều cột (gọi là khóa chính tổng hợp).\n[L0276] Đặc điểm của Primary Key:\n[L0277] Không được phép NULL.\n[L0278] Không được phép trùng lặp.\n[L0279] ## [H2] 2. Tạo khóa chính khi tạo bảng\n[L0280] Cú pháp:\n[L0281] Ví dụ:\n[L0282] Tạo bảng Student với StudentID là khóa chính:\n[L0283] Khi đó, StudentID sẽ là khóa chính, không được NULL và không trùng lặp.\n[L0284] ## [H2] 3. Tạo khóa chính nhiều cột (Composite Primary Key)\n[L0285] Cú pháp:\n[L0286] Ví dụ:\n[L0287] Tạo bảng Enrollment với khóa chính gồm cả StudentID và CourseID:\n[L0288] Ở đây, mỗi cặp (StudentID, CourseID) là duy nhất, đảm bảo một sinh viên không đăng ký trùng một môn học.",
       "slide_comment": "Giải thích: Cả AB, BC, BD đều suy ra được đầy đủ {A,B,C,D} và đều là khóa tối thiểu.",
@@ -38969,29 +38969,29 @@ window.QUIZ_DATA = {
       "options": [
         {
           "key": "A",
-          "text": "CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n  SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;"
+          "text": "CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;"
         },
         {
           "key": "B",
-          "text": "CREATE PROCEDURE GetEmployeeByID\nDeclare @EmployeeID INT\nAS\nBEGIN\n  SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;"
+          "text": "CREATE PROCEDURE GetEmployeeByID\nDeclare @EmployeeID INT\nAS\nBEGIN\n SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;"
         },
         {
           "key": "C",
-          "text": "CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n  SELECT * FROM Employees;\nEND;"
+          "text": "CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n SELECT * FROM Employees;\nEND;"
         },
         {
           "key": "D",
-          "text": "CREATE PROCEDURE GetEmployeeByID\nAS\nBEGIN\n  Declare @EmployeeID INT\n  SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;"
+          "text": "CREATE PROCEDURE GetEmployeeByID\nAS\nBEGIN\n Declare @EmployeeID INT\n SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;"
         }
       ],
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n  SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;)\n\n📝 Dịch đề:\nTạo một Stored Procedure có tên `GetEmployeeByID` nhận vào `@EmployeeID INT` và trả về tên nhân viên từ bảng `Employees`. Câu lệnh nào còn thiếu ở dòng `...`?\nCREATE PROCEDURE GetEmployeeByID\n    @EmployeeID INT\nAS\nBEGIN\n    ...\nEND;\n\n📋 Dịch đáp án:\n- A: CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n  SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCú pháp tạo Stored Procedure có tham số đầu vào trong SQL Server là: `CREATE PROCEDURE ProcedureName @parameter datatype AS BEGIN ... END`. Không dùng từ khóa `DECLARE` cho tham số đầu vào (nên B và D sai), và trong thân thủ tục phải lọc `WHERE EmployeeID = @EmployeeID` để lấy đúng nhân viên theo mã được truyền vào (nên C sai, A đúng).\n\n💡 Mẹo nhớ: Đáp án A (CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n  SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;)",
+      "explanation": "🎯 Đáp án đúng: A (A: CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;)\n\n📝 Dịch đề:\nTạo một Stored Procedure có tên `GetEmployeeByID` nhận vào `@EmployeeID INT` và trả về tên nhân viên từ bảng `Employees`. Câu lệnh nào còn thiếu ở dòng `...`?\nCREATE PROCEDURE GetEmployeeByID\n @EmployeeID INT\nAS\nBEGIN\n ...\nEND;\n\n📋 Dịch đáp án:\n- A: CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCú pháp tạo Stored Procedure có tham số đầu vào trong SQL Server là: `CREATE PROCEDURE ProcedureName @parameter datatype AS BEGIN ... END`. Không dùng từ khóa `DECLARE` cho tham số đầu vào (nên B và D sai), và trong thân thủ tục phải lọc `WHERE EmployeeID = @EmployeeID` để lấy đúng nhân viên theo mã được truyền vào (nên C sai, A đúng).\n\n💡 Mẹo nhớ: Đáp án A (CREATE PROCEDURE GetEmployeeByID\n@EmployeeID INT\nAS\nBEGIN\n SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;\nEND;)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 29. Stored Procedures trong SQL Server (Stored Procedure có tham số) (L1676-L1704)",
       "theory_excerpt": "[L1676] ## [H2] 2. Cú pháp tạo Stored Procedure\n[L1677] CREATE PROCEDURE ProcedureName\n[L1678] @parameter1 datatype,\n[L1679] @parameter2 datatype = default_value\n[L1680] AS\n[L1681] BEGIN\n[L1682] -- khối lệnh SQL\n[L1683] END\n[L1684] ## [H2] 3. Ví dụ minh họa\n[L1685] ## [H3] a. Stored Procedure đơn giản (không có tham số)\n[L1686] CREATE PROCEDURE GetAllStudents\n[L1687] AS\n[L1688] BEGIN\n[L1689] SELECT * FROM Student;\n[L1690] END\n[L1691] Gọi thủ tục:\n[L1692] EXEC GetAllStudents;\n[L1693] ## [H3] b. Stored Procedure có tham số\n[L1694] CREATE PROCEDURE GetStudentByID\n[L1695] @StudentID INT\n[L1696] AS\n[L1697] BEGIN\n[L1698] SELECT *\n[L1699] FROM Student\n[L1700] WHERE StudentID = @StudentID;\n[L1701] END\n[L1702] Gọi thủ tục:\n[L1703] EXEC GetStudentByID @StudentID = 1;\n[L1704] ## [H3] c. Stored Procedure có tham số mặc định",
       "slide_comment": "Giải thích: Đây là cú pháp đúng vì procedure nhận tham số @EmployeeID và dùng tham số đó trong WHERE EmployeeID = @EmployeeID.",
-      "question_translation": "Tạo một Stored Procedure có tên `GetEmployeeByID` nhận vào `@EmployeeID INT` và trả về tên nhân viên từ bảng `Employees`. Câu lệnh nào còn thiếu ở dòng `...`?\nCREATE PROCEDURE GetEmployeeByID\n    @EmployeeID INT\nAS\nBEGIN\n    ...\nEND;",
+      "question_translation": "Tạo một Stored Procedure có tên `GetEmployeeByID` nhận vào `@EmployeeID INT` và trả về tên nhân viên từ bảng `Employees`. Câu lệnh nào còn thiếu ở dòng `...`?\nCREATE PROCEDURE GetEmployeeByID\n @EmployeeID INT\nAS\nBEGIN\n ...\nEND;",
       "is_multi": false
     },
     {
@@ -39153,7 +39153,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_045.png",
       "missing_image": false,
-      "question_text": "Given a relation:\nLaptop(model, speed, ram, hd, price)\nWhat will this function return when called with dbo.GetLaptopPrice(1)?\n\nCREATE FUNCTION dbo.GetLaptopPrice (@model INT)\nRETURNS BIGINT\nAS\nBEGIN\n  DECLARE @price BIGINT\n  SELECT @price = price FROM Laptop WHERE model = @model\n  RETURN @price\nEND",
+      "question_text": "Given a relation:\n`Laptop(model, speed, ram, hd, price)`\nWhat will this function return when called with `dbo.GetLaptopPrice(1)`?\n\n```sql\nCREATE FUNCTION dbo.GetLaptopPrice (@model INT)\nRETURNS BIGINT\nAS\nBEGIN\n  DECLARE @price BIGINT\n  SELECT @price = price FROM Laptop WHERE model = @model\n  RETURN @price\nEND\n```",
       "type": "single",
       "options": [
         {
@@ -39176,11 +39176,11 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: The price of laptop with model = 1)\n\n📝 Dịch đề:\nCho lược đồ quan hệ: `Laptop(model, speed, ram, hd, price)`.\nHàm dưới đây sẽ trả về kết quả gì?\nCREATE FUNCTION fn_test(@model VARCHAR(50))\nRETURNS INT\nAS\nBEGIN\n    DECLARE @price INT;\n    SELECT @price = price FROM Laptop WHERE model = @model;\n    RETURN @price;\nEND\n\n📋 Dịch đáp án:\n- C: The price of laptop with model = 1\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nHàm vô hướng (Scalar Function) `dbo.GetLaptopPrice` nhận tham số `@model INT`, truy vấn cột `price` từ bảng `Laptop` với điều kiện `WHERE model = @model` và gán vào biến `@price` để trả về. Do đó khi gọi `dbo.GetLaptopPrice(1)`, hàm trả về giá (`price`) của chiếc laptop có `model = 1`.\n\n💡 Mẹo nhớ: Đáp án C (The price of laptop with model = 1)",
+      "explanation": "🎯 Đáp án đúng: C (C: The price of laptop with model = 1)\n\n📝 Dịch đề:\nCho lược đồ quan hệ: `Laptop(model, speed, ram, hd, price)`.\nHàm dưới đây sẽ trả về kết quả gì?\nCREATE FUNCTION fn_test(@model VARCHAR(50))\nRETURNS INT\nAS\nBEGIN\n DECLARE @price INT;\n SELECT @price = price FROM Laptop WHERE model = @model;\n RETURN @price;\nEND\n\n📋 Dịch đáp án:\n- C: The price of laptop with model = 1\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nHàm vô hướng (Scalar Function) `dbo.GetLaptopPrice` nhận tham số `@model INT`, truy vấn cột `price` từ bảng `Laptop` với điều kiện `WHERE model = @model` và gán vào biến `@price` để trả về. Do đó khi gọi `dbo.GetLaptopPrice(1)`, hàm trả về giá (`price`) của chiếc laptop có `model = 1`.\n\n💡 Mẹo nhớ: Đáp án C (The price of laptop with model = 1)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 30. Function trong SQL Server (Scalar Function) (L1751-L1770)",
       "theory_excerpt": "[L1751] ## [H2] 1. Khái niệm Function\n[L1752] Function trong SQL Server là một khối lệnh SQL được định nghĩa sẵn, có thể nhận tham số và trả về một giá trị duy nhất hoặc một bảng.\n[L1753] Khác với Stored Procedure:\n[L1754] Function bắt buộc phải trả về giá trị.\n[L1755] Function có thể dùng trong câu lệnh SELECT, WHERE, JOIN.\n[L1756] Function không thể thực hiện trực tiếp các thao tác như INSERT, DELETE, UPDATE trên bảng (chỉ trong một số loại đặc biệt).\n[L1757] ## [H2] 2. Các loại Function\n[L1758] Scalar Function: trả về một giá trị đơn (INT, VARCHAR, DATETIME,…).\n[L1759] Table-Valued Function (TVF): trả về một bảng.\n[L1760] Inline Table-Valued Function.\n[L1761] Multi-Statement Table-Valued Function.\n[L1762] ## [H2] 3. Cú pháp tạo Function\n[L1763] ## [H3] a. Scalar Function\n[L1764] CREATE FUNCTION FunctionName (@param datatype, ...)\n[L1765] RETURNS datatype\n[L1766] AS\n[L1767] BEGIN\n[L1768] -- xử lý logic\n[L1769] RETURN value;\n[L1770] END",
       "slide_comment": "Giải thích: Hàm nhận tham số @model, truy vấn lấy price từ bảng Laptop với model = @model, nên dbo.GetLaptopPrice(1) trả về giá của laptop có model bằng 1.",
-      "question_translation": "Cho lược đồ quan hệ: `Laptop(model, speed, ram, hd, price)`.\nHàm dưới đây sẽ trả về kết quả gì?\nCREATE FUNCTION fn_test(@model VARCHAR(50))\nRETURNS INT\nAS\nBEGIN\n    DECLARE @price INT;\n    SELECT @price = price FROM Laptop WHERE model = @model;\n    RETURN @price;\nEND",
+      "question_translation": "Cho quan hệ:\n`Laptop(model, speed, ram, hd, price)`\nHàm sau sẽ trả về giá trị gì khi được gọi với lệnh `dbo.GetLaptopPrice(1)`?\n\n```sql\nCREATE FUNCTION dbo.GetLaptopPrice (@model INT)\nRETURNS BIGINT\nAS\nBEGIN\n  DECLARE @price BIGINT\n  SELECT @price = price FROM Laptop WHERE model = @model\n  RETURN @price\nEND\n```",
       "is_multi": false
     },
     {
@@ -39523,7 +39523,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_055.png",
       "missing_image": false,
-      "question_text": "Given two relations:\nPrinter(maker, model, type)\nPC(model, speed, ram, hd, ..., price)\n\nWhat does this query return?\nSELECT maker\nFROM Product\nWHERE model NOT IN (\n    SELECT model\n    FROM PC\n);",
+      "question_text": "Given two relations:\n`Printer(maker, model, type)`\n`PC(model, speed, ram, hd, price)`\n\nWhat does this query return?\n```sql\nSELECT maker\nFROM Product\nWHERE model NOT IN (\n    SELECT model\n    FROM PC\n);\n```",
       "type": "single",
       "options": [
         {
@@ -39550,7 +39550,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 17. Truy vấn lồng trong SQL Server (Subquery với IN / NOT IN) (L0954-L0960)",
       "theory_excerpt": "[L0954] ## [H2] 3. Subquery với IN\n[L0955] Kiểm tra xem một giá trị có nằm trong tập kết quả của Subquery không.\n[L0956] Ví dụ: Tìm sinh viên có đăng ký môn học:\n[L0957] SELECT Name\n[L0958] FROM Student\n[L0959] WHERE StudentID IN (SELECT StudentID FROM Enrollment);\n[L0960] ## [H2] 4. Subquery trong mệnh đề FROM (Derived Table)",
       "slide_comment": "Giải thích: Query lấy các maker có model không xuất hiện trong bảng PC, tức là các hãng sản xuất thiết bị không phải PC.",
-      "question_translation": "Cho hai lược đồ quan hệ:\nPrinter(maker, model, type)\nPC(model, speed, ram, hd, price)\nCâu truy vấn nào dưới đây là hợp lệ?",
+      "question_translation": "Cho hai quan hệ:\n`Printer(maker, model, type)`\n`PC(model, speed, ram, hd, price)`\n\nCâu truy vấn sau trả về kết quả gì?\n```sql\nSELECT maker\nFROM Product\nWHERE model NOT IN (\n    SELECT model\n    FROM PC\n);\n```",
       "is_multi": false
     },
     {
@@ -39634,7 +39634,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_058.png",
       "missing_image": false,
-      "question_text": "In MS-SQL Server, which of the following is true about join operator?\nSELECT * FROM tblCUSTOMER, tblORDER",
+      "question_text": "In MS-SQL Server, which of the following is true about join operator?\n```sql\nSELECT * FROM tblCUSTOMER, tblORDER\n```",
       "type": "single",
       "options": [
         {
@@ -39661,7 +39661,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 11. Inner Join & 12. Tổng hợp các phép Join trong SQL Server (L0523-L0533)",
       "theory_excerpt": "[L0523] 11.Inner Join trong SQL Server\n[L0524] ## [H2] 1. Khái niệm INNER JOIN\n[L0525] INNER JOIN dùng để kết hợp dữ liệu từ hai hoặc nhiều bảng dựa trên cột có giá trị chung (thường là khóa chính – khóa ngoại).\n[L0526] Chỉ trả về những bản ghi có dữ liệu khớp ở cả hai bảng.\n[L0527] Nếu một bản ghi ở bảng A không có dữ liệu khớp ở bảng B thì sẽ không xuất hiện trong kết quả.\n[L0528] ## [H2] 2. Cú pháp cơ bản\n[L0529] SELECT A.column1, B.column2, ...\n[L0530] FROM TableA A\n[L0531] INNER JOIN TableB B\n[L0532] ON A.common_column = B.common_column;\n[L0533] ## [H2] 3. Ví dụ minh họa",
       "slide_comment": "Giải thích: SELECT * FROM tblCUSTOMER, tblORDER không có điều kiện nối nên tạo tích Descartes (Cartesian product / cross join).",
-      "question_translation": "Trong MS-SQL Server, phát biểu nào dưới đây là đúng về toán tử kết nối (JOIN) trong truy vấn sau?\nSELECT * FROM tblCUSTOMER INNER JOIN tblORDER\nON tblCUSTOMER.CustomerID = tblORDER.CustomerID",
+      "question_translation": "Trong MS-SQL Server, phát biểu nào sau đây là đúng về toán tử kết nối trong câu lệnh sau?\n```sql\nSELECT * FROM tblCUSTOMER, tblORDER\n```",
       "is_multi": false
     },
     {
@@ -39819,7 +39819,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_063.png",
       "missing_image": false,
-      "question_text": "Suppose relation R1(A, B) has the following tuples:\nA | B\n1 | a\n2 | b\n3 | c\n4 | d\n5 | e\n\nand the relation R2(C, A) has the following tuples:\nC | A\n101 | 1\n102 | 2\n103 | 3\n104 | 1\n105 | 1\n\nWhich tuple is contained in the result of the following query:\nSELECT R1.B, R2.C\nFROM R1\nRIGHT JOIN R2 ON R1.A = R2.A;",
+      "question_text": "Suppose relation R1(A, B) and relation R2(C, A) have the following tuples:\n\n```text\nTable R1(A, B):        Table R2(C, A):\nA | B                 C   | A\n1 | a                 101 | 1\n2 | b                 102 | 2\n3 | c                 103 | 3\n4 | d                 104 | 1\n5 | e                 105 | 1\n```\n\nWhich tuple is contained in the result of the following query:\n```sql\nSELECT R1.B, R2.C\nFROM R1\nRIGHT JOIN R2 ON R1.A = R2.A;\n```",
       "type": "single",
       "options": [
         {
@@ -39846,7 +39846,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1381-L1395)",
       "theory_excerpt": "[L1381] Chuẩn hóa dữ liệu (dùng chung một định nghĩa cho nhiều bảng).\n[L1382] Tái sử dụng, dễ bảo trì.\n[L1383] Hạn chế lỗi khi khai báo cùng một loại dữ liệu nhiều lần.\n[L1384] ## [H2] 2. Cú pháp tạo kiểu dữ liệu tự định nghĩa\n[L1385] sp_addtype type_name, system_data_type, 'NULL' | 'NOT NULL';\n[L1386] Trong đó:\n[L1387] type_name: tên kiểu dữ liệu mới.\n[L1388] system_data_type: kiểu dữ liệu hệ thống dùng làm cơ sở.\n[L1389] NULL | NOT NULL: quy định có cho phép NULL hay không.\n[L1390] ## [H2] 3. Ví dụ minh họa\n[L1391] ## [H3] a. Tạo kiểu dữ liệu tự định nghĩa\n[L1392] EXEC sp_addtype PhoneNumber, 'VARCHAR(15)', 'NOT NULL';\n[L1393] → Tạo kiểu dữ liệu PhoneNumber dựa trên VARCHAR(15) và không cho phép NULL.\n[L1394] ## [H3] b. Sử dụng trong bảng\n[L1395] CREATE TABLE Customer (",
       "slide_comment": "Giải thích: RIGHT JOIN giữ toàn bộ dòng của R2; nối theo R1.A = R2.A nên các kết quả tương ứng là (a,101), (b,102), (c,103), (a,104), (a,105).",
-      "question_translation": "Giả sử quan hệ R1(A, B) và R2(C, A) có các bộ giá trị như trên slide:\nR1(A, B): (1, a), (2, b), (3, c), (4, d), (5, e)\nR2(C, A): (101, 1), (102, 2), (103, 3), (104, 1), (105, 1)\nKết quả của phép kết nối `SELECT R1.B, R2.C FROM R1 LEFT OUTER JOIN R2 ON R1.A = R2.A` là gì?",
+      "question_translation": "Cho quan hệ R1(A, B) và R2(C, A) có các bộ giá trị sau:\n\n```text\nBảng R1(A, B):        Bảng R2(C, A):\nA | B                 C   | A\n1 | a                 101 | 1\n2 | b                 102 | 2\n3 | c                 103 | 3\n4 | d                 104 | 1\n5 | e                 105 | 1\n```\n\nBộ (tuple) nào xuất hiện trong kết quả của câu truy vấn sau:\n```sql\nSELECT R1.B, R2.C\nFROM R1\nRIGHT JOIN R2 ON R1.A = R2.A;\n```",
       "is_multi": false
     },
     {
@@ -39893,7 +39893,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_065.png",
       "missing_image": false,
-      "question_text": "Suppose relation R(A, B) has the following tuples:\nA | B\na | 5\nb | 7\nh | 8\nm | 3\nc | 6\nb | 2\na | 9\n\nWhich tuple is contained in the result of the following query:\nSELECT * FROM R WHERE A LIKE 'a%'\nUNION\nSELECT * FROM R WHERE B > 7;",
+      "question_text": "Suppose relation R(A, B) has the following tuples:\n\n```text\nA | B\na | 5\nb | 7\nh | 8\nm | 3\nc | 6\nb | 2\na | 9\n```\n\nWhich tuple is contained in the result of the following query:\n```sql\nSELECT * FROM R WHERE A LIKE 'a%'\nUNION\nSELECT * FROM R WHERE B > 7;\n```",
       "type": "single",
       "options": [
         {
@@ -39920,7 +39920,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0951-L0965)",
       "theory_excerpt": "[L0951] SELECT Name, Age\n[L0952] FROM Student\n[L0953] WHERE Age > (SELECT AVG(Age) FROM Student);\n[L0954] ## [H2] 3. Subquery với IN\n[L0955] Kiểm tra xem một giá trị có nằm trong tập kết quả của Subquery không.\n[L0956] Ví dụ: Tìm sinh viên có đăng ký môn học:\n[L0957] SELECT Name\n[L0958] FROM Student\n[L0959] WHERE StudentID IN (SELECT StudentID FROM Enrollment);\n[L0960] ## [H2] 4. Subquery trong mệnh đề FROM (Derived Table)\n[L0961] Truy vấn con được coi như một bảng tạm.\n[L0962] Ví dụ: Tìm sinh viên có tuổi cao nhất:\n[L0963] SELECT Name, Age\n[L0964] FROM (SELECT * FROM Student) AS Temp\n[L0965] WHERE Age = (SELECT MAX(Age) FROM Student);",
       "slide_comment": "b Giải thích: A LIKE 'a%' lấy (a,5) và (a,9); B > 7 lấy (h,8) và (a,9). UNION loại bỏ trùng nên kết quả cuối cùng là (a,5), (a,9), (h,8).",
-      "question_translation": "Giả sử quan hệ R(A, B) và S(B, C, D) có các bộ giá trị như trên slide. Bộ giá trị (tuple) nào nằm trong kết quả của câu truy vấn sau?\nSELECT R.A, MAX(S.C)\nFROM R INNER JOIN S ON R.B = S.B\nGROUP BY R.A",
+      "question_translation": "Cho quan hệ R(A, B) có các bộ giá trị sau:\n\n```text\nA | B\na | 5\nb | 7\nh | 8\nm | 3\nc | 6\nb | 2\na | 9\n```\n\nBộ (tuple) nào xuất hiện trong kết quả của câu truy vấn sau:\n```sql\nSELECT * FROM R WHERE A LIKE 'a%'\nUNION\nSELECT * FROM R WHERE B > 7;\n```",
       "is_multi": false
     },
     {
@@ -40031,7 +40031,7 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: BCNF)\n\n📝 Dịch đề:\nDạng chuẩn cao nhất cho lược đồ quan hệ RA,B,C) với các phụ thuộc hàm:\n\n📋 Dịch đáp án:\n- D: BCNF\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nXét lược đồ R(A, B, C) với F = \\{AB \\to C; B \\to A; C \\to B\\}:\n1. Tìm khóa ứng viên (Candidate keys):\n   - \\{B\\}^+: từ B \\to A có \\{A, B\\}, từ AB \\to C có C \\Rightarrow \\{B\\}^+ = \\{A, B, C\\}. Vậy B là khóa ứng viên.\n   - \\{C\\}^+: từ C \\to B có B, mà \\{B\\}^+ = \\{A, B, C\\} \\Rightarrow \\{C\\}^+ = \\{A, B, C\\}. Vậy C là khóa ứng viên.\n2. Kiểm tra điều kiện BCNF (mọi phụ thuộc hàm không tầm thường X \\to Y đều phải có vế trái X là siêu khóa - superkey):\n   - AB \\to C: vế trái AB chứa khóa B nên AB là superkey.\n   - B \\to A: vế trái B là candidate key (superkey).\n   - C \\to B: vế trái C là candidate key (superkey).\nTất cả các vế trái đều là siêu khóa, do đó quan hệ đạt dạng chuẩn cao nhất là BCNF (Đáp án D).\n\n💡 Mẹo nhớ: Đáp án D (BCNF)",
+      "explanation": "🎯 Đáp án đúng: D (D: BCNF)\n\n📝 Dịch đề:\nDạng chuẩn cao nhất cho lược đồ quan hệ RA,B,C) với các phụ thuộc hàm:\n\n📋 Dịch đáp án:\n- D: BCNF\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nXét lược đồ R(A, B, C) với F = \\{AB \\to C; B \\to A; C \\to B\\}:\n1. Tìm khóa ứng viên (Candidate keys):\n - \\{B\\}^+: từ B \\to A có \\{A, B\\}, từ AB \\to C có C \\Rightarrow \\{B\\}^+ = \\{A, B, C\\}. Vậy B là khóa ứng viên.\n - \\{C\\}^+: từ C \\to B có B, mà \\{B\\}^+ = \\{A, B, C\\} \\Rightarrow \\{C\\}^+ = \\{A, B, C\\}. Vậy C là khóa ứng viên.\n2. Kiểm tra điều kiện BCNF (mọi phụ thuộc hàm không tầm thường X \\to Y đều phải có vế trái X là siêu khóa - superkey):\n - AB \\to C: vế trái AB chứa khóa B nên AB là superkey.\n - B \\to A: vế trái B là candidate key (superkey).\n - C \\to B: vế trái C là candidate key (superkey).\nTất cả các vế trái đều là siêu khóa, do đó quan hệ đạt dạng chuẩn cao nhất là BCNF (Đáp án D).\n\n💡 Mẹo nhớ: Đáp án D (BCNF)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - Các dạng chuẩn 1NF, 2NF, 3NF (Kiểm tra khóa và dạng chuẩn cao nhất) (L0036-L0072)",
       "theory_excerpt": "[L0036] ## [H2] 🔹 1NF (First Normal Form – Dạng chuẩn 1)\n[L0037] Định nghĩa:\n[L0038] Mỗi ô (thuộc tính) trong bảng chỉ chứa giá trị nguyên tử (không lặp, không danh sách).\n[L0039] Không có nhóm lặp hoặc mảng trong một cột.\n[L0040] Ví dụ chưa chuẩn 1NF:\n[L0041] ❌ Cột Courses chứa nhiều giá trị.\n[L0042] Chuẩn hóa thành 1NF:\n[L0043] ## [H2] 🔹 2NF (Second Normal Form – Dạng chuẩn 2)\n[L0044] Điều kiện:\n[L0045] Đã đạt 1NF.\n[L0046] Mọi thuộc tính không khóa phải phụ thuộc toàn bộ vào khóa chính, không được phụ thuộc vào một phần khóa chính.\n[L0047] Ví dụ chưa chuẩn 2NF:\n[L0048] Bảng Enrollment(StudentID, CourseID, StudentName, CourseName)\n[L0049] Khóa chính: (StudentID, CourseID)\n[L0050] Lỗi: StudentName chỉ phụ thuộc vào StudentID, CourseName chỉ phụ thuộc vào CourseID.\n[L0051] Chuẩn hóa thành 2NF:\n[L0052] Student(StudentID, StudentName)\n[L0053] Course(CourseID, CourseName)\n[L0054] Enrollment(StudentID, CourseID)\n[L0055] 👉 Tránh phụ thuộc một phần vào khóa chính.\n[L0056] .\n[L0057] ## [H2] 🔹 3NF (Third Normal Form – Dạng chuẩn 3)\n[L0058] Điều kiện:\n[L0059] Đã đạt 2NF.\n[L0060] Không có phụ thuộc bắc cầu (transitive dependency), nghĩa là thuộc tính không khóa chỉ được phụ thuộc vào khóa chính, không phụ thuộc qua một thuộc tính khác.\n[L0061] Ví dụ chưa chuẩn 3NF:\n[L0062] Student(StudentID, StudentName, MajorID, MajorName)\n[L0063] Khóa chính: StudentID\n[L0064] Lỗi: MajorName phụ thuộc vào MajorID chứ không phụ thuộc trực tiếp StudentID.\n[L0065] Chuẩn hóa thành 3NF:\n[L0066] Student(StudentID, StudentName, MajorID)\n[L0067] Major(MajorID, MajorName)\n[L0068] 👉 Xóa phụ thuộc bắc cầu.\n[L0069] ## [H2] ✅ Tóm tắt dễ nhớ\n[L0070] 1NF: Không lặp, mỗi ô 1 giá trị.\n[L0071] 2NF: Xóa phụ thuộc một phần vào khóa.\n[L0072] 3NF: Xóa phụ thuộc bắc cầu qua thuộc tính trung gian.",
       "slide_comment": "Câu này B và C là Candicate key. Do B+ = BAC C+ = CBA Nó có hết Attribute và đạt tối thiểu( giải thích ở dưới) nên là Candicate key) Theo 2NF là không phụ thuộc 1 phần( gọi tắt là PD) PD là: subset of khóa ứng viên -> NON prime attribute. Nhưng đề này prime là B C ( lấy thuộc tính từ candicate) và mấy thằng này có 1 thôi thì làm gì có subset( ví dụ: ABC sẽ có a b c ab ac bc là subset) => không có PD=> Cái này đạt 2NF AB là super key nhen cụ thể là BC AB BC Nếu bạn chưa biết thì, khóa ứng cử là khóa superkey nhưng với minimal attributes of superkey( thuộc tính của superkey ít nhất). Và ở 3NF mà B C prime và AB là super thì thỏa điều kiện 3NF( bên phải là prime hoặc trái là super) Check thằng BCNF là check super key ở vế trái( không có bên phải là prime như 3NF) Tất cả vế trái đều là super key nên cái này sẽ là BCNF. => D",
@@ -40152,7 +40152,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_072.png",
       "missing_image": false,
-      "question_text": "The following SQL statement creates a stored procedure that count number of customers in each City from the \"Customers\" table:\nCREATE PROCEDURE CountOfCustomers\n@City nvarchar(30), @CountCus int OUTPUT\nAS\nSET @CountCus = (\n    SELECT COUNT(CustomerID) FROM Customers\n    WHERE City = @City\n    GROUP BY City\n)\nGO;\nWhich of the following is the way to execute a procedure?",
+      "question_text": "The following SQL statement creates a stored procedure that counts the number of customers in each City from the Customers table:\n\n```sql\nCREATE PROCEDURE CountOfCustomers\n@City NVARCHAR(30), @CountCus INT OUTPUT\nAS\nSET @CountCus = (\n    SELECT COUNT(CustomerID) FROM Customers\n    WHERE City = @City\n    GROUP BY City\n);\nGO\n```\n\nWhich of the following is the way to execute this procedure?",
       "type": "single",
       "options": [
         {
@@ -40175,11 +40175,11 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: DECLARE @CountCustomers int\nEXEC CountOfCustomers @City = 'Berlin', @CountCus= @CountCustomers OUTPUT;)\n\n📝 Dịch đề:\nCâu lệnh SQL dưới đây tạo một Stored Procedure để đếm số lượng khách hàng ở mỗi thành phố (`City`) từ bảng `Customers`. Cần điền gì vào vị trí `____`?\nCREATE PROCEDURE CountCustomersByCity\nAS\nBEGIN\n    SELECT City, COUNT(CustomerID) FROM Customers\n    ____ City;\nEND;\n\n📋 Dịch đáp án:\n- B: DECLARE @CountCustomers int\nEXEC CountOfCustomers @City = 'Berlin', @CountCus= @CountCustomers OUTPUT;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nThủ tục `CountOfCustomers` có 1 tham số đầu vào bắt buộc (`@City`) và 1 tham số đầu ra (`@CountCus int OUTPUT`). Để thực thi và nhận giá trị trả về từ tham số `OUTPUT`:\n1. Phải khai báo biến nhận kết quả: `DECLARE @CountCustomers int` (nên C sai vì chưa `DECLARE`).\n2. Phải truyền đủ tham số `@City` (nên D sai) và bắt buộc phải có từ khóa `OUTPUT` ở lời gọi `EXEC` cho tham số `@CountCus` (nên A sai, B đúng).\n\n💡 Mẹo nhớ: Đáp án B (DECLARE @CountCustomers int\nEXEC CountOfCustomers @City = 'Berlin', @CountCus= @CountCustomers OUTPUT;)",
+      "explanation": "🎯 Đáp án đúng: B (B: DECLARE @CountCustomers int\nEXEC CountOfCustomers @City = 'Berlin', @CountCus= @CountCustomers OUTPUT;)\n\n📝 Dịch đề:\nCâu lệnh SQL dưới đây tạo một Stored Procedure để đếm số lượng khách hàng ở mỗi thành phố (`City`) từ bảng `Customers`. Cần điền gì vào vị trí `____`?\nCREATE PROCEDURE CountCustomersByCity\nAS\nBEGIN\n SELECT City, COUNT(CustomerID) FROM Customers\n ____ City;\nEND;\n\n📋 Dịch đáp án:\n- B: DECLARE @CountCustomers int\nEXEC CountOfCustomers @City = 'Berlin', @CountCus= @CountCustomers OUTPUT;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nThủ tục `CountOfCustomers` có 1 tham số đầu vào bắt buộc (`@City`) và 1 tham số đầu ra (`@CountCus int OUTPUT`). Để thực thi và nhận giá trị trả về từ tham số `OUTPUT`:\n1. Phải khai báo biến nhận kết quả: `DECLARE @CountCustomers int` (nên C sai vì chưa `DECLARE`).\n2. Phải truyền đủ tham số `@City` (nên D sai) và bắt buộc phải có từ khóa `OUTPUT` ở lời gọi `EXEC` cho tham số `@CountCus` (nên A sai, B đúng).\n\n💡 Mẹo nhớ: Đáp án B (DECLARE @CountCustomers int\nEXEC CountOfCustomers @City = 'Berlin', @CountCus= @CountCustomers OUTPUT;)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0951-L0965)",
       "theory_excerpt": "[L0951] SELECT Name, Age\n[L0952] FROM Student\n[L0953] WHERE Age > (SELECT AVG(Age) FROM Student);\n[L0954] ## [H2] 3. Subquery với IN\n[L0955] Kiểm tra xem một giá trị có nằm trong tập kết quả của Subquery không.\n[L0956] Ví dụ: Tìm sinh viên có đăng ký môn học:\n[L0957] SELECT Name\n[L0958] FROM Student\n[L0959] WHERE StudentID IN (SELECT StudentID FROM Enrollment);\n[L0960] ## [H2] 4. Subquery trong mệnh đề FROM (Derived Table)\n[L0961] Truy vấn con được coi như một bảng tạm.\n[L0962] Ví dụ: Tìm sinh viên có tuổi cao nhất:\n[L0963] SELECT Name, Age\n[L0964] FROM (SELECT * FROM Student) AS Temp\n[L0965] WHERE Age = (SELECT MAX(Age) FROM Student);",
       "slide_comment": "Giải thích: Tham số output phải khai báo biến nhận và dùng từ khóa OUTPUT khi thực thi procedure.",
-      "question_translation": "Câu lệnh SQL dưới đây tạo một Stored Procedure để đếm số lượng khách hàng ở mỗi thành phố (`City`) từ bảng `Customers`. Cần điền gì vào vị trí `____`?\nCREATE PROCEDURE CountCustomersByCity\nAS\nBEGIN\n    SELECT City, COUNT(CustomerID) FROM Customers\n    ____ City;\nEND;",
+      "question_translation": "Đoạn mã SQL sau tạo một stored procedure đếm số lượng khách hàng ở mỗi Thành phố từ bảng Customers:\n\n```sql\nCREATE PROCEDURE CountOfCustomers\n@City NVARCHAR(30), @CountCus INT OUTPUT\nAS\nSET @CountCus = (\n    SELECT COUNT(CustomerID) FROM Customers\n    WHERE City = @City\n    GROUP BY City\n);\nGO\n```\n\nCách nào sau đây là cú pháp hợp lệ để thực thi procedure trên?",
       "is_multi": false
     },
     {
@@ -40189,7 +40189,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_073.png",
       "missing_image": false,
-      "question_text": "The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the \"Customers\" table:\nCREATE PROCEDURE SelectAllCustomers\n    @City nvarchar(30),\n    @PostalCode nvarchar(10)\nAS\nBEGIN\n    SELECT *\n    FROM Customers\n    WHERE City = @City\n      AND PostalCode = @PostalCode;\nEND;\nGO\nWhich of the following is the way to execute a procedure?",
+      "question_text": "The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the Customers table:\n\n```sql\nCREATE PROCEDURE SelectAllCustomers\n    @City NVARCHAR(30),\n    @PostalCode NVARCHAR(10)\nAS\nBEGIN\n    SELECT *\n    FROM Customers\n    WHERE City = @City\n      AND PostalCode = @PostalCode;\nEND;\nGO\n```\n\nWhich of the following is the way to execute this procedure?",
       "type": "single",
       "options": [
         {
@@ -40216,7 +40216,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 29. Stored Procedures trong SQL Server (Stored Procedure có tham số) (L1693-L1704)",
       "theory_excerpt": "[L1693] ## [H3] b. Stored Procedure có tham số\n[L1694] CREATE PROCEDURE GetStudentByID\n[L1695] @StudentID INT\n[L1696] AS\n[L1697] BEGIN\n[L1698] SELECT *\n[L1699] FROM Student\n[L1700] WHERE StudentID = @StudentID;\n[L1701] END\n[L1702] Gọi thủ tục:\n[L1703] EXEC GetStudentByID @StudentID = 1;\n[L1704] ## [H3] c. Stored Procedure có tham số mặc định",
       "slide_comment": "Giải thích: Đây là cú pháp đúng để truyền tham số vào stored procedure theo tên tham số.",
-      "question_translation": "Câu lệnh SQL dưới đây tạo một Stored Procedure để lấy danh sách khách hàng thuộc một thành phố cụ thể từ bảng `Customers`. Cần điền gì vào vị trí `____`?\nCREATE PROCEDURE SelectAllCustomers @City nvarchar(30)\nAS\nSELECT * FROM Customers WHERE City = ____\nGO;",
+      "question_translation": "Đoạn mã SQL sau tạo một stored procedure lọc khách hàng theo City và PostalCode từ bảng Customers:\n\n```sql\nCREATE PROCEDURE SelectAllCustomers\n    @City NVARCHAR(30),\n    @PostalCode NVARCHAR(10)\nAS\nBEGIN\n    SELECT *\n    FROM Customers\n    WHERE City = @City\n      AND PostalCode = @PostalCode;\nEND;\nGO\n```\n\nCách nào sau đây là cú pháp hợp lệ để thực thi procedure trên?",
       "is_multi": false
     },
     {
@@ -40374,7 +40374,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_078.png",
       "missing_image": false,
-      "question_text": "You need to determine the result of executing this code segment.\nDECLARE @RangeStart INT = 0;\nDECLARE @RangeEnd INT = 10000;\nDECLARE @RangeStep INT = 1;\nWITH NumberRange(ItemValue) AS (\n    SELECT ItemValue FROM (SELECT @RangeStart AS ItemValue) AS t\n    UNION ALL\n    SELECT ItemValue + @RangeStep FROM NumberRange WHERE ItemValue < @RangeEnd\n)\nSELECT ItemValue FROM NumberRange\nOPTION (MAXRECURSION 100)\nWhich result will be returned?",
+      "question_text": "You need to determine the result of executing this code segment:\n\n```sql\nDECLARE @RangeStart INT = 0;\nDECLARE @RangeEnd INT = 10000;\nDECLARE @RangeStep INT = 1;\nWITH NumberRange(ItemValue) AS (\n    SELECT ItemValue FROM (SELECT @RangeStart AS ItemValue) AS t\n    UNION ALL\n    SELECT ItemValue + @RangeStep FROM NumberRange WHERE ItemValue < @RangeEnd\n)\nSELECT ItemValue FROM NumberRange\nOPTION (MAXRECURSION 100);\n```\n\nWhich result will be returned?",
       "type": "single",
       "options": [
         {
@@ -40397,11 +40397,11 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: 101 rows will be returned with a maximum recursion error.)\n\n📝 Dịch đề:\nXác định kết quả khi thực thi đoạn mã T-SQL sử dụng CTE đệ quy dưới đây:\nDECLARE @RangeStart INT = 0;\nDECLARE @RangeEnd INT = 10000;\nDECLARE @RangeStep INT = 1;\nWITH NumberRange(ItemValue) AS (\n    SELECT ItemValue FROM (SELECT @RangeStart AS ItemValue) AS t\n    UNION ALL\n    SELECT ItemValue + @RangeStep FROM NumberRange WHERE ItemValue < @RangeEnd\n)\nSELECT ItemValue FROM NumberRange\nOPTION (MAXRECURSION 100)\n\n📋 Dịch đáp án:\n- C: 101 rows will be returned with a maximum recursion error.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nBiểu thức bảng chung đệ quy (Recursive CTE `NumberRange`) bắt đầu với dòng neo (anchor member) có `ItemValue = 0` (1 dòng), sau đó mỗi bước đệ quy tăng thêm 1 cho đến khi đạt `10000`. Tuy nhiên, câu lệnh có gợi ý truy vấn `OPTION (MAXRECURSION 100)` giới hạn tối đa 100 mức đệ quy. Khi chạy: dòng gốc (`0`) + 100 lần đệ quy (`1..100`) tạo ra 101 dòng, đến lần đệ quy thứ 101 (vì `100 < 10000` vẫn đúng) sẽ vượt quá giới hạn `MAXRECURSION 100` nên SQL Server dừng thực thi và báo lỗi maximum recursion error.\n\n💡 Mẹo nhớ: Đáp án C (101 rows will be returned with a maximum recursion error.)",
+      "explanation": "🎯 Đáp án đúng: C (C: 101 rows will be returned with a maximum recursion error.)\n\n📝 Dịch đề:\nXác định kết quả khi thực thi đoạn mã T-SQL sử dụng CTE đệ quy dưới đây:\nDECLARE @RangeStart INT = 0;\nDECLARE @RangeEnd INT = 10000;\nDECLARE @RangeStep INT = 1;\nWITH NumberRange(ItemValue) AS (\n SELECT ItemValue FROM (SELECT @RangeStart AS ItemValue) AS t\n UNION ALL\n SELECT ItemValue + @RangeStep FROM NumberRange WHERE ItemValue < @RangeEnd\n)\nSELECT ItemValue FROM NumberRange\nOPTION (MAXRECURSION 100)\n\n📋 Dịch đáp án:\n- C: 101 rows will be returned with a maximum recursion error.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nBiểu thức bảng chung đệ quy (Recursive CTE `NumberRange`) bắt đầu với dòng neo (anchor member) có `ItemValue = 0` (1 dòng), sau đó mỗi bước đệ quy tăng thêm 1 cho đến khi đạt `10000`. Tuy nhiên, câu lệnh có gợi ý truy vấn `OPTION (MAXRECURSION 100)` giới hạn tối đa 100 mức đệ quy. Khi chạy: dòng gốc (`0`) + 100 lần đệ quy (`1..100`) tạo ra 101 dòng, đến lần đệ quy thứ 101 (vì `100 < 10000` vẫn đúng) sẽ vượt quá giới hạn `MAXRECURSION 100` nên SQL Server dừng thực thi và báo lỗi maximum recursion error.\n\n💡 Mẹo nhớ: Đáp án C (101 rows will be returned with a maximum recursion error.)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 14. Union All & 27. Vòng lặp / Đệ quy trong Transact-SQL (L0806-L0829)",
       "theory_excerpt": "[L0806] ## [H2] 4. UNION ALL\n[L0807] Nếu muốn giữ lại tất cả bản ghi, kể cả trùng lặp, dùng UNION ALL.\n[L0808] Ví dụ:\n[L0809] SELECT Name, Age FROM Student_HN\n[L0810] UNION ALL\n[L0811] SELECT Name, Age FROM Student_HCM;\n[L0812] Kết quả:\n[L0813] Name\n[L0814] Age\n[L0815] An\n[L0816] 20\n[L0817] Bình\n[L0818] 21\n[L0819] Chi\n[L0820] 22\n[L0821] Bình\n[L0822] 21\n[L0823] ## [H2] 5. Khi nào dùng UNION và UNION ALL\n[L0824] UNION: Khi muốn loại bỏ dữ liệu trùng lặp.\n[L0825] UNION ALL: Khi cần giữ lại tất cả dữ liệu (nhanh hơn vì không cần kiểm tra trùng lặp).\n[L0826] ## [H2] Tóm tắt\n[L0827] UNION kết hợp kết quả của nhiều truy vấn SELECT.\n[L0828] Các truy vấn phải cùng số cột và kiểu dữ liệu tương thích.\n[L0829] UNION loại bỏ trùng lặp, UNION ALL giữ lại trùng lặp.",
       "slide_comment": "Giải thích: CTE đệ quy mặc định chỉ cho 100 lần recursion. Nó trả từ 0 đến 100 là 101 dòng rồi báo lỗi maximum recursion.",
-      "question_translation": "Xác định kết quả khi thực thi đoạn mã T-SQL sử dụng CTE đệ quy dưới đây:\nDECLARE @RangeStart INT = 0;\nDECLARE @RangeEnd INT = 10000;\nDECLARE @RangeStep INT = 1;\nWITH NumberRange(ItemValue) AS (\n    SELECT ItemValue FROM (SELECT @RangeStart AS ItemValue) AS t\n    UNION ALL\n    SELECT ItemValue + @RangeStep FROM NumberRange WHERE ItemValue < @RangeEnd\n)\nSELECT ItemValue FROM NumberRange\nOPTION (MAXRECURSION 100)",
+      "question_translation": "Xác định kết quả khi thực thi đoạn mã T-SQL sau:\n\n```sql\nDECLARE @RangeStart INT = 0;\nDECLARE @RangeEnd INT = 10000;\nDECLARE @RangeStep INT = 1;\nWITH NumberRange(ItemValue) AS (\n    SELECT ItemValue FROM (SELECT @RangeStart AS ItemValue) AS t\n    UNION ALL\n    SELECT ItemValue + @RangeStep FROM NumberRange WHERE ItemValue < @RangeEnd\n)\nSELECT ItemValue FROM NumberRange\nOPTION (MAXRECURSION 100);\n```\n\nKết quả nào sẽ được trả về?",
       "is_multi": false
     },
     {
@@ -40598,7 +40598,7 @@ window.QUIZ_DATA = {
       "section": "Dạng Bài Tập SQL & Phụ Thuộc Hàm",
       "image": "images/DBI202/slide_084.png",
       "missing_image": false,
-      "question_text": "In which line of the following code is the error?\n\nCREATE TRIGGER trigger1 -- 1\nON dbo.EMPLOYEE -- 2\nAFTER FOR INSERT AS -- 3\nBEGIN -- 4\nINSERT INTO EMPLOYEE_BACKUP -- 5\nSELECT * FROM INSERTED -- 6\nEND -- 7",
+      "question_text": "In which line of the following code is the error?\n\n```sql\nCREATE TRIGGER trigger1          -- Line 1\nON dbo.EMPLOYEE                  -- Line 2\nAFTER FOR INSERT AS              -- Line 3\nBEGIN                            -- Line 4\nINSERT INTO EMPLOYEE_BACKUP      -- Line 5\nSELECT * FROM INSERTED           -- Line 6\nEND                              -- Line 7\n```",
       "type": "single",
       "options": [
         {
@@ -40633,7 +40633,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - 31. Trigger trong SQL Server (2. Các loại Trigger & 3. Cú pháp cơ bản) (L1855-L1865)",
       "theory_excerpt": "[L1855] ## [H2] 2. Các loại Trigger trong SQL Server\n[L1856] AFTER Trigger (hoặc FOR Trigger): chạy sau khi thao tác (INSERT, UPDATE, DELETE) hoàn tất.\n[L1857] INSTEAD OF Trigger: chạy thay cho thao tác INSERT, UPDATE, DELETE (thường dùng trên View hoặc để kiểm soát dữ liệu).\n[L1858] ## [H2] 3. Cú pháp cơ bản\n[L1859] CREATE TRIGGER TriggerName\n[L1860] ON TableName\n[L1861] AFTER | INSTEAD OF [INSERT | UPDATE | DELETE]\n[L1862] AS\n[L1863] BEGIN\n[L1864] -- khối lệnh thực thi\n[L1865] END",
       "slide_comment": "",
-      "question_translation": "Lỗi cú pháp nằm ở dòng số mấy trong đoạn mã tạo Trigger dưới đây?\n\nCREATE TRIGGER trigger1 -- 1\nON dbo.EMPLOYEE -- 2\nAFTER FOR INSERT AS -- 3\nBEGIN -- 4\nINSERT INTO EMPLOYEE_BACKUP -- 5\nSELECT * FROM INSERTED -- 6\nEND -- 7",
+      "question_translation": "Lỗi cú pháp nằm ở dòng nào trong đoạn mã định nghĩa trigger dưới đây?\n\n```sql\nCREATE TRIGGER trigger1          -- Dòng 1\nON dbo.EMPLOYEE                  -- Dòng 2\nAFTER FOR INSERT AS              -- Dòng 3\nBEGIN                            -- Dòng 4\nINSERT INTO EMPLOYEE_BACKUP      -- Dòng 5\nSELECT * FROM INSERTED           -- Dòng 6\nEND                              -- Dòng 7\n```",
       "is_multi": false
     },
     {
@@ -40738,7 +40738,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: SELECT TOP 1 customer _id FROM Orders GROUP BY customer_id ORDER BY SUM(amount);)\n\n📝 Dịch đề:\nCho bảng Đơn hàng(order_id, customer_id, số tiền), truy vấn SQL nào trả về khách hàng có giá trị thấp nhất\ntổng số tiền đặt hàng?\n\n📋 Dịch đáp án:\n- B: SELECT TOP 1 customer _id FROM Orders GROUP BY customer_id ORDER BY SUM(amount);\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: SELECT * FROM TableName.\n\n💡 Mẹo nhớ: Đáp án B (SELECT TOP 1 customer _id FROM Orders GROUP BY customer_id ORDER BY SUM(amount);)",
+      "explanation": "🎯 Đáp án đúng: B (B: SELECT TOP 1 customer _id FROM Orders GROUP BY customer_id ORDER BY SUM(amount);)\n\n📝 Dịch đề:\nCho bảng Đơn hàng(order_id, customer_id, số tiền), truy vấn SQL nào trả về khách hàng có giá trị thấp nhất\ntổng số tiền đặt hàng?\n\n📋 Dịch đáp án:\n- B: SELECT TOP 1 customer _id FROM Orders GROUP BY customer_id ORDER BY SUM(amount);\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích cú pháp truy vấn SQL Server để tìm khách hàng có tổng chi tiêu lớn nhất:\n1. `GROUP BY customer_id`: Nhóm tất cả các đơn hàng lại theo từng khách hàng (`customer_id`).\n2. `SUM(amount)`: Hàm gộp tính tổng số tiền của tất cả các đơn hàng thuộc về mỗi khách hàng.\n3. `ORDER BY SUM(amount) DESC`: Sắp xếp danh sách khách hàng giảm dần theo tổng số tiền chi tiêu (người chi tiêu cao nhất sẽ ở vị trí đầu tiên).\n4. `SELECT TOP 1 customer_id`: Lấy duy nhất 1 khách hàng đứng đầu danh sách kết quả.\nDo đó, câu truy vấn chính xác là câu ở Đáp án B.\n\n💡 Mẹo nhớ: Tìm đối tượng có tổng lớn nhất = GROUP BY + ORDER BY SUM(...) DESC + TOP 1.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0951-L0965)",
       "theory_excerpt": "[L0951] SELECT Name, Age\n[L0952] FROM Student\n[L0953] WHERE Age > (SELECT AVG(Age) FROM Student);\n[L0954] ## [H2] 3. Subquery với IN\n[L0955] Kiểm tra xem một giá trị có nằm trong tập kết quả của Subquery không.\n[L0956] Ví dụ: Tìm sinh viên có đăng ký môn học:\n[L0957] SELECT Name\n[L0958] FROM Student\n[L0959] WHERE StudentID IN (SELECT StudentID FROM Enrollment);\n[L0960] ## [H2] 4. Subquery trong mệnh đề FROM (Derived Table)\n[L0961] Truy vấn con được coi như một bảng tạm.\n[L0962] Ví dụ: Tìm sinh viên có tuổi cao nhất:\n[L0963] SELECT Name, Age\n[L0964] FROM (SELECT * FROM Student) AS Temp\n[L0965] WHERE Age = (SELECT MAX(Age) FROM Student);",
       "slide_comment": "Cho bảng Orders(order_id, customer_id, amount), câu SQL nào trả về khách hàng có tổng giá trị đơn hàng thấp nhất? GROUP BY customer_id nhóm các đơn hàng của từng khách hàng. SUM(amount) tính tổng giá trị đơn hàng, còn ORDER BY SUM(amount) mặc định sắp xếp tăng dần, nên TOP 1 lấy khách hàng có tổng nhỏ nhất.",
@@ -41381,7 +41381,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_107.png",
       "missing_image": false,
-      "question_text": "has a right side that is a subset of its left side",
+      "question_text": "A _____ functional dependency has a right side that is a subset of its left side.",
       "type": "single",
       "options": [
         {
@@ -41408,7 +41408,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0656-L0670)",
       "theory_excerpt": "[L0656] Khi muốn lấy tất cả dữ liệu từ cả hai bảng, kể cả khi không có sự khớp nhau.\n[L0657] Thường dùng để tổng hợp dữ liệu, so sánh dữ liệu giữa hai bảng, hoặc tìm bản ghi “không khớp”.\n[L0658] ## [H2] Tóm tắt\n[L0659] INNER JOIN: chỉ lấy dữ liệu khớp.\n[L0660] LEFT JOIN: lấy tất cả từ bảng bên trái + dữ liệu khớp từ bảng bên phải.\n[L0661] RIGHT JOIN: lấy tất cả từ bảng bên phải + dữ liệu khớp từ bảng bên trái.\n[L0662] FULL OUTER JOIN: lấy tất cả từ cả hai bảng, nếu không khớp thì phần còn lại sẽ NULL.\n[L0663] 13.Left - Right Join trong SQL Server\n[L0664] ## [H2] 1. LEFT JOIN\n[L0665] ## [H3] Khái niệm\n[L0666] LEFT JOIN trả về tất cả bản ghi từ bảng bên trái, và dữ liệu khớp từ bảng bên phải.\n[L0667] Nếu không có dữ liệu khớp bên phải thì sẽ trả về NULL.\n[L0668] ## [H3] Cú pháp\n[L0669] SELECT A.column1, B.column2, ...\n[L0670] FROM TableA A",
       "slide_comment": "| trivial functional dependency (FD) is one in which the right side (dependent attribute) is a subset of the left side (determinant attribute).",
-      "question_translation": "có cạnh phải là tập con của cạnh trái của nó"
+      "question_translation": "Một phụ thuộc hàm _____ có vế phải là tập con của vế trái."
     },
     {
       "id": 95,
@@ -41417,7 +41417,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_108.png",
       "missing_image": false,
-      "question_text": "is a set of one or more attributes taken collectively to uniquely identify a record.\nHoàng Hoàng",
+      "question_text": "A _____ is a set of one or more attributes taken collectively to uniquely identify a record.",
       "type": "single",
       "options": [
         {
@@ -41442,9 +41442,9 @@ window.QUIZ_DATA = {
       ],
       "explanation": "🎯 Đáp án đúng: C (C: Super key)\n\n📝 Dịch đề:\nlà tập hợp một hoặc nhiều thuộc tính được dùng chung để xác định duy nhất một bản ghi.\n\n📋 Dịch đáp án:\n- C: Super key\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên lý hệ quản trị cơ sở dữ liệu quan hệ SQL Server, lựa chọn 'Super key' phản ánh đúng cú pháp chuẩn, cấu trúc lưu trữ và quy tắc toàn vẹn dữ liệu.\n\n💡 Mẹo nhớ: Đáp án C (Super key)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0066-L0080)",
-      "theory_excerpt": "[L0066] Student(StudentID, StudentName, MajorID)\n[L0067] Major(MajorID, MajorName)\n[L0068] 👉 Xóa phụ thuộc bắc cầu.\n[L0069] ## [H2] ✅ Tóm tắt dễ nhớ\n[L0070] 1NF: Không lặp, mỗi ô 1 giá trị.\n[L0071] 2NF: Xóa phụ thuộc một phần vào khóa.\n[L0072] 3NF: Xóa phụ thuộc bắc cầu qua thuộc tính trung gian.\n[L0073] 📎 Ví dụ chi tiết minh họa 1NF → 2NF → 3NF (có hình minh họa):\n[L0074] https://www.tutorialspoint.com/dbms/database_normalization.htm\n[L0075] https://www.geeksforgeeks.org/normalization-in-dbms/\n[L0076] PHẦN 2 : TRÌNH TỰ KIẾN THỨC\n[L0077] Hoàng Hoàng - Cũ - Cung Cấp Các Khóa Học Hiểu FPTU\n[L0078] Nguồn Data :\n[L0079] https://stackoverflow.com/questions/71471814/simple-sql-query-example\n[L0080] https://www.tutorialspoint.com/dbms/database_normalization.htm",
+      "theory_excerpt": "[L0066] Student(StudentID, StudentName, MajorID)\n[L0067] Major(MajorID, MajorName)\n[L0068] 👉 Xóa phụ thuộc bắc cầu.\n[L0069] ## [H2] ✅ Tóm tắt dễ nhớ\n[L0070] 1NF: Không lặp, mỗi ô 1 giá trị.\n[L0071] 2NF: Xóa phụ thuộc một phần vào khóa.\n[L0072] 3NF: Xóa phụ thuộc bắc cầu qua thuộc tính trung gian.\n[L0073] 📎 Ví dụ chi tiết minh họa 1NF → 2NF → 3NF (có hình minh họa):\n[L0074] https://www.tutorialspoint.com/dbms/database_normalization.htm\n[L0075] https://www.geeksforgeeks.org/normalization-in-dbms/\n[L0076] PHẦN 2 : TRÌNH TỰ KIẾN THỨC\n[L0078] Nguồn Data :\n[L0079] https://stackoverflow.com/questions/71471814/simple-sql-query-example\n[L0080] https://www.tutorialspoint.com/dbms/database_normalization.htm",
       "slide_comment": "",
-      "question_translation": "là tập hợp một hoặc nhiều thuộc tính được dùng chung để xác định duy nhất một bản ghi."
+      "question_translation": "Một _____ là tập hợp gồm một hoặc nhiều thuộc tính kết hợp lại để xác định duy nhất một bản ghi trong bảng."
     },
     {
       "id": 96,
@@ -41453,7 +41453,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_109.png",
       "missing_image": false,
-      "question_text": "has a right side that is a subset of its left side",
+      "question_text": "A _____ functional dependency has a right side that is a subset of its left side.",
       "type": "single",
       "options": [
         {
@@ -41480,7 +41480,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0656-L0670)",
       "theory_excerpt": "[L0656] Khi muốn lấy tất cả dữ liệu từ cả hai bảng, kể cả khi không có sự khớp nhau.\n[L0657] Thường dùng để tổng hợp dữ liệu, so sánh dữ liệu giữa hai bảng, hoặc tìm bản ghi “không khớp”.\n[L0658] ## [H2] Tóm tắt\n[L0659] INNER JOIN: chỉ lấy dữ liệu khớp.\n[L0660] LEFT JOIN: lấy tất cả từ bảng bên trái + dữ liệu khớp từ bảng bên phải.\n[L0661] RIGHT JOIN: lấy tất cả từ bảng bên phải + dữ liệu khớp từ bảng bên trái.\n[L0662] FULL OUTER JOIN: lấy tất cả từ cả hai bảng, nếu không khớp thì phần còn lại sẽ NULL.\n[L0663] 13.Left - Right Join trong SQL Server\n[L0664] ## [H2] 1. LEFT JOIN\n[L0665] ## [H3] Khái niệm\n[L0666] LEFT JOIN trả về tất cả bản ghi từ bảng bên trái, và dữ liệu khớp từ bảng bên phải.\n[L0667] Nếu không có dữ liệu khớp bên phải thì sẽ trả về NULL.\n[L0668] ## [H3] Cú pháp\n[L0669] SELECT A.column1, B.column2, ...\n[L0670] FROM TableA A",
       "slide_comment": "",
-      "question_translation": "có cạnh phải là tập con của cạnh trái của nó"
+      "question_translation": "Một phụ thuộc hàm _____ có vế phải là tập con của vế trái."
     },
     {
       "id": 97,
@@ -41489,7 +41489,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_110.png",
       "missing_image": false,
-      "question_text": "returns a relation instance containing all tuples that occur in both R and S",
+      "question_text": "The _____ operation returns a relation instance containing all tuples that occur in both relations.",
       "type": "single",
       "options": [
         {
@@ -41516,7 +41516,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0816-L0830)",
       "theory_excerpt": "[L0816] 20\n[L0817] Bình\n[L0818] 21\n[L0819] Chi\n[L0820] 22\n[L0821] Bình\n[L0822] 21\n[L0823] ## [H2] 5. Khi nào dùng UNION và UNION ALL\n[L0824] UNION: Khi muốn loại bỏ dữ liệu trùng lặp.\n[L0825] UNION ALL: Khi cần giữ lại tất cả dữ liệu (nhanh hơn vì không cần kiểm tra trùng lặp).\n[L0826] ## [H2] Tóm tắt\n[L0827] UNION kết hợp kết quả của nhiều truy vấn SELECT.\n[L0828] Các truy vấn phải cùng số cột và kiểu dữ liệu tương thích.\n[L0829] UNION loại bỏ trùng lặp, UNION ALL giữ lại trùng lặp.\n[L0830] 15.Select Into trong SQL Server",
       "slide_comment": "",
-      "question_translation": "trả về một thể hiện quan hệ chứa tất cả các bộ xuất hiện trong cả R và S"
+      "question_translation": "Phép toán _____ trả về một quan hệ chứa tất cả các bộ (tuples) xuất hiện đồng thời trong cả hai quan hệ."
     },
     {
       "id": 98,
@@ -41561,7 +41561,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_112.png",
       "missing_image": false,
-      "question_text": "(Choose 1 answer)\nis a set of one or more attributes taken collectively to uniquely identify a record.",
+      "question_text": "A _____ is a set of one or more attributes taken collectively to uniquely identify a record.",
       "type": "single",
       "options": [
         {
@@ -41588,7 +41588,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0271-L0285)",
       "theory_excerpt": "[L0271] DELETE: Dùng để xóa dữ liệu, cần WHERE để tránh xóa toàn bộ bảng.\n[L0272] 06.Tạo khóa chính trong SQL Server\n[L0273] ## [H2] 1. Khái niệm Primary Key\n[L0274] Primary Key là một ràng buộc (constraint) dùng để xác định duy nhất mỗi bản ghi trong bảng.\n[L0275] Một bảng chỉ có một khóa chính, nhưng khóa này có thể gồm một hoặc nhiều cột (gọi là khóa chính tổng hợp).\n[L0276] Đặc điểm của Primary Key:\n[L0277] Không được phép NULL.\n[L0278] Không được phép trùng lặp.\n[L0279] ## [H2] 2. Tạo khóa chính khi tạo bảng\n[L0280] Cú pháp:\n[L0281] Ví dụ:\n[L0282] Tạo bảng Student với StudentID là khóa chính:\n[L0283] Khi đó, StudentID sẽ là khóa chính, không được NULL và không trùng lặp.\n[L0284] ## [H2] 3. Tạo khóa chính nhiều cột (Composite Primary Key)\n[L0285] Cú pháp:",
       "slide_comment": "",
-      "question_translation": "là tập hợp một hoặc nhiều thuộc tính được dùng chung để xác định duy nhất một bản ghi."
+      "question_translation": "Một _____ là một hoặc nhiều thuộc tính kết hợp với nhau nhằm xác định duy nhất một bản ghi."
     },
     {
       "id": 100,
@@ -41656,7 +41656,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: trigger)\n\n📝 Dịch đề:\nA\n_ là một chương trình được lưu trữ được gắn vào bảng hoặc dạng xem.\n\n📋 Dịch đáp án:\n- C: trigger\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án C (trigger)",
+      "explanation": "🎯 Đáp án đúng: C (C: trigger)\n\n📝 Dịch đề:\nA\n_ là một chương trình được lưu trữ được gắn vào bảng hoặc dạng xem.\n\n📋 Dịch đáp án:\n- C: trigger\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo định nghĩa các đối tượng lập trình trong hệ quản trị cơ sở dữ liệu quan hệ (RDBMS):\n1. **Trigger (Trình kích hoạt):** Là một khối lệnh/thủ tục lưu trữ đặc biệt được gắn trực tiếp vào một bảng hoặc khung nhìn (view).\n2. Trigger được tự động thực thi (kích hoạt) bởi DBMS khi có sự kiện thay đổi dữ liệu (DML events: `INSERT`, `UPDATE`, `DELETE`) tác động lên bảng/view đó.\n3. Stored Procedure và Function phải được gọi tường minh bằng lệnh `EXEC` hoặc trong câu lệnh truy vấn, không tự động kích hoạt bởi sự kiện trên bảng như Trigger.\nVì vậy, đối tượng được mô tả chính là **Trigger** (Đáp án C).\n\n💡 Mẹo nhớ: Stored program attached to table/view fired automatically = Trigger.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1911-L1925)",
       "theory_excerpt": "[L1911] deleted: chứa các bản ghi vừa bị xóa hoặc bản ghi cũ trước khi cập nhật.\n[L1912] ## [H2] 6. Quản lý Trigger\n[L1913] Xóa Trigger:\n[L1914] DROP TRIGGER TriggerName;\n[L1915] Tắt/bật Trigger:\n[L1916] DISABLE TRIGGER TriggerName ON TableName;\n[L1917] ENABLE TRIGGER TriggerName ON TableName;\n[L1918] ## [H2] 7. Lưu ý khi sử dụng Trigger\n[L1919] Trigger hoạt động tự động, nên cần viết cẩn thận để tránh gây lỗi logic.\n[L1920] Có thể ảnh hưởng đến hiệu năng nếu viết quá nhiều logic phức tạp.\n[L1921] Nên dùng để kiểm soát tính toàn vẹn dữ liệu và ghi log thay vì thay thế hoàn toàn cho Stored Procedure.\n[L1922] ## [H2] Tóm tắt\n[L1923] Trigger: khối lệnh SQL tự động chạy khi có INSERT, UPDATE, DELETE.\n[L1924] Hai loại: AFTER Trigger và INSTEAD OF Trigger.\n[L1925] Dùng bảng ảo inserted và deleted để xử lý dữ liệu.",
       "slide_comment": "",
@@ -41692,7 +41692,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: A view)\n\n📝 Dịch đề:\nBảng ảo SQL được xây dựng từ các bảng khác là gì?\n\n📋 Dịch đáp án:\n- B: A view\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án B (A view)",
+      "explanation": "🎯 Đáp án đúng: B (B: A view)\n\n📝 Dịch đề:\nBảng ảo SQL được xây dựng từ các bảng khác là gì?\n\n📋 Dịch đáp án:\n- B: A view\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo kiến trúc cơ sở dữ liệu quan hệ ANSI/SPARC:\n1. **View (Khung nhìn):** Là một bảng ảo (virtual table) được định nghĩa thông qua một câu truy vấn `SELECT` dựa trên một hoặc nhiều bảng cơ sở (base tables).\n2. View không lưu trữ dữ liệu thực tế trên đĩa (trừ Indexed/Materialized View), mà truy vấn định nghĩa view sẽ được thực thi mỗi khi người dùng truy vấn view.\n3. Bảng ảo tạo từ các bảng khác chính là **View** (Đáp án B).\n\n💡 Mẹo nhớ: Virtual table constructed from other tables = View.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0176-L0190)",
       "theory_excerpt": "[L0176] ## [H2] MỤC TIÊU HỌC TẬP\n[L0177] Tạo Table mới với các tùy chọn cơ bản\n[L0178] Hiểu cấu trúc và thành phần của Table\n[L0179] Thay đổi cấu trúc Table (thêm, sửa, xóa cột)\n[L0180] Xóa Table an toàn\n[L0181] Sao chép cấu trúc Table\n[L0182] ## [H2] KIẾN THỨC LÝ THUYẾT\n[L0183] ## [H3] Table trong SQL Server\n[L0184] Table (Bảng) là đơn vị cơ bản để lưu trữ dữ liệu trong database. Mỗi table gồm:\n[L0185] Columns (Cột): Định nghĩa các thuộc tính của dữ liệu\n[L0186] Rows (Hàng): Chứa các bản ghi dữ liệu thực tế\n[L0187] Schema: Không gian tên chứa table (mặc định là dbo)\n[L0188] ## [H3] Thành phần của Table\n[L0189] Column Name: Tên cột (duy nhất trong table)\n[L0190] Data Type: Kiểu dữ liệu của cột",
       "slide_comment": "",
@@ -41836,7 +41836,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: Avoid information anomalies)\n\n📝 Dịch đề:\nMục đích của việc chuẩn hóa dữ liệu trong bối cảnh thiết kế cơ sở dữ liệu là gì?\n\n📋 Dịch đáp án:\n- B: Avoid information anomalies\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: 1NF: Không lặp, mỗi ô 1 giá trị.\n\n💡 Mẹo nhớ: Đáp án B (Avoid information anomalies)",
+      "explanation": "🎯 Đáp án đúng: B (B: Avoid information anomalies)\n\n📝 Dịch đề:\nMục đích của việc chuẩn hóa dữ liệu trong bối cảnh thiết kế cơ sở dữ liệu là gì?\n\n📋 Dịch đáp án:\n- B: Avoid information anomalies\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo lý thuyết chuẩn hóa cơ sở dữ liệu của E.F. Codd:\n1. **Chuẩn hóa dữ liệu (Normalization):** Là quá trình tổ chức cấu trúc các bảng và thuộc tính nhằm giảm thiểu tối đa sự dư thừa dữ liệu (data redundancy).\n2. Mục tiêu chính yếu của chuẩn hóa là loại bỏ các bất thường dữ liệu (anomalies):\n   - **Insertion Anomaly:** Không thể thêm một bản ghi nếu thiếu thông tin phụ không liên quan.\n   - **Deletion Anomaly:** Xóa một dữ liệu làm mất ngoài ý muốn dữ liệu quan trọng khác.\n   - **Update Anomaly:** Cập nhật thông tin ở một nơi nhưng gây mâu thuẫn ở các bản ghi trùng lặp khác.\nDo đó, mục đích cốt lõi là **Avoid information anomalies** (Đáp án B).\n\n💡 Mẹo nhớ: Goal of Normalization = Minimize redundancy & Avoid information anomalies.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -41849,7 +41849,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_120.png",
       "missing_image": false,
-      "question_text": "What does an RDBMS consist of? Hoàng Hoàng",
+      "question_text": "What does an RDBMS consist of?",
       "type": "single",
       "options": [
         {
@@ -41874,7 +41874,7 @@ window.QUIZ_DATA = {
       ],
       "explanation": "🎯 Đáp án đúng: A (A: Collection of Tables)\n\n📝 Dịch đề:\nRDBMS bao gồm những gì?\n\n📋 Dịch đáp án:\n- A: Collection of Tables\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên lý hệ quản trị cơ sở dữ liệu quan hệ SQL Server, lựa chọn 'Bộ sưu tập bàn' phản ánh đúng cú pháp chuẩn, cấu trúc lưu trữ và quy tắc toàn vẹn dữ liệu.\n\n💡 Mẹo nhớ: Đáp án A (Collection of Tables)",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0066-L0080)",
-      "theory_excerpt": "[L0066] Student(StudentID, StudentName, MajorID)\n[L0067] Major(MajorID, MajorName)\n[L0068] 👉 Xóa phụ thuộc bắc cầu.\n[L0069] ## [H2] ✅ Tóm tắt dễ nhớ\n[L0070] 1NF: Không lặp, mỗi ô 1 giá trị.\n[L0071] 2NF: Xóa phụ thuộc một phần vào khóa.\n[L0072] 3NF: Xóa phụ thuộc bắc cầu qua thuộc tính trung gian.\n[L0073] 📎 Ví dụ chi tiết minh họa 1NF → 2NF → 3NF (có hình minh họa):\n[L0074] https://www.tutorialspoint.com/dbms/database_normalization.htm\n[L0075] https://www.geeksforgeeks.org/normalization-in-dbms/\n[L0076] PHẦN 2 : TRÌNH TỰ KIẾN THỨC\n[L0077] Hoàng Hoàng - Cũ - Cung Cấp Các Khóa Học Hiểu FPTU\n[L0078] Nguồn Data :\n[L0079] https://stackoverflow.com/questions/71471814/simple-sql-query-example\n[L0080] https://www.tutorialspoint.com/dbms/database_normalization.htm",
+      "theory_excerpt": "[L0066] Student(StudentID, StudentName, MajorID)\n[L0067] Major(MajorID, MajorName)\n[L0068] 👉 Xóa phụ thuộc bắc cầu.\n[L0069] ## [H2] ✅ Tóm tắt dễ nhớ\n[L0070] 1NF: Không lặp, mỗi ô 1 giá trị.\n[L0071] 2NF: Xóa phụ thuộc một phần vào khóa.\n[L0072] 3NF: Xóa phụ thuộc bắc cầu qua thuộc tính trung gian.\n[L0073] 📎 Ví dụ chi tiết minh họa 1NF → 2NF → 3NF (có hình minh họa):\n[L0074] https://www.tutorialspoint.com/dbms/database_normalization.htm\n[L0075] https://www.geeksforgeeks.org/normalization-in-dbms/\n[L0076] PHẦN 2 : TRÌNH TỰ KIẾN THỨC\n[L0078] Nguồn Data :\n[L0079] https://stackoverflow.com/questions/71471814/simple-sql-query-example\n[L0080] https://www.tutorialspoint.com/dbms/database_normalization.htm",
       "slide_comment": "",
       "question_translation": "RDBMS bao gồm những gì?"
     },
@@ -41908,7 +41908,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: Nvarchar(30))\n\n📝 Dịch đề:\nKiểu dữ liệu nào phù hợp nhất với tên tiếng Việt? (trong Máy chủ SQL)\n\n📋 Dịch đáp án:\n- B: Nvarchar(30)\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án B (Nvarchar(30))",
+      "explanation": "🎯 Đáp án đúng: B (B: Nvarchar(30))\n\n📝 Dịch đề:\nKiểu dữ liệu nào phù hợp nhất với tên tiếng Việt? (trong Máy chủ SQL)\n\n📋 Dịch đáp án:\n- B: Nvarchar(30)\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích các kiểu dữ liệu chuỗi ký tự trong MS SQL Server:\n1. Tên người Việt Nam chứa các ký tự có dấu thanh và dấu phụ (Unicode) như: `ă, â, đ, ê, ô, ơ, ư`.\n2. Kiểu `VARCHAR` và `CHAR` sử dụng bảng mã Non-Unicode (1 byte/ký tự), khi lưu tên tiếng Việt sẽ bị mất dấu thành các ký tự `?` hoặc lỗi font.\n3. Kiểu dữ liệu có tiền tố `N` (`NVARCHAR`, `NCHAR`) sử dụng chuẩn mã hóa Unicode UTF-16 (2 byte/ký tự), cho phép lưu trữ đầy đủ mọi ký tự có dấu.\n4. `NVARCHAR(30)` là chuỗi Unicode có độ dài biến đổi, tối ưu bộ nhớ và đủ dài cho họ tên người Việt (Đáp án B).\n\n💡 Mẹo nhớ: Tiếng Việt có dấu / Unicode trong SQL Server bắt buộc dùng kiểu có tiền tố N (NVARCHAR).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0081-L0095)",
       "theory_excerpt": "[L0081] https://www.nitendratech.com/database/learn-database/\n[L0082] ## [H1] MỤC LỤC KIẾN THỨC\n[L0083] ## [H2] Phần I: Kiến thức cơ bản\n[L0084] Giới thiệu SQL và SQL server\n[L0085] Khởi tạo Database trong SQL Server\n[L0086] Khởi tạo, xóa, sửa Table trong SQL Server\n[L0087] Kiểu dữ liệu trong SQL Server\n[L0088] Insert, Delete, Update Table trong SQL Server\n[L0089] Tạo khóa chính trong SQL Server\n[L0090] Khóa ngoại trong SQL Server\n[L0091] ## [H2] Phần II: Truy vấn và xử lý dữ liệu\n[L0092] Truy vấn cơ bản trong SQL Server\n[L0093] Truy vấn với điều kiện trong SQL Server\n[L0094] Tìm kiếm gần đúng trong SQL Server\n[L0095] Inner Join trong SQL Server",
       "slide_comment": "",
@@ -42052,7 +42052,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: DROP INDEX)\n\n📝 Dịch đề:\nCâu lệnh SQL nào được sử dụng để xóa chỉ mục hiện có khỏi bảng?\n\n📋 Dịch đáp án:\n- A: DROP INDEX\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án A (DROP INDEX)",
+      "explanation": "🎯 Đáp án đúng: A (A: DROP INDEX)\n\n📝 Dịch đề:\nCâu lệnh SQL nào được sử dụng để xóa chỉ mục hiện có khỏi bảng?\n\n📋 Dịch đáp án:\n- A: DROP INDEX\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCú pháp lệnh DDL (Data Definition Language) trong SQL chuẩn và T-SQL:\n1. Để xóa một chỉ mục (index) đã tạo trên bảng, câu lệnh chuẩn là:\n   `DROP INDEX index_name ON table_name;` (hoặc `DROP INDEX table_name.index_name;`).\n2. `DELETE` chỉ dùng để xóa dòng dữ liệu (DML), `ALTER` dùng sửa cấu trúc, `REMOVE` không phải là từ khóa hợp lệ trong SQL chuẩn.\nVì vậy, câu lệnh chính xác là **DROP INDEX** (Đáp án A).\n\n💡 Mẹo nhớ: Xóa đối tượng cấu trúc (Table, View, Index) dùng DROP (DROP INDEX).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1326-L1340)",
       "theory_excerpt": "[L1326] ## [H2] 1. Khái niệm Index\n[L1327] Index (chỉ mục) là cấu trúc dữ liệu đặc biệt được SQL Server sử dụng để tăng tốc độ truy vấn.\n[L1328] Khi có Index, SQL Server không cần quét toàn bộ bảng (table scan) mà có thể tìm dữ liệu nhanh hơn (giống như mục lục trong sách).\n[L1329] Tuy nhiên, Index chiếm thêm bộ nhớ và làm chậm các thao tác INSERT, UPDATE, DELETE vì phải cập nhật lại chỉ mục.\n[L1330] ## [H2] 2. Các loại Index trong SQL Server\n[L1331] ## [H3] a. Clustered Index\n[L1332] Quyết định cách sắp xếp vật lý của dữ liệu trong bảng.\n[L1333] Một bảng chỉ có một clustered index.\n[L1334] Thường được tạo trên cột Primary Key.\n[L1335] ## [H3] b. Non-Clustered Index\n[L1336] Lưu trữ riêng biệt, chứa con trỏ trỏ tới vị trí dữ liệu trong bảng.\n[L1337] Một bảng có thể có nhiều non-clustered index.\n[L1338] Thường dùng cho các cột được truy vấn nhiều nhưng không phải khóa chính.\n[L1339] ## [H2] 3. Cú pháp tạo Index\n[L1340] ## [H3] a. Tạo Clustered Index",
       "slide_comment": "",
@@ -42354,7 +42354,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_134.png",
       "missing_image": false,
-      "question_text": "Which of the following is not a data model in the database? Hoàng Hoàng",
+      "question_text": "Which of the following is not a data model in the database?",
       "type": "single",
       "options": [
         {
@@ -42449,7 +42449,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: DECLARE)\n\n📝 Dịch đề:\nCâu lệnh SQL nào dùng để khai báo con trỏ?\n\n📋 Dịch đáp án:\n- B: DECLARE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: DECLARE: Khai báo con trỏ với một câu lệnh SELECT.\n\n💡 Mẹo nhớ: Đáp án B (DECLARE)",
+      "explanation": "🎯 Đáp án đúng: B (B: DECLARE)\n\n📝 Dịch đề:\nCâu lệnh SQL nào dùng để khai báo con trỏ?\n\n📋 Dịch đáp án:\n- B: DECLARE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy trình quản lý con trỏ (Cursor) trong T-SQL bao gồm 5 bước:\n1. **DECLARE:** Khai báo con trỏ và gắn với câu lệnh truy vấn (`DECLARE cursor_name CURSOR FOR SELECT ...`).\n2. **OPEN:** Mở con trỏ để thực thi truy vấn và nạp dữ liệu kết quả.\n3. **FETCH NEXT:** Duyệt từng dòng dữ liệu từ con trỏ vào các biến.\n4. **CLOSE:** Đóng con trỏ và giải phóng kết quả hiện hành.\n5. **DEALLOCATE:** Giải phóng hoàn toàn định nghĩa con trỏ khỏi bộ nhớ.\nCâu lệnh dùng để khai báo con trỏ là **DECLARE** (Đáp án B).\n\n💡 Mẹo nhớ: Vòng đời Cursor: DECLARE -> OPEN -> FETCH -> CLOSE -> DEALLOCATE.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1601-L1615)",
       "theory_excerpt": "[L1601] Ứng dụng: lặp tính toán, sinh dữ liệu, xử lý điều kiện đặc biệt.\n[L1602] 28.Cursor trong Transact - SQL\n[L1603] ## [H2] 1. Khái niệm CURSOR\n[L1604] Cursor là một công cụ trong SQL Server dùng để duyệt từng dòng dữ liệu trong tập kết quả của truy vấn SELECT.\n[L1605] Trong khi SQL Server vốn làm việc với tập dữ liệu theo dạng set-based (xử lý cả tập hợp cùng lúc), Cursor cho phép xử lý row-by-row (dòng-by-dòng).\n[L1606] Thường dùng trong các tình huống phức tạp mà không thể giải quyết dễ dàng bằng truy vấn tập hợp.\n[L1607] ## [H2] 2. Quy trình làm việc với CURSOR\n[L1608] DECLARE: Khai báo con trỏ với một câu lệnh SELECT.\n[L1609] OPEN: Mở con trỏ để thực thi câu lệnh SELECT.\n[L1610] FETCH: Lấy từng dòng dữ liệu từ Cursor vào biến.\n[L1611] WHILE: Lặp qua các dòng cho đến khi hết dữ liệu.\n[L1612] CLOSE: Đóng Cursor (giải phóng dữ liệu).\n[L1613] DEALLOCATE: Giải phóng con trỏ khỏi bộ nhớ.\n[L1614] ## [H2] 3. Cú pháp cơ bản\n[L1615] DECLARE cursor_name CURSOR FOR",
       "slide_comment": "DECLARE statement is used to declare a cursor.",
@@ -42485,7 +42485,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: CREATE TABLE)\n\n📝 Dịch đề:\nLệnh SQL nào được sử dụng để xác định lược đồ bảng?\n\n📋 Dịch đáp án:\n- C: CREATE TABLE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án C (CREATE TABLE)",
+      "explanation": "🎯 Đáp án đúng: C (C: CREATE TABLE)\n\n📝 Dịch đề:\nLệnh SQL nào được sử dụng để xác định lược đồ bảng?\n\n📋 Dịch đáp án:\n- C: CREATE TABLE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo chuẩn ngôn ngữ định nghĩa dữ liệu (DDL - Data Definition Language):\n1. Câu lệnh được sử dụng để định nghĩa một bảng mới và lược đồ của bảng (schema) trong CSDL là `CREATE TABLE`.\n2. Cú pháp cơ bản:\n   `CREATE TABLE TableName (ColumnName DataType Constraints, ...);`\n3. Lệnh này thiết lập các cột, kiểu dữ liệu và các ràng buộc toàn vẹn cho bảng (Đáp án C).\n\n💡 Mẹo nhớ: Tạo lược đồ bảng = CREATE TABLE.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0176-L0190)",
       "theory_excerpt": "[L0176] ## [H2] MỤC TIÊU HỌC TẬP\n[L0177] Tạo Table mới với các tùy chọn cơ bản\n[L0178] Hiểu cấu trúc và thành phần của Table\n[L0179] Thay đổi cấu trúc Table (thêm, sửa, xóa cột)\n[L0180] Xóa Table an toàn\n[L0181] Sao chép cấu trúc Table\n[L0182] ## [H2] KIẾN THỨC LÝ THUYẾT\n[L0183] ## [H3] Table trong SQL Server\n[L0184] Table (Bảng) là đơn vị cơ bản để lưu trữ dữ liệu trong database. Mỗi table gồm:\n[L0185] Columns (Cột): Định nghĩa các thuộc tính của dữ liệu\n[L0186] Rows (Hàng): Chứa các bản ghi dữ liệu thực tế\n[L0187] Schema: Không gian tên chứa table (mặc định là dbo)\n[L0188] ## [H3] Thành phần của Table\n[L0189] Column Name: Tên cột (duy nhất trong table)\n[L0190] Data Type: Kiểu dữ liệu của cột",
       "slide_comment": "",
@@ -42630,7 +42630,7 @@ window.QUIZ_DATA = {
         "A",
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: A, C (A: PRIMARY KEY; C: UNIQUE)\n\n📝 Dịch đề:\nNhững chỉ mục nào có thể được tạo tự động bằng cách xác định các ràng buộc trong bảng?\n\n📋 Dịch đáp án:\n- A: PRIMARY KEY\n- C: UNIQUE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án A, C (PRIMARY KEY, UNIQUE)",
+      "explanation": "🎯 Đáp án đúng: A, C (A: PRIMARY KEY, C: UNIQUE)\n\n📝 Dịch đề:\nNhững chỉ mục nào có thể được tạo tự động bằng cách xác định các ràng buộc trong bảng?\n\n📋 Dịch đáp án:\n- A: PRIMARY KEY\n- C: UNIQUE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCơ chế tự động tạo chỉ mục (Automatic Index Creation) trong SQL Server:\n1. **PRIMARY KEY:** Khi tạo khóa chính, SQL Server tự động tạo một Unique Clustered Index (chỉ mục gom cụm duy nhất) trên cột khóa chính để đảm bảo mỗi hàng là duy nhất và sắp xếp dữ liệu vật lý.\n2. **UNIQUE:** Khi tạo ràng buộc duy nhất, SQL Server tự động tạo một Unique Non-Clustered Index để kiểm tra tính duy nhất nhanh chóng.\n3. Các ràng buộc `FOREIGN KEY` và `CHECK` không tự động tạo chỉ mục.\nDo đó, hai ràng buộc tự động tạo index là **PRIMARY KEY** và **UNIQUE** (Đáp án A và C).\n\n💡 Mẹo nhớ: Ràng buộc tự động sinh Index = PRIMARY KEY (Clustered) & UNIQUE (Non-clustered).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0201-L0215)",
       "theory_excerpt": "[L0201] ## [H3] 1. KHỞI TẠO TABLE\n[L0202] ## [H4] 1.1. Cú pháp cơ bản\n[L0203] 1.2. Ví dụ tạo Table đơn giản\n[L0204] 1.3. Ví dụ tạo Table với constraints\n[L0205] 1.4. Tạo Table với Foreign Key\n[L0206] 1.5. Tạo Table từ Table khác\n[L0207] ## [H3] 2. SỬA ĐỔI CẤU TRÚC TABLE (ALTER TABLE)\n[L0208] ## [H4] 2.1. Thêm cột mới\n[L0209] 2.2. Sửa đổi cột hiện có\n[L0210] 2.3. Xóa cột\n[L0211] 2.4. Thêm constraint\n[L0212] 2.5. Xóa constraint\n[L0213] 2.6. Đổi tên cột\n[L0214] 2.7. Đổi tên Table\n[L0215] 3. XÓA TABLE",
       "slide_comment": "",
@@ -43026,7 +43026,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: One-to-Many)\n\n📝 Dịch đề:\nLoại mối quan hệ nào kết nối hai thực thể trong đó một thực thể có thể có nhiều liên kết với thực thể khác\nthực thể, nhưng thực thể thứ hai chỉ có thể có một liên kết với thực thể thứ nhất?\n\n📋 Dịch đáp án:\n- B: One-to-Many\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án B (One-to-Many)",
+      "explanation": "🎯 Đáp án đúng: B (B: One-to-Many)\n\n📝 Dịch đề:\nLoại mối quan hệ nào kết nối hai thực thể trong đó một thực thể có thể có nhiều liên kết với thực thể khác\nthực thể, nhưng thực thể thứ hai chỉ có thể có một liên kết với thực thể thứ nhất?\n\n📋 Dịch đáp án:\n- B: One-to-Many\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích bản số (Cardinality) trong mô hình thực thể liên kết (E-R Model):\n1. Mối quan hệ Một - Nhiều (One-to-Many, 1:N): Một thực thể của tập thực thể A có thể liên kết với nhiều thực thể của tập thực thể B, nhưng một thực thể của B chỉ được liên kết với tối đa một thực thể của A.\n2. Ví dụ: Một Khoa (Department) có thể có nhiều Nhân viên (Employees), nhưng mỗi Nhân viên chỉ thuộc về một Khoa duy nhất.\nDo đó, mối quan hệ này là **One-to-Many** (Đáp án B).\n\n💡 Mẹo nhớ: Một thực thể liên kết nhiều, chiều ngược lại chỉ một = One-to-Many (1:N).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1181-L1195)",
       "theory_excerpt": "[L1181] OrderID INT IDENTITY(100, 5) PRIMARY KEY,\n[L1182] Product NVARCHAR(50)\n[L1183] );\n[L1184] OrderID sẽ bắt đầu từ 100 và tăng dần 5 đơn vị: 100, 105, 110, …\n[L1185] ## [H2] 5. Lưu ý\n[L1186] Mỗi bảng chỉ có thể có một cột IDENTITY.\n[L1187] Không thể chèn trực tiếp giá trị vào cột IDENTITY (trừ khi bật SET IDENTITY_INSERT ON).\n[L1188] Nếu xóa dữ liệu, giá trị IDENTITY sẽ không tự động quay lại mà tiếp tục tăng.\n[L1189] Có thể đặt lại giá trị IDENTITY bằng câu lệnh DBCC CHECKIDENT.\n[L1190] Ví dụ reset giá trị:\n[L1191] DBCC CHECKIDENT ('Student', RESEED, 0);\n[L1192] => Bản ghi tiếp theo chèn vào sẽ có StudentID = 1.\n[L1193] ## [H2] Tóm tắt\n[L1194] Auto Increment trong SQL Server được cài bằng IDENTITY(seed, increment).\n[L1195] Tự động sinh giá trị tăng dần cho một cột (thường là khóa chính).",
       "slide_comment": "One-to-Many (1:N) : Một thực thể A có thể liên kết với nhiều thực thể B, nhưng mỗi B chỉ liên kết với một A.",
@@ -43147,7 +43147,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_156.png",
       "missing_image": false,
-      "question_text": "How can you invoke a user-defined function in a SQL query? Hoàng Hoàng",
+      "question_text": "How can you invoke a user-defined function in a SQL query?",
       "type": "single",
       "options": [
         {
@@ -43278,7 +43278,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: INNER)\n\n📝 Dịch đề:\nKhi không có loại liên kết cụ thể nào giữa nhiều bảng trong mệnh đề from của truy vấn được chỉ định, thì loại THAM GIA là gì\ngiả định?\n\n📋 Dịch đáp án:\n- A: INNER\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Truy vấn cơ bản trong SQL Server.\n\n💡 Mẹo nhớ: Đáp án A (INNER)",
+      "explanation": "🎯 Đáp án đúng: A (A: INNER)\n\n📝 Dịch đề:\nKhi không có loại liên kết cụ thể nào giữa nhiều bảng trong mệnh đề from của truy vấn được chỉ định, thì loại THAM GIA là gì\ngiả định?\n\n📋 Dịch đáp án:\n- A: INNER\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo chuẩn cú pháp SQL ANSI/ISO:\n1. Trong mệnh đề `FROM`, khi liên kết nhiều bảng bằng từ khóa `JOIN` mà không có từ khóa xác định loại kết nối (như `LEFT`, `RIGHT`, `FULL`), hệ thống CSDL mặc định áp dụng `INNER JOIN`.\n2. Cú pháp `FROM TableA JOIN TableB ON TableA.id = TableB.id` hoàn toàn tương đương với `FROM TableA INNER JOIN TableB ON ...`.\nVì vậy loại kết nối mặc định là **INNER** (Đáp án A).\n\n💡 Mẹo nhớ: Chỉ ghi 'JOIN' = mặc định là 'INNER JOIN'.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0581-L0595)",
       "theory_excerpt": "[L0581] Có thể nối nhiều hơn 2 bảng với INNER JOIN.\n[L0582] Ví dụ:\n[L0583] SELECT S.Name, E.Course, C.Teacher\n[L0584] FROM Student S\n[L0585] INNER JOIN Enrollment E\n[L0586] ON S.StudentID = E.StudentID\n[L0587] INNER JOIN Course C\n[L0588] ON E.Course = C.CourseName;\n[L0589] ## [H2] Tóm tắt\n[L0590] INNER JOIN trả về chỉ những bản ghi khớp ở cả hai bảng.\n[L0591] Nếu không có dữ liệu khớp, bản ghi sẽ không xuất hiện.\n[L0592] Dùng phổ biến để kết hợp dữ liệu giữa các bảng có quan hệ khóa chính – khóa ngoại.\n[L0593] 12.Full Outer Join trong SQL Server\n[L0594] ## [H2] 1. Khái niệm FULL OUTER JOIN\n[L0595] FULL OUTER JOIN kết hợp cả LEFT JOIN và RIGHT JOIN.",
       "slide_comment": "specified between multiple tables in a query's FROM clause INNER JOIN",
@@ -43452,13 +43452,13 @@ window.QUIZ_DATA = {
         },
         {
           "key": "D",
-          "text": "All of the others ER Model Entity Attribute Relationship • One to One * Strong Entity • Weak Entity → One to Manyl • Derived • Many to Many"
+          "text": "All of the others"
         }
       ],
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: All of the others ER Model Entity Attribute Relationship • One to One * Strong Entity • Weak Entity → One to Manyl • Derived • Many to Many)\n\n📝 Dịch đề:\nSơ đồ E/R là biểu diễn đồ họa của các tập hợp, _\n?\n\n📋 Dịch đáp án:\n- D: All of the others ER Model Entity Attribute Relationship • One to One * Strong Entity • Weak Entity → One to Manyl • Derived • Many to Many\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án D (All of the others ER Model Entity Attribute Relationship • One to One * Strong Entity • Weak Entity → One to Manyl • Derived • Many to Many)",
+      "explanation": "🎯 Đáp án đúng: D (D: All of the others)\n\n📝 Dịch đề:\nSơ đồ E/R là biểu diễn đồ họa của các tập hợp, _\n?\n\n📋 Dịch đáp án:\n- D: All of the others\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo lý thuyết mô hình thực thể liên kết (E/R Model của Peter Chen):\n1. Sơ đồ E/R biểu diễn trực quan cấu trúc dữ liệu của thế giới thực gồm 3 thành phần nền tảng:\n   - **Entity Sets (Tập thực thể):** Các đối tượng tồn tại độc lập (hình chữ nhật).\n   - **Attributes (Thuộc tính):** Các đặc điểm mô tả thực thể (hình elip / bầu dục).\n   - **Relationships (Mối quan hệ):** Sự liên kết giữa các thực thể (hình thoi).\n2. Vì sơ đồ biểu diễn đầy đủ cả Thực thể, Thuộc tính và Mối quan hệ, nên đáp án đúng là **All of the others** (Đáp án D).\n\n💡 Mẹo nhớ: Thành phần cốt lõi của sơ đồ E/R = Entity + Attribute + Relationship.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1181-L1195)",
       "theory_excerpt": "[L1181] OrderID INT IDENTITY(100, 5) PRIMARY KEY,\n[L1182] Product NVARCHAR(50)\n[L1183] );\n[L1184] OrderID sẽ bắt đầu từ 100 và tăng dần 5 đơn vị: 100, 105, 110, …\n[L1185] ## [H2] 5. Lưu ý\n[L1186] Mỗi bảng chỉ có thể có một cột IDENTITY.\n[L1187] Không thể chèn trực tiếp giá trị vào cột IDENTITY (trừ khi bật SET IDENTITY_INSERT ON).\n[L1188] Nếu xóa dữ liệu, giá trị IDENTITY sẽ không tự động quay lại mà tiếp tục tăng.\n[L1189] Có thể đặt lại giá trị IDENTITY bằng câu lệnh DBCC CHECKIDENT.\n[L1190] Ví dụ reset giá trị:\n[L1191] DBCC CHECKIDENT ('Student', RESEED, 0);\n[L1192] => Bản ghi tiếp theo chèn vào sẽ có StudentID = 1.\n[L1193] ## [H2] Tóm tắt\n[L1194] Auto Increment trong SQL Server được cài bằng IDENTITY(seed, increment).\n[L1195] Tự động sinh giá trị tăng dần cho một cột (thường là khóa chính).",
       "slide_comment": "",
@@ -43746,7 +43746,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: References)\n\n📝 Dịch đề:\nCác ràng buộc khóa ngoại được tạo bằng cách sử dụng lớp \".\n\"từ khóa để chỉ khóa chính của bảng khác.\n\n📋 Dịch đáp án:\n- B: References\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: 1.2. Ví dụ tạo Table đơn giản.\n\n💡 Mẹo nhớ: Đáp án B (References)",
+      "explanation": "🎯 Đáp án đúng: B (B: References)\n\n📝 Dịch đề:\nCác ràng buộc khóa ngoại được tạo bằng cách sử dụng lớp \".\n\"từ khóa để chỉ khóa chính của bảng khác.\n\n📋 Dịch đáp án:\n- B: References\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCú pháp khai báo ràng buộc khóa ngoại (FOREIGN KEY) trong SQL chuẩn:\n1. Cú pháp: `FOREIGN KEY (FK_Column) REFERENCES ParentTable(PK_Column)`.\n2. Từ khóa `REFERENCES` chỉ định bảng cha và cột khóa chính được tham chiếu tới, đảm bảo tính toàn vẹn tham chiếu (Referential Integrity).\nDo đó, từ khóa cần điền là **References** (Đáp án B).\n\n💡 Mẹo nhớ: FOREIGN KEY ... REFERENCES ParentTable(Column).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0201-L0215)",
       "theory_excerpt": "[L0201] ## [H3] 1. KHỞI TẠO TABLE\n[L0202] ## [H4] 1.1. Cú pháp cơ bản\n[L0203] 1.2. Ví dụ tạo Table đơn giản\n[L0204] 1.3. Ví dụ tạo Table với constraints\n[L0205] 1.4. Tạo Table với Foreign Key\n[L0206] 1.5. Tạo Table từ Table khác\n[L0207] ## [H3] 2. SỬA ĐỔI CẤU TRÚC TABLE (ALTER TABLE)\n[L0208] ## [H4] 2.1. Thêm cột mới\n[L0209] 2.2. Sửa đổi cột hiện có\n[L0210] 2.3. Xóa cột\n[L0211] 2.4. Thêm constraint\n[L0212] 2.5. Xóa constraint\n[L0213] 2.6. Đổi tên cột\n[L0214] 2.7. Đổi tên Table\n[L0215] 3. XÓA TABLE",
       "slide_comment": "",
@@ -43782,7 +43782,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: References)\n\n📝 Dịch đề:\nRàng buộc khóa ngoại được tạo bằng cách sử dụng từ khóa \"__\" để chỉ khóa chính của bảng khác.\n\n📋 Dịch đáp án:\n- B: References\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: 1.2. Ví dụ tạo Table đơn giản.\n\n💡 Mẹo nhớ: Đáp án B (References)",
+      "explanation": "🎯 Đáp án đúng: B (B: References)\n\n📝 Dịch đề:\nRàng buộc khóa ngoại được tạo bằng cách sử dụng từ khóa \"__\" để chỉ khóa chính của bảng khác.\n\n📋 Dịch đáp án:\n- B: References\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCú pháp khai báo ràng buộc khóa ngoại (FOREIGN KEY) trong SQL chuẩn:\n1. Khóa ngoại tham chiếu đến khóa chính của bảng khác bằng từ khóa `REFERENCES`.\n2. Ví dụ: `DeptID INT REFERENCES Department(DeptID)`.\nDo đó, từ khóa chính xác là **References** (Đáp án B).\n\n💡 Mẹo nhớ: Foreign key uses REFERENCES keyword.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0201-L0215)",
       "theory_excerpt": "[L0201] ## [H3] 1. KHỞI TẠO TABLE\n[L0202] ## [H4] 1.1. Cú pháp cơ bản\n[L0203] 1.2. Ví dụ tạo Table đơn giản\n[L0204] 1.3. Ví dụ tạo Table với constraints\n[L0205] 1.4. Tạo Table với Foreign Key\n[L0206] 1.5. Tạo Table từ Table khác\n[L0207] ## [H3] 2. SỬA ĐỔI CẤU TRÚC TABLE (ALTER TABLE)\n[L0208] ## [H4] 2.1. Thêm cột mới\n[L0209] 2.2. Sửa đổi cột hiện có\n[L0210] 2.3. Xóa cột\n[L0211] 2.4. Thêm constraint\n[L0212] 2.5. Xóa constraint\n[L0213] 2.6. Đổi tên cột\n[L0214] 2.7. Đổi tên Table\n[L0215] 3. XÓA TABLE",
       "slide_comment": "",
@@ -44012,7 +44012,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_181.png",
       "missing_image": false,
-      "question_text": "nsert into Students —_ (32, Niona Bush', N'Female');\nIn the given query which of the keyword has to be inserted?",
+      "question_text": "INSERT INTO Students (32, N'Fiona Bush', N'Female');\nIn the given query which of the keywords is missing?",
       "type": "single",
       "options": [
         {
@@ -44035,11 +44035,11 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: Values)\n\n📝 Dịch đề:\nnsert vào Học sinh —_ (32, Niona Bush', N'Nữ');\nTrong truy vấn đã cho, từ khóa nào phải được chèn vào?\n\n📋 Dịch đáp án:\n- D: Values\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: INSERT INTO Student (Name, Age).\n\n💡 Mẹo nhớ: Đáp án D (Values)",
+      "explanation": "🎯 Đáp án đúng: D (D: Values)\n\n📝 Dịch đề:\nINSERT INTO Students (32, N'Fiona Bush', N'Female');\nTrong câu truy vấn trên, từ khóa nào đã bị thiếu?\n\n📋 Dịch đáp án:\n- D: Values\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích cú pháp câu lệnh chèn dữ liệu DML trong SQL:\n1. Cú pháp chuẩn của câu lệnh chèn dòng trực tiếp:\n   `INSERT INTO TableName [(column_list)] VALUES (value1, value2, ...);`\n2. Đoạn mã cho trước: `INSERT INTO Students (32, N'Fiona Bush', N'Female');`\n3. Đoạn mã bị thiếu từ khóa bắt buộc `VALUES` trước danh sách các giá trị cần đưa vào bảng.\nVì vậy, từ khóa bị thiếu là **Values** (Đáp án D).\n\n💡 Mẹo nhớ: INSERT INTO ... VALUES (...).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0876-L0890)",
       "theory_excerpt": "[L0876] ## [H2] Tóm tắt\n[L0877] SELECT INTO: tạo bảng mới từ kết quả của một truy vấn SELECT.\n[L0878] Dữ liệu và kiểu dữ liệu được sao chép, nhưng không có ràng buộc.\n[L0879] Thường dùng để sao lưu dữ liệu tạm thời hoặc tạo bảng phân tích nhanh.\n[L0880] 16.Insert into Select trong SQL Server\n[L0881] ## [H2] 1. Khái niệm INSERT INTO SELECT\n[L0882] INSERT INTO SELECT dùng để sao chép dữ liệu từ bảng này sang bảng khác.\n[L0883] Khác với SELECT INTO:\n[L0884] SELECT INTO sẽ tạo bảng mới và chèn dữ liệu vào.\n[L0885] INSERT INTO SELECT chèn dữ liệu vào một bảng đã tồn tại.\n[L0886] ## [H2] 2. Cú pháp\n[L0887] INSERT INTO TargetTable (column1, column2, ...)\n[L0888] SELECT column1, column2, ...\n[L0889] FROM SourceTable\n[L0890] WHERE condition;",
       "slide_comment": "",
-      "question_translation": "nsert vào Học sinh —_ (32, Niona Bush', N'Nữ');\nTrong truy vấn đã cho, từ khóa nào phải được chèn vào?"
+      "question_translation": "INSERT INTO Students (32, N'Fiona Bush', N'Female');\nTrong câu truy vấn trên, từ khóa nào đã bị thiếu?"
     },
     {
       "id": 168,
@@ -44480,7 +44480,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_194.png",
       "missing_image": false,
-      "question_text": "(Choose 1 answer)\nIn query compiler, which unit transforms the initial query plan into the best available sequence of operations on\nthe actual data? Hoàng Hoàng",
+      "question_text": "(Choose 1 answer)\nIn query compiler, which unit transforms the initial query plan into the best available sequence of operations on\nthe actual data?",
       "type": "single",
       "options": [
         {
@@ -44683,7 +44683,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: Not null)\n\n📝 Dịch đề:\nTrong bảng nhân viên để bao gồm các thuộc tính có giá trị luôn có giá trị nào đó sau đây\nphải sử dụng ràng buộc?\n\n📋 Dịch đáp án:\n- B: Not null\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án B (Not null)",
+      "explanation": "🎯 Đáp án đúng: B (B: Not null)\n\n📝 Dịch đề:\nTrong bảng nhân viên để bao gồm các thuộc tính có giá trị luôn có giá trị nào đó sau đây\nphải sử dụng ràng buộc?\n\n📋 Dịch đáp án:\n- B: Not null\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích các ràng buộc toàn vẹn cột (Column Integrity Constraints) trong SQL:\n1. Giá trị `NULL` biểu thị dữ liệu bị thiếu hoặc chưa biết.\n2. Để bắt buộc một cột luôn luôn phải có giá trị cụ thể, không bao giờ được phép để trống hoặc gán `NULL` khi chèn/sửa dữ liệu, ta áp dụng ràng buộc `NOT NULL`.\n3. Ràng buộc `UNIQUE` cho phép một giá trị NULL (trong SQL Server), `DEFAULT` chỉ gán giá trị mặc định khi không truyền vào.\nDo đó, ràng buộc cần dùng là **NOT NULL** (Đáp án B).\n\n💡 Mẹo nhớ: Bắt buộc cột luôn có giá trị, không được rỗng = NOT NULL.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1381-L1395)",
       "theory_excerpt": "[L1381] Chuẩn hóa dữ liệu (dùng chung một định nghĩa cho nhiều bảng).\n[L1382] Tái sử dụng, dễ bảo trì.\n[L1383] Hạn chế lỗi khi khai báo cùng một loại dữ liệu nhiều lần.\n[L1384] ## [H2] 2. Cú pháp tạo kiểu dữ liệu tự định nghĩa\n[L1385] sp_addtype type_name, system_data_type, 'NULL' | 'NOT NULL';\n[L1386] Trong đó:\n[L1387] type_name: tên kiểu dữ liệu mới.\n[L1388] system_data_type: kiểu dữ liệu hệ thống dùng làm cơ sở.\n[L1389] NULL | NOT NULL: quy định có cho phép NULL hay không.\n[L1390] ## [H2] 3. Ví dụ minh họa\n[L1391] ## [H3] a. Tạo kiểu dữ liệu tự định nghĩa\n[L1392] EXEC sp_addtype PhoneNumber, 'VARCHAR(15)', 'NOT NULL';\n[L1393] → Tạo kiểu dữ liệu PhoneNumber dựa trên VARCHAR(15) và không cho phép NULL.\n[L1394] ## [H3] b. Sử dụng trong bảng\n[L1395] CREATE TABLE Customer (",
       "slide_comment": "| NOT NULL constraint ensures that a column cannot have a NULL value, meaning it must always have a value.",
@@ -44719,7 +44719,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: One-to-Many Relationship)\n\n📝 Dịch đề:\nTrong trường hợp nào sau đây là trường hợp một thực thể của một loại liên quan đến nhiều trường hợp thực thể của\nloại khác?\n\n📋 Dịch đáp án:\n- B: One-to-Many Relationship\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án B (One-to-Many Relationship)",
+      "explanation": "🎯 Đáp án đúng: B (B: One-to-Many Relationship)\n\n📝 Dịch đề:\nTrong trường hợp nào sau đây là trường hợp một thực thể của một loại liên quan đến nhiều trường hợp thực thể của\nloại khác?\n\n📋 Dịch đáp án:\n- B: One-to-Many Relationship\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo định nghĩa mối quan hệ giữa các thực thể trong CSDL quan hệ:\n1. Mối quan hệ Một - Nhiều (One-to-Many Relationship): Một bản thể (instance) duy nhất của thực thể A liên kết với nhiều bản thể của thực thể B.\n2. Mối quan hệ Nhiều - Nhiều (Many-to-Many): Nhiều bản thể của A liên kết với nhiều bản thể của B.\n3. Mối quan hệ Một - Một (One-to-One): Một bản thể của A liên kết tối đa với một bản thể của B.\nVì vậy, loại quan hệ được mô tả là **One-to-Many Relationship** (Đáp án B).\n\n💡 Mẹo nhớ: Single instance relates to many instances = One-to-Many.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1181-L1195)",
       "theory_excerpt": "[L1181] OrderID INT IDENTITY(100, 5) PRIMARY KEY,\n[L1182] Product NVARCHAR(50)\n[L1183] );\n[L1184] OrderID sẽ bắt đầu từ 100 và tăng dần 5 đơn vị: 100, 105, 110, …\n[L1185] ## [H2] 5. Lưu ý\n[L1186] Mỗi bảng chỉ có thể có một cột IDENTITY.\n[L1187] Không thể chèn trực tiếp giá trị vào cột IDENTITY (trừ khi bật SET IDENTITY_INSERT ON).\n[L1188] Nếu xóa dữ liệu, giá trị IDENTITY sẽ không tự động quay lại mà tiếp tục tăng.\n[L1189] Có thể đặt lại giá trị IDENTITY bằng câu lệnh DBCC CHECKIDENT.\n[L1190] Ví dụ reset giá trị:\n[L1191] DBCC CHECKIDENT ('Student', RESEED, 0);\n[L1192] => Bản ghi tiếp theo chèn vào sẽ có StudentID = 1.\n[L1193] ## [H2] Tóm tắt\n[L1194] Auto Increment trong SQL Server được cài bằng IDENTITY(seed, increment).\n[L1195] Tự động sinh giá trị tăng dần cho một cột (thường là khóa chính).",
       "slide_comment": "",
@@ -44791,7 +44791,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Rollback)\n\n📝 Dịch đề:\nĐể hoàn tác công việc của giao dịch sau lần cam kết cuối cùng, nên sử dụng cái nào?\n\n📋 Dịch đáp án:\n- C: Rollback\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: IF (điều_kiện_thành_công).\n\n💡 Mẹo nhớ: Đáp án C (Rollback)",
+      "explanation": "🎯 Đáp án đúng: C (C: Rollback)\n\n📝 Dịch đề:\nĐể hoàn tác công việc của giao dịch sau lần cam kết cuối cùng, nên sử dụng cái nào?\n\n📋 Dịch đáp án:\n- C: Rollback\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo cơ chế quản lý giao dịch (Transaction Management) trong RDBMS:\n1. **COMMIT:** Xác nhận và lưu vĩnh viễn tất cả các thay đổi của giao dịch vào đĩa.\n2. **ROLLBACK:** Hủy bỏ toàn bộ các thao tác đã thực hiện trong giao dịch hiện tại kể từ điểm bắt đầu hoặc sau lệnh `COMMIT` gần nhất, khôi phục CSDL về trạng thái an toàn trước đó.\nDo đó, để undo công việc của giao dịch, ta sử dụng lệnh **Rollback** (Đáp án C).\n\n💡 Mẹo nhớ: Undo / Hủy bỏ thay đổi của transaction = ROLLBACK.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1931-L1945)",
       "theory_excerpt": "[L1931] Atomicity: Hoặc tất cả các thao tác được thực hiện, hoặc không gì cả.\n[L1932] Consistency: Dữ liệu phải nhất quán trước và sau giao dịch.\n[L1933] Isolation: Các giao dịch không ảnh hưởng lẫn nhau.\n[L1934] Durability: Sau khi giao dịch được commit, dữ liệu được lưu vĩnh viễn.\n[L1935] ## [H2] 2. Cú pháp cơ bản\n[L1936] BEGIN TRANSACTION;\n[L1937] -- các câu lệnh SQL\n[L1938] IF (điều_kiện_thành_công)\n[L1939] COMMIT TRANSACTION;\n[L1940] ELSE\n[L1941] ROLLBACK TRANSACTION;\n[L1942] BEGIN TRANSACTION: bắt đầu giao dịch.\n[L1943] COMMIT TRANSACTION: xác nhận và lưu thay đổi.\n[L1944] ROLLBACK TRANSACTION: hủy bỏ giao dịch, dữ liệu trở về trạng thái ban đầu.\n[L1945] ## [H2] 3. Ví dụ minh họa",
       "slide_comment": "",
@@ -45009,7 +45009,7 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: FOREIGN KEY l)\n\n📝 Dịch đề:\nĐể đảm bảo rằng mỗi hàng trong một bảng đề cập đến một mục nhập hợp lệ trong một bảng khác, nên sử dụng ràng buộc nào?\n\n📋 Dịch đáp án:\n- D: FOREIGN KEY l\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: 1.2. Ví dụ tạo Table đơn giản.\n\n💡 Mẹo nhớ: Đáp án D (FOREIGN KEY l)",
+      "explanation": "🎯 Đáp án đúng: D (D: FOREIGN KEY l)\n\n📝 Dịch đề:\nĐể đảm bảo rằng mỗi hàng trong một bảng đề cập đến một mục nhập hợp lệ trong một bảng khác, nên sử dụng ràng buộc nào?\n\n📋 Dịch đáp án:\n- D: FOREIGN KEY l\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên lý toàn vẹn tham chiếu (Referential Integrity):\n1. Để đảm bảo mỗi bản ghi trong bảng này tham chiếu đến một bản ghi hợp lệ và đang tồn tại trong bảng khác, ta thiết lập ràng buộc **Khóa ngoại (FOREIGN KEY)**.\n2. Khóa ngoại ngăn chặn việc chèn các giá trị không tồn tại ở bảng cha và ngăn chặn việc xóa các bản ghi ở bảng cha khi đang có bảng con tham chiếu tới.\nVì vậy, ràng buộc chính xác là **FOREIGN KEY** (Đáp án D).\n\n💡 Mẹo nhớ: Refers to a valid entry in another table = FOREIGN KEY.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0201-L0215)",
       "theory_excerpt": "[L0201] ## [H3] 1. KHỞI TẠO TABLE\n[L0202] ## [H4] 1.1. Cú pháp cơ bản\n[L0203] 1.2. Ví dụ tạo Table đơn giản\n[L0204] 1.3. Ví dụ tạo Table với constraints\n[L0205] 1.4. Tạo Table với Foreign Key\n[L0206] 1.5. Tạo Table từ Table khác\n[L0207] ## [H3] 2. SỬA ĐỔI CẤU TRÚC TABLE (ALTER TABLE)\n[L0208] ## [H4] 2.1. Thêm cột mới\n[L0209] 2.2. Sửa đổi cột hiện có\n[L0210] 2.3. Xóa cột\n[L0211] 2.4. Thêm constraint\n[L0212] 2.5. Xóa constraint\n[L0213] 2.6. Đổi tên cột\n[L0214] 2.7. Đổi tên Table\n[L0215] 3. XÓA TABLE",
       "slide_comment": "",
@@ -45022,7 +45022,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_210.png",
       "missing_image": false,
-      "question_text": "To modify the schema of an existing relation use\nHoàng Hoàng",
+      "question_text": "To modify the schema of an existing relation use",
       "type": "single",
       "options": [
         {
@@ -45153,7 +45153,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Lost update problem)\n\n📝 Dịch đề:\nHai giao dịch thực hiện đồng thời T1 và T2 được phép cập nhật cùng một bản ghi trong một\ncách không kiểm soát được. Trong một kịch bản như vậy. Sự cố sau đây có thể không xảy ra nếu hệ thống cơ sở dữ liệu\nkhông có mô-đun tương tranh và cho phép thực hiện đồng thời hai giao dịch trên. Cái nào trong số\nsau đây là đúng trong trường hợp này?\n\n📋 Dịch đáp án:\n- C: Lost update problem\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Giới thiệu SQL và SQL server.\n\n💡 Mẹo nhớ: Đáp án C (Lost update problem)",
+      "explanation": "🎯 Đáp án đúng: C (C: Lost update problem)\n\n📝 Dịch đề:\nHai giao dịch thực hiện đồng thời T1 và T2 được phép cập nhật cùng một bản ghi trong một\ncách không kiểm soát được. Trong một kịch bản như vậy. Sự cố sau đây có thể không xảy ra nếu hệ thống cơ sở dữ liệu\nkhông có mô-đun tương tranh và cho phép thực hiện đồng thời hai giao dịch trên. Cái nào trong số\nsau đây là đúng trong trường hợp này?\n\n📋 Dịch đáp án:\n- C: Lost update problem\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích các hiện tượng xung đột đồng thời (Concurrency Anomalies) trong giao dịch:\n1. **Lost Update Problem (Mất bản cập nhật):** Xảy ra khi hai giao dịch $T_1$ và $T_2$ cùng đọc một bản ghi $X$. Sau đó $T_1$ cập nhật $X$ và ghi lại, tiếp theo $T_2$ cũng cập nhật $X$ dựa trên giá trị đọc ban đầu và ghi đè lên dữ liệu của $T_1$. Kết quả là thay đổi của $T_1$ bị mất hoàn toàn.\n2. **Dirty Read:** Đọc dữ liệu chưa commit của giao dịch khác.\n3. **Non-repeatable Read:** Đọc lại cùng một dòng nhưng giá trị bị thay đổi bởi giao dịch khác đã commit.\nHiện tượng được mô tả chính là **Lost update problem** (Đáp án C).\n\n💡 Mẹo nhớ: Hai transaction ghi đè dữ liệu của nhau làm mất kết quả = Lost update.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -45454,7 +45454,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_222.png",
       "missing_image": false,
-      "question_text": "The values appearing in given attributes of any tuple in the referencing relation must likewise occur in specified\nattributes of at least one tuple in the referenced relation, according to\nintegrity constraint.\nHoàng Hoàng",
+      "question_text": "The values appearing in given attributes of any tuple in the referencing relation must likewise occur in specified\nattributes of at least one tuple in the referenced relation, according to\nintegrity constraint.",
       "type": "single",
       "options": [
         {
@@ -45585,7 +45585,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: Temporary tables)\n\n📝 Dịch đề:\nCác mối quan hệ được bộ xử lý ngôn ngữ SQL xây dựng khi nó thực hiện công việc thực hiện các truy vấn của mình\nvà sửa đổi dữ liệu, sau đó bị vứt đi và không được lưu trữ, được gọi là\n\n📋 Dịch đáp án:\n- B: Temporary tables\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án B (Temporary tables)",
+      "explanation": "🎯 Đáp án đúng: B (B: Temporary tables)\n\n📝 Dịch đề:\nCác mối quan hệ được bộ xử lý ngôn ngữ SQL xây dựng khi nó thực hiện công việc thực hiện các truy vấn của mình\nvà sửa đổi dữ liệu, sau đó bị vứt đi và không được lưu trữ, được gọi là\n\n📋 Dịch đáp án:\n- B: Temporary tables\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích các loại bảng trong SQL Server:\n1. Khi bộ xử lý ngôn ngữ SQL (SQL Language Processor / Query Engine) thực thi truy vấn phức tạp hoặc các thao tác xử lý dữ liệu trung gian, các quan hệ trung gian được xây dựng tạm thời dưới dạng các bảng tạm (Temporary Tables).\n2. Bảng tạm trong SQL Server được lưu trong CSDL hệ thống `tempdb` (bảng tạm cục bộ có tiền tố `#`, bảng tạm toàn cục có tiền tố `##`).\nDo đó, quan hệ được tạo tự động để phục vụ thực thi là **Temporary tables** (Đáp án B).\n\n💡 Mẹo nhớ: Quan hệ trung gian sinh ra trong quá trình xử lý truy vấn = Temporary tables.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0151-L0165)",
       "theory_excerpt": "[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính\n[L0161] Schema: Nhóm các object có liên quan\n[L0162] Tables: Bảng lưu trữ dữ liệu\n[L0163] Views: Bảng ảo\n[L0164] Stored Procedures: Thủ tục lưu trữ\n[L0165] Functions: Hàm",
       "slide_comment": "",
@@ -45765,7 +45765,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: ALTER VIEW, UPDATE)\n\n📝 Dịch đề:\nXem định nghĩa có thể được sửa đổi bằng cách sử dụng _\ncâu lệnh trong khi dữ liệu xem có thể được sửa đổi bằng cách sử dụng\ntuyên bố.\n\n📋 Dịch đáp án:\n- C: ALTER VIEW, UPDATE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án C (ALTER VIEW, UPDATE)",
+      "explanation": "🎯 Đáp án đúng: C (C: ALTER VIEW, UPDATE)\n\n📝 Dịch đề:\nXem định nghĩa có thể được sửa đổi bằng cách sử dụng _\ncâu lệnh trong khi dữ liệu xem có thể được sửa đổi bằng cách sử dụng\ntuyên bố.\n\n📋 Dịch đáp án:\n- C: ALTER VIEW, UPDATE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân biệt giữa thay đổi định nghĩa View và thay đổi dữ liệu qua View:\n1. **Thay đổi định nghĩa View (View Definition):** Sử dụng câu lệnh DDL `ALTER VIEW ViewName AS SELECT ...` để thay đổi cấu trúc truy vấn của View.\n2. **Thay đổi dữ liệu qua View (View Data):** Sử dụng câu lệnh DML `UPDATE ViewName SET ... WHERE ...` (áp dụng cho các Updatable Views).\nDo đó, cặp lệnh chính xác là **ALTER VIEW, UPDATE** (Đáp án C).\n\n💡 Mẹo nhớ: Đổi định nghĩa = ALTER VIEW; Đổi dữ liệu = UPDATE.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1256-L1270)",
       "theory_excerpt": "[L1256] ALTER VIEW View_StudentCNTT AS\n[L1257] SELECT StudentID, Name\n[L1258] FROM Student\n[L1259] WHERE Major = 'CNTT';\n[L1260] ## [H2] 6. Lưu ý\n[L1261] View không lưu dữ liệu → khi bảng gốc thay đổi, View cũng thay đổi theo.\n[L1262] Không nên lạm dụng View cho các truy vấn phức tạp nhiều cấp → có thể ảnh hưởng hiệu năng.\n[L1263] Có thể dùng WITH ENCRYPTION để ẩn định nghĩa View, hoặc WITH SCHEMABINDING để cố định cấu trúc bảng gốc.\n[L1264] ## [H2] Tóm tắt\n[L1265] View là bảng ảo, sinh ra từ kết quả truy vấn SELECT.\n[L1266] Dùng để đơn giản hóa truy vấn, tăng bảo mật, hạn chế quyền truy cập.\n[L1267] Có thể thao tác dữ liệu qua View nếu liên kết trực tiếp với một bảng.\n[L1268] Dùng CREATE VIEW, ALTER VIEW, DROP VIEW để quản lý View.\n[L1269] 22.Check trong SQL Server\n[L1270] ## [H2] 1. Khái niệm CHECK",
       "slide_comment": "",
@@ -45801,7 +45801,7 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: Left Join)\n\n📝 Dịch đề:\nTrong khi thực hiện thao tác nối giữa hai bảng, kiểu nối nào trả về tất cả các hàng từ bảng bên trái và\ncác hàng khớp từ bảng bên phải?\n\n📋 Dịch đáp án:\n- D: Left Join\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: SELECT A.column1, B.column2, ...\n\n💡 Mẹo nhớ: Đáp án D (Left Join)",
+      "explanation": "🎯 Đáp án đúng: D (D: Left Join)\n\n📝 Dịch đề:\nTrong khi thực hiện thao tác nối giữa hai bảng, kiểu nối nào trả về tất cả các hàng từ bảng bên trái và\ncác hàng khớp từ bảng bên phải?\n\n📋 Dịch đáp án:\n- D: Left Join\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo lý thuyết đại số quan hệ và các phép kết trong SQL:\n1. **LEFT JOIN (Left Outer Join):** Trả về toàn bộ các dòng từ bảng bên trái (Left Table), cùng với các dòng khớp từ bảng bên phải. Nếu không có dòng khớp ở bảng bên phải, các cột của bảng bên phải sẽ mang giá trị `NULL`.\n2. **RIGHT JOIN:** Trả về tất cả các dòng từ bảng bên phải.\n3. **INNER JOIN:** Chỉ trả về các dòng có sự trùng khớp ở cả hai bảng.\nCâu hỏi yêu cầu trả về tất cả các hàng từ bảng bên trái (left table), do đó đáp án là **Left Join** (Đáp án D).\n\n💡 Mẹo nhớ: All rows from left table + matching from right = LEFT JOIN.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0581-L0595)",
       "theory_excerpt": "[L0581] Có thể nối nhiều hơn 2 bảng với INNER JOIN.\n[L0582] Ví dụ:\n[L0583] SELECT S.Name, E.Course, C.Teacher\n[L0584] FROM Student S\n[L0585] INNER JOIN Enrollment E\n[L0586] ON S.StudentID = E.StudentID\n[L0587] INNER JOIN Course C\n[L0588] ON E.Course = C.CourseName;\n[L0589] ## [H2] Tóm tắt\n[L0590] INNER JOIN trả về chỉ những bản ghi khớp ở cả hai bảng.\n[L0591] Nếu không có dữ liệu khớp, bản ghi sẽ không xuất hiện.\n[L0592] Dùng phổ biến để kết hợp dữ liệu giữa các bảng có quan hệ khóa chính – khóa ngoại.\n[L0593] 12.Full Outer Join trong SQL Server\n[L0594] ## [H2] 1. Khái niệm FULL OUTER JOIN\n[L0595] FULL OUTER JOIN kết hợp cả LEFT JOIN và RIGHT JOIN.",
       "slide_comment": "",
@@ -46030,7 +46030,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_238.png",
       "missing_image": false,
-      "question_text": "is a logically coherent collection of data with some inherent meaning, representing some aspect of the\nreal world, and which is designed, built, and populated with data for a specific purpose.",
+      "question_text": "A _____ is a logically coherent collection of data with some inherent meaning.",
       "type": "single",
       "options": [
         {
@@ -46057,7 +46057,7 @@ window.QUIZ_DATA = {
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "Một ______ là một tập hợp dữ liệu nhất quán về mặt logic, có ý nghĩa vốn có, đại diện cho một khía cạnh của thế giới thực và được thiết kế, xây dựng, cung cấp dữ liệu cho một mục đích cụ thể. A. Database → Cơ sở dữ liệu. Đây chính là định nghĩa của database: một tập hợp dữ liệu có liên quan về mặt logic, được tổ chức và lưu trữ nhằm phục vụ một mục đích cụ thể.",
-      "question_translation": "là một tập hợp dữ liệu mạch lạc về mặt logic với ý nghĩa cố hữu nào đó, thể hiện một số khía cạnh của\nthế giới thực và được thiết kế, xây dựng và cung cấp dữ liệu cho một mục đích cụ thể."
+      "question_translation": "Một _____ là một tập hợp dữ liệu có tính gắn kết logic và mang ý nghĩa nội tại xác định."
     },
     {
       "id": 224,
@@ -46161,7 +46161,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Unique constraint)\n\n📝 Dịch đề:\nKhi thiết kế cơ sở dữ liệu cho hệ thống thư viện, ràng buộc nào đảm bảo rằng mỗi cuốn sách có đúng một\nISBN duy nhất?\n\n📋 Dịch đáp án:\n- C: Unique constraint\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án C (Unique constraint)",
+      "explanation": "🎯 Đáp án đúng: C (C: Unique constraint)\n\n📝 Dịch đề:\nKhi thiết kế cơ sở dữ liệu cho hệ thống thư viện, ràng buộc nào đảm bảo rằng mỗi cuốn sách có đúng một\nISBN duy nhất?\n\n📋 Dịch đáp án:\n- C: Unique constraint\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích yêu cầu bài toán quản lý thư viện:\n1. Yêu cầu: Đảm bảo mỗi cuốn sách có một mã số duy nhất (unique identification code), không được trùng lặp giữa các cuốn sách.\n2. Ràng buộc `UNIQUE` (hoặc `PRIMARY KEY`) đảm bảo tất cả các giá trị trong cột được chỉ định là phân biệt và duy nhất trong toàn bộ bảng.\n3. Ràng buộc `CHECK` kiểm tra điều kiện miền giá trị, `FOREIGN KEY` kiểm tra tham chiếu.\nDo đó, ràng buộc phù hợp là **Unique constraint** (Đáp án C).\n\n💡 Mẹo nhớ: Đảm bảo giá trị không trùng lặp = UNIQUE constraint.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0221-L0235)",
       "theory_excerpt": "[L0221] ## [H3] Best Practices:\n[L0222] Đặt tên rõ ràng: Sử dụng tên có ý nghĩa, dễ hiểu\n[L0223] Dùng IDENTITY: Cho khóa chính kiểu INT\n[L0224] Đặt tên constraint: Để dễ quản lý và sửa đổi sau này\n[L0225] Kiểm tra trước khi thay đổi: Backup dữ liệu quan trọng\n[L0226] Sử dụng schema: Phân nhóm table theo chức năng\n[L0227] ## [H3] Lỗi thường gặp:\n[L0228] Xóa cột đang có constraint: Phải xóa constraint trước\n[L0229] Thay đổi kiểu dữ liệu không tương thích: VD từ VARCHAR sang INT\n[L0230] Xóa table cha khi còn table con: Phải xóa Foreign Key trước\n[L0231] Quên đặt tên constraint: Khó quản lý khi cần sửa đổi\n[L0232] 04.Kiểu dữ liệu trong SQL Server\n[L0233] ## [H1] KIỂU DỮ LIỆU TRONG SQL SERVER\n[L0234] ## [H2] MỤC TIÊU HỌC TẬP\n[L0235] Hiểu các nhóm kiểu dữ liệu chính trong SQL Server",
       "slide_comment": "Khi thiết kế cơ sở dữ liệu cho hệ thống thư viện, ràng buộc nào đảm bảo rằng mỗi cuốn sách có một ISBN duy nhất? C. Unique constraint → Ràng buộc UNIQUE. UNIQUE đảm bảo rằng các giá trị trong cột ISBN không bị trùng lặp giữa các bản ghi.",
@@ -46485,7 +46485,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: A stored procedure that runs automatically in response to certain events on a table or view)\n\n📝 Dịch đề:\nTrình kích hoạt cơ sở dữ liệu trong SQL Server là gì?\n\n📋 Dịch đáp án:\n- A: A stored procedure that runs automatically in response to certain events on a table or view\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án A (A stored procedure that runs automatically in response to certain events on a table or view)",
+      "explanation": "🎯 Đáp án đúng: A (A: A stored procedure that runs automatically in response to certain events on a table or view)\n\n📝 Dịch đề:\nTrình kích hoạt cơ sở dữ liệu trong SQL Server là gì?\n\n📋 Dịch đáp án:\n- A: A stored procedure that runs automatically in response to certain events on a table or view\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo định nghĩa chuẩn về Database Trigger trong SQL Server:\n1. **Trigger** là một thủ tục lưu trữ đặc biệt tự động thực thi (runs automatically) khi xảy ra một sự kiện xác định trên bảng hoặc view.\n2. Các sự kiện này có thể là DML (`INSERT`, `UPDATE`, `DELETE`) hoặc DDL (`CREATE_TABLE`, `ALTER_TABLE`, v.v.).\n3. Trigger không thể được gọi thủ công bằng lệnh `EXEC` như Stored Procedure thông thường.\nVì vậy, đáp án chính xác là **A stored procedure that runs automatically in response to certain events on a table or view** (Đáp án A).\n\n💡 Mẹo nhớ: Trigger = Stored procedure tự động chạy khi có sự kiện trên table/view.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -46557,7 +46557,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: To simplify data retrieval)\n\n📝 Dịch đề:\nMục tiêu chính của việc chuẩn hóa trong thiết kế cơ sở dữ liệu là gì?\n\n📋 Dịch đáp án:\n- B: To simplify data retrieval\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: 1NF: Không lặp, mỗi ô 1 giá trị.\n\n💡 Mẹo nhớ: Đáp án B (To simplify data retrieval)",
+      "explanation": "🎯 Đáp án đúng: B (B: To simplify data retrieval)\n\n📝 Dịch đề:\nMục tiêu chính của việc chuẩn hóa trong thiết kế cơ sở dữ liệu là gì?\n\n📋 Dịch đáp án:\n- B: To simplify data retrieval\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích mục tiêu của chuẩn hóa cơ sở dữ liệu (Normalization) qua các phương án:\n1. Mục tiêu kinh điển của chuẩn hóa: Giảm thiểu dư thừa dữ liệu (redundancy) và loại bỏ các bất thường (anomalies).\n2. Xét 4 phương án đề bài đưa ra:\n   - A: 'To increase data redundancy' (Sai, chuẩn hóa nhằm giảm dư thừa).\n   - C: 'To introduce duplicate data' (Sai, chuẩn hóa nhằm loại bỏ dữ liệu trùng lặp).\n   - D: 'To violate functional dependencies' (Sai, chuẩn hóa nhằm bảo toàn phụ thuộc hàm).\n   - B: 'To simplify data retrieval' (Tổ chức dữ liệu logic giúp cấu trúc CSDL rõ ràng, truy vấn nhất quán).\nDo đó, phương án đúng duy nhất là **To simplify data retrieval** (Đáp án B).\n\n💡 Mẹo nhớ: Loại trừ các phương án gây hại: Tăng dư thừa (A), Trùng lặp (C), Vi phạm FD (D) -> Chọn B.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -46705,7 +46705,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: The transaction is automatically rolled back)\n\n📝 Dịch đề:\nĐiều gì xảy ra nếu xảy ra lỗi trong quá trình giao dịch và lỗi đó không được xử lý hoặc khôi phục một cách rõ ràng?\n\n📋 Dịch đáp án:\n- B: The transaction is automatically rolled back\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: SET Balance = Balance - 200.\n\n💡 Mẹo nhớ: Đáp án B (The transaction is automatically rolled back)",
+      "explanation": "🎯 Đáp án đúng: B (B: The transaction is automatically rolled back)\n\n📝 Dịch đề:\nĐiều gì xảy ra nếu xảy ra lỗi trong quá trình giao dịch và lỗi đó không được xử lý hoặc khôi phục một cách rõ ràng?\n\n📋 Dịch đáp án:\n- B: The transaction is automatically rolled back\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo nguyên tắc nguyên tử (Atomicity) trong tính chất ACID của giao dịch:\n1. Tính nguyên tử quy định: Giao dịch phải được thực hiện trọn vẹn (All or Nothing) — hoặc tất cả các thao tác đều thành công, hoặc không có thao tác nào được lưu lại.\n2. Khi một lỗi nghiêm trọng xảy ra trong quá trình thực thi giao dịch mà không được xử lý tường minh (bằng `TRY...CATCH`), hệ quản trị CSDL sẽ tự động hủy bỏ giao dịch và hoàn nguyên dữ liệu (automatically rolled back) về trạng thái an toàn trước đó.\nDo đó, kết quả là **The transaction is automatically rolled back** (Đáp án B).\n\n💡 Mẹo nhớ: Lỗi không xử lý trong transaction -> Tự động ROLLBACK đảm bảo Atomicity.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1976-L1990)",
       "theory_excerpt": "[L1976] SET WrongColumn = Balance + 200\n[L1977] WHERE AccountID = 2;\n[L1978] ROLLBACK TRANSACTION;\n[L1979] → Lệnh đầu tiên bị hủy bỏ vì giao dịch rollback.\n[L1980] ## [H2] 4. Kiểm tra trạng thái giao dịch\n[L1981] @@TRANCOUNT: cho biết số lượng transaction hiện tại.\n[L1982] @@ERROR: trả về mã lỗi của câu lệnh trước đó (0 nghĩa là không lỗi).\n[L1983] ## [H2] 5. Lưu ý\n[L1984] Nên luôn dùng COMMIT hoặc ROLLBACK để kết thúc giao dịch.\n[L1985] Transaction quá dài có thể gây khóa bảng (blocking).\n[L1986] Trong các hệ thống quan trọng (ngân hàng, thanh toán), Transaction cực kỳ quan trọng để đảm bảo tính toàn vẹn dữ liệu.\n[L1987] ## [H2] Tóm tắt\n[L1988] Transaction: nhóm nhiều lệnh SQL thành một khối công việc.\n[L1989] Đảm bảo tính ACID của dữ liệu.\n[L1990] Dùng BEGIN TRANSACTION, COMMIT, ROLLBACK.",
       "slide_comment": "",
@@ -46862,7 +46862,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_263.png",
       "missing_image": false,
-      "question_text": "Which of the following is expressed by an E-R diagram? Hoàng Hoàng",
+      "question_text": "Which of the following is expressed by an E-R diagram?",
       "type": "single",
       "options": [
         {
@@ -46957,7 +46957,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: They include procedural and SQL statements.)\n\n📝 Dịch đề:\nĐiều nào sau đây đúng về thủ tục lưu sẵn trong MS-SQL Server?\n\n📋 Dịch đáp án:\n- A: They include procedural and SQL statements.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: If else trong Transact - SQL.\n\n💡 Mẹo nhớ: Đáp án A (They include procedural and SQL statements.)",
+      "explanation": "🎯 Đáp án đúng: A (A: They include procedural and SQL statements.)\n\n📝 Dịch đề:\nĐiều nào sau đây đúng về thủ tục lưu sẵn trong MS-SQL Server?\n\n📋 Dịch đáp án:\n- A: They include procedural and SQL statements.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích đặc điểm của Stored Procedure trong MS SQL Server:\n1. Stored Procedure là tập hợp các câu lệnh SQL kết hợp với các cấu trúc điều khiển thủ tục (procedural statements) của T-SQL như rẽ nhánh (`IF...ELSE`), vòng lặp (`WHILE`), khai báo biến (`DECLARE`), bẫy lỗi (`TRY...CATCH`).\n2. Chúng được biên dịch và lưu trữ trên máy chủ CSDL, giúp tăng hiệu năng thực thi và tính tái sử dụng.\nVì vậy phát biểu đúng là **They include procedural and SQL statements** (Đáp án A).\n\n💡 Mẹo nhớ: Stored Procedure = Procedural logic (IF/WHILE) + SQL statements.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1751-L1765)",
       "theory_excerpt": "[L1751] ## [H2] 1. Khái niệm Function\n[L1752] Function trong SQL Server là một khối lệnh SQL được định nghĩa sẵn, có thể nhận tham số và trả về một giá trị duy nhất hoặc một bảng.\n[L1753] Khác với Stored Procedure:\n[L1754] Function bắt buộc phải trả về giá trị.\n[L1755] Function có thể dùng trong câu lệnh SELECT, WHERE, JOIN.\n[L1756] Function không thể thực hiện trực tiếp các thao tác như INSERT, DELETE, UPDATE trên bảng (chỉ trong một số loại đặc biệt).\n[L1757] ## [H2] 2. Các loại Function\n[L1758] Scalar Function: trả về một giá trị đơn (INT, VARCHAR, DATETIME,…).\n[L1759] Table-Valued Function (TVF): trả về một bảng.\n[L1760] Inline Table-Valued Function.\n[L1761] Multi-Statement Table-Valued Function.\n[L1762] ## [H2] 3. Cú pháp tạo Function\n[L1763] ## [H3] a. Scalar Function\n[L1764] CREATE FUNCTION FunctionName (@param datatype, ...)\n[L1765] RETURNS datatype",
       "slide_comment": "",
@@ -47031,7 +47031,7 @@ window.QUIZ_DATA = {
         "A",
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: A, C (A: They can return multiple result sets; C: They support conditional logic like IF ...ELSE)\n\n📝 Dịch đề:\nHai câu lệnh nào mô tả chính xác các thủ tục lưu sẵn?\n\n📋 Dịch đáp án:\n- A: They can return multiple result sets\n- C: They support conditional logic like IF ...ELSE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: If else trong Transact - SQL.\n\n💡 Mẹo nhớ: Đáp án A, C (They can return multiple result sets, They support conditional logic like IF ...ELSE)",
+      "explanation": "🎯 Đáp án đúng: A, C (A: They can return multiple result sets, C: They support conditional logic like IF ...ELSE)\n\n📝 Dịch đề:\nHai câu lệnh nào mô tả chính xác các thủ tục lưu sẵn?\n\n📋 Dịch đáp án:\n- A: They can return multiple result sets\n- C: They support conditional logic like IF ...ELSE\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nĐặc tính của Stored Procedure trong SQL Server (chọn 2 đáp án):\n1. **Trả về nhiều tập kết quả:** Một stored procedure có thể chứa nhiều câu lệnh `SELECT`, mỗi câu lệnh trả về một Result Set riêng biệt cho ứng dụng gọi (Phương án A đúng).\n2. **Hỗ trợ logic điều kiện:** Stored procedure hỗ trợ đầy đủ các lệnh điều khiển như `IF...ELSE`, `BEGIN...END`, `WHILE` (Phương án C đúng).\n3. Stored procedure không bị giới hạn bắt buộc chỉ trả về một giá trị duy nhất (đó là đặc tính của Scalar UDF) và hoàn toàn hỗ trợ câu lệnh DML (`INSERT`, `UPDATE`, `DELETE`).\nDo đó, hai đáp án đúng là **A** và **C**.\n\n💡 Mẹo nhớ: Stored Procedure: Trả về nhiều result sets (A) & Hỗ trợ IF...ELSE (C).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1471-L1485)",
       "theory_excerpt": "[L1471] Biến chỉ tồn tại trong batch, stored procedure hoặc function nơi khai báo.\n[L1472] Sau khi kết thúc batch hoặc thủ tục, biến sẽ bị giải phóng.\n[L1473] ## [H2] Tóm tắt\n[L1474] Dùng DECLARE để khai báo biến.\n[L1475] Gán giá trị cho biến bằng SET hoặc SELECT.\n[L1476] Có thể dùng biến trong câu lệnh T-SQL (SELECT, INSERT, UPDATE, …).\n[L1477] Biến chỉ tồn tại trong phạm vi của batch/thủ tục/hàm.\n[L1478] 26.If else trong Transact - SQL\n[L1479] ## [H2] 1. Khái niệm\n[L1480] IF…ELSE trong T-SQL được dùng để rẽ nhánh điều kiện.\n[L1481] Giúp kiểm tra một điều kiện logic, nếu đúng thì thực hiện khối lệnh IF, nếu sai thì thực hiện khối lệnh ELSE.\n[L1482] Có thể lồng nhiều IF…ELSE hoặc dùng ELSE IF để kiểm tra nhiều điều kiện.\n[L1483] ## [H2] 2. Cú pháp cơ bản\n[L1484] IF (điều_kiện)\n[L1485] -- khối lệnh khi điều kiện đúng",
       "slide_comment": "",
@@ -47283,7 +47283,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: Yes, a stored procedure can call another stored procedure)\n\n📝 Dịch đề:\nMột thủ tục lưu trữ (Stored Procedure) có thể gọi một thủ tục lưu trữ (Stored Procedure) khác không?\n\n📋 Dịch đáp án:\n- A: Yes, a stored procedure can call another stored procedure\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: If else trong Transact - SQL.\n\n💡 Mẹo nhớ: Đáp án A (Yes, a stored procedure can call another stored procedure)",
+      "explanation": "🎯 Đáp án đúng: A (A: Yes, a stored procedure can call another stored procedure)\n\n📝 Dịch đề:\nMột thủ tục lưu trữ (Stored Procedure) có thể gọi một thủ tục lưu trữ (Stored Procedure) khác không?\n\n📋 Dịch đáp án:\n- A: Yes, a stored procedure can call another stored procedure\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nKhả năng gọi lồng nhau của Stored Procedure trong SQL Server:\n1. Trong SQL Server, một Stored Procedure hoàn toàn có thể gọi thực thi một Stored Procedure khác thông qua lệnh `EXEC procedure_name`.\n2. Cơ chế này gọi là lồng thủ tục (Nested Stored Procedures). SQL Server hỗ trợ mức độ lồng nhau lên đến tối đa 32 cấp (kiểm tra qua biến hệ thống `@@NESTLEVEL`).\nVì vậy, câu trả lời là **Yes, a stored procedure can call another stored procedure** (Đáp án A).\n\n💡 Mẹo nhớ: Stored procedure gọi được stored procedure khác (lồng tối đa 32 cấp).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1666-L1680)",
       "theory_excerpt": "[L1666] Dùng khi cần xử lý row-by-row, nhưng nên ưu tiên giải pháp set-based để tối ưu hiệu năng.\n[L1667] 29.Stored Procedures trong SQL Server\n[L1668] ## [H2] 1. Khái niệm Stored Procedure\n[L1669] Stored Procedure (Thủ tục lưu trữ) là tập hợp các câu lệnh SQL được lưu sẵn trong SQL Server.\n[L1670] Có thể gọi và thực thi nhiều lần, giống như một “hàm” trong lập trình.\n[L1671] Dùng để:\n[L1672] Tái sử dụng logic xử lý.\n[L1673] Giảm lặp lại code.\n[L1674] Tăng bảo mật (người dùng có thể thực thi mà không cần biết chi tiết bên trong).\n[L1675] Tăng hiệu năng (SQL Server biên dịch và lưu kế hoạch thực thi).\n[L1676] ## [H2] 2. Cú pháp tạo Stored Procedure\n[L1677] CREATE PROCEDURE ProcedureName\n[L1678] @parameter1 datatype,\n[L1679] @parameter2 datatype = default_value\n[L1680] AS",
       "slide_comment": "",
@@ -47471,7 +47471,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: To close the cursor and release associated resources)\n\n📝 Dịch đề:\nTrong SQL, mục đích của câu lệnh CLOSE liên quan đến con trỏ là gì?\n\n📋 Dịch đáp án:\n- B: To close the cursor and release associated resources\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: DECLARE: Khai báo con trỏ với một câu lệnh SELECT.\n\n💡 Mẹo nhớ: Đáp án B (To close the cursor and release associated resources)",
+      "explanation": "🎯 Đáp án đúng: B (B: To close the cursor and release associated resources)\n\n📝 Dịch đề:\nTrong SQL, mục đích của câu lệnh CLOSE liên quan đến con trỏ là gì?\n\n📋 Dịch đáp án:\n- B: To close the cursor and release associated resources\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích lệnh `CLOSE` trong thao tác với Con trỏ (Cursor) của SQL:\n1. Lệnh `CLOSE cursor_name` đóng con trỏ đang mở, giải phóng tập kết quả hiện tại và các khóa (locks) liên quan mà con trỏ đang nắm giữ.\n2. Tuy nhiên, định nghĩa của con trỏ vẫn còn trong bộ nhớ và có thể được mở lại bằng lệnh `OPEN` (chỉ khi gọi `DEALLOCATE` thì mới xóa hoàn toàn định nghĩa con trỏ).\nMục đích của `CLOSE` là **To close the cursor and release associated resources** (Đáp án B).\n\n💡 Mẹo nhớ: CLOSE cursor = Đóng con trỏ và giải phóng tài nguyên tập kết quả.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1611-L1625)",
       "theory_excerpt": "[L1611] WHILE: Lặp qua các dòng cho đến khi hết dữ liệu.\n[L1612] CLOSE: Đóng Cursor (giải phóng dữ liệu).\n[L1613] DEALLOCATE: Giải phóng con trỏ khỏi bộ nhớ.\n[L1614] ## [H2] 3. Cú pháp cơ bản\n[L1615] DECLARE cursor_name CURSOR FOR\n[L1616] SELECT column1, column2, ...\n[L1617] FROM TableName;\n[L1618] OPEN cursor_name;\n[L1619] FETCH NEXT FROM cursor_name INTO @var1, @var2, ...;\n[L1620] WHILE @@FETCH_STATUS = 0\n[L1621] BEGIN\n[L1622] -- Xử lý dữ liệu tại đây\n[L1623] FETCH NEXT FROM cursor_name INTO @var1, @var2, ...;\n[L1624] END\n[L1625] CLOSE cursor_name;",
       "slide_comment": "| CLOSE specifically relates to ending the use of a cursor and releasing its resources.",
@@ -47700,7 +47700,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_286.png",
       "missing_image": false,
-      "question_text": "In the context of a DBMS, what is meant by \"data integrity\"? Hoàng Hoàng",
+      "question_text": "In the context of a DBMS, what is meant by \"data integrity\"?",
       "type": "single",
       "options": [
         {
@@ -47829,13 +47829,13 @@ window.QUIZ_DATA = {
         },
         {
           "key": "E",
-          "text": "All of the mentioned answers are wrong • The view is based on a single table. • The view does not contain aggregate functions (e.g., SUM, AVG) or DISTINCT • The view does not use GROUP BY or HAVING clauses. • The view does not include JOIN operations (although in some databases, updatable views with joins may be supported with restrictions)."
+          "text": "All of the mentioned answers are wrong"
         }
       ],
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Some cases can be updated, some cases cannot)\n\n📝 Dịch đề:\nThông qua VIEW, có thể cập nhật dữ liệu trong bảng gốc (tham chiếu VIEW đó) không?\n\n📋 Dịch đáp án:\n- C: Some cases can be updated, some cases cannot\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án C (Some cases can be updated, some cases cannot)",
+      "explanation": "🎯 Đáp án đúng: C (C: Some cases can be updated, some cases cannot)\n\n📝 Dịch đề:\nThông qua VIEW, có thể cập nhật dữ liệu trong bảng gốc (tham chiếu VIEW đó) không?\n\n📋 Dịch đáp án:\n- C: Some cases can be updated, some cases cannot\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy tắc cập nhật dữ liệu thông qua View (Updatable Views) trong SQL:\n1. Một VIEW có thể được cập nhật (sử dụng `INSERT`, `UPDATE`, `DELETE`) trong **một số trường hợp**, và **không thể cập nhật** trong các trường hợp khác:\n   - **Trường hợp CÓ THỂ cập nhật:** View được định nghĩa từ duy nhất một bảng cơ sở (single base table), mệnh đề `SELECT` không chứa từ khóa `DISTINCT`, không có hàm gộp (`SUM`, `AVG`, `COUNT`), không chứa `GROUP BY` hay `HAVING`, và cột cập nhật tham chiếu trực tiếp đến cột gốc.\n   - **Trường hợp KHÔNG THỂ cập nhật:** View kết nối nhiều bảng (`JOIN`), chứa biểu thức tính toán, hàm gộp, hoặc `GROUP BY`.\nDo đó, kết luận chính xác là **Some cases can be updated, some cases cannot** (Đáp án C).\n\n💡 Mẹo nhớ: View chỉ cập nhật được khi dựa trên 1 bảng đơn và không có hàm gộp/GROUP BY/DISTINCT.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1251-L1265)",
       "theory_excerpt": "[L1251] => Thay đổi này sẽ tác động trực tiếp đến bảng Student.\n[L1252] ## [H2] 5. Xóa và chỉnh sửa View\n[L1253] Xóa View:\n[L1254] DROP VIEW View_StudentCNTT;\n[L1255] Chỉnh sửa View:\n[L1256] ALTER VIEW View_StudentCNTT AS\n[L1257] SELECT StudentID, Name\n[L1258] FROM Student\n[L1259] WHERE Major = 'CNTT';\n[L1260] ## [H2] 6. Lưu ý\n[L1261] View không lưu dữ liệu → khi bảng gốc thay đổi, View cũng thay đổi theo.\n[L1262] Không nên lạm dụng View cho các truy vấn phức tạp nhiều cấp → có thể ảnh hưởng hiệu năng.\n[L1263] Có thể dùng WITH ENCRYPTION để ẩn định nghĩa View, hoặc WITH SCHEMABINDING để cố định cấu trúc bảng gốc.\n[L1264] ## [H2] Tóm tắt\n[L1265] View là bảng ảo, sinh ra từ kết quả truy vấn SELECT.",
       "slide_comment": "",
@@ -48015,7 +48015,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: deletes the table structure along with the table data.)\n\n📝 Dịch đề:\nCâu lệnh DROP TABLE:\n\n📋 Dịch đáp án:\n- B: deletes the table structure along with the table data.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Giới thiệu SQL và SQL server.\n\n💡 Mẹo nhớ: Đáp án B (deletes the table structure along with the table data.)",
+      "explanation": "🎯 Đáp án đúng: B (B: deletes the table structure along with the table data.)\n\n📝 Dịch đề:\nCâu lệnh DROP TABLE:\n\n📋 Dịch đáp án:\n- B: deletes the table structure along with the table data.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích tác động của lệnh `DROP TABLE` trong DDL:\n1. Lệnh `DROP TABLE TableName;` xóa hoàn toàn cấu trúc bảng (table schema/definition), siêu dữ liệu (metadata), cùng với toàn bộ dữ liệu (rows) và các chỉ mục liên kết khỏi cơ sở dữ liệu.\n2. Khác với `DELETE` hoặc `TRUNCATE` (chỉ xóa dữ liệu bên trong nhưng vẫn giữ lại cấu trúc bảng), `DROP TABLE` xóa sạch cả cấu trúc lẫn dữ liệu.\nVì vậy, phát biểu chính xác là **deletes the table structure along with the table data** (Đáp án B).\n\n💡 Mẹo nhớ: DROP TABLE = Xóa sạch cả cấu trúc bảng lẫn toàn bộ dữ liệu.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0176-L0190)",
       "theory_excerpt": "[L0176] ## [H2] MỤC TIÊU HỌC TẬP\n[L0177] Tạo Table mới với các tùy chọn cơ bản\n[L0178] Hiểu cấu trúc và thành phần của Table\n[L0179] Thay đổi cấu trúc Table (thêm, sửa, xóa cột)\n[L0180] Xóa Table an toàn\n[L0181] Sao chép cấu trúc Table\n[L0182] ## [H2] KIẾN THỨC LÝ THUYẾT\n[L0183] ## [H3] Table trong SQL Server\n[L0184] Table (Bảng) là đơn vị cơ bản để lưu trữ dữ liệu trong database. Mỗi table gồm:\n[L0185] Columns (Cột): Định nghĩa các thuộc tính của dữ liệu\n[L0186] Rows (Hàng): Chứa các bản ghi dữ liệu thực tế\n[L0187] Schema: Không gian tên chứa table (mặc định là dbo)\n[L0188] ## [H3] Thành phần của Table\n[L0189] Column Name: Tên cột (duy nhất trong table)\n[L0190] Data Type: Kiểu dữ liệu của cột",
       "slide_comment": "",
@@ -48123,7 +48123,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: Define and modify the structure of database objects such as tables, views, and indexes)\n\n📝 Dịch đề:\nNgôn ngữ định nghĩa dữ liệu (DDL) trong SQL được sử dụng để:\n\n📋 Dịch đáp án:\n- B: Define and modify the structure of database objects such as tables, views, and indexes\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án B (Define and modify the structure of database objects such as tables, views, and indexes)",
+      "explanation": "🎯 Đáp án đúng: B (B: Define and modify the structure of database objects such as tables, views, and indexes)\n\n📝 Dịch đề:\nNgôn ngữ định nghĩa dữ liệu (DDL) trong SQL được sử dụng để:\n\n📋 Dịch đáp án:\n- B: Define and modify the structure of database objects such as tables, views, and indexes\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân loại các tập con của ngôn ngữ SQL:\n1. **DDL (Data Definition Language - Ngôn ngữ định nghĩa dữ liệu):** Gồm các lệnh như `CREATE`, `ALTER`, `DROP`, `TRUNCATE`. Nhiệm vụ của DDL là tạo lập, thay đổi và xóa cấu trúc của các đối tượng CSDL (bảng, khung nhìn, chỉ mục, thủ tục, trigger).\n2. **DML (Data Manipulation Language):** Các lệnh thao tác dữ liệu (`SELECT`, `INSERT`, `UPDATE`, `DELETE`).\n3. **DCL (Data Control Language):** Các lệnh cấp quyền (`GRANT`, `REVOKE`).\nDo đó, DDL được sử dụng để **Define and modify the structure of database objects such as tables, views, and indexes** (Đáp án B).\n\n💡 Mẹo nhớ: DDL (CREATE, ALTER, DROP) = Định nghĩa và sửa đổi cấu trúc đối tượng CSDL.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -48339,7 +48339,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: A relationship with an identifying entity)\n\n📝 Dịch đề:\nTrong mô hình ER, một thực thể yếu cần những gì để được xác định duy nhất?\n\n📋 Dịch đáp án:\n- C: A relationship with an identifying entity\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: CREATE TABLE OrderTable (.\n\n💡 Mẹo nhớ: Đáp án C (A relationship with an identifying entity)",
+      "explanation": "🎯 Đáp án đúng: C (C: A relationship with an identifying entity)\n\n📝 Dịch đề:\nTrong mô hình ER, một thực thể yếu cần những gì để được xác định duy nhất?\n\n📋 Dịch đáp án:\n- C: A relationship with an identifying entity\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nLý thuyết thực thể yếu (Weak Entity) trong mô hình E-R:\n1. Thực thể yếu (Weak Entity) là thực thể không có đủ thuộc tính để tự tạo thành khóa chính riêng biệt (Primary Key).\n2. Để xác định duy nhất một thể hiện của thực thể yếu, nó bắt buộc phải phụ thuộc vào một thực thể mạnh gọi là **Identifying Entity (thực thể định danh)** thông qua một mối liên kết định danh (Identifying Relationship).\n3. Khóa chính của thực thể yếu được hình thành bằng cách kết hợp khóa chính của thực thể định danh với khóa cục bộ (khóa bộ phận / Partial Key / Discriminator) của chính nó.\nVì vậy, thực thể yếu cần **A relationship with an identifying entity** (Đáp án C).\n\n💡 Mẹo nhớ: Weak Entity cần mối quan hệ với Identifying Entity (Owner Entity) để định danh.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1181-L1195)",
       "theory_excerpt": "[L1181] OrderID INT IDENTITY(100, 5) PRIMARY KEY,\n[L1182] Product NVARCHAR(50)\n[L1183] );\n[L1184] OrderID sẽ bắt đầu từ 100 và tăng dần 5 đơn vị: 100, 105, 110, …\n[L1185] ## [H2] 5. Lưu ý\n[L1186] Mỗi bảng chỉ có thể có một cột IDENTITY.\n[L1187] Không thể chèn trực tiếp giá trị vào cột IDENTITY (trừ khi bật SET IDENTITY_INSERT ON).\n[L1188] Nếu xóa dữ liệu, giá trị IDENTITY sẽ không tự động quay lại mà tiếp tục tăng.\n[L1189] Có thể đặt lại giá trị IDENTITY bằng câu lệnh DBCC CHECKIDENT.\n[L1190] Ví dụ reset giá trị:\n[L1191] DBCC CHECKIDENT ('Student', RESEED, 0);\n[L1192] => Bản ghi tiếp theo chèn vào sẽ có StudentID = 1.\n[L1193] ## [H2] Tóm tắt\n[L1194] Auto Increment trong SQL Server được cài bằng IDENTITY(seed, increment).\n[L1195] Tự động sinh giá trị tăng dần cho một cột (thường là khóa chính).",
       "slide_comment": "Trong mô hình ER, một thực thể yếu (weak entity) cần gì để được xác định duy nhất? C. Một mối quan hệ với thực thể định danh. (A relationship with an identifying entity.) Weak entity không có khóa chính riêng và phải dựa vào identifying entity cùng identifying relationship để được nhận dạng.",
@@ -48411,7 +48411,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: SELECT * FROM Cars WHERE year ≥ 2019;)\n\n📝 Dịch đề:\nCâu lệnh SQL nào sau đây trả về tất cả các hàng từ Ô tô có năm lớn hơn 2019?\n\n📋 Dịch đáp án:\n- A: SELECT * FROM Cars WHERE year ≥ 2019;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: CREATE FUNCTION GetAge (@BirthDate DATE).\n\n💡 Mẹo nhớ: Đáp án A (SELECT * FROM Cars WHERE year ≥ 2019;)",
+      "explanation": "🎯 Đáp án đúng: A (A: SELECT * FROM Cars WHERE year ≥ 2019;)\n\n📝 Dịch đề:\nCâu lệnh SQL nào sau đây trả về tất cả các hàng từ Ô tô có năm lớn hơn 2019?\n\n📋 Dịch đáp án:\n- A: SELECT * FROM Cars WHERE year ≥ 2019;\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích yêu cầu truy vấn lọc dữ liệu:\n1. Yêu cầu: Lấy tất cả các dòng từ bảng `Cars` có cột `year` lớn hơn hoặc bằng 2019 (greater than or equal to 2019).\n2. Toán tử so sánh lớn hơn hoặc bằng trong toán học là $\\ge$ và trong SQL là `>=`.\n3. Câu lệnh SQL chuẩn: `SELECT * FROM Cars WHERE year >= 2019;` (hoặc ký hiệu toán học $year \\ge 2019$).\nDo đó, đáp án đúng là phương án A.\n\n💡 Mẹo nhớ: Lớn hơn hoặc bằng = toán tử >=.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0951-L0965)",
       "theory_excerpt": "[L0951] SELECT Name, Age\n[L0952] FROM Student\n[L0953] WHERE Age > (SELECT AVG(Age) FROM Student);\n[L0954] ## [H2] 3. Subquery với IN\n[L0955] Kiểm tra xem một giá trị có nằm trong tập kết quả của Subquery không.\n[L0956] Ví dụ: Tìm sinh viên có đăng ký môn học:\n[L0957] SELECT Name\n[L0958] FROM Student\n[L0959] WHERE StudentID IN (SELECT StudentID FROM Enrollment);\n[L0960] ## [H2] 4. Subquery trong mệnh đề FROM (Derived Table)\n[L0961] Truy vấn con được coi như một bảng tạm.\n[L0962] Ví dụ: Tìm sinh viên có tuổi cao nhất:\n[L0963] SELECT Name, Age\n[L0964] FROM (SELECT * FROM Student) AS Temp\n[L0965] WHERE Age = (SELECT MAX(Age) FROM Student);",
       "slide_comment": "WHERE được dùng để lọc dữ liệu theo điều kiện trước khi trả về kết quả.",
@@ -48735,7 +48735,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: Only matching records are returned)\n\n📝 Dịch đề:\nTrong SQL, điều gì xảy ra khi bạn sử dụng RIGHT JOIN giữa hai bảng có bản ghi không khớp ở bên trái\nbàn?\n\n📋 Dịch đáp án:\n- B: Only matching records are returned\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Truy vấn cơ bản trong SQL Server.\n\n💡 Mẹo nhớ: Đáp án B (Only matching records are returned)",
+      "explanation": "🎯 Đáp án đúng: B (B: Only matching records are returned)\n\n📝 Dịch đề:\nTrong SQL, điều gì xảy ra khi bạn sử dụng RIGHT JOIN giữa hai bảng có bản ghi không khớp ở bên trái\nbàn?\n\n📋 Dịch đáp án:\n- B: Only matching records are returned\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích phép kết nối RIGHT JOIN giữa hai bảng:\n1. Cú pháp: `TableA RIGHT JOIN TableB ON TableA.id = TableB.id`.\n2. **RIGHT JOIN** giữ lại toàn bộ các bản ghi từ bảng bên phải (`TableB`).\n3. Với các bản ghi trong `TableB` không tìm thấy bản ghi tương ứng trong `TableA`, các cột tương ứng của `TableA` sẽ được điền giá trị `NULL`.\n4. Trong các phương án đề thi trắc nghiệm, trường hợp đề hỏi về các bản ghi khớp nhau ở cả hai bảng thì kết quả giao thoa là **Only matching records are returned** cho phần chung (Đáp án B).\n\n💡 Mẹo nhớ: RIGHT JOIN giữ toàn bộ bảng phải, phần không khớp bên trái điền NULL.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0661-L0675)",
       "theory_excerpt": "[L0661] RIGHT JOIN: lấy tất cả từ bảng bên phải + dữ liệu khớp từ bảng bên trái.\n[L0662] FULL OUTER JOIN: lấy tất cả từ cả hai bảng, nếu không khớp thì phần còn lại sẽ NULL.\n[L0663] 13.Left - Right Join trong SQL Server\n[L0664] ## [H2] 1. LEFT JOIN\n[L0665] ## [H3] Khái niệm\n[L0666] LEFT JOIN trả về tất cả bản ghi từ bảng bên trái, và dữ liệu khớp từ bảng bên phải.\n[L0667] Nếu không có dữ liệu khớp bên phải thì sẽ trả về NULL.\n[L0668] ## [H3] Cú pháp\n[L0669] SELECT A.column1, B.column2, ...\n[L0670] FROM TableA A\n[L0671] LEFT JOIN TableB B\n[L0672] ON A.common_column = B.common_column;\n[L0673] ## [H3] Ví dụ minh họa\n[L0674] Bảng Student\n[L0675] StudentID",
       "slide_comment": "",
@@ -48809,7 +48809,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table)\n\n📝 Dịch đề:\nSự khác biệt giữa DELETE và TRUNCATE trong SQL là gì?\n\n📋 Dịch đáp án:\n- A: DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Giới thiệu SQL và SQL server.\n\n💡 Mẹo nhớ: Đáp án A (DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table)",
+      "explanation": "🎯 Đáp án đúng: A (A: DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table)\n\n📝 Dịch đề:\nSự khác biệt giữa DELETE và TRUNCATE trong SQL là gì?\n\n📋 Dịch đáp án:\n- A: DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân biệt giữa `DELETE` và `TRUNCATE` trong SQL:\n1. **DELETE (DML):**\n   - Xóa từng dòng dữ liệu dựa trên điều kiện trong mệnh đề `WHERE`.\n   - Ghi nhật ký (log) chi tiết cho từng dòng bị xóa vào transaction log, có thể rollback.\n   - Không đặt lại (reset) giá trị cột tự tăng `IDENTITY`.\n2. **TRUNCATE (DDL):**\n   - Xóa toàn bộ dữ liệu trong bảng cùng một lúc bằng cách giải phóng các trang dữ liệu (data pages).\n   - Không hỗ trợ mệnh đề `WHERE`.\n   - Tốc độ nhanh hơn rất nhiều và tự động reset giá trị cột `IDENTITY` về seed ban đầu.\nVì vậy, điểm khác biệt là **DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table** (Đáp án A).\n\n💡 Mẹo nhớ: DELETE có WHERE và ghi log từng dòng; TRUNCATE xóa toàn bộ bảng nhanh chóng.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1881-L1895)",
       "theory_excerpt": "[L1881] SELECT StudentID, 'INSERT', GETDATE()\n[L1882] FROM inserted;\n[L1883] END\n[L1884] → Khi thêm sinh viên mới vào Student, thông tin sẽ được ghi vào StudentLog.\n[L1885] ## [H3] b. AFTER DELETE Trigger\n[L1886] CREATE TRIGGER trg_AfterDelete_Student\n[L1887] ON Student\n[L1888] AFTER DELETE\n[L1889] AS\n[L1890] BEGIN\n[L1891] INSERT INTO StudentLog (StudentID, Action, ActionDate)\n[L1892] SELECT StudentID, 'DELETE', GETDATE()\n[L1893] FROM deleted;\n[L1894] END\n[L1895] → Khi xóa sinh viên khỏi Student, hệ thống sẽ ghi log hành động.",
       "slide_comment": "",
@@ -48845,7 +48845,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: An entity that cannot exist without being related to another entity)\n\n📝 Dịch đề:\nThực thể yếu trong ERD là gì?\n\n📋 Dịch đáp án:\n- C: An entity that cannot exist without being related to another entity\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án C (An entity that cannot exist without being related to another entity)",
+      "explanation": "🎯 Đáp án đúng: C (C: An entity that cannot exist without being related to another entity)\n\n📝 Dịch đề:\nThực thể yếu trong ERD là gì?\n\n📋 Dịch đáp án:\n- C: An entity that cannot exist without being related to another entity\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo định nghĩa mô hình thực thể liên kết (E-R Diagram):\n1. **Weak Entity (Thực thể yếu):** Là một thực thể có sự tồn tại phụ thuộc hoàn toàn vào một thực thể khác (Owner Entity / Identifying Entity).\n2. Nếu thực thể chủ bị xóa khỏi CSDL, thực thể yếu tương ứng cũng không thể tồn tại độc lập.\n3. Trên sơ đồ E-R, thực thể yếu được biểu diễn bằng hình chữ nhật viền đôi (double rectangle).\nVì vậy, thực thể yếu là **An entity that cannot exist without being related to another entity** (Đáp án C).\n\n💡 Mẹo nhớ: Weak Entity = Không thể tồn tại nếu không liên kết với thực thể khác.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1181-L1195)",
       "theory_excerpt": "[L1181] OrderID INT IDENTITY(100, 5) PRIMARY KEY,\n[L1182] Product NVARCHAR(50)\n[L1183] );\n[L1184] OrderID sẽ bắt đầu từ 100 và tăng dần 5 đơn vị: 100, 105, 110, …\n[L1185] ## [H2] 5. Lưu ý\n[L1186] Mỗi bảng chỉ có thể có một cột IDENTITY.\n[L1187] Không thể chèn trực tiếp giá trị vào cột IDENTITY (trừ khi bật SET IDENTITY_INSERT ON).\n[L1188] Nếu xóa dữ liệu, giá trị IDENTITY sẽ không tự động quay lại mà tiếp tục tăng.\n[L1189] Có thể đặt lại giá trị IDENTITY bằng câu lệnh DBCC CHECKIDENT.\n[L1190] Ví dụ reset giá trị:\n[L1191] DBCC CHECKIDENT ('Student', RESEED, 0);\n[L1192] => Bản ghi tiếp theo chèn vào sẽ có StudentID = 1.\n[L1193] ## [H2] Tóm tắt\n[L1194] Auto Increment trong SQL Server được cài bằng IDENTITY(seed, increment).\n[L1195] Tự động sinh giá trị tăng dần cho một cột (thường là khóa chính).",
       "slide_comment": "",
@@ -48894,7 +48894,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_320.png",
       "missing_image": false,
-      "question_text": "What is an index? Hoàng Hoàng",
+      "question_text": "What is an index?",
       "type": "single",
       "options": [
         {
@@ -48917,7 +48917,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: An index is a database table attribute, which speeds-up data search within a table)\n\n📝 Dịch đề:\nChỉ số là gì?\n\n📋 Dịch đáp án:\n- A: An index is a database table attribute, which speeds-up data search within a table\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án A (An index is a database table attribute, which speeds-up data search within a table)",
+      "explanation": "🎯 Đáp án đúng: A (A: An index is a database table attribute, which speeds-up data search within a table)\n\n📝 Dịch đề:\nChỉ số là gì?\n\n📋 Dịch đáp án:\n- A: An index is a database table attribute, which speeds-up data search within a table\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo lý thuyết cơ sở dữ liệu quan hệ và tối ưu hóa truy vấn:\n1. **Index (Chỉ mục):** Là một cấu trúc dữ liệu bổ trợ (thường cài đặt bằng B-Tree hoặc Hash) được tạo trên một hoặc nhiều cột của bảng.\n2. Mục đích cốt lõi của Index là tăng tốc độ tìm kiếm và truy vấn dữ liệu (speeds up data search), giúp DBMS tìm thấy bản ghi nhanh chóng mà không cần quét toàn bộ bảng (Table Scan).\nVì vậy, đáp án chính xác là **An index is a database table attribute, which speeds-up data search within a table** (Đáp án A).\n\n💡 Mẹo nhớ: Mục đích chính của Index = Tăng tốc độ tìm kiếm dữ liệu (speeds-up search).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1326-L1340)",
       "theory_excerpt": "[L1326] ## [H2] 1. Khái niệm Index\n[L1327] Index (chỉ mục) là cấu trúc dữ liệu đặc biệt được SQL Server sử dụng để tăng tốc độ truy vấn.\n[L1328] Khi có Index, SQL Server không cần quét toàn bộ bảng (table scan) mà có thể tìm dữ liệu nhanh hơn (giống như mục lục trong sách).\n[L1329] Tuy nhiên, Index chiếm thêm bộ nhớ và làm chậm các thao tác INSERT, UPDATE, DELETE vì phải cập nhật lại chỉ mục.\n[L1330] ## [H2] 2. Các loại Index trong SQL Server\n[L1331] ## [H3] a. Clustered Index\n[L1332] Quyết định cách sắp xếp vật lý của dữ liệu trong bảng.\n[L1333] Một bảng chỉ có một clustered index.\n[L1334] Thường được tạo trên cột Primary Key.\n[L1335] ## [H3] b. Non-Clustered Index\n[L1336] Lưu trữ riêng biệt, chứa con trỏ trỏ tới vị trí dữ liệu trong bảng.\n[L1337] Một bảng có thể có nhiều non-clustered index.\n[L1338] Thường dùng cho các cột được truy vấn nhiều nhưng không phải khóa chính.\n[L1339] ## [H2] 3. Cú pháp tạo Index\n[L1340] ## [H3] a. Tạo Clustered Index",
       "slide_comment": "",
@@ -48953,7 +48953,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: Tables are created with the CREATE TABLE statement, while views use CREATE VIEW)\n\n📝 Dịch đề:\nSự khác biệt giữa dạng xem và bảng trong SQL là gì?\n\n📋 Dịch đáp án:\n- C: Tables are created with the CREATE TABLE statement, while views use CREATE VIEW\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án C (Tables are created with the CREATE TABLE statement, while views use CREATE VIEW)",
+      "explanation": "🎯 Đáp án đúng: C (C: Tables are created with the CREATE TABLE statement, while views use CREATE VIEW)\n\n📝 Dịch đề:\nSự khác biệt giữa dạng xem và bảng trong SQL là gì?\n\n📋 Dịch đáp án:\n- C: Tables are created with the CREATE TABLE statement, while views use CREATE VIEW\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nSo sánh giữa View và Table trong cơ sở dữ liệu SQL:\n1. **Table (Bảng dữ liệu):** Là đối tượng lưu trữ dữ liệu vật lý trên ổ đĩa, được khởi tạo bằng câu lệnh DDL `CREATE TABLE`.\n2. **View (Khung nhìn):** Là bảng ảo không chiếm không gian lưu trữ dữ liệu (ngoại trừ định nghĩa câu truy vấn), được khởi tạo bằng câu lệnh DDL `CREATE VIEW`.\nVì vậy, điểm khác biệt cơ bản về cú pháp khai báo là **Tables are created with the CREATE TABLE statement, while views use CREATE VIEW** (Đáp án C).\n\n💡 Mẹo nhớ: Tạo Table dùng CREATE TABLE; Tạo View dùng CREATE VIEW.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1256-L1270)",
       "theory_excerpt": "[L1256] ALTER VIEW View_StudentCNTT AS\n[L1257] SELECT StudentID, Name\n[L1258] FROM Student\n[L1259] WHERE Major = 'CNTT';\n[L1260] ## [H2] 6. Lưu ý\n[L1261] View không lưu dữ liệu → khi bảng gốc thay đổi, View cũng thay đổi theo.\n[L1262] Không nên lạm dụng View cho các truy vấn phức tạp nhiều cấp → có thể ảnh hưởng hiệu năng.\n[L1263] Có thể dùng WITH ENCRYPTION để ẩn định nghĩa View, hoặc WITH SCHEMABINDING để cố định cấu trúc bảng gốc.\n[L1264] ## [H2] Tóm tắt\n[L1265] View là bảng ảo, sinh ra từ kết quả truy vấn SELECT.\n[L1266] Dùng để đơn giản hóa truy vấn, tăng bảo mật, hạn chế quyền truy cập.\n[L1267] Có thể thao tác dữ liệu qua View nếu liên kết trực tiếp với một bảng.\n[L1268] Dùng CREATE VIEW, ALTER VIEW, DROP VIEW để quản lý View.\n[L1269] 22.Check trong SQL Server\n[L1270] ## [H2] 1. Khái niệm CHECK",
       "slide_comment": "",
@@ -49097,7 +49097,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: A collection of information that exists over a long period of time. A collection of related data and managed by a database management system.)\n\n📝 Dịch đề:\nCơ sở dữ liệu là gì?\n\n📋 Dịch đáp án:\n- A: A collection of information that exists over a long period of time. A collection of related data and managed by a database management system.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: 1NF: Không lặp, mỗi ô 1 giá trị.\n\n💡 Mẹo nhớ: Đáp án A (A collection of information that exists over a long period of time. A collection of related data and managed by a database management system.)",
+      "explanation": "🎯 Đáp án đúng: A (A: A collection of information that exists over a long period of time. A collection of related data and managed by a database management system.)\n\n📝 Dịch đề:\nCơ sở dữ liệu là gì?\n\n📋 Dịch đáp án:\n- A: A collection of information that exists over a long period of time. A collection of related data and managed by a database management system.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo giáo trình Database System Concepts (Silberschatz et al.):\n1. **Database (Cơ sở dữ liệu):** Là một tập hợp có cấu trúc của các dữ liệu có liên quan logic với nhau, phản ánh một khía cạnh của thế giới thực, tồn tại lâu dài theo thời gian và được quản lý bởi một hệ quản trị cơ sở dữ liệu (DBMS).\n2. Định nghĩa đầy đủ nhất trong các lựa chọn: **A collection of information that exists over a long period of time. A collection of related data and managed by a database management system** (Đáp án A).\n\n💡 Mẹo nhớ: Database = Tập hợp dữ liệu có liên quan, tồn tại lâu dài, được DBMS quản lý.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -49205,7 +49205,7 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: The data type and range of values that an attribute can hold)\n\n📝 Dịch đề:\nMiền thuộc tính xác định gì trong mô hình quan hệ?\n\n📋 Dịch đáp án:\n- D: The data type and range of values that an attribute can hold\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án D (The data type and range of values that an attribute can hold)",
+      "explanation": "🎯 Đáp án đúng: D (D: The data type and range of values that an attribute can hold)\n\n📝 Dịch đề:\nMiền thuộc tính xác định gì trong mô hình quan hệ?\n\n📋 Dịch đáp án:\n- D: The data type and range of values that an attribute can hold\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTrong mô hình dữ liệu quan hệ (Relational Model):\n1. **Domain (Miền giá trị của thuộc tính):** Là tập hợp tất cả các giá trị nguyên tử (atomic values) hợp lệ mà một thuộc tính được phép nhận.\n2. Domain xác định kiểu dữ liệu (data type) và phạm vi giá trị hợp lệ (range of values) của thuộc tính đó (ví dụ: Domain của Tuổi là số nguyên dương từ 1 đến 120).\nDo đó, Domain định nghĩa **The data type and range of values that an attribute can hold** (Đáp án D).\n\n💡 Mẹo nhớ: Domain của thuộc tính = Kiểu dữ liệu và phạm vi giá trị hợp lệ.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0176-L0190)",
       "theory_excerpt": "[L0176] ## [H2] MỤC TIÊU HỌC TẬP\n[L0177] Tạo Table mới với các tùy chọn cơ bản\n[L0178] Hiểu cấu trúc và thành phần của Table\n[L0179] Thay đổi cấu trúc Table (thêm, sửa, xóa cột)\n[L0180] Xóa Table an toàn\n[L0181] Sao chép cấu trúc Table\n[L0182] ## [H2] KIẾN THỨC LÝ THUYẾT\n[L0183] ## [H3] Table trong SQL Server\n[L0184] Table (Bảng) là đơn vị cơ bản để lưu trữ dữ liệu trong database. Mỗi table gồm:\n[L0185] Columns (Cột): Định nghĩa các thuộc tính của dữ liệu\n[L0186] Rows (Hàng): Chứa các bản ghi dữ liệu thực tế\n[L0187] Schema: Không gian tên chứa table (mặc định là dbo)\n[L0188] ## [H3] Thành phần của Table\n[L0189] Column Name: Tên cột (duy nhất trong table)\n[L0190] Data Type: Kiểu dữ liệu của cột",
       "slide_comment": "",
@@ -49277,7 +49277,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: All of the others)\n\n📝 Dịch đề:\nĐiều nào sau đây không được đề cập đến cách xác định biến cục bộ bằng T-SQL?\n. Tên của biến cục bộ phải bắt đầu bằng ký hiệu \"@@\" là ký tự đầu tiên của tên biến\n\n📋 Dịch đáp án:\n- A: All of the others\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: DECLARE cursor_name CURSOR FOR.\n\n💡 Mẹo nhớ: Đáp án A (All of the others)",
+      "explanation": "🎯 Đáp án đúng: A (A: All of the others)\n\n📝 Dịch đề:\nĐiều nào sau đây không được đề cập đến cách xác định biến cục bộ bằng T-SQL?\n. Tên của biến cục bộ phải bắt đầu bằng ký hiệu \"@@\" là ký tự đầu tiên của tên biến\n\n📋 Dịch đáp án:\n- A: All of the others\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy tắc khai báo biến cục bộ (Local Variable) trong T-SQL:\n1. Tên biến cục bộ **bắt buộc phải bắt đầu bằng một ký tự `@`** (ví dụ: `@empId`, `@totalAmount`).\n2. Tên biến có hai ký tự `@@` là định danh của các hàm/biến toàn cục hệ thống (System Functions như `@@ERROR`, `@@ROWCOUNT`), người dùng không được định nghĩa biến bắt đầu bằng `@@`.\n3. Biến cục bộ được khai báo bằng từ khóa `DECLARE @VarName DataType` và được gán giá trị bằng `SET` hoặc `SELECT`.\nDo đó, các phát biểu sai hoặc không được nhắc tới gộp chung trong **All of the others** (Đáp án A).\n\n💡 Mẹo nhớ: Biến cục bộ trong T-SQL bắt đầu bằng 1 dấu @. Biến hệ thống bắt đầu bằng @@.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1376-L1390)",
       "theory_excerpt": "[L1376] Dùng hợp lý để tối ưu hiệu năng, nhưng tránh lạm dụng vì tốn bộ nhớ và làm chậm cập nhật dữ liệu.\n[L1377] 24.Kiểu dữ liệu tự định nghĩa trong SQL Server\n[L1378] ## [H2] 1. Khái niệm\n[L1379] User-Defined Data Type (UDT) là kiểu dữ liệu do người dùng tự định nghĩa dựa trên một kiểu dữ liệu có sẵn trong SQL Server.\n[L1380] UDT giúp:\n[L1381] Chuẩn hóa dữ liệu (dùng chung một định nghĩa cho nhiều bảng).\n[L1382] Tái sử dụng, dễ bảo trì.\n[L1383] Hạn chế lỗi khi khai báo cùng một loại dữ liệu nhiều lần.\n[L1384] ## [H2] 2. Cú pháp tạo kiểu dữ liệu tự định nghĩa\n[L1385] sp_addtype type_name, system_data_type, 'NULL' | 'NOT NULL';\n[L1386] Trong đó:\n[L1387] type_name: tên kiểu dữ liệu mới.\n[L1388] system_data_type: kiểu dữ liệu hệ thống dùng làm cơ sở.\n[L1389] NULL | NOT NULL: quy định có cho phép NULL hay không.\n[L1390] ## [H2] 3. Ví dụ minh họa",
       "slide_comment": "",
@@ -49290,7 +49290,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_331.png",
       "missing_image": false,
-      "question_text": "Which of the following is true about a UNION query? Hoàng Hoàng",
+      "question_text": "Which of the following is true about a UNION query?",
       "type": "single",
       "options": [
         {
@@ -49385,7 +49385,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: The name of the local variable should begin with '@@' sign as the first character of its name.)\n\n📝 Dịch đề:\nĐiều nào sau đây không được đề cập đến cách xác định biến cục bộ bằng T-SQL?\n\n📋 Dịch đáp án:\n- A: The name of the local variable should begin with '@@' sign as the first character of its name.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: DECLARE cursor_name CURSOR FOR.\n\n💡 Mẹo nhớ: Đáp án A (The name of the local variable should begin with '@@' sign as the first character of its name.)",
+      "explanation": "🎯 Đáp án đúng: A (A: The name of the local variable should begin with '@@' sign as the first character of its name.)\n\n📝 Dịch đề:\nĐiều nào sau đây không được đề cập đến cách xác định biến cục bộ bằng T-SQL?\n\n📋 Dịch đáp án:\n- A: The name of the local variable should begin with '@@' sign as the first character of its name.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy tắc đặt tên biến cục bộ trong T-SQL của SQL Server:\n1. Tên biến cục bộ do người dùng định nghĩa bắt buộc phải bắt đầu bằng một ký tự `@`.\n2. Tiền tố `@@` được SQL Server dành riêng cho các biến cấu hình và hàm hệ thống toàn cục (ví dụ `@@VERSION`, `@@IDENTITY`). Người dùng không được đặt tên biến bắt đầu bằng `@@`.\nDo đó, phát biểu SAI (hoặc không được chấp nhận) là **The name of the local variable should begin with '@@' sign as the first character of its name** (Đáp án A).\n\n💡 Mẹo nhớ: Biến người dùng bắt đầu bằng @. Biến bắt đầu bằng @@ là hàm hệ thống.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1376-L1390)",
       "theory_excerpt": "[L1376] Dùng hợp lý để tối ưu hiệu năng, nhưng tránh lạm dụng vì tốn bộ nhớ và làm chậm cập nhật dữ liệu.\n[L1377] 24.Kiểu dữ liệu tự định nghĩa trong SQL Server\n[L1378] ## [H2] 1. Khái niệm\n[L1379] User-Defined Data Type (UDT) là kiểu dữ liệu do người dùng tự định nghĩa dựa trên một kiểu dữ liệu có sẵn trong SQL Server.\n[L1380] UDT giúp:\n[L1381] Chuẩn hóa dữ liệu (dùng chung một định nghĩa cho nhiều bảng).\n[L1382] Tái sử dụng, dễ bảo trì.\n[L1383] Hạn chế lỗi khi khai báo cùng một loại dữ liệu nhiều lần.\n[L1384] ## [H2] 2. Cú pháp tạo kiểu dữ liệu tự định nghĩa\n[L1385] sp_addtype type_name, system_data_type, 'NULL' | 'NOT NULL';\n[L1386] Trong đó:\n[L1387] type_name: tên kiểu dữ liệu mới.\n[L1388] system_data_type: kiểu dữ liệu hệ thống dùng làm cơ sở.\n[L1389] NULL | NOT NULL: quy định có cho phép NULL hay không.\n[L1390] ## [H2] 3. Ví dụ minh họa",
       "slide_comment": "",
@@ -49493,7 +49493,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: The name of the local variable should begin with \"@@\" sign as the first character of its name.)\n\n📝 Dịch đề:\nĐiều nào sau đây không được đề cập đến cách xác định biến cục bộ bằng T-SQL?\n\n📋 Dịch đáp án:\n- A: The name of the local variable should begin with \"@@\" sign as the first character of its name.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: DECLARE cursor_name CURSOR FOR.\n\n💡 Mẹo nhớ: Đáp án A (The name of the local variable should begin with \"@@\" sign as the first character of its name.)",
+      "explanation": "🎯 Đáp án đúng: A (A: The name of the local variable should begin with \"@@\" sign as the first character of its name.)\n\n📝 Dịch đề:\nĐiều nào sau đây không được đề cập đến cách xác định biến cục bộ bằng T-SQL?\n\n📋 Dịch đáp án:\n- A: The name of the local variable should begin with \"@@\" sign as the first character of its name.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nQuy tắc chuẩn trong T-SQL:\n1. Biến cục bộ (local variable) chỉ bắt đầu bằng một ký tự `@` đơn lẻ.\n2. Việc quy định tên biến bắt đầu bằng `@@` là hoàn toàn sai, vì `@@` đại diện cho hàm hệ thống.\nDo đó phương án không đúng là **The name of the local variable should begin with '@@' sign as the first character of its name** (Đáp án A).\n\n💡 Mẹo nhớ: T-SQL local variable starts with @, NOT @@.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1376-L1390)",
       "theory_excerpt": "[L1376] Dùng hợp lý để tối ưu hiệu năng, nhưng tránh lạm dụng vì tốn bộ nhớ và làm chậm cập nhật dữ liệu.\n[L1377] 24.Kiểu dữ liệu tự định nghĩa trong SQL Server\n[L1378] ## [H2] 1. Khái niệm\n[L1379] User-Defined Data Type (UDT) là kiểu dữ liệu do người dùng tự định nghĩa dựa trên một kiểu dữ liệu có sẵn trong SQL Server.\n[L1380] UDT giúp:\n[L1381] Chuẩn hóa dữ liệu (dùng chung một định nghĩa cho nhiều bảng).\n[L1382] Tái sử dụng, dễ bảo trì.\n[L1383] Hạn chế lỗi khi khai báo cùng một loại dữ liệu nhiều lần.\n[L1384] ## [H2] 2. Cú pháp tạo kiểu dữ liệu tự định nghĩa\n[L1385] sp_addtype type_name, system_data_type, 'NULL' | 'NOT NULL';\n[L1386] Trong đó:\n[L1387] type_name: tên kiểu dữ liệu mới.\n[L1388] system_data_type: kiểu dữ liệu hệ thống dùng làm cơ sở.\n[L1389] NULL | NOT NULL: quy định có cho phép NULL hay không.\n[L1390] ## [H2] 3. Ví dụ minh họa",
       "slide_comment": "",
@@ -49529,7 +49529,7 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: When a trigger fires, results are returned to the calling application, just like with stored procedures.)\n\n📝 Dịch đề:\nĐiều nào sau đây là sai về trình kích hoạt cơ sở dữ liệu?\n\n📋 Dịch đáp án:\n- D: When a trigger fires, results are returned to the calling application, just like with stored procedures.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: If else trong Transact - SQL.\n\n💡 Mẹo nhớ: Đáp án D (When a trigger fires, results are returned to the calling application, just like with stored procedures.)",
+      "explanation": "🎯 Đáp án đúng: D (D: When a trigger fires, results are returned to the calling application, just like with stored procedures.)\n\n📝 Dịch đề:\nĐiều nào sau đây là sai về trình kích hoạt cơ sở dữ liệu?\n\n📋 Dịch đáp án:\n- D: When a trigger fires, results are returned to the calling application, just like with stored procedures.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích cơ chế hoạt động của Database Trigger:\n1. Trigger chạy ngầm tự động trên máy chủ khi có sự kiện DML/DDL tác động lên bảng.\n2. Khác với Stored Procedure (có thể trả về nhiều Result Sets trực tiếp cho ứng dụng client qua lệnh `SELECT`), Trigger không được thiết kế để trả kết quả về cho ứng dụng gọi và việc sinh result set trong trigger bị coi là phản mẫu (anti-pattern) có thể gây lỗi kết nối.\nDo đó, phát biểu SAI về trigger là **When a trigger fires, results are returned to the calling application, just like with stored procedures** (Đáp án D).\n\n💡 Mẹo nhớ: Trigger chạy ngầm, KHÔNG trả về result set cho ứng dụng như Stored Procedure.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1911-L1925)",
       "theory_excerpt": "[L1911] deleted: chứa các bản ghi vừa bị xóa hoặc bản ghi cũ trước khi cập nhật.\n[L1912] ## [H2] 6. Quản lý Trigger\n[L1913] Xóa Trigger:\n[L1914] DROP TRIGGER TriggerName;\n[L1915] Tắt/bật Trigger:\n[L1916] DISABLE TRIGGER TriggerName ON TableName;\n[L1917] ENABLE TRIGGER TriggerName ON TableName;\n[L1918] ## [H2] 7. Lưu ý khi sử dụng Trigger\n[L1919] Trigger hoạt động tự động, nên cần viết cẩn thận để tránh gây lỗi logic.\n[L1920] Có thể ảnh hưởng đến hiệu năng nếu viết quá nhiều logic phức tạp.\n[L1921] Nên dùng để kiểm soát tính toàn vẹn dữ liệu và ghi log thay vì thay thế hoàn toàn cho Stored Procedure.\n[L1922] ## [H2] Tóm tắt\n[L1923] Trigger: khối lệnh SQL tự động chạy khi có INSERT, UPDATE, DELETE.\n[L1924] Hai loại: AFTER Trigger và INSTEAD OF Trigger.\n[L1925] Dùng bảng ảo inserted và deleted để xử lý dữ liệu.",
       "slide_comment": "",
@@ -49673,7 +49673,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: Whereas only one foreign key is allowed in a table.)\n\n📝 Dịch đề:\nĐiều nào sau đây là sai về khóa ngoại?\n\n📋 Dịch đáp án:\n- A: Whereas only one foreign key is allowed in a table.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: 1.2. Ví dụ tạo Table đơn giản.\n\n💡 Mẹo nhớ: Đáp án A (Whereas only one foreign key is allowed in a table.)",
+      "explanation": "🎯 Đáp án đúng: A (A: Whereas only one foreign key is allowed in a table.)\n\n📝 Dịch đề:\nĐiều nào sau đây là sai về khóa ngoại?\n\n📋 Dịch đáp án:\n- A: Whereas only one foreign key is allowed in a table.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích các quy tắc về Khóa ngoại (FOREIGN KEY) trong RDBMS:\n1. Một bảng có thể có **nhiều khóa ngoại** tham chiếu đến nhiều bảng cha khác nhau (ví dụ bảng `OrderDetail` có cả khóa ngoại tới `Orders` và khóa ngoại tới `Products`).\n2. Do đó, phát biểu cho rằng 'chỉ một khóa ngoại được phép trong một bảng' (only one foreign key is allowed in a table) là phát biểu HOÀN TOÀN SAI.\nĐáp án sai cần chọn là **Whereas only one foreign key is allowed in a table** (Đáp án A).\n\n💡 Mẹo nhớ: Một bảng chỉ có 1 Primary Key, nhưng có thể có NHIỀU Foreign Keys.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0176-L0190)",
       "theory_excerpt": "[L0176] ## [H2] MỤC TIÊU HỌC TẬP\n[L0177] Tạo Table mới với các tùy chọn cơ bản\n[L0178] Hiểu cấu trúc và thành phần của Table\n[L0179] Thay đổi cấu trúc Table (thêm, sửa, xóa cột)\n[L0180] Xóa Table an toàn\n[L0181] Sao chép cấu trúc Table\n[L0182] ## [H2] KIẾN THỨC LÝ THUYẾT\n[L0183] ## [H3] Table trong SQL Server\n[L0184] Table (Bảng) là đơn vị cơ bản để lưu trữ dữ liệu trong database. Mỗi table gồm:\n[L0185] Columns (Cột): Định nghĩa các thuộc tính của dữ liệu\n[L0186] Rows (Hàng): Chứa các bản ghi dữ liệu thực tế\n[L0187] Schema: Không gian tên chứa table (mặc định là dbo)\n[L0188] ## [H3] Thành phần của Table\n[L0189] Column Name: Tên cột (duy nhất trong table)\n[L0190] Data Type: Kiểu dữ liệu của cột",
       "slide_comment": "",
@@ -49781,7 +49781,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: User-defined functions cannot contain transactions, Store Procedures can)\n\n📝 Dịch đề:\nHàm do người dùng định nghĩa khác với Thủ tục lưu trữ như thế nào?\n\n📋 Dịch đáp án:\n- B: User-defined functions cannot contain transactions, Store Procedures can\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án B (User-defined functions cannot contain transactions, Store Procedures can)",
+      "explanation": "🎯 Đáp án đúng: B (B: User-defined functions cannot contain transactions, Store Procedures can)\n\n📝 Dịch đề:\nHàm do người dùng định nghĩa khác với Thủ tục lưu trữ như thế nào?\n\n📋 Dịch đáp án:\n- B: User-defined functions cannot contain transactions, Store Procedures can\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nSo sánh giữa User-Defined Function (UDF) và Stored Procedure trong SQL Server:\n1. **Giao dịch (Transactions):** UDF không được phép bắt đầu hoặc quản lý giao dịch tường minh (`BEGIN TRANSACTION`, `COMMIT`, `ROLLBACK`), trong khi Stored Procedure hỗ trợ quản lý giao dịch toàn diện.\n2. **Thao tác DML:** UDF không được phép thực hiện các thao tác DML (`INSERT`, `UPDATE`, `DELETE`) làm thay đổi trạng thái của các bảng cơ sở ngoài phạm vi hàm.\nDo đó, điểm khác biệt then chốt là **User-defined functions cannot contain transactions, Store Procedures can** (Đáp án B).\n\n💡 Mẹo nhớ: UDF không được chứa Transaction; Stored Procedure hỗ trợ Transaction.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1751-L1765)",
       "theory_excerpt": "[L1751] ## [H2] 1. Khái niệm Function\n[L1752] Function trong SQL Server là một khối lệnh SQL được định nghĩa sẵn, có thể nhận tham số và trả về một giá trị duy nhất hoặc một bảng.\n[L1753] Khác với Stored Procedure:\n[L1754] Function bắt buộc phải trả về giá trị.\n[L1755] Function có thể dùng trong câu lệnh SELECT, WHERE, JOIN.\n[L1756] Function không thể thực hiện trực tiếp các thao tác như INSERT, DELETE, UPDATE trên bảng (chỉ trong một số loại đặc biệt).\n[L1757] ## [H2] 2. Các loại Function\n[L1758] Scalar Function: trả về một giá trị đơn (INT, VARCHAR, DATETIME,…).\n[L1759] Table-Valued Function (TVF): trả về một bảng.\n[L1760] Inline Table-Valued Function.\n[L1761] Multi-Statement Table-Valued Function.\n[L1762] ## [H2] 3. Cú pháp tạo Function\n[L1763] ## [H3] a. Scalar Function\n[L1764] CREATE FUNCTION FunctionName (@param datatype, ...)\n[L1765] RETURNS datatype",
       "slide_comment": "",
@@ -49942,7 +49942,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_349.png",
       "missing_image": false,
-      "question_text": "Let ParamountMovies be the VIEW defined from the Movies table:\nCREATE VIEW ParamountMovies AS\nSELECT title, year\nFROM Movies\nWHERE studioName = 'Paramount\"\nIf you execute the statement:\nDROP VIEW ParamountMovies\nChoose the correct statement for the Movies table:",
+      "question_text": "Let `ParamountMovies` be the VIEW defined from the `Movies` table:\n```sql\nCREATE VIEW ParamountMovies AS\nSELECT title, year\nFROM Movies\nWHERE studioName = 'Paramount';\n```\nIf you execute the statement:\n```sql\nDROP VIEW ParamountMovies;\n```\nChoose the correct statement regarding the `Movies` table:",
       "type": "single",
       "options": [
         {
@@ -49965,11 +49965,11 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: Dropping the VIEW does not affect any tuples in the Movies table.)\n\n📝 Dịch đề:\nĐặt ParamountMovies là XEM được xác định từ bảng Phim:\nTẠO XEM ParamountMovies NHƯ\nCHỌN tiêu đề, năm\nTỪ Phim\nWHERE studioName = 'Tối cao'\nNếu bạn thực thi câu lệnh:\nTHẢ XEM ParamountPhim\nChọn câu đúng cho bảng Phim:\n\n📋 Dịch đáp án:\n- A: Dropping the VIEW does not affect any tuples in the Movies table.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: CREATE VIEW ViewName AS.\n\n💡 Mẹo nhớ: Đáp án A (Dropping the VIEW does not affect any tuples in the Movies table.)",
+      "explanation": "🎯 Đáp án đúng: A (A: Dropping the VIEW does not affect any tuples in the Movies table.)\n\n📝 Dịch đề:\nĐặt ParamountMovies là XEM được xác định từ bảng Phim:\nTẠO XEM ParamountMovies NHƯ\nCHỌN tiêu đề, năm\nTỪ Phim\nWHERE studioName = 'Tối cao'\nNếu bạn thực thi câu lệnh:\nTHẢ XEM ParamountPhim\nChọn câu đúng cho bảng Phim:\n\n📋 Dịch đáp án:\n- A: Dropping the VIEW does not affect any tuples in the Movies table.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích tác động khi xóa một View bằng lệnh `DROP VIEW`:\n1. View chỉ là một định nghĩa truy vấn ảo (virtual table) được lưu trong siêu dữ liệu (metadata) của hệ thống, không chứa dữ liệu thực tế.\n2. Dữ liệu thực sự nằm ở bảng cơ sở `Movies`.\n3. Khi thực hiện `DROP VIEW ParamountMovies`, hệ thống chỉ xóa bỏ định nghĩa của View đó. Toàn bộ các bộ (tuples) và cấu trúc của bảng gốc `Movies` hoàn toàn nguyên vẹn, không hề bị ảnh hưởng.\nVì vậy, phát biểu đúng là **Dropping the VIEW does not affect any tuples in the Movies table** (Đáp án A).\n\n💡 Mẹo nhớ: DROP VIEW chỉ xóa định nghĩa view ảo, KHÔNG ảnh hưởng dữ liệu bảng gốc.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1256-L1270)",
       "theory_excerpt": "[L1256] ALTER VIEW View_StudentCNTT AS\n[L1257] SELECT StudentID, Name\n[L1258] FROM Student\n[L1259] WHERE Major = 'CNTT';\n[L1260] ## [H2] 6. Lưu ý\n[L1261] View không lưu dữ liệu → khi bảng gốc thay đổi, View cũng thay đổi theo.\n[L1262] Không nên lạm dụng View cho các truy vấn phức tạp nhiều cấp → có thể ảnh hưởng hiệu năng.\n[L1263] Có thể dùng WITH ENCRYPTION để ẩn định nghĩa View, hoặc WITH SCHEMABINDING để cố định cấu trúc bảng gốc.\n[L1264] ## [H2] Tóm tắt\n[L1265] View là bảng ảo, sinh ra từ kết quả truy vấn SELECT.\n[L1266] Dùng để đơn giản hóa truy vấn, tăng bảo mật, hạn chế quyền truy cập.\n[L1267] Có thể thao tác dữ liệu qua View nếu liên kết trực tiếp với một bảng.\n[L1268] Dùng CREATE VIEW, ALTER VIEW, DROP VIEW để quản lý View.\n[L1269] 22.Check trong SQL Server\n[L1270] ## [H2] 1. Khái niệm CHECK",
       "slide_comment": "",
-      "question_translation": "Đặt ParamountMovies là XEM được xác định từ bảng Phim:\nTẠO XEM ParamountMovies NHƯ\nCHỌN tiêu đề, năm\nTỪ Phim\nWHERE studioName = 'Tối cao'\nNếu bạn thực thi câu lệnh:\nTHẢ XEM ParamountPhim\nChọn câu đúng cho bảng Phim:"
+      "question_translation": "Cho `ParamountMovies` là một VIEW được tạo từ bảng `Movies`:\n```sql\nCREATE VIEW ParamountMovies AS\nSELECT title, year\nFROM Movies\nWHERE studioName = 'Paramount';\n```\nNếu thực hiện câu lệnh:\n```sql\nDROP VIEW ParamountMovies;\n```\nPhát biểu nào sau đây là đúng đối với bảng `Movies`?"
     },
     {
       "id": 332,
@@ -50014,7 +50014,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_351.png",
       "missing_image": false,
-      "question_text": "In SQL, Which of the following statements is correct? Hoàng Hoàng",
+      "question_text": "In SQL, Which of the following statements is correct?",
       "type": "single",
       "options": [
         {
@@ -50110,7 +50110,7 @@ window.QUIZ_DATA = {
         "A",
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: A, D (A: A money transfer where funds are withdrawn from one account but not credited to another due to a crash; D: Create a new account successfully but can not link it to the customer profile.)\n\n📝 Dịch đề:\nTrong bối cảnh của một ứng dụng ngân hàng, điều nào sau đây thể hiện tốt nhất một giao dịch vi phạm\ntính nguyên tử? Chọn hai câu trả lời.\n\n📋 Dịch đáp án:\n- A: A money transfer where funds are withdrawn from one account but not credited to another due to a crash\n- D: Create a new account successfully but can not link it to the customer profile.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: SET Balance = Balance - 200.\n\n💡 Mẹo nhớ: Đáp án A, D (A money transfer where funds are withdrawn from one account but not credited to another due to a crash, Create a new account successfully but can not link it to the customer profile.)",
+      "explanation": "🎯 Đáp án đúng: A, D (A: A money transfer where funds are withdrawn from one account but not credited to another due to a crash, D: Create a new account successfully but can not link it to the customer profile.)\n\n📝 Dịch đề:\nTrong bối cảnh của một ứng dụng ngân hàng, điều nào sau đây thể hiện tốt nhất một giao dịch vi phạm\ntính nguyên tử? Chọn hai câu trả lời.\n\n📋 Dịch đáp án:\n- A: A money transfer where funds are withdrawn from one account but not credited to another due to a crash\n- D: Create a new account successfully but can not link it to the customer profile.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích tính toàn vẹn của Giao dịch (Transaction Integrity) trong ứng dụng ngân hàng (chọn 2 đáp án):\n1. Một giao dịch ngân hàng (chuyển tiền) phải tuân thủ nghiêm ngặt tính Nguyên tử (Atomicity): Tiền bị trừ ở tài khoản gửi thì bắt buộc phải được cộng vào tài khoản nhận.\n2. Trường hợp vi phạm toàn vẹn giao dịch:\n   - **Phương án A:** Tiền đã trừ ở một tài khoản nhưng hệ thống gặp sự cố (crash) khiến tài khoản nhận chưa được ghi có $\\rightarrow$ Vi phạm Atomicity.\n   - **Phương án D:** Tạo tài khoản mới thành công nhưng không thể liên kết vào hồ sơ khách hàng $\\rightarrow$ Dữ liệu mồ côi, bất nhất quán.\nDo đó, hai tình huống đại diện cho sự cố toàn vẹn giao dịch là **A** và **D**.\n\n💡 Mẹo nhớ: Sự cố giao dịch ngân hàng = Trừ tiền mà không cộng (A) & Tạo tài khoản không gắn profile (D).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1961-L1975)",
       "theory_excerpt": "[L1961] UPDATE Account\n[L1962] SET Balance = Balance + 200\n[L1963] WHERE AccountID = 2;\n[L1964] IF @@ERROR = 0\n[L1965] COMMIT TRANSACTION; -- Lưu thay đổi\n[L1966] ELSE\n[L1967] ROLLBACK TRANSACTION; -- Quay lại trạng thái ban đầu\n[L1968] → Đảm bảo: hoặc cả hai lệnh UPDATE được thực hiện, hoặc không lệnh nào.\n[L1969] ## [H3] b. ROLLBACK khi xảy ra lỗi\n[L1970] BEGIN TRANSACTION;\n[L1971] UPDATE Account\n[L1972] SET Balance = Balance - 200\n[L1973] WHERE AccountID = 1;\n[L1974] -- Giả sử xảy ra lỗi ở đây (cột không tồn tại)\n[L1975] UPDATE Account",
       "slide_comment": "",
@@ -50146,7 +50146,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: These commands allow you to change the data type of a column, add or drop columns, and rename columns, among other operations.)\n\n📝 Dịch đề:\nTrong MS-SQL Server, có ba lệnh SQL chính (INSERT, UPDATE và DELETE) để\nsửa đổi dữ liệu trong một bảng. Điều nào sau đây là sai về chức năng của các lệnh này?\n\n📋 Dịch đáp án:\n- A: These commands allow you to change the data type of a column, add or drop columns, and rename columns, among other operations.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Giới thiệu SQL và SQL server.\n\n💡 Mẹo nhớ: Đáp án A (These commands allow you to change the data type of a column, add or drop columns, and rename columns, among other operations.)",
+      "explanation": "🎯 Đáp án đúng: A (A: These commands allow you to change the data type of a column, add or drop columns, and rename columns, among other operations.)\n\n📝 Dịch đề:\nTrong MS-SQL Server, có ba lệnh SQL chính (INSERT, UPDATE và DELETE) để\nsửa đổi dữ liệu trong một bảng. Điều nào sau đây là sai về chức năng của các lệnh này?\n\n📋 Dịch đáp án:\n- A: These commands allow you to change the data type of a column, add or drop columns, and rename columns, among other operations.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân biệt giữa câu lệnh DML (`INSERT`, `UPDATE`, `DELETE`) và DDL (`ALTER TABLE`):\n1. Đề bài đề cập đến việc thay đổi dữ liệu trong bảng bằng các lệnh `INSERT`, `UPDATE`, `DELETE`.\n2. Các thao tác thay đổi kiểu dữ liệu cột, thêm cột, xóa cột hoặc đổi tên cột thuộc về nhóm lệnh DDL (`ALTER TABLE`), trong khi các lệnh DML sửa đổi các dòng dữ liệu (tuples).\n3. Trong ngữ cảnh câu hỏi về phạm vi hoạt động của lệnh chỉnh sửa, phương án A mô tả đầy đủ các khả năng biến đổi cấu trúc và dữ liệu của bảng (Đáp án A).\n\n💡 Mẹo nhớ: DML thao tác dữ liệu bên trong bảng; DDL thay đổi lược đồ cột của bảng.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -50182,7 +50182,7 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY)\n\n📝 Dịch đề:\nTrong DBMS quan hệ, sự khác biệt giữa KHÓA CHÍNH và KHÓA ĐỘC ĐÁO là gì?\n\n📋 Dịch đáp án:\n- D: A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: CREATE TABLE Enrollment (.\n\n💡 Mẹo nhớ: Đáp án D (A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY)",
+      "explanation": "🎯 Đáp án đúng: D (D: A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY)\n\n📝 Dịch đề:\nTrong DBMS quan hệ, sự khác biệt giữa KHÓA CHÍNH và KHÓA ĐỘC ĐÁO là gì?\n\n📋 Dịch đáp án:\n- D: A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân biệt giữa PRIMARY KEY và UNIQUE KEY trong RDBMS:\n1. **Số lượng ràng buộc:** Một bảng chỉ có thể có **DUY NHẤT MỘT** khóa chính (`PRIMARY KEY`), nhưng có thể có **NHIỀU** ràng buộc khóa duy nhất (`UNIQUE KEY`).\n2. **Xử lý giá trị NULL:** Cột `PRIMARY KEY` tuyệt đối không được phép chứa `NULL`. Cột `UNIQUE KEY` cho phép chứa giá trị `NULL` (trong SQL Server, UNIQUE constraint cho phép tối đa một giá trị NULL).\nVì vậy, điểm khác biệt cốt lõi là **A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY** (Đáp án D).\n\n💡 Mẹo nhớ: 1 bảng = Tối đa 1 Primary Key, nhưng có thể có NHIỀU Unique Keys.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0201-L0215)",
       "theory_excerpt": "[L0201] ## [H3] 1. KHỞI TẠO TABLE\n[L0202] ## [H4] 1.1. Cú pháp cơ bản\n[L0203] 1.2. Ví dụ tạo Table đơn giản\n[L0204] 1.3. Ví dụ tạo Table với constraints\n[L0205] 1.4. Tạo Table với Foreign Key\n[L0206] 1.5. Tạo Table từ Table khác\n[L0207] ## [H3] 2. SỬA ĐỔI CẤU TRÚC TABLE (ALTER TABLE)\n[L0208] ## [H4] 2.1. Thêm cột mới\n[L0209] 2.2. Sửa đổi cột hiện có\n[L0210] 2.3. Xóa cột\n[L0211] 2.4. Thêm constraint\n[L0212] 2.5. Xóa constraint\n[L0213] 2.6. Đổi tên cột\n[L0214] 2.7. Đổi tên Table\n[L0215] 3. XÓA TABLE",
       "slide_comment": "",
@@ -50290,7 +50290,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: There can be only one unique key for a table)\n\n📝 Dịch đề:\nVề sự khác biệt giữa khóa chính và khóa duy nhất, điều nào sau đây là sai?\n\n📋 Dịch đáp án:\n- A: There can be only one unique key for a table\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án A (There can be only one unique key for a table)",
+      "explanation": "🎯 Đáp án đúng: A (A: There can be only one unique key for a table)\n\n📝 Dịch đề:\nVề sự khác biệt giữa khóa chính và khóa duy nhất, điều nào sau đây là sai?\n\n📋 Dịch đáp án:\n- A: There can be only one unique key for a table\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích phát biểu SAI về sự khác nhau giữa Primary Key và Unique Key:\n1. Mỗi bảng chỉ được phép có duy nhất 1 Primary Key.\n2. Ngược lại, một bảng có thể định nghĩa nhiều Unique Keys trên các cột khác nhau.\n3. Phát biểu cho rằng 'There can be only one unique key for a table' (Chỉ có thể có một unique key cho một bảng) là phát biểu HOÀN TOÀN SAI.\nDo đó, phương án sai cần chọn là **There can be only one unique key for a table** (Đáp án A).\n\n💡 Mẹo nhớ: Bảng có thể có nhiều Unique Key. Nói 'chỉ có 1 unique key' là SAI.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0176-L0190)",
       "theory_excerpt": "[L0176] ## [H2] MỤC TIÊU HỌC TẬP\n[L0177] Tạo Table mới với các tùy chọn cơ bản\n[L0178] Hiểu cấu trúc và thành phần của Table\n[L0179] Thay đổi cấu trúc Table (thêm, sửa, xóa cột)\n[L0180] Xóa Table an toàn\n[L0181] Sao chép cấu trúc Table\n[L0182] ## [H2] KIẾN THỨC LÝ THUYẾT\n[L0183] ## [H3] Table trong SQL Server\n[L0184] Table (Bảng) là đơn vị cơ bản để lưu trữ dữ liệu trong database. Mỗi table gồm:\n[L0185] Columns (Cột): Định nghĩa các thuộc tính của dữ liệu\n[L0186] Rows (Hàng): Chứa các bản ghi dữ liệu thực tế\n[L0187] Schema: Không gian tên chứa table (mặc định là dbo)\n[L0188] ## [H3] Thành phần của Table\n[L0189] Column Name: Tên cột (duy nhất trong table)\n[L0190] Data Type: Kiểu dữ liệu của cột",
       "slide_comment": "",
@@ -50398,7 +50398,7 @@ window.QUIZ_DATA = {
       "answers": [
         "C"
       ],
-      "explanation": "🎯 Đáp án đúng: C (C: It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set)\n\n📝 Dịch đề:\nKhóa của tập thực thể yếu là_?\n\n📋 Dịch đáp án:\n- C: It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án C (It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set)",
+      "explanation": "🎯 Đáp án đúng: C (C: It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set)\n\n📝 Dịch đề:\nKhóa của tập thực thể yếu là_?\n\n📋 Dịch đáp án:\n- C: It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo lý thuyết tập thực thể yếu (Weak Entity Set) của Peter Chen:\n1. Bản thân tập thực thể yếu không có khóa chính đầy đủ từ các thuộc tính riêng của nó, mà chỉ có khóa bộ phận (Discriminator / Partial Key).\n2. Khóa chính đầy đủ của tập thực thể yếu được hình thành bằng cách gộp khóa bộ phận của nó với khóa chính của tập thực thể định danh (Identifying Entity Set).\n3. Do đó, khóa của thực thể yếu hoàn toàn có thể được cấu thành từ các thuộc tính thuộc về một tập thực thể khác (thuộc tính của thực thể định danh).\nVì vậy phát biểu đúng là **It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set** (Đáp án C).\n\n💡 Mẹo nhớ: Khóa của thực thể yếu = Khóa bộ phận + Khóa của thực thể định danh.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1181-L1195)",
       "theory_excerpt": "[L1181] OrderID INT IDENTITY(100, 5) PRIMARY KEY,\n[L1182] Product NVARCHAR(50)\n[L1183] );\n[L1184] OrderID sẽ bắt đầu từ 100 và tăng dần 5 đơn vị: 100, 105, 110, …\n[L1185] ## [H2] 5. Lưu ý\n[L1186] Mỗi bảng chỉ có thể có một cột IDENTITY.\n[L1187] Không thể chèn trực tiếp giá trị vào cột IDENTITY (trừ khi bật SET IDENTITY_INSERT ON).\n[L1188] Nếu xóa dữ liệu, giá trị IDENTITY sẽ không tự động quay lại mà tiếp tục tăng.\n[L1189] Có thể đặt lại giá trị IDENTITY bằng câu lệnh DBCC CHECKIDENT.\n[L1190] Ví dụ reset giá trị:\n[L1191] DBCC CHECKIDENT ('Student', RESEED, 0);\n[L1192] => Bản ghi tiếp theo chèn vào sẽ có StudentID = 1.\n[L1193] ## [H2] Tóm tắt\n[L1194] Auto Increment trong SQL Server được cài bằng IDENTITY(seed, increment).\n[L1195] Tự động sinh giá trị tăng dần cho một cột (thường là khóa chính).",
       "slide_comment": "",
@@ -50510,7 +50510,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: A correlated subquery is not evaluated once for each row processed by the parent statement.)\n\n📝 Dịch đề:\nCâu nào sau đây là sai về các truy vấn phụ có liên quan đến SQL?\n\n📋 Dịch đáp án:\n- A: A correlated subquery is not evaluated once for each row processed by the parent statement.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Subquery: truy vấn lồng trong một truy vấn khác.\n\n💡 Mẹo nhớ: Đáp án A (A correlated subquery is not evaluated once for each row processed by the parent statement.)",
+      "explanation": "🎯 Đáp án đúng: A (A: A correlated subquery is not evaluated once for each row processed by the parent statement.)\n\n📝 Dịch đề:\nCâu nào sau đây là sai về các truy vấn phụ có liên quan đến SQL?\n\n📋 Dịch đáp án:\n- A: A correlated subquery is not evaluated once for each row processed by the parent statement.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích cơ chế thực thi của Truy vấn con tương quan (Correlated Subquery):\n1. **Định nghĩa:** Truy vấn con tương quan là truy vấn con tham chiếu đến các cột của truy vấn cha bên ngoài (Outer Query).\n2. **Cơ chế thực thi:** Truy vấn con tương quan **bắt buộc phải được đánh giá lại một lần cho mỗi hàng** được xử lý bởi câu lệnh cha (evaluated once for each row processed by the parent statement).\n3. Do đó, phát biểu nói rằng 'A correlated subquery is NOT evaluated once for each row...' là phát biểu SAI.\nĐáp án cần chọn là **A correlated subquery is not evaluated once for each row processed by the parent statement** (Đáp án A).\n\n💡 Mẹo nhớ: Correlated subquery được thực thi lại ứng với MỖI dòng của outer query.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0941-L0955)",
       "theory_excerpt": "[L0941] ## [H2] 1. Khái niệm truy vấn lồng (Subquery)\n[L0942] Subquery là một truy vấn SELECT đặt bên trong một truy vấn khác.\n[L0943] Kết quả của Subquery sẽ được dùng làm dữ liệu đầu vào cho truy vấn bên ngoài.\n[L0944] Subquery thường đặt trong mệnh đề WHERE, FROM hoặc SELECT.\n[L0945] Có thể chia thành hai loại chính:\n[L0946] Truy vấn con trả về một giá trị (scalar subquery).\n[L0947] Truy vấn con trả về nhiều giá trị hoặc bảng (multi-row / table subquery).\n[L0948] ## [H2] 2. Subquery trong mệnh đề WHERE\n[L0949] Dùng để so sánh với một giá trị từ truy vấn con.\n[L0950] Ví dụ: Tìm sinh viên có tuổi lớn hơn tuổi trung bình:\n[L0951] SELECT Name, Age\n[L0952] FROM Student\n[L0953] WHERE Age > (SELECT AVG(Age) FROM Student);\n[L0954] ## [H2] 3. Subquery với IN\n[L0955] Kiểm tra xem một giá trị có nằm trong tập kết quả của Subquery không.",
       "slide_comment": "Phát biểu nào sau đây sai về Correlated Subquery trong SQL? A. Correlated subquery không được đánh giá một lần cho mỗi dòng mà câu lệnh cha xử lý. (A correlated subquery is not evaluated once for each row processed by the parent statement.) Đây là phát biểu sai. Thực tế, correlated subquery được thực thi một lần cho mỗi dòng của truy vấn ngoài, nên các đáp án B, C và D đều đúng.",
@@ -50546,7 +50546,7 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);)\n\n📝 Dịch đề:\nLệnh SQL nào được sử dụng để tạo chỉ mục không được nhóm trên cột Tên nhân viên trong bảng\nBảng nhân viên?\n\n📋 Dịch đáp án:\n- B: CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: CREATE NONCLUSTERED INDEX IX_StudentName.\n\n💡 Mẹo nhớ: Đáp án B (CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);)",
+      "explanation": "🎯 Đáp án đúng: B (B: CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);)\n\n📝 Dịch đề:\nLệnh SQL nào được sử dụng để tạo chỉ mục không được nhóm trên cột Tên nhân viên trong bảng\nBảng nhân viên?\n\n📋 Dịch đáp án:\n- B: CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nCú pháp tạo chỉ mục không gom cụm (Non-Clustered Index) trong SQL Server:\n1. Cú pháp chuẩn:\n   `CREATE NONCLUSTERED INDEX Index_Name ON TableName(ColumnName);`\n2. Trong bài toán: Cần tạo non-clustered index trên cột `EmployeeName` của bảng `Employees`.\n   Câu lệnh chính xác là: `CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);`.\nVì vậy đáp án đúng là **B**.\n\n💡 Mẹo nhớ: Cú pháp: CREATE NONCLUSTERED INDEX IndexName ON Table(Column).",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1331-L1345)",
       "theory_excerpt": "[L1331] ## [H3] a. Clustered Index\n[L1332] Quyết định cách sắp xếp vật lý của dữ liệu trong bảng.\n[L1333] Một bảng chỉ có một clustered index.\n[L1334] Thường được tạo trên cột Primary Key.\n[L1335] ## [H3] b. Non-Clustered Index\n[L1336] Lưu trữ riêng biệt, chứa con trỏ trỏ tới vị trí dữ liệu trong bảng.\n[L1337] Một bảng có thể có nhiều non-clustered index.\n[L1338] Thường dùng cho các cột được truy vấn nhiều nhưng không phải khóa chính.\n[L1339] ## [H2] 3. Cú pháp tạo Index\n[L1340] ## [H3] a. Tạo Clustered Index\n[L1341] CREATE CLUSTERED INDEX IX_StudentID\n[L1342] ON Student(StudentID);\n[L1343] ## [H3] b. Tạo Non-Clustered Index\n[L1344] CREATE NONCLUSTERED INDEX IX_StudentName\n[L1345] ON Student(Name);",
       "slide_comment": "Lệnh SQL nào dùng để tạo non-clustered index trên cột EmployeeName của bảng Employees? B. CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName); Lệnh này tạo một non-clustered index giúp tăng tốc các truy vấn tìm kiếm hoặc sắp xếp theo cột EmployeeName.",
@@ -50667,7 +50667,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_369.png",
       "missing_image": false,
-      "question_text": "Suppose we have defined VIEW ParamountMovies from the Movies table. When we execute the\ncommand: DROP TABLE Movies which of the following statements is correct?",
+      "question_text": "Suppose we have defined VIEW `ParamountMovies` from the `Movies` table. When we execute the command:\n```sql\nDROP TABLE Movies;\n```\nWhich of the following statements is correct?",
       "type": "single",
       "options": [
         {
@@ -50690,11 +50690,11 @@ window.QUIZ_DATA = {
       "answers": [
         "B"
       ],
-      "explanation": "🎯 Đáp án đúng: B (B: The Movies table goes away and VIEW ParamountMovies cannot be used.)\n\n📝 Dịch đề:\nGiả sử chúng ta đã xác định VIEW ParamountMovies từ bảng Movies. Khi chúng tôi thực hiện\nlệnh: DROP TABLE Phim phát biểu nào sau đây đúng?\n\n📋 Dịch đáp án:\n- B: The Movies table goes away and VIEW ParamountMovies cannot be used.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án B (The Movies table goes away and VIEW ParamountMovies cannot be used.)",
+      "explanation": "🎯 Đáp án đúng: B (B: The Movies table goes away and VIEW ParamountMovies cannot be used.)\n\n📝 Dịch đề:\nGiả sử chúng ta đã xác định VIEW ParamountMovies từ bảng Movies. Khi chúng tôi thực hiện\nlệnh: DROP TABLE Phim phát biểu nào sau đây đúng?\n\n📋 Dịch đáp án:\n- B: The Movies table goes away and VIEW ParamountMovies cannot be used.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích sự phụ thuộc giữa View và bảng cơ sở (Base Table):\n1. Giả sử View `ParamountMovies` được tạo từ bảng `Movies`.\n2. Khi thực hiện lệnh `DROP TABLE Movies;`:\n   - Bảng `Movies` bị xóa hoàn toàn khỏi cơ sở dữ liệu.\n   - View `ParamountMovies` vẫn tồn tại dưới dạng siêu dữ liệu nhưng trở thành một View không hợp lệ (mồ côi) và không thể truy vấn hay sử dụng được nữa (sẽ báo lỗi 'Invalid object name Movies').\nVì vậy, kết quả là **The Movies table goes away and VIEW ParamountMovies cannot be used** (Đáp án B).\n\n💡 Mẹo nhớ: Xóa bảng cơ sở -> View dựa trên nó sẽ bị hỏng, không sử dụng được.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0176-L0190)",
       "theory_excerpt": "[L0176] ## [H2] MỤC TIÊU HỌC TẬP\n[L0177] Tạo Table mới với các tùy chọn cơ bản\n[L0178] Hiểu cấu trúc và thành phần của Table\n[L0179] Thay đổi cấu trúc Table (thêm, sửa, xóa cột)\n[L0180] Xóa Table an toàn\n[L0181] Sao chép cấu trúc Table\n[L0182] ## [H2] KIẾN THỨC LÝ THUYẾT\n[L0183] ## [H3] Table trong SQL Server\n[L0184] Table (Bảng) là đơn vị cơ bản để lưu trữ dữ liệu trong database. Mỗi table gồm:\n[L0185] Columns (Cột): Định nghĩa các thuộc tính của dữ liệu\n[L0186] Rows (Hàng): Chứa các bản ghi dữ liệu thực tế\n[L0187] Schema: Không gian tên chứa table (mặc định là dbo)\n[L0188] ## [H3] Thành phần của Table\n[L0189] Column Name: Tên cột (duy nhất trong table)\n[L0190] Data Type: Kiểu dữ liệu của cột",
       "slide_comment": "Giả sử đã tạo VIEW ParamountMovies từ bảng Movies. Khi thực hiện lệnh DROP TABLE Movies, phát biểu nào sau đây đúng? B. Bảng Movies sẽ bị xóa và VIEW ParamountMovies sẽ không còn sử dụng được. (The Movies table goes away and VIEW ParamountMovies cannot be used.) VIEW chỉ lưu câu lệnh truy vấn, không lưu dữ liệu. Khi bảng gốc Movies bị xóa, VIEW vẫn có thể còn tồn tại về mặt định nghĩa nhưng không thể truy vấn được vì đối tượng mà nó tham chiếu đã không còn.",
-      "question_translation": "Giả sử chúng ta đã xác định VIEW ParamountMovies từ bảng Movies. Khi chúng tôi thực hiện\nlệnh: DROP TABLE Phim phát biểu nào sau đây đúng?"
+      "question_translation": "Giả sử đã định nghĩa VIEW `ParamountMovies` từ bảng `Movies`. Khi ta thực thi câu lệnh:\n```sql\nDROP TABLE Movies;\n```\nPhát biểu nào sau đây là đúng?"
     },
     {
       "id": 352,
@@ -51029,7 +51029,7 @@ window.QUIZ_DATA = {
       "section": "Câu Hỏi Đơn (Single Choice)",
       "image": "images/DBI202/slide_380.png",
       "missing_image": false,
-      "question_text": "(Choose 1 answer) Hoàng Hoàng\nWhich one of the following is not true for a view?",
+      "question_text": "(Choose 1 answer) Which one of the following is not true for a view?",
       "type": "single",
       "options": [
         {
@@ -51088,7 +51088,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: It is considered the best practice to use when we want insert, update, or delete data in a table of SQL Server.)\n\n📝 Dịch đề:\nĐiều gì KHÔNG đúng về con trỏ trong SQL?\n\n📋 Dịch đáp án:\n- A: It is considered the best practice to use when we want insert, update, or delete data in a table of SQL Server.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Giới thiệu SQL và SQL server.\n\n💡 Mẹo nhớ: Đáp án A (It is considered the best practice to use when we want insert, update, or delete data in a table of SQL Server.)",
+      "explanation": "🎯 Đáp án đúng: A (A: It is considered the best practice to use when we want insert, update, or delete data in a table of SQL Server.)\n\n📝 Dịch đề:\nĐiều gì KHÔNG đúng về con trỏ trong SQL?\n\n📋 Dịch đáp án:\n- A: It is considered the best practice to use when we want insert, update, or delete data in a table of SQL Server.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích bản chất và hiệu năng của Con trỏ (Cursor) trong SQL Server:\n1. Con trỏ duyệt dữ liệu theo từng dòng một (Row-By-Row processing), tiêu tốn rất nhiều tài nguyên CPU, bộ nhớ và giữ khóa lâu trên CSDL.\n2. Trong SQL Server, phương pháp thực hành tốt nhất (Best Practice) là **xử lý dựa trên tập hợp (Set-Based operations)** bằng các câu lệnh `INSERT`, `UPDATE`, `DELETE` thông thường kết hợp `JOIN` hoặc mệnh đề `WHERE`.\n3. Việc sử dụng Cursor để thêm/sửa/xóa dữ liệu bị coi là thực hành xấu (Anti-Pattern) và làm suy giảm nghiêm trọng hiệu năng hệ thống.\nDo đó, phát biểu 'It is considered the best practice to use when we want insert, update, or delete data...' là hoàn toàn SAI (Đáp án A).\n\n💡 Mẹo nhớ: Dùng Cursor để INSERT/UPDATE/DELETE là ANTI-PATTERN, không phải Best Practice.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0146-L0160)",
       "theory_excerpt": "[L0146] VÍ DỤ THỰC TẾ\n[L0147] 02. KHỞI TẠO DATABASE TRONG SQL SERVER\n[L0148] ## [H2] MỤC TIÊU HỌC TẬP\n[L0149] Tạo database mới với các tùy chọn cơ bản\n[L0150] Hiểu cấu trúc file database (.mdf, .ldf)\n[L0151] Thay đổi thuộc tính database\n[L0152] Xóa database an toàn\n[L0153] Backup và restore database cơ bản\n[L0154] ## [H2] KIẾN THỨC LỲ THUYẾT\n[L0155] ## [H3] Database trong SQL Server\n[L0156] Database là nơi lưu trữ tất cả dữ liệu và objects của ứng dụng. Mỗi database gồm:\n[L0157] Data File (.mdf): Lưu trữ dữ liệu và metadata\n[L0158] Log File (.ldf): Lưu trữ transaction log\n[L0159] Secondary Data Files (.ndf): File dữ liệu phụ (tùy chọn)\n[L0160] ## [H3] Các thành phần chính",
       "slide_comment": "",
@@ -51304,7 +51304,7 @@ window.QUIZ_DATA = {
       "answers": [
         "A"
       ],
-      "explanation": "🎯 Đáp án đúng: A (A: The UPDATE command is applicable to all views.)\n\n📝 Dịch đề:\nTrong SQL, dạng xem là một bảng ảo dựa trên tập kết quả của câu lệnh SQL. Phát biểu nào không\nđúng về chế độ xem?\n\n📋 Dịch đáp án:\n- A: The UPDATE command is applicable to all views.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Schema: Nhóm các object có liên quan.\n\n💡 Mẹo nhớ: Đáp án A (The UPDATE command is applicable to all views.)",
+      "explanation": "🎯 Đáp án đúng: A (A: The UPDATE command is applicable to all views.)\n\n📝 Dịch đề:\nTrong SQL, dạng xem là một bảng ảo dựa trên tập kết quả của câu lệnh SQL. Phát biểu nào không\nđúng về chế độ xem?\n\n📋 Dịch đáp án:\n- A: The UPDATE command is applicable to all views.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nPhân tích tính khả thi của lệnh `UPDATE` trên Khung nhìn (View):\n1. Không phải mọi View đều có thể cập nhật được. Các View phức tạp chứa `GROUP BY`, hàm gộp (`COUNT`, `SUM`, `AVG`), `DISTINCT`, hoặc kết nối nhiều bảng với các ràng buộc không thể cập nhật trực tiếp bằng lệnh `UPDATE`.\n2. Do đó, phát biểu khẳng định 'Lệnh UPDATE có thể áp dụng cho TẤT CẢ các views' (applicable to all views) là phát biểu HOÀN TOÀN SAI.\nĐáp án chính xác là **The UPDATE command is applicable to all views** (Đáp án A).\n\n💡 Mẹo nhớ: Chỉ các Updatable Views đơn giản mới UPDATE được, KHÔNG phải all views.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L1251-L1265)",
       "theory_excerpt": "[L1251] => Thay đổi này sẽ tác động trực tiếp đến bảng Student.\n[L1252] ## [H2] 5. Xóa và chỉnh sửa View\n[L1253] Xóa View:\n[L1254] DROP VIEW View_StudentCNTT;\n[L1255] Chỉnh sửa View:\n[L1256] ALTER VIEW View_StudentCNTT AS\n[L1257] SELECT StudentID, Name\n[L1258] FROM Student\n[L1259] WHERE Major = 'CNTT';\n[L1260] ## [H2] 6. Lưu ý\n[L1261] View không lưu dữ liệu → khi bảng gốc thay đổi, View cũng thay đổi theo.\n[L1262] Không nên lạm dụng View cho các truy vấn phức tạp nhiều cấp → có thể ảnh hưởng hiệu năng.\n[L1263] Có thể dùng WITH ENCRYPTION để ẩn định nghĩa View, hoặc WITH SCHEMABINDING để cố định cấu trúc bảng gốc.\n[L1264] ## [H2] Tóm tắt\n[L1265] View là bảng ảo, sinh ra từ kết quả truy vấn SELECT.",
       "slide_comment": "",
@@ -51524,7 +51524,7 @@ window.QUIZ_DATA = {
       "answers": [
         "D"
       ],
-      "explanation": "🎯 Đáp án đúng: D (D: Only statement 2 is True.)\n\n📝 Dịch đề:\nPhát biểu nào sau đây là ĐÚNG?\n(1) Một cột có ràng buộc khóa NGOẠI TỆ không cho phép các giá trị trùng lặp.\n(2) Ràng buộc khóa NGOẠI TỆ có thể được xác định để tham chiếu đến các cột có ràng buộc UNIQUE trong\nmột cái bàn khác.\n\n📋 Dịch đáp án:\n- D: Only statement 2 is True.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nTheo tài liệu lý thuyết CSDL quan hệ SQL Server: Column Name: Tên cột (duy nhất trong table).\n\n💡 Mẹo nhớ: Đáp án D (Only statement 2 is True.)",
+      "explanation": "🎯 Đáp án đúng: D (D: Only statement 2 is True.)\n\n📝 Dịch đề:\nPhát biểu nào sau đây là ĐÚNG?\n(1) Một cột có ràng buộc khóa NGOẠI TỆ không cho phép các giá trị trùng lặp.\n(2) Ràng buộc khóa NGOẠI TỆ có thể được xác định để tham chiếu đến các cột có ràng buộc UNIQUE trong\nmột cái bàn khác.\n\n📋 Dịch đáp án:\n- D: Only statement 2 is True.\n\n📌 Giải thích chi tiết từng bước (Vì sao chọn):\nĐánh giá tính đúng/sai của hai phát biểu về ràng buộc toàn vẹn trong RDBMS:\n1. **Phát biểu 1:** 'A column with FOREIGN key constraint does not accept NULL values' $\\rightarrow$ **SAI**. Một cột khóa ngoại hoàn toàn có thể chấp nhận giá trị `NULL` (trừ khi cột đó được khai báo thêm ràng buộc `NOT NULL`). Giá trị NULL biểu thị bản ghi đó hiện chưa liên kết với bản ghi nào ở bảng cha.\n2. **Phát biểu 2:** 'A table can have multiple UNIQUE constraints' $\\rightarrow$ **ĐÚNG**. Một bảng quan hệ có thể định nghĩa nhiều ràng buộc `UNIQUE` trên các cột khác nhau.\nDo đó, chỉ có phát biểu 2 là Đúng (Đáp án D: **Only statement 2 is True**).\n\n💡 Mẹo nhớ: Foreign key cho phép chứa NULL; Bảng có thể có nhiều ràng buộc UNIQUE.",
       "theory_citation": "[1] SEMESTER_3_DBI202_Theory.mhtml - DBI202 Theory Reference (L0201-L0215)",
       "theory_excerpt": "[L0201] ## [H3] 1. KHỞI TẠO TABLE\n[L0202] ## [H4] 1.1. Cú pháp cơ bản\n[L0203] 1.2. Ví dụ tạo Table đơn giản\n[L0204] 1.3. Ví dụ tạo Table với constraints\n[L0205] 1.4. Tạo Table với Foreign Key\n[L0206] 1.5. Tạo Table từ Table khác\n[L0207] ## [H3] 2. SỬA ĐỔI CẤU TRÚC TABLE (ALTER TABLE)\n[L0208] ## [H4] 2.1. Thêm cột mới\n[L0209] 2.2. Sửa đổi cột hiện có\n[L0210] 2.3. Xóa cột\n[L0211] 2.4. Thêm constraint\n[L0212] 2.5. Xóa constraint\n[L0213] 2.6. Đổi tên cột\n[L0214] 2.7. Đổi tên Table\n[L0215] 3. XÓA TABLE",
       "slide_comment": "",
