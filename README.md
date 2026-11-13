@@ -16,7 +16,7 @@ Tổng cộng: **1.400 câu hỏi** trích xuất từ slide bài giảng thực
 - Dịch đề và phương án song ngữ Anh - Việt 100%
 - Giải thích chi tiết từng bước, có trích dẫn lý thuyết giáo trình
 - Hỗ trợ xem ảnh Slide bài giảng gốc, phóng to thu nhỏ
-- Đánh dấu câu hỏi cần ôn lại (Bookmark ★)
+- Đánh dấu câu hỏi cần ôn lại (Bookmark)
 - Lưu tiến trình tự động vào LocalStorage
 - Tính năng Bỏ qua (Skip - Xem đáp án ngay)
 
